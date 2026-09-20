@@ -8,15 +8,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-GjtOTNDftIqp9CSexbYPQ9/H5e+o1HfdZh6kL6eiw6o=' 'sha256-bGapo3EdzxlIa7MyviDOv4x9mGrYns+Z+1haOWenX3U=' 'sha256-uK9AKRgaIj1NWk0EP8/iLEF4TbaW9S9w1O/7jhZaABA=' 'sha256-D4Q8v1ae/GsAmHGZ56sF12b3qo9fQy55ZAbc3qhTWa8='; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-GjtOTNDftIqp9CSexbYPQ9/H5e+o1HfdZh6kL6eiw6o=' 'sha256-bGapo3EdzxlIa7MyviDOv4x9mGrYns+Z+1haOWenX3U=' 'sha256-uK9AKRgaIj1NWk0EP8/iLEF4TbaW9S9w1O/7jhZaABA=' 'sha256-dScU8G6mPcYDqVOIDM7RwLc/MjdK8w70/xc+n4bcfpw='; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>mbmoney.online | Free net worth and budget tracker</title>
 <link rel="canonical" href="https://mbmoney.online/">
+<meta property="og:title" content="mbmoney.online | Free net worth and budget tracker">
+<meta property="og:description" content="Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mbmoney.online/">
+<meta name="theme-color" content="#0a9fb0">
 <meta name="author" content="Matthew Broyer">
 <meta name="copyright" content="© 2025–2026 Matthew Broyer. All rights reserved.">
 <meta name="description" content="Free net worth and budget tracker. Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b6b4f'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233ddc97'/%3E%3Cstop offset='1' stop-color='%2322d3c5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='url(%23g)'/%3E%3Cg transform='translate(3.2 1.6) scale(1.067) translate(0 -1)' fill='none' stroke='%2304231a' stroke-width='2.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19V11.5C4 7.5 11 7.5 11 11.5V19M11 11.5C11 6.5 20 6.5 20 10.5V19'/%3E%3C/g%3E%3C/svg%3E">
 <script>try{var __t=localStorage.getItem('pwmt.theme')||'dark';if(__t!=='auto')document.documentElement.setAttribute('data-theme',__t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 <style>
 /* ---- theme: "midnight mint" (dark default) + "daylight" (light) ---- */
@@ -286,7 +291,7 @@ input[type=search]{background:var(--surface);border:1px solid var(--border-stron
 a.btn{text-decoration:none;color:var(--ink)}
 .fld.plain{font-size:13px}
 @media(max-width:640px){
-  table.tx th:nth-child(2),table.tx td:nth-child(2),table.tx th:nth-child(6),table.tx td:nth-child(6),table.tx th:nth-child(9),table.tx td:nth-child(9){display:none}
+  table.tx th:nth-child(2),table.tx td:nth-child(2),table.tx th:nth-child(6),table.tx td:nth-child(6),table.tx th:nth-child(8),table.tx td:nth-child(8){display:none}
   table.tx input[type=date]{width:128px;padding-right:2px}
   table.tx input[type=text]{min-width:90px}
 }
@@ -647,10 +652,39 @@ html.framed #framedMsg{display:block}
 html.framed body>*:not(#framedMsg):not(script):not(noscript){display:none!important}
 #framedMsg a{color:var(--accent)}
 
+/* paste transactions */
+dialog.wide{max-width:960px}
+dialog.wide .btns{position:sticky;bottom:-20px;background:var(--surface);padding:10px 0 2px;margin-top:10px;z-index:2}
+.popts{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:end;margin-top:10px}
+.pdet{margin-top:10px;border:1px solid var(--border);border-radius:12px;padding:8px 12px}
+.pdet>summary{cursor:pointer;font-weight:600;padding:4px 0}
+.pmap th{padding:6px 6px;vertical-align:bottom}.pmap select{min-width:130px;width:100%}
+.pmap td{white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis;color:var(--ink-2)}
+.ptbl td,.ptbl th{text-align:left}.ptbl td.r,.ptbl th.r{text-align:right}
+.ptbl select{min-width:170px;width:100%;min-height:34px}
+.ptbl td:first-child,.ptbl th:first-child{text-align:center;width:52px}
+.ptag{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:99px;font-size:11px;background:var(--surface-2);border:1px solid var(--border);color:var(--ink-2)}
+.pbulk{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border)}
+.pskip{margin-top:8px}.pskip li{font-size:12.5px;color:var(--ink-2);overflow-wrap:anywhere}
+
+table.tx td input.amt-in{color:var(--good-ink)}
+
+.notes-card{margin-top:16px}
+.notes-list{display:grid;gap:10px;margin-top:10px}
+.note-row{display:flex;gap:8px;align-items:flex-start}
+.note-row textarea{flex:1;min-height:76px;resize:vertical;line-height:1.5;font-size:15px}
+.note-row .btn{flex:none}
+.notes-foot{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:12px}
+.notes-all{margin-top:14px;border-top:1px solid var(--grid);padding-top:10px}
+.notes-all summary{cursor:pointer;font-weight:600;font-size:14px}
+.notes-all .na-m{margin-top:10px}
+.notes-all ul{margin:4px 0 0;padding-left:20px;color:var(--ink-2);font-size:14px;white-space:pre-wrap}
+.notes-all li{margin:2px 0}
+
 </style>
 </head>
 <body>
-<div id="splash" role="status" aria-live="polite"><div class="sp-logo"><svg viewBox="0 0 24 24" fill="none" stroke="#04231a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-7 4 4 8-9"/><path d="M15 5h6v6"/></svg></div><div class="sp-bar"><i></i></div><div class="sp-t">Loading your finances…</div></div>
+<div id="splash" role="status" aria-live="polite"><div class="sp-logo"><svg viewBox="0 0 24 24" fill="none" stroke="#04231a" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path transform="translate(0 -1)" d="M4 19V11.5C4 7.5 11 7.5 11 11.5V19M11 11.5C11 6.5 20 6.5 20 10.5V19"/></svg></div><div class="sp-bar"><i></i></div><div class="sp-t">Loading your finances…</div></div>
 <noscript><style>#splash{display:none}</style></noscript>
 <script>try{if(window.top!==window.self)document.documentElement.className+=' framed'}catch(e){document.documentElement.className+=' framed'}</script>
 <script>setTimeout(function(){var s=document.getElementById('splash');if(s)s.remove()},6000)</script>
@@ -658,7 +692,7 @@ html.framed body>*:not(#framedMsg):not(script):not(noscript){display:none!import
 <div id="framedMsg" role="alert"><b>Open this app directly.</b> For your protection, mbmoney.online does not run inside another page. <a href="https://mbmoney.online/" target="_top" rel="noopener">Open mbmoney.online</a></div>
 <header class="top">
   <div class="wrap">
-    <div class="brand"><div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#04231a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-7 4 4 8-9"/><path d="M15 5h6v6"/></svg></div><div class="bt"><h1>mbmoney.online</h1><span>ALPHA 4.0 · Web edition</span></div></div>
+    <div class="brand"><div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#04231a" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path transform="translate(0 -1)" d="M4 19V11.5C4 7.5 11 7.5 11 11.5V19M11 11.5C11 6.5 20 6.5 20 10.5V19"/></svg></div><div class="bt"><h1>mbmoney.online</h1><span>BETA 4.0 · Web edition</span></div></div>
     <div class="tabwrap"><button class="tabarrow l" type="button" aria-label="Show earlier tabs" hidden>‹</button><nav class="tabs" aria-label="Sections"></nav><button class="tabarrow r" type="button" aria-label="Show more tabs" hidden>›</button></div>
     <div class="actions">
       <button class="btn sm" id="searchBtn" type="button" title="Search the whole site (press / or Ctrl+K)" aria-label="Search"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="5.5"/><path d="M13.5 13.5L17 17"/></svg><span class="lbl">Search</span><kbd class="kb">Ctrl K</kbd></button>
@@ -685,9 +719,9 @@ html.framed body>*:not(#framedMsg):not(script):not(noscript){display:none!import
 <script>
 const ACH_BASE=[{"name": "Data Wrangler", "desc": "Imported your first transactions. The numbers obey you now.", "rar": "Common", "xp": 50}, {"name": "First Steps", "desc": "Logged your first 25 transactions.", "rar": "Common", "xp": 50}, {"name": "Net Worth Newbie", "desc": "Tracked your net worth for a month. Knowledge is power.", "rar": "Common", "xp": 75}, {"name": "One Month Wonder", "desc": "Tracked your budget for a month. Impressive restraint.", "rar": "Common", "xp": 75}, {"name": "Ledger Apprentice", "desc": "Tracked 100 transactions total.", "rar": "Common", "xp": 100}, {"name": "Frugal Fighter I", "desc": "Lived below your means for a whole month. Adulting unlocked.", "rar": "Uncommon", "xp": 100}, {"name": "Double Tracker I", "desc": "Tracked net worth 2 months in a row. You’re serious now.", "rar": "Uncommon", "xp": 100}, {"name": "Double Tracker II", "desc": "Tracked your budget 2 months in a row. Consistency achieved.", "rar": "Uncommon", "xp": 100}, {"name": "Keeping Tabs", "desc": "Reached 250 transactions logged.", "rar": "Uncommon", "xp": 150}, {"name": "Income Rookie", "desc": "Recorded $10,000 in total income. Cha-ching!", "rar": "Uncommon", "xp": 150}, {"name": "Triple Tracker I", "desc": "Tracked net worth 3 consecutive months. Patience pays.", "rar": "Uncommon", "xp": 150}, {"name": "Triple Tracker II", "desc": "Tracked your budget 3 consecutive months. Routine mode: ON.", "rar": "Uncommon", "xp": 150}, {"name": "Thousandaire", "desc": "Saved your first $1,000. Ka-ching!", "rar": "Uncommon", "xp": 150}, {"name": "Paper Trail", "desc": "500 transactions recorded. Discipline unlocked.", "rar": "Uncommon", "xp": 200}, {"name": "Retirement Rookie I", "desc": "Contributed to a retirement account for 1 month. Long game begun.", "rar": "Uncommon", "xp": 200}, {"name": "Debt Slayer I", "desc": "All credit cards defeated. You feel lighter already.", "rar": "Rare", "xp": 200}, {"name": "Credit Climber I", "desc": "Credit score hit 650+. Respect earned.", "rar": "Rare", "xp": 200}, {"name": "Bronze Saver", "desc": "10% average savings rate. Not bad for a rookie.", "rar": "Rare", "xp": 200}, {"name": "Side Hustler I", "desc": "Earned $1,000 from business income. First taste of freedom.", "rar": "Rare", "xp": 200}, {"name": "Quarter Milestone", "desc": "Saved $2,500. Getting serious.", "rar": "Rare", "xp": 200}, {"name": "Side Hustler II", "desc": "Earned $5,000 from business income. The grind continues.", "rar": "Rare", "xp": 200}, {"name": "Five Digits Saved", "desc": "Saved $5,000. Wealth mode: activated.", "rar": "Rare", "xp": 250}, {"name": "Above Water", "desc": "Positive net worth unlocked! Floating comfortably.", "rar": "Rare", "xp": 300}, {"name": "Bookkeeper", "desc": "1,000 transactions tracked. Habit formed.", "rar": "Rare", "xp": 300}, {"name": "Retirement Rookie II", "desc": "Contributed to a retirement account 2 months in a row. Steady grind.", "rar": "Rare", "xp": 300}, {"name": "Income Tracker I", "desc": "Recorded $50,000 total income. Money talks.", "rar": "Rare", "xp": 350}, {"name": "Retirement Adept I", "desc": "3 months consecutive retirement contributions. Future secured.", "rar": "Rare", "xp": 350}, {"name": "Retirement Adept II", "desc": "6 months consecutive retirement contributions. Patience rewarded.", "rar": "Rare", "xp": 400}, {"name": "Cash Stash I", "desc": "Hold $10,000 in cash equivalents. Safety first.", "rar": "Rare", "xp": 400}, {"name": "Market Player I", "desc": "Hold $10,000 in investments. Wall Street mode engaged.", "rar": "Rare", "xp": 400}, {"name": "Base Camp", "desc": "Reach $25,000 net worth. The climb begins.", "rar": "Rare", "xp": 400}, {"name": "Half Funded Hero", "desc": "Saved 3 months of expenses. Halfway to security.", "rar": "Rare", "xp": 500}, {"name": "Car-Free Champ", "desc": "Paid off your auto loan. Freedom wheels unlocked.", "rar": "Rare", "xp": 500}, {"name": "Half-Century Networth", "desc": "Reach $50,000 net worth. Wealth unlocked.", "rar": "Rare", "xp": 500}, {"name": "The Vault is Ready", "desc": "Accounts aligned. Vault pressure stable.", "rar": "Rare", "xp": 500}, {"name": "Side Hustler III", "desc": "Earned $10,000 from business income. You’re cooking now.", "rar": "Epic", "xp": 300}, {"name": "Half-Year Hero I", "desc": "Tracked net worth for 6 consecutive months. Growth unlocked.", "rar": "Epic", "xp": 300}, {"name": "Half-Year Hero II", "desc": "Tracked your budget for 6 consecutive months. Discipline achieved.", "rar": "Epic", "xp": 300}, {"name": "Debt Slayer II", "desc": "Paid off $10,000 in total debt. Chains removed.", "rar": "Epic", "xp": 400}, {"name": "Investor Initiate", "desc": "Contributed to an investment account. Wall Street, meet you.", "rar": "Epic", "xp": 400}, {"name": "Number Cruncher", "desc": "2,500 transactions entered. Spreadsheet mastery.", "rar": "Epic", "xp": 400}, {"name": "Credit Climber II", "desc": "700+ credit score. Impressive stamina.", "rar": "Epic", "xp": 500}, {"name": "Year Tracker I", "desc": "Tracked net worth 12 consecutive months. Level up.", "rar": "Epic", "xp": 500}, {"name": "Year Tracker II", "desc": "Tracked monthly budget 12 consecutive months. Persistence unlocked.", "rar": "Epic", "xp": 500}, {"name": "Silver Saver", "desc": "20% average savings rate. Money wizardry achieved.", "rar": "Epic", "xp": 500}, {"name": "Finance Fanatic", "desc": "5,000 transactions logged. Money moves only.", "rar": "Epic", "xp": 500}, {"name": "Side Hustler IV", "desc": "Earned $50,000 from business income. The grind pays off.", "rar": "Epic", "xp": 600}, {"name": "Income Tracker II", "desc": "Recorded $100,000 total income. Feeling legendary.", "rar": "Epic", "xp": 600}, {"name": "Retirement Master I", "desc": "12 months consecutive retirement contributions. Long game complete.", "rar": "Epic", "xp": 600}, {"name": "Credit Master", "desc": "750+ credit score. Respect unlocked.", "rar": "Epic", "xp": 700}, {"name": "Gold Saver", "desc": "30% average savings rate. Financial wizard.", "rar": "Epic", "xp": 700}, {"name": "Side Hustler V", "desc": "Earned $100,000 from business income. Big moves.", "rar": "Epic", "xp": 700}, {"name": "Emergency Expert", "desc": "Emergency fund fully funded. Sleep easy.", "rar": "Epic", "xp": 700}, {"name": "Retirement Master II", "desc": "Contributed to retirement account 2 years in a row. Patience rewarded.", "rar": "Epic", "xp": 700}, {"name": "Two-Year Tracker I", "desc": "Tracked net worth for 2 consecutive years. Growth mastered.", "rar": "Epic", "xp": 800}, {"name": "Two-Year Tracker II", "desc": "Tracked budget for 2 consecutive years. Iron discipline.", "rar": "Epic", "xp": 800}, {"name": "Income Tracker III", "desc": "Recorded $250,000 total income. Big stacks.", "rar": "Epic", "xp": 800}, {"name": "Side Hustler VI", "desc": "Earned $250,000 from business income. Entrepreneur mode.", "rar": "Epic", "xp": 900}, {"name": "Transaction Titan", "desc": "7,500 transactions total. The grind pays off.", "rar": "Legendary", "xp": 600}, {"name": "Six-Figure Networth", "desc": "Reach $100,000 net worth. Milestone unlocked.", "rar": "Legendary", "xp": 1000}, {"name": "Homeowner Hero", "desc": "Bought your first home. Castle secured.", "rar": "Legendary", "xp": 1000}, {"name": "Credit Elite", "desc": "800+ credit score. Financial god mode.", "rar": "Legendary", "xp": 1000}, {"name": "Three-Year Tracker I", "desc": "Tracked net worth 3 consecutive years. Legendary persistence.", "rar": "Legendary", "xp": 1000}, {"name": "Three-Year Tracker II", "desc": "Tracked budget 3 consecutive years. Dedication unlocked.", "rar": "Legendary", "xp": 1000}, {"name": "Retirement Master III", "desc": "3 consecutive years of contributions. The long game mastered.", "rar": "Legendary", "xp": 1000}, {"name": "Platinum Saver", "desc": "40% average savings rate. Money wizard 2.0.", "rar": "Legendary", "xp": 1000}, {"name": "Grand Accountant", "desc": "9,999 transactions entered. Ledger legend.", "rar": "Legendary", "xp": 1000}, {"name": "Income Tracker IV", "desc": "Recorded $500,000 total income. Stacks secured.", "rar": "Legendary", "xp": 1200}, {"name": "Side Hustler VII", "desc": "Earned $500,000 from business income. CEO mode.", "rar": "Legendary", "xp": 1500}, {"name": "Debt-Free Legend", "desc": "Debt-free (excluding mortgage). Chains removed forever.", "rar": "Legendary", "xp": 1500}, {"name": "Quarter-Millionaire", "desc": "$250,000 net worth. Power unlocked.", "rar": "Legendary", "xp": 1500}, {"name": "Five-Year Tracker I", "desc": "Tracked net worth 5 consecutive years. Absolute discipline.", "rar": "Legendary", "xp": 1500}, {"name": "Five-Year Tracker II", "desc": "Tracked budget 5 consecutive years. Obsessive mode.", "rar": "Legendary", "xp": 1500}, {"name": "Retirement Master IV", "desc": "5 consecutive years of contributions. Retirement pro.", "rar": "Legendary", "xp": 1500}, {"name": "Income Tracker V", "desc": "Recorded $1,000,000 total income. Milestone achieved.", "rar": "Legendary", "xp": 2000}, {"name": "Side Hustler VIII", "desc": "Earned $1,000,000 from business income. Empire built.", "rar": "Legendary", "xp": 2500}, {"name": "Mortgage Crusher", "desc": "Paid off mortgage. Freedom unlocked.", "rar": "Legendary", "xp": 2500}, {"name": "Millionaire Status", "desc": "$1,000,000 net worth. Legendary status achieved.", "rar": "Legendary", "xp": 3000}, {"name": "FI Achiever", "desc": "Financial independence reached. Work optional.", "rar": "Legendary", "xp": 5000}, {"name": "Titan of Wealth I", "desc": "Reach $2,500,000 net worth. You monster.", "rar": "Exotic", "xp": 7500}, {"name": "Titan of Wealth II", "desc": "Reach $5,000,000 net worth. Unstoppable.", "rar": "Exotic", "xp": 10000}, {"name": "Titan of Wealth III", "desc": "Reach $10,000,000 net worth. God mode engaged.", "rar": "Exotic", "xp": 20000}];
 const ABOUT_TEXT="Made for people whose paycheck lands in one credit union checking account.\n\nKeep Monthly Budget and Transactions up to date. The Dashboard turns them into your net worth, savings rate and spending patterns. Extra Charts and What If? go deeper. Achievements turn the habit into XP.\n\nBuilt after studying the Bogleheads® Wiki and reading \"If You Can\" by William J. Bernstein. Bogleheads® is a registered trademark of The John C. Bogle Center for Financial Literacy. This app is independent and is not affiliated with or endorsed by the Bogle Center, the Bogleheads community or the author.";
-const LICENSE_TEXT="The short version: use this free web app as much as you like for your own money. No account, no fees, no tracking. Don't copy it, reuse its code or design, or pass it off as yours. Details below.\n\n1. Free to use\nYou get a free, personal, non-exclusive, non-transferable permission to use this web app (the \"App\") in your browser for your own personal finances. It is meant for adults. You don't need an account or a login, and you don't pay anything.\n\n2. Hands off the code (this part is firm)\nThe App's source code, design, layout, charts, badge and achievement artwork, and written content are protected by copyright, and I keep all rights to them. Unless I give you written permission first, you agree not to:\n• copy, scrape, mirror, re-host or republish the App, or any part of its code, design, artwork or text, on any site, app or product, free or paid;\n• build a clone, a \"remix\" or an \"inspired-by\" version from its code, or take it apart to reuse it somewhere else;\n• sell, rent, sublicense or give away the App, or bundle it into anything else;\n• use the App to run a finance service for other people, or for any other commercial purpose;\n• remove or hide the copyright notice or these terms, or claim the App as your own work;\n• interfere with the App or the site it lives on, including with bots or automated scraping.\nViewing the page source to see how something works is fine. Copying or reusing the code without permission breaks these terms and my copyright, and I may respond with takedown requests to hosts and search engines and with any legal remedies available to me.\n\n3. Use it sensibly\nUse the App only for lawful, personal purposes. Don't store other people's private information in it. Don't enter passwords, Social Security numbers, or full card or account numbers. Don't try to break, overload or probe the App or the site it lives on.\n\n4. Your data stays with you\nThere are no accounts and no servers holding your data. Everything you enter is saved in your own browser (local storage) and never leaves your device unless you export it. That means I can't see it and can't recover it. If you clear your browser data or switch devices, it's gone unless you exported a CSV backup. Export one now and then. The privacy policy has the details.\n\n5. Not financial advice\nThis is an educational tool and gives no financial, tax, legal or investment advice. Its numbers, forecasts and projections are estimates based on what you enter and on simple assumptions, and the FAQ explains how the main ones are calculated. It's still an alpha, so it may contain mistakes. I'm not your financial advisor, accountant or lawyer. Big money decisions are yours, and a qualified professional is a good idea for the important ones.\n\n6. No warranty\nThe App is provided \"as is\" and \"as available\", without warranties of any kind, express or implied, including accuracy, reliability, fitness for a particular purpose, or that it will always be available or error-free.\n\n7. Limit of liability\nTo the fullest extent the law allows, I'm not liable for any loss or damage (including lost data or financial decisions) that comes from using, or not being able to use, the App. If your local law doesn't allow some of these limits, they apply only as far as the law permits.\n\n8. Changes and the off switch\nI may update, change or shut down the App, or update these terms, at any time. The \"last updated\" date on this page shows the latest version. If you keep using the App after a change, you accept the new terms. If you break these terms, your permission to use the App ends automatically.\n\n9. Everything else\nIf any part of these terms turns out to be unenforceable, the rest still applies. Names of other products, books, sites and organizations mentioned in the App belong to their owners (for example, Bogleheads® is a registered trademark of The John C. Bogle Center for Financial Literacy). Mentioning them doesn't mean they endorse this App or are affiliated with it. These terms are governed by the laws of the State of New Hampshire, and any dispute will be handled in the courts located in Rockingham County, New Hampshire.\n\n© 2025–2026 Matthew Broyer. All rights reserved.";
+const LICENSE_TEXT="The short version: use this free web app as much as you like for your own money. No account, no fees, no tracking. Don't copy it, reuse its code or design, or pass it off as yours. Details below.\n\n1. Free to use\nYou get a free, personal, non-exclusive, non-transferable permission to use this web app (the \"App\") in your browser for your own personal finances. It is meant for adults. You don't need an account or a login, and you don't pay anything.\n\n2. Hands off the code (this part is firm)\nThe App's source code, design, layout, charts, badge and achievement artwork, and written content are protected by copyright, and I keep all rights to them. Unless I give you written permission first, you agree not to:\n• copy, scrape, mirror, re-host or republish the App, or any part of its code, design, artwork or text, on any site, app or product, free or paid;\n• build a clone, a \"remix\" or an \"inspired-by\" version from its code, or take it apart to reuse it somewhere else;\n• sell, rent, sublicense or give away the App, or bundle it into anything else;\n• use the App to run a finance service for other people, or for any other commercial purpose;\n• remove or hide the copyright notice or these terms, or claim the App as your own work;\n• interfere with the App or the site it lives on, including with bots or automated scraping.\nViewing the page source to see how something works is fine. Copying or reusing the code without permission breaks these terms and my copyright, and I may respond with takedown requests to hosts and search engines and with any legal remedies available to me.\n\n3. Use it sensibly\nUse the App only for lawful, personal purposes. Don't store other people's private information in it. Don't enter passwords, Social Security numbers, or full card or account numbers. Don't try to break, overload or probe the App or the site it lives on.\n\n4. Your data stays with you\nThere are no accounts and no servers holding your data. Everything you enter is saved in your own browser (local storage) and never leaves your device unless you export it. That means I can't see it and can't recover it. If you clear your browser data or switch devices, it's gone unless you exported a CSV backup. Export one now and then. The privacy policy has the details.\n\n5. Not financial advice\nThis is an educational tool and gives no financial, tax, legal or investment advice. Its numbers, forecasts and projections are estimates based on what you enter and on simple assumptions, and the FAQ explains how the main ones are calculated. It's still a beta, so it may contain mistakes. I'm not your financial advisor, accountant or lawyer. Big money decisions are yours, and a qualified professional is a good idea for the important ones.\n\n6. No warranty\nThe App is provided \"as is\" and \"as available\", without warranties of any kind, express or implied, including accuracy, reliability, fitness for a particular purpose, or that it will always be available or error-free.\n\n7. Limit of liability\nTo the fullest extent the law allows, I'm not liable for any loss or damage (including lost data or financial decisions) that comes from using, or not being able to use, the App. If your local law doesn't allow some of these limits, they apply only as far as the law permits.\n\n8. Changes and the off switch\nI may update, change or shut down the App, or update these terms, at any time. The \"last updated\" date on this page shows the latest version. If you keep using the App after a change, you accept the new terms. If you break these terms, your permission to use the App ends automatically.\n\n9. Everything else\nIf any part of these terms turns out to be unenforceable, the rest still applies. Names of other products, books, sites and organizations mentioned in the App belong to their owners (for example, Bogleheads® is a registered trademark of The John C. Bogle Center for Financial Literacy). Mentioning them doesn't mean they endorse this App or are affiliated with it. These terms are governed by the laws of the State of New Hampshire, and any dispute will be handled in the courts located in Rockingham County, New Hampshire.\n\n© 2025–2026 Matthew Broyer. All rights reserved.";
 const PRIVACY_TEXT="The short version: this app does not collect your data. There is no account, no database, no analytics, no ads and no cookies. What you enter stays in your browser.\n\n1. What you enter\nAn optional name, date of birth, take-home and retirement income, account balances, credit score, notes, and transactions (date, description, category, amount). The date of birth only feeds age-based numbers, so you can leave it blank.\n\n2. Where it is stored\nIn your browser's local storage, on this device only. The app uses three entries: pwmt.web.v1 (your data), pwmt.theme (light or dark) and pwmt.notice (that you dismissed the storage notice). No cookies are set. Local storage is not encrypted, so anyone who can use this browser profile can see your data. On a shared computer, use a private window or clear your data when you finish.\n\n3. What leaves your device\nNothing, unless you export it. Export saves a CSV file to your device, and what happens to that file afterward is up to you. While the app runs it makes no network requests: no fonts, scripts, images, analytics or error reports are loaded from or sent to any other site.\nThis site is hosted on GitHub Pages, and its domain name is managed through Namecheap. When you load the page, GitHub, like any web host, receives your request and may log technical details such as your IP address, browser type and time of request. Namecheap may see lookups of the domain name. That happens on their side, outside the app, under their own privacy statements, and nothing you enter is part of it. I add no analytics and keep no logs of my own.\n\n4. Deleting your data\nGet Started, then Your data, then Clear all data removes everything from local storage after you confirm. For the undo button, a copy is held in memory only, never saved, and it is gone when you leave or reload the page. The theme and notice entries stay until you clear this site's data in your browser settings, which also deletes everything else. I can't delete your data for you, because I never receive it.\n\n5. Export and import\nData, then Export CSV downloads everything you entered. Data, then Import CSV brings it back, or adds a bank export. Import happens in your browser and the file is never uploaded.\n\n6. Sensitive information\nPlease don't enter passwords, Social Security numbers, or full card or account numbers. The app blocks or removes what looks like a card or Social Security number in text fields and imports, but it can't catch everything.\n\n7. Children\nThis app is for adults managing their own money. It is not directed to children. It collects no information from anyone, because it collects nothing.\n\n8. Changes\nIf the app's behavior changes, I will update this page and its \"last updated\" date.";
-const RELEASES=[{"title": "mbmoney.online © 2026 · ALPHA 4.0 Web Edition · September 20, 2026", "lines": ["• Renamed from Personal Wealth Management Tool to mbmoney.online. New name in the header, page title, footer, downloads and this app's text. Your saved data carries over.", "• Runs in your browser as one web page. No spreadsheet software, no accounts, no server. Your data autosaves as you type.", "• Move data in and out as one CSV. Paste rows from Excel, Google Sheets or your bank, or import a bank-style CSV (duplicates are flagged). Demo data and a CSV template are built in.", "• Dark and light themes, gradient charts with hover tooltips, and a table view for every chart.", "• Numbers count up, charts draw in, and achievements unlock with confetti. New: a Level chip in the header, a \"Next up\" card and rotating insights on the Dashboard.", "• New What If? tab: sliders for extra investing, expected return and time horizon, with a live projection.", "• Monthly Budget shows one month at a time: planned vs. actual, copy from last month, fill forward, and a monthly net worth check-in (balances, credit score, life-event note).", "• Transactions: quick add with description memory, search and filters, inline editing, bulk category and delete, paste from a spreadsheet.", "• Dashboard: 50/30/20 check, this-month snapshot and a net worth hero. Extra Charts redrawn with one axis per chart and better unusual-expense detection.", "• Achievements: all 82 originals plus 30 new, redrawn badges, live progress on locked ones, tap for details.", "• Site search (press / or Ctrl/Cmd + K), expandable FAQ, \"last updated\" stamps, a back-to-top button, loading animations and a short storage notice.", "• Confirmation before every destructive action: deleting a transaction, clearing a month or all data, replacing your data on import.", "• Rewritten terms of use, a new privacy policy, a guided About tour, shorter on-page copy and more space under the header.", "• Faster to use: one Data menu for import and export, larger tap targets, screens that respond in under 400 ms, and Transactions filters tucked behind a button.", "• Harder to break: undo after clearing data, importing, loading demo data, bulk edits and clearing a month. The Add form flags missing amounts, future dates and duplicates before you save.", "• Easier to finish: Get Started opens with a setup checklist that shows your progress and your next step.", "• Safer by design: a strict content security policy blocks outside connections and unapproved scripts. Imports are size-limited, damaged saved data is repaired on load, and card or Social Security numbers are blocked or removed from text.", "• Accessibility pass: skip link, page headings, labeled form fields in every table row, labeled dialogs, higher contrast in light mode, and tabs that can be scrolled both ways.", "• Demo data now uses generic store and service names instead of real brands.", "• Demo data uses a sample profile (John Doe, age 28).", "• Fixed: the retirement and FI/RE dates counted the Cash row twice and left out investments. They now use cash + investments, matching the Milestones chart.", "• Changed: \"current month\" achievements (debt-free, car-free, etc.) now need a balance entered and a prior balance owed, so they no longer unlock on an empty sheet. Streaks only count months up to the current one.", "• Changed: type expenses and debts as positive numbers. The app handles the sign.", "• The privacy policy now names the hosting (GitHub Pages) and the domain manager (Namecheap). The page refuses to run inside another site's frame."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.1 · October 21, 2025", "lines": ["• Minor formula corrections for improved accuracy.", "• 'Get Started' page refinements for a smoother onboarding experience.", "• Added the 'Essential Banking Checklist' to improve user stability.", "• Updated spreadsheet description.", "• Introduced the 'Achievements' tab.", "• Includes 82 new achievements.", "• Custom images.", "• Unique descriptions.", "• Defined rarity and difficulty levels.", "• Implemented a leveling system to enhance user engagement and motivation.", "• Each achievement grants you XP.", "• Added a level progress bar displaying current XP and XP required."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.0 · August 28, 2025", "lines": ["• Copyright update.", "• Foundation for the 'Achievements' tab has been planned.", "• 'Dashboard' accessibility updates."]}, {"title": "Personal Wealth Management Tool © 2025 · BETA 2.2 · April 1, 2025", "lines": ["• Updated various terms for accesibility reasons and better calculations.", "• Updated tab sequence.", "• Updated a various charting forumulas."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.1 · September 17, 2024", "lines": ["• Added the 'Extra Charts' tab.", "• 'Monthly Update' tab now includes credit score tracking."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.0 · September 1, 2024", "lines": ["• Essential rebuild; starting from a fresh workbook.", "• ‘Get Started’: Condensed pages ‘Getting Started’, ‘Settings’, and ‘License’ into one.", "• ‘Dashboard’: The new dashboard is the updates biggest feature!", "• ‘Transactions’: Removed columns for bloating/accessibility reasons.", "• ‘Monthly Tracking’: Combined the ‘Net Worth’ and ‘Budget’ tracking tabs into one.", "• ‘Chart Data’: This page contains all of the formulas required for data validation.", "• Updated the theme to better reflect wealth accumulation.", "• Enhanced the mobile user experience.", "• Improved the flow of information throughout the spreadsheet.", "• Updated the spreadsheet description to more accurately represent the project.", "• Removed the ‘Quick Tools’ tab.", "• Removed the option to sign up for update notifications.", "• Reduced spreadsheet length to 80 years."]}, {"title": "Personal Wealth Management Tool © 2024 · Full Version 1.1 · July 5, 2024", "lines": ["• Updated the project name to 'Personal Wealth Management Tool'", "• Updated various tab names and colors.", "• Introducing the new 'Quick Tools' tab!", "• Custom Budget Calculator", "• Savings Goal Calculator", "• Portfolio Rebalancing Tool", "• 'My Budget Planner' chart is no longer displaying \"over budget\" at net zero.", "• RE: Optimized the 'Input Transactions' page.", "• RE: Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · Full Version 1.0 · May 28, 2024", "lines": ["• Optimized the 'Input Transactions' page.", "• Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.1 · April 30, 2024", "lines": ["• 'Set Budget Targets' tab now shows your current category totals.", "• 'Set Budget Targets' pie chart updated for better presentation.", "• Cells that require inputs are now validated to reduce possible errors.", "• Fixed 'Historical Charts' Month-over-Month bug, and updated pie charts.", "• Unlocked 'Input Transactions' tab to enable table sorting."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.0 · April 26, 2024", "lines": ["• The project moves into private BETA testing with multiple testers.", "• Implemented assets vs. liabilities overview and budget overview charts.", "• Introduced settings page, user themes, and retirement planning options.", "• Enhanced customer support features.", "• Obtained spreadsheet copyright protection; official licensing agreement."]}, {"title": "Personal Wealth Management · ALPHA · April 12, 2024", "lines": ["• Effortlessly categorize spending, income, needs, wants, savings & debts.", "• See your financial health at a glance.", "• Track progress with clear charts and historical timelines.", "• Plan & monitor spending to reach your financial goals.", "• Track net worth, savings, and debt repayments."]}];
+const RELEASES=[{"title": "mbmoney.online © 2026 · BETA 4.0 Web Edition · September 20, 2026", "lines": ["• Now in BETA (was ALPHA). All pages, CSV import and export, and paste tools are in place and tested, and the forecasts are still estimates. Expect fixes as more people use it.", "• New logo and site icon.", "• Renamed from Personal Wealth Management Tool to mbmoney.online. New name in the header, page title, footer, downloads and this app's text. Your saved data carries over.", "• New categories: Alcohol, Hobbies & Sports, Clothing, Childcare & Kids, Pets, Home & Auto Insurance, Interest & Dividends, Rental Income, Government Benefits and 529 / Education Savings. Existing data and CSV files work as before.", "• Paste Transactions reads more bank and spreadsheet layouts: title rows, balance columns, debit and credit columns, a debit/credit label column, amounts like $(10.28). Pasting on any page opens it. Picking a category fills other rows with the same description, and the preview shows your totals before you add.", "• Transactions tab: the Expense and Income columns are now one Amount column (negative is an expense, positive is income). Paste Transactions can set a column as Balance.", "• Life events & notes on Monthly Budget is now a full-width box. Write as much as you need and add as many notes per month as you like. An All notes list shows every month.", "• Easier pasting: press Ctrl+V anywhere on Transactions, or load a file. Columns are detected for you (tabs, commas, bank web text, debit and credit columns), and you can fix them, pick categories row by row, and undo the import.", "• Runs in your browser as one web page. No spreadsheet software, no accounts, no server. Your data autosaves as you type.", "• Move data in and out as one CSV. Paste rows from Excel, Google Sheets or your bank, or import a bank-style CSV (duplicates are flagged). Demo data and a CSV template are built in.", "• Dark and light themes, gradient charts with hover tooltips, and a table view for every chart.", "• Numbers count up, charts draw in, and achievements unlock with confetti. New: a Level chip in the header, a \"Next up\" card and rotating insights on the Dashboard.", "• New What If? tab: sliders for extra investing, expected return and time horizon, with a live projection.", "• Monthly Budget shows one month at a time: planned vs. actual, copy from last month, fill forward, and a monthly net worth check-in (balances, credit score, life-event note).", "• Transactions: quick add with description memory, search and filters, inline editing, bulk category and delete, paste from a spreadsheet.", "• Dashboard: 50/30/20 check, this-month snapshot and a net worth hero. Extra Charts redrawn with one axis per chart and better unusual-expense detection.", "• Achievements: all 82 originals plus 30 new, redrawn badges, live progress on locked ones, tap for details.", "• Site search (press / or Ctrl/Cmd + K), expandable FAQ, \"last updated\" stamps, a back-to-top button, loading animations and a short storage notice.", "• Confirmation before every destructive action: deleting a transaction, clearing a month or all data, replacing your data on import.", "• Rewritten terms of use, a new privacy policy, a guided About tour, shorter on-page copy and more space under the header.", "• Faster to use: one Data menu for import and export, larger tap targets, screens that respond in under 400 ms, and Transactions filters tucked behind a button.", "• Harder to break: undo after clearing data, importing, loading demo data, bulk edits and clearing a month. The Add form flags missing amounts, future dates and duplicates before you save.", "• Easier to finish: Get Started opens with a setup checklist that shows your progress and your next step.", "• Safer by design: a strict content security policy blocks outside connections and unapproved scripts. Imports are size-limited, damaged saved data is repaired on load, and card or Social Security numbers are blocked or removed from text.", "• Accessibility pass: skip link, page headings, labeled form fields in every table row, labeled dialogs, higher contrast in light mode, and tabs that can be scrolled both ways.", "• Demo data now uses generic store and service names instead of real brands.", "• Demo data uses a sample profile (John Doe, age 28).", "• Fixed: the retirement and FI/RE dates counted the Cash row twice and left out investments. They now use cash + investments, matching the Milestones chart.", "• Changed: \"current month\" achievements (debt-free, car-free, etc.) now need a balance entered and a prior balance owed, so they no longer unlock on an empty sheet. Streaks only count months up to the current one.", "• Changed: type expenses and debts as positive numbers. The app handles the sign.", "• The privacy policy now names the hosting (GitHub Pages) and the domain manager (Namecheap). The page refuses to run inside another site's frame."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.1 · October 21, 2025", "lines": ["• Minor formula corrections for improved accuracy.", "• 'Get Started' page refinements for a smoother onboarding experience.", "• Added the 'Essential Banking Checklist' to improve user stability.", "• Updated spreadsheet description.", "• Introduced the 'Achievements' tab.", "• Includes 82 new achievements.", "• Custom images.", "• Unique descriptions.", "• Defined rarity and difficulty levels.", "• Implemented a leveling system to enhance user engagement and motivation.", "• Each achievement grants you XP.", "• Added a level progress bar displaying current XP and XP required."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.0 · August 28, 2025", "lines": ["• Copyright update.", "• Foundation for the 'Achievements' tab has been planned.", "• 'Dashboard' accessibility updates."]}, {"title": "Personal Wealth Management Tool © 2025 · BETA 2.2 · April 1, 2025", "lines": ["• Updated various terms for accesibility reasons and better calculations.", "• Updated tab sequence.", "• Updated a various charting forumulas."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.1 · September 17, 2024", "lines": ["• Added the 'Extra Charts' tab.", "• 'Monthly Update' tab now includes credit score tracking."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.0 · September 1, 2024", "lines": ["• Essential rebuild; starting from a fresh workbook.", "• ‘Get Started’: Condensed pages ‘Getting Started’, ‘Settings’, and ‘License’ into one.", "• ‘Dashboard’: The new dashboard is the updates biggest feature!", "• ‘Transactions’: Removed columns for bloating/accessibility reasons.", "• ‘Monthly Tracking’: Combined the ‘Net Worth’ and ‘Budget’ tracking tabs into one.", "• ‘Chart Data’: This page contains all of the formulas required for data validation.", "• Updated the theme to better reflect wealth accumulation.", "• Enhanced the mobile user experience.", "• Improved the flow of information throughout the spreadsheet.", "• Updated the spreadsheet description to more accurately represent the project.", "• Removed the ‘Quick Tools’ tab.", "• Removed the option to sign up for update notifications.", "• Reduced spreadsheet length to 80 years."]}, {"title": "Personal Wealth Management Tool © 2024 · Full Version 1.1 · July 5, 2024", "lines": ["• Updated the project name to 'Personal Wealth Management Tool'", "• Updated various tab names and colors.", "• Introducing the new 'Quick Tools' tab!", "• Custom Budget Calculator", "• Savings Goal Calculator", "• Portfolio Rebalancing Tool", "• 'My Budget Planner' chart is no longer displaying \"over budget\" at net zero.", "• RE: Optimized the 'Input Transactions' page.", "• RE: Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · Full Version 1.0 · May 28, 2024", "lines": ["• Optimized the 'Input Transactions' page.", "• Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.1 · April 30, 2024", "lines": ["• 'Set Budget Targets' tab now shows your current category totals.", "• 'Set Budget Targets' pie chart updated for better presentation.", "• Cells that require inputs are now validated to reduce possible errors.", "• Fixed 'Historical Charts' Month-over-Month bug, and updated pie charts.", "• Unlocked 'Input Transactions' tab to enable table sorting."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.0 · April 26, 2024", "lines": ["• The project moves into private BETA testing with multiple testers.", "• Implemented assets vs. liabilities overview and budget overview charts.", "• Introduced settings page, user themes, and retirement planning options.", "• Enhanced customer support features.", "• Obtained spreadsheet copyright protection; official licensing agreement."]}, {"title": "Personal Wealth Management · ALPHA · April 12, 2024", "lines": ["• Effortlessly categorize spending, income, needs, wants, savings & debts.", "• See your financial health at a glance.", "• Track progress with clear charts and historical timelines.", "• Plan & monitor spending to reach your financial goals.", "• Track net worth, savings, and debt repayments."]}];
 'use strict';
 /* ============ helpers ============ */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
@@ -759,8 +793,10 @@ const pct=(x,d=0)=>isNum(x)?(x*100).toFixed(d)+'%':'–';
 function parseNum(s){
   if(typeof s==='number')return isFinite(s)?s:null;
   s=String(s==null?'':s).trim(); if(!s)return null;
-  let neg=false; if(/^\(.*\)$/.test(s)){neg=true;s=s.slice(1,-1)}
-  s=s.replace(/[$,\s]/g,''); if(s.endsWith('-')){neg=!neg;s=s.slice(0,-1)}
+  let neg=false; s=s.replace(/[$€£\s,]/g,'');
+  const cd=/^(.*\d)(cr|dr)$/i.exec(s); if(cd){ s=cd[1]; if(cd[2].toLowerCase()==='dr')neg=true; }
+  if(/^\(.*\)$/.test(s)){neg=!neg;s=s.slice(1,-1)}
+  if(s.endsWith('-')){neg=!neg;s=s.slice(0,-1)}
   const n=Number(s); if(!isFinite(n)||s==='')return null; return neg?-n:n;
 }
 const round2=x=>Math.round(x*100)/100;
@@ -775,10 +811,10 @@ const GROUPS={
 const EXP_GROUPS=['needs','wants','savings','debt'];
 const ASSET_GROUPS=['cash','invest','use'], LIAB_GROUPS=['cc','loan'];
 const ROW_DEFS=[
- ['salary','income','Salary'],['bonus','income','Bonus'],['reimb','income','Reimbursement'],['biz','income','Business Income'],['taxref','income','Tax Refund'],['othinc','income','Other Income'],
- ['rent','needs','Rent'],['bills','needs','Bills & Utilities'],['groc','needs','Groceries'],['hins','needs','Health/Dental/Life Insurance'],['auto','needs','Auto & Transport'],['taxes','needs','Taxes'],['bizexp','needs','Business Expenses'],['finsvc','needs','Financial Services'],['hfit','needs','Health & Fitness'],['pcare','needs','Personal Care'],['homeimp','needs','Home Improvement'],['edu','needs','Education'],['fees','needs','Fees & Charges'],
- ['rest','wants','Restaurants'],['subs','wants','Subscriptions'],['shop','wants','Shopping'],['ent','wants','Entertainment'],['travel','wants','Travel'],['gifts','wants','Gifts & Donations'],['misc','wants','Misc.'],
- ['sv_ef','savings','Emergency Fund Contribution'],['sv_401k','savings','401k Contribution'],['sv_roth','savings','Roth IRA Contribution'],['sv_tira','savings','Traditional IRA Contribution'],['sv_hsa','savings','HSA Contribution'],['sv_tax','savings','Taxable Inv. Contribution'],['sv_cry','savings','Cryptocurrency Contribution'],
+ ['salary','income','Salary'],['bonus','income','Bonus'],['reimb','income','Reimbursement'],['biz','income','Business Income'],['taxref','income','Tax Refund'],['intdiv','income','Interest & Dividends'],['rental','income','Rental Income'],['govben','income','Government Benefits'],['othinc','income','Other Income'],
+ ['rent','needs','Rent'],['bills','needs','Bills & Utilities'],['groc','needs','Groceries'],['hins','needs','Health/Dental/Life Insurance'],['auto','needs','Auto & Transport'],['taxes','needs','Taxes'],['bizexp','needs','Business Expenses'],['finsvc','needs','Financial Services'],['hfit','needs','Health & Fitness'],['pcare','needs','Personal Care'],['homeimp','needs','Home Improvement'],['edu','needs','Education'],['fees','needs','Fees & Charges'],['childcare','needs','Childcare & Kids'],['pets','needs','Pets'],['pins','needs','Home & Auto Insurance'],
+ ['rest','wants','Restaurants'],['alc','wants','Alcohol'],['subs','wants','Subscriptions'],['shop','wants','Shopping'],['cloth','wants','Clothing'],['hobby','wants','Hobbies & Sports'],['ent','wants','Entertainment'],['travel','wants','Travel'],['gifts','wants','Gifts & Donations'],['misc','wants','Misc.'],
+ ['sv_ef','savings','Emergency Fund Contribution'],['sv_401k','savings','401k Contribution'],['sv_roth','savings','Roth IRA Contribution'],['sv_tira','savings','Traditional IRA Contribution'],['sv_hsa','savings','HSA Contribution'],['sv_tax','savings','Taxable Inv. Contribution'],['sv_cry','savings','Cryptocurrency Contribution'],['sv_529','savings','529 / Education Savings'],
  ['dp_mort','debt','Mortgage Payment'],['dp_auto','debt','Auto Loan Payment'],['dp_cc','debt','Credit Card Payment'],['dp_edu','debt','Education Loan Payment'],['dp_pers','debt','Personal Loan Payment'],['dp_p2p','debt','Peer-to-Peer Loan Payment'],
  ['b_check','cash','Checking Account'],['b_ef','cash','Emergency Fund'],['b_cash','cash','Cash'],
  ['b_401k','invest','Vested 401k'],['b_tira','invest','Traditional IRA'],['b_roth','invest','Roth IRA'],['b_hsa','invest','HSA'],['b_tax','invest','Taxable Investments'],['b_cry','invest','Cryptocurrency'],['b_biz','invest','Business Equity'],
@@ -808,7 +844,7 @@ function freshState(){
 let S=freshState();
 const nameOf=id=>(S.names[id]&&S.names[id].trim())||ROW[id].name;
 function categorize(){ // name -> id map
-  const m=new Map(); for(const id of Object.keys(ROW))m.set(nameOf(id).toLowerCase(),id); return m;
+  const m=new Map(); for(const id of Object.keys(ROW))m.set(ROW[id].name.toLowerCase(),id); for(const id of Object.keys(ROW))if(S.names[id]&&S.names[id].trim())m.set(S.names[id].trim().toLowerCase(),id); return m; // your own names win over built-in ones
 }
 let _saveMsg=null, storageOK=true;
 function setSaveMsg(t){ if(_saveMsg)_saveMsg.textContent=t; }
@@ -820,6 +856,7 @@ const hasRow=id=>typeof id==='string'&&Object.prototype.hasOwnProperty.call(ROW,
 const ISO_D=/^\d{4}-\d{2}-\d{2}$/, ISO_M=/^\d{4}-\d{2}$/, fin=v=>typeof v==='number'&&isFinite(v);
 const uerr=m=>Object.assign(new Error(m),{userMsg:true});
 /* Rebuild state from storage field by field, so a damaged or hand-edited entry cannot break the app. */
+const NOTE_MAX=2000, NOTE_CAP=20;
 function cleanState(o){
   const f=freshState(), own=x=>x&&typeof x==='object'&&!Array.isArray(x)?x:{}, st=own(o.settings);
   f.settings.name=typeof st.name==='string'?st.name.slice(0,60):'';
@@ -829,7 +866,7 @@ function cleanState(o){
   for(const [id,v] of Object.entries(own(o.names)))if(hasRow(id)&&typeof v==='string')f.names[id]=v.slice(0,60);
   for(const k of ['budget','bal'])for(const [mk,bag] of Object.entries(own(o[k])))if(ISO_M.test(mk)){ const nb={}; for(const [id,v] of Object.entries(own(bag)))if(hasRow(id)&&fin(v))nb[id]=v; if(Object.keys(nb).length)f[k][mk]=nb; }
   for(const [mk,v] of Object.entries(own(o.credit)))if(ISO_M.test(mk)&&fin(v))f.credit[mk]=v;
-  for(const [mk,v] of Object.entries(own(o.notes)))if(ISO_M.test(mk)&&typeof v==='string'&&v)f.notes[mk]=v.slice(0,500);
+  for(const [mk,v] of Object.entries(own(o.notes)))if(ISO_M.test(mk)){ const a=(Array.isArray(v)?v:[v]).filter(x=>typeof x==='string'&&x.trim()).map(x=>x.slice(0,NOTE_MAX)).slice(0,NOTE_CAP); if(a.length)f.notes[mk]=a; } // older saves held one string per month
   if(Array.isArray(o.tx)){ const used=new Set(); let max=0; const pend=[];
     for(const t of o.tx.slice(0,200000)){ if(!t||typeof t!=='object'||!ISO_D.test(t.date||'')||!fin(t.amt))continue;
       const n=Number.isInteger(t.n)&&t.n>0&&!used.has(t.n)?t.n:0; if(n){used.add(n);max=Math.max(max,n)}
@@ -892,7 +929,7 @@ function toCSV(){
   for(const mk of Object.keys(S.budget).sort()) for(const id of Object.keys(S.budget[mk]).sort((a,b)=>order(a)-order(b))) { const v=S.budget[mk][id]; if(isNum(v)) out.push(['Budget',mk+'-01',csvSafe(nameOf(id)),GROUPS[ROW[id].g].label,v,'','']); }
   for(const mk of Object.keys(S.bal).sort()) for(const id of Object.keys(S.bal[mk]).sort((a,b)=>order(a)-order(b))) { const v=S.bal[mk][id]; if(isNum(v)) out.push(['Balance',mk+'-01',csvSafe(nameOf(id)),GROUPS[ROW[id].g].label,v,'','']); }
   for(const mk of Object.keys(S.credit).sort()) if(isNum(S.credit[mk])) out.push(['Credit Score',mk+'-01','Credit Score','',S.credit[mk],'','']);
-  for(const mk of Object.keys(S.notes).sort()) if(S.notes[mk]) out.push(['Note',mk+'-01','Life Events','','',csvSafe(S.notes[mk]),'']);
+  for(const mk of Object.keys(S.notes).sort()) for(const nt of S.notes[mk]) if(nt) out.push(['Note',mk+'-01','Life Events','','',csvSafe(nt),'']);
   const txs=S.tx.slice().sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:a.n-b.n);
   for(const t of txs) out.push(['Transaction',t.date,csvSafe(t.desc),t.cat&&ROW[t.cat]?nameOf(t.cat):'',t.amt,'',t.bal===''||t.bal==null?'':t.bal]);
   // Description column is unused for transactions; keep Item = description
@@ -934,7 +971,7 @@ function importCSVText(text,mode){
       }else if(type==='credit score'||type==='credit'){
         const n=parseNum(val); if(!dt||n==null){info.skipped++;continue} N.credit[mkOf(dt)]=n; info.other++;
       }else if(type==='note'){
-        if(!dt){info.skipped++;continue} const t=clean(csvUnsafe(get(r,iDs)||val).trim(),500); if(t)N.notes[mkOf(dt)]=t; info.other++;
+        if(!dt){info.skipped++;continue} const t=clean(csvUnsafe(get(r,iDs)||val).trim(),NOTE_MAX); if(t){ const k=mkOf(dt), a=Array.isArray(N.notes[k])?N.notes[k]:(N.notes[k]=[]); if(!a.includes(t)&&a.length<NOTE_CAP)a.push(t); } info.other++;
       }else if(type==='transaction'){
         const amt=parseNum(val); if(!dt||amt==null){info.skipped++;continue}
         const cname=get(r,iC).trim(); let cat=''; if(cname){cat=rowId(cname,g=>GROUPS[g].kind==='cat')||''; if(!cat)info.uncategorized++;} else info.uncategorized++;
@@ -1607,7 +1644,7 @@ function buildDemo(){
     ef+=250+ri(-20,20); k401+=400+ri(-150,250); roth+=200+ri(-60,110); hsa+=75; tax+=75+ri(-20,60); cry=Math.max(50,cry*(1+(rnd()-.5)*.25)); veh-=150; cc1=Math.max(0,cc1-ri(140,260)+(i%5===0?120:0)); cc2=Math.max(0,cc2-ri(30,90)); autoL-=300; eduL-=150; chk=2200+ri(-500,900);
     N.bal[mk]={b_check:round2(chk),b_ef:round2(ef),b_cash:ri(60,140),b_401k:round2(k401),b_roth:round2(roth),b_hsa:round2(hsa),b_tax:round2(tax),b_cry:round2(cry),b_veh:round2(veh),b_bike:400,l_cc1:round2(cc1),l_cc2:round2(cc2),l_auto:round2(autoL),l_edu:round2(eduL)};
     score=Math.min(742,score+ri(2,6)); N.credit[mk]=Math.round(score);
-    if(i===6)N.notes[mk]='Started new job'; if(i===14)N.notes[mk]='Moved apartments'; if(i===20)N.notes[mk]='Paid off Credit Card #2';
+    if(i===6)N.notes[mk]=['Started new job']; if(i===14)N.notes[mk]=['Moved apartments','New lease is $75 a month higher. Rent budget updated.']; if(i===20)N.notes[mk]=['Paid off Credit Card #2'];
   });
   N.seq=seq; { const now=Date.now(); N.updated=now; N.touched={tx:now,budget:now,bal:now,config:now}; } return N;
 }
@@ -1630,7 +1667,7 @@ function dlg(o){
   return new Promise(res=>{
     let result=null;
     const bs=(o.buttons||[{label:'OK',value:true,cls:'primary'}]);
-    const tid='dt'+Math.random().toString(36).slice(2,8); const d=el('dialog',{'aria-labelledby':tid},el('h3',{id:tid},o.title),o.body?el('div',{class:'dbody'},o.body):null,
+    const tid='dt'+Math.random().toString(36).slice(2,8); const d=el('dialog',{'aria-labelledby':tid,class:o.cls||null},el('h3',{id:tid},o.title),o.body?el('div',{class:'dbody'},o.body):null,
       el('div',{class:'btns'},bs.map(b=>el('button',{class:'btn '+(b.cls||''),type:'button',onclick:()=>{result=b.value;d.close()}},b.label))));
     d.addEventListener('close',()=>{d.remove();res(result)});
     document.body.append(d); d.showModal();
@@ -1647,7 +1684,7 @@ function go(p,noHash){
   if(booted&&!noHash){ const h=$('#p-'+p+' h2'); if(h){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); } }
   if(booted&&typeof playIn==='function')playIn(p);
 }
-function hasAnyData(){return S.tx.length>0||Object.keys(S.budget).length>0||Object.keys(S.bal).length>0}
+function hasAnyData(){return S.tx.length>0||Object.keys(S.budget).length>0||Object.keys(S.bal).length>0||Object.keys(S.notes).length>0||Object.keys(S.credit).length>0}
 function replaceState(N){ const flags=S.flags||{}; S=N; { const now=Date.now(); S.touched=S.touched||{}; if(hasAnyData()){S.updated=now; if(S.tx.length)S.touched.tx=now; if(Object.keys(S.budget).length)S.touched.budget=now; if(Object.keys(S.bal).length)S.touched.bal=now; S.touched.config=now}else{S.updated=null;S.touched={}} } S.flags=Object.assign({},N.flags||{},flags); VERSION++; M.ver=-1; ACH=ACH; persist(); for(const p of PAGES)dirty[p]=true; if(typeof checkUnlocks==='function')checkUnlocks(true); }
 function effTheme(){ const a=document.documentElement.getAttribute('data-theme'); return a||(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); }
 function setTheme(t){
@@ -1892,7 +1929,7 @@ const CSV_DOC_LINES=[
 RENDER.start=function(){
   const root=$('#p-start'); root.replaceChildren(); const T=S.settings;
   root.append(el('div',{class:'page-h'},el('div',null,el('h2',null,'See where your money goes'),el('p',null,'Log spending, check in monthly, and get your net worth, savings rate and retirement date. Free, no account, and your data stays in your browser.')),
-    el('span',{class:'pill'},'ALPHA 4.0 · Web')));
+    el('span',{class:'pill'},'BETA 4.0 · Web')));
   if(!hasAnyData())root.append(emptyBanner());
   root.append(stepsEl());
   const g=el('div',{class:'grid g2'}); root.append(g);
@@ -2061,6 +2098,39 @@ function buildBudget(m){
   BUD.refresh=refresh; refresh(); return wrap;
 }
 
+/* Life events and notes: any number per month, each with room to write. */
+function notesCard(m){
+  const card=el('div',{class:'card notes-card'},el('div',{class:'bg-h'},el('div',null,el('h3',null,'Life events & notes · '+mLabelLong(m)),el('div',{class:'sub'},'Anything that explains this month\'s numbers: a new job, a move, a big purchase. Add as many notes as you need.'))));
+  let list=(S.notes[m]||[]).slice(); if(!list.length)list=[''];
+  const box=el('div',{class:'notes-list'}), foot=el('div',{class:'notes-foot'}), all=el('details',{class:'notes-all'});
+  const commit=()=>{ const c=list.map(s=>s.trim()).filter(Boolean); if(c.length)S.notes[m]=c; else delete S.notes[m]; edited('budget','notes'); };
+  const grow=t=>{ t.style.height='auto'; t.style.height=Math.min(t.scrollHeight+2,420)+'px'; };
+  function drawAll(){
+    const ks=Object.keys(S.notes).filter(k=>S.notes[k]&&S.notes[k].length).sort().reverse(), n=ks.reduce((a,k)=>a+S.notes[k].length,0);
+    all.replaceChildren(el('summary',null,'All notes ('+n+')'));
+    if(!n){ all.append(el('p',{class:'sub'},'Nothing yet. Notes from every month will be listed here.')); return; }
+    for(const k of ks)all.append(el('div',{class:'na-m'},el('button',{class:'btn sm ghost',type:'button',onclick:()=>{ BUD.month=k; BUD.view='networth'; RENDER.budget(); }},mLabelLong(k)),el('ul',null,S.notes[k].map(t=>el('li',null,t)))));
+  }
+  function draw(focusLast){
+    box.replaceChildren(); const tas=[];
+    list.forEach((txt,i)=>{
+      const ta=el('textarea',{rows:2,maxlength:NOTE_MAX,'aria-label':'Note '+(i+1)+' for '+mLabelLong(m),placeholder:i===0?'e.g. Started a new job. Moved apartments. Paid off Credit Card #2.':'Another note'}); ta.value=txt; tas.push(ta);
+      ta.addEventListener('input',()=>{ grow(ta); if(!looksSensitive(ta.value)){ list[i]=ta.value; commit(); } });
+      let atFocus=txt; ta.addEventListener('focus',()=>{ atFocus=list[i]||''; });
+      ta.addEventListener('change',()=>{ if(looksSensitive(ta.value)){ toast(SENSITIVE_MSG,6000); ta.value=atFocus; list[i]=atFocus; commit(); grow(ta); } drawAll(); });
+      const del=el('button',{class:'btn sm ghost',type:'button','aria-label':'Delete note '+(i+1),title:'Delete this note',onclick:()=>{ const had=list[i]&&list[i].trim(); const snap=JSON.stringify(S); if(list.length===1)list=['']; else list.splice(i,1); commit(); draw(); drawAll(); if(had)undoToast('Note deleted.',snap); }},'✕');
+      box.append(el('div',{class:'note-row'},ta,list.length>1||txt.trim()?del:null));
+    });
+    tas.forEach(t=>setTimeout(()=>grow(t),0)); if(focusLast&&tas.length)tas[tas.length-1].focus();
+    const last=list[list.length-1]||''; add.disabled=list.length>=NOTE_CAP||!last.trim();
+  }
+  const add=el('button',{class:'btn sm',type:'button',onclick:()=>{ list.push(''); draw(true); }},'+ Add another note');
+  foot.append(add,el('span',{class:'sub'},'Saved as you type. Included in your CSV export.'));
+  card.append(box,foot,all); draw(); drawAll();
+  box.addEventListener('input',()=>{ const last=list[list.length-1]||''; add.disabled=list.length>=NOTE_CAP||!last.trim(); });
+  return card;
+}
+
 function buildNetWorth(m){
   const wrap=el('div'); const used=usedIds(); const list=[]; const refs={rows:{},grp:{}}; const prev=mAdd(m,-1);
   const tNW=el('div',{class:'big'}),tA=el('div',{class:'val'}),tL=el('div',{class:'val'}),tD=el('div',{class:'val'});
@@ -2084,11 +2154,11 @@ function buildNetWorth(m){
     place[g].append(card);
   }
   // credit score + notes
-  const card=groupCard('Benchmarks & notes','Optional');
+  const card=groupCard('Benchmarks','Optional');
   const score=el('input',{type:'text',inputmode:'numeric',placeholder:'300–850',value:isNum(S.credit[m])?String(S.credit[m]):'',onchange:e=>{ const v=e.target.value.trim(); if(v===''){delete S.credit[m]} else { const n=parseNum(v); if(n==null||n<300||n>850||!Number.isInteger(n)){toast('Credit scores are whole numbers from 300 to 850.');e.target.value=isNum(S.credit[m])?S.credit[m]:'';return} S.credit[m]=n } edited('budget','credit'); }});
-  const note=el('input',{type:'text',maxlength:280,placeholder:'e.g. Started a new job',value:S.notes[m]||'',onchange:e=>{ const v=e.target.value.trim(); if(looksSensitive(v)){toast(SENSITIVE_MSG,6000);e.target.value=S.notes[m]||'';return} if(v)S.notes[m]=v; else delete S.notes[m]; edited('budget','notes'); }});
-  card.append(el('div',{class:'brow'},el('div',{class:'bn'},el('span',{class:'nm'},'Credit score')),score),el('div',{style:'padding:8px 0'},el('label',{class:'fld'},'Life event / note',note)));
+  card.append(el('div',{class:'brow'},el('div',{class:'bn'},el('span',{class:'nm'},'Credit score')),score));
   colB.append(card);
+  wrap.append(notesCard(m));
   const un=unusedToggle(hidden); if(un)wrap.append(el('div',{class:'row mt',style:'justify-content:center'},un)); else if(BUD.showAll)wrap.append(el('div',{class:'row mt',style:'justify-content:center'},unusedToggle(1)));
   function refresh(){
     const b=bal(m), p=bal(prev);
@@ -2110,57 +2180,195 @@ function catSelect(value,attrs,blank){
   for(const g of ['income','needs','wants','savings','debt']){ const og=el('optgroup',{label:GROUPS[g].label}); for(const id of ROW_BY_GROUP[g])og.append(el('option',{value:id},nameOf(id))); s.append(og); }
   s.value=value||''; return s;
 }
-function histMap(){ // description -> last category/type
-  const m=new Map(); for(const t of S.tx){ if(t.desc&&t.cat)m.set(t.desc.trim().toLowerCase(),{cat:t.cat,sign:t.amt<0?'exp':'inc'}) } return m;
+const descKey=d=>String(d).toLowerCase().replace(/[\d#*]+/g,' ').replace(/[^a-z ]+/g,' ').replace(/\s+/g,' ').trim();
+function histMap(){ // description -> last category/type (also keyed by a loose form, so "MARKET BASKET #123" finds "Market Basket")
+  const m=new Map(); for(const t of S.tx){ if(t.desc&&t.cat){ const v={cat:t.cat,sign:t.amt<0?'exp':'inc'}; m.set(t.desc.trim().toLowerCase(),v); const k=descKey(t.desc); if(k.length>=3)m.set('~'+k,v); } } return m;
 }
 function addTx(t){ t.n=++S.seq; S.tx.push(t); return t; }
-function parsePasted(text,opt){
-  const clean=text.replace(/\r/g,'').trim(); if(!clean)return{rows:[],skipped:0,dupes:0};
-  const useTab=/\t/.test(clean); let rows=useTab?clean.split('\n').map(l=>l.split('\t')):parseCSV(clean);
-  const norm=s=>String(s||'').trim().toLowerCase();
-  const head=rows[0].map(norm); const isHead=head.some(h=>/^(date|posted|transaction date|description|memo|payee|amount|debit|credit|category)/.test(h))&&!normDate(rows[0][0]);
-  let iD=-1,iDs=-1,iA=-1,iE=-1,iI=-1,iC=-1;
-  if(isHead){ const f=(...ns)=>head.findIndex(h=>ns.some(n=>h===n||h.startsWith(n)));
-    iD=f('date','posted','transaction date'); iDs=f('description','memo','payee','name','details'); iA=f('amount','value'); iE=f('expense','debit','withdrawal'); iI=f('income','credit','deposit'); iC=f('category'); rows=rows.slice(1);
-  }else{ const r=rows.find(r=>r.length>2)||rows[0]; iD=r.findIndex(c=>normDate(c)); if(iD<0)iD=0;
-    const numCols=[],txtCols=[]; r.forEach((c,i)=>{ if(i===iD)return; (parseNum(c)!=null&&/[\d]/.test(c)?numCols:txtCols).push(i)});
-    iDs=txtCols[0]??-1; iC=txtCols[1]??-1; if(numCols.length>=2){iE=numCols[0];iI=numCols[1]}else iA=numCols[0]??-1; }
-  const hist=histMap(), names=categorize(); const out=[]; let skipped=0,dupes=0,redacted=0;
-  const existing=new Set(S.tx.map(t=>t.date+'|'+(t.desc||'').toLowerCase()+'|'+t.amt));
-  for(const r of rows){
-    const date=normDate(r[iD]); let amt=null;
-    if(iA>=0){ amt=parseNum(r[iA]); if(amt!=null&&opt.posExpense)amt=-amt; }
-    else{ const e=iE>=0?parseNum(r[iE]):null, i=iI>=0?parseNum(r[iI]):null; if(e!=null||i!=null)amt=(i||0)-Math.abs(e||0); }
-    if(!date||amt==null||amt===0){skipped++;continue}
-    const rd_=redactSensitive(String(iDs>=0?r[iDs]:'').trim()); if(rd_.hit)redacted++; const desc=rd_.text.slice(0,200); let cat='';
-    if(iC>=0&&r[iC]){ const id=names.get(String(r[iC]).trim().toLowerCase()); if(id&&GROUPS[ROW[id].g].kind==='cat')cat=id; }
-    if(!cat&&desc){ const h=hist.get(desc.toLowerCase()); if(h)cat=h.cat; }
-    const t={date,desc,cat,amt:round2(amt),bal:''}; t.dupe=existing.has(date+'|'+desc.toLowerCase()+'|'+t.amt); if(t.dupe)dupes++; out.push(t);
+/* ---------- paste transactions ---------- */
+const P_ROLES=[['skip','Ignore'],['date','Date'],['desc','Description'],['amt','Amount'],['exp','Expense or debit'],['inc','Income or credit'],['cat','Category'],['bal','Balance'],['kind','Debit/credit label']];
+const P_MAX_LINES=20000, P_REVIEW=300;
+const pDateFull=c=>/^\d{1,4}[-/.]\d{1,2}[-/.]\d{1,4}([ T].*)?$/.test(c)||/^[A-Za-z]{3,9}\.? \d{1,2},? \d{2,4}$/.test(c)||/^\d{1,2} [A-Za-z]{3,9}\.? \d{2,4}$/.test(c);
+const pNum=c=>/\d/.test(c)&&parseNum(c)!=null;
+const P_DATE='(?:\\d{1,4}[-/]\\d{1,2}[-/]\\d{1,4}|[A-Za-z]{3,9}\\.? \\d{1,2},? \\d{2,4}|\\d{1,2} [A-Za-z]{3,9}\\.? \\d{2,4})';
+const P_AMT='[-+]?\\(?[-+]?\\$?\\s?[-+]?[\\d,]*\\.?\\d+\\)?-?', P_AMT2='[-+]?\\(?[-+]?\\$?\\s?[-+]?[\\d,]*\\.\\d{2}\\)?-?';
+const P_RE1=new RegExp('^\\s*('+P_DATE+')\\s+(.+?)\\s+('+P_AMT2+')\\s+('+P_AMT2+')\\s*$'), P_RE2=new RegExp('^\\s*('+P_DATE+')\\s+(.+?)\\s+('+P_AMT+')\\s*$');
+const pFree=re=>l=>{const m=re.exec(l); return m?m.slice(1):[l]};
+/* Split pasted text into rows of cells. Tries tabs, commas, semicolons, wide gaps and "date text amount" lines, and keeps whichever finds the most date+amount rows. */
+function pSplit(text){
+  const all=text.replace(/^﻿/,'').replace(/\r\n?/g,'\n').split('\n').filter(l=>l.trim());
+  const capped=all.length>P_MAX_LINES, L=capped?all.slice(0,P_MAX_LINES):all; if(!L.length)return{rows:[],capped:false};
+  const semi=l=>l.split(';').map(c=>/^[-+$\s]*\(?\d[\d.]*,\d{1,2}\)?-?$/.test(c.trim())?c.trim().replace(/\./g,'').replace(',','.'):c);
+  const M=[['tab',ls=>ls.map(l=>l.split('\t'))],['csv',ls=>parseCSV(ls.join('\n'))],['semi',ls=>ls.map(semi)],['gap',ls=>ls.map(l=>l.trim().split(/\s{2,}/))],['free1',ls=>ls.map(pFree(P_RE1))],['free2',ls=>ls.map(pFree(P_RE2))]];
+  const smp=L.slice(0,25), score=rows=>rows.filter(r=>r.some(c=>pDateFull(c.trim()))&&r.some(c=>!pDateFull(c.trim())&&pNum(c.trim()))).length/Math.max(1,rows.length);
+  let best=null,bs=-1; for(const[n,f]of M){ if(n==='tab'&&!L.some(l=>l.includes('\t')))continue; let s=0; try{s=score(f(smp))}catch(e){} if(s>bs+1e-9){bs=s;best=f} }
+  let rows=best(L); rows=pTrimHead(rows.map(r=>r.map(c=>String(c==null?'':c).trim())));
+  return{rows,capped};
+}
+/* Header names -> [role, priority]. Higher priority wins when two columns claim the same role. */
+function pHeadRole(c){
+  c=String(c||'').toLowerCase().replace(/\s+/g,' ').trim(); if(!c)return null;
+  if(/balance|\bbal\b|running/.test(c))return['bal',2];
+  if(/^#$|^no\.?$|^id$|^(transaction|trans\.?|txn|item|seq|sequence|line|serial)( ?(#|no\.?|number|num|id))$|^check|^cheque|card (no|number|#)|^status$/.test(c))return['skip',9];
+  if(/^(type|(transaction|trans\.?|txn) type|dr ?\/ ?cr|cr ?\/ ?dr|debit ?\/ ?credit|credit ?\/ ?debit|debit or credit|credit or debit)$/.test(c))return['kind',2];
+  if(/date|^posted|^posting|^post\b/.test(c))return['date',/^(transaction|trans|purchase)/.test(c)?3:(/post/.test(c)?1:2)];
+  if(/categor/.test(c))return['cat',2];
+  if(/expense|debit|withdraw|paid out|money out|outflow|spent/.test(c))return['exp',2];
+  if(/income|credit|deposit|paid in|money in|inflow|received/.test(c))return['inc',2];
+  if(/amount|amt|value|total|^sum/.test(c))return['amt',2];
+  if(/^description/.test(c))return['desc',3];
+  if(/^(payee|merchant|name|vendor)\b/.test(c))return['desc',2];
+  if(/memo|detail|narrative|particulars|note|^transaction|^original|^reference/.test(c))return['desc',1];
+  return null;
+}
+const P_KIND=/^(debit|dr|d|withdrawal|withdraw|purchase|sale|charge|expense|ach_debit|debit_card|credit|cr|c|deposit|refund|return|income|ach_credit)\b/i;
+const kindSign=s=>{ s=String(s||'').trim().toLowerCase(); if(/^(debit|dr|d|withdraw|purchase|sale|charge|expense|ach_debit)/.test(s))return -1; if(/^(credit|cr|c|deposit|refund|return|income|ach_credit)/.test(s))return 1; return 0; };
+/* Bank category names that mean one of ours. */
+const P_CATALIAS={'dining':'rest','restaurants & dining':'rest','restaurant':'rest','fast food':'rest','food & drink':'rest','food and dining':'rest','coffee shops':'rest','groceries':'groc','grocery':'groc','supermarkets':'groc','gas':'auto','gas & fuel':'auto','fuel':'auto','automotive':'auto','transportation':'auto','parking':'auto','utilities':'bills','phone':'bills','internet':'bills','bills':'bills','entertainment':'ent','movies & dvds':'ent','music':'ent','shopping':'shop','merchandise':'shop','general merchandise':'shop','online shopping':'shop','travel':'travel','airlines':'travel','hotels':'travel','lodging':'travel','health':'hfit','medical':'hfit','healthcare':'hfit','pharmacy':'hfit','health & wellness':'hfit','fitness':'hfit','personal care':'pcare','beauty':'pcare','education':'edu','home':'homeimp','home & garden':'homeimp','home improvement':'homeimp','gifts':'gifts','charity':'gifts','gifts & donations':'gifts','fees':'fees','fees & adjustments':'fees','bank fees':'fees','insurance':'hins','credit card payment':'dp_cc','credit card payments':'dp_cc','paycheck':'salary','payroll':'salary','salary':'salary','interest':'intdiv','dividends':'intdiv','interest income':'intdiv','alcohol':'alc','alcohol & bars':'alc','bars':'alc','subscriptions':'subs','streaming':'subs','pets':'pets','pet':'pets','clothing':'cloth','apparel':'cloth','childcare':'childcare','kids':'childcare','taxes':'taxes','tax':'taxes'};
+function pCatId(name,names){ const k=String(name||'').trim().toLowerCase(); if(!k)return ''; let id=names.get(k)||(hasRow(P_CATALIAS[k])?P_CATALIAS[k]:''); return id&&GROUPS[ROW[id].g].kind==='cat'?id:''; }
+/* If the first rows are a title or a bank summary, drop everything above the real header row. */
+function pTrimHead(rows){
+  for(let k=0;k<Math.min(15,rows.length);k++){ const r=rows[k]; if(r.filter(c=>c).length<2||r.some(c=>pDateFull(c)))continue;
+    const h=r.map(pHeadRole).filter(x=>x&&x[0]!=='skip').map(x=>x[0]); if(h.includes('date')&&(h.includes('amt')||h.includes('exp')||h.includes('inc')))return k?rows.slice(k):rows; }
+  return rows;
+}
+/* Guess what each column is (header names first, then what the values look like). */
+function pGuess(rows){
+  const ncol=Math.min(14,Math.max(0,...rows.slice(0,30).map(r=>r.length))), first=rows[0]||[];
+  const heads=first.map(pHeadRole);
+  const hdr=first.length>=2&&!first.some(c=>pDateFull(c))&&heads.filter(h=>h&&h[0]!=='skip').length>=2;
+  const good=m=>m.includes('date')&&(m.includes('amt')||m.includes('exp')||m.includes('inc'));
+  const data=rows.slice(hdr?1:0,(hdr?1:0)+30), col=i=>data.map(r=>(r[i]||'').trim()).filter(Boolean);
+  const share=(i,f)=>{const v=col(i); return v.length?v.filter(f).length/v.length:0};
+  const isKind=i=>share(i,c=>P_KIND.test(c)&&c.length<16)>=.8;
+  const avgLen=i=>{const v=col(i); return v.length?v.reduce((a,c)=>a+c.length,0)/v.length:0};
+  const pickDesc=(map,used)=>{ let best=-1,bl=0; for(let i=0;i<ncol;i++){ if(map[i]!=='skip'||used.has(i)||!col(i).length||share(i,pNum)>=.7||share(i,pDateFull)>=.5||isKind(i))continue; const l=avgLen(i); if(l>bl){bl=l;best=i} } return best; };
+  if(hdr){
+    const best={}; heads.forEach((h,i)=>{ if(!h||h[0]==='skip'||i>=ncol)return; const b=best[h[0]]; if(!b||h[1]>b.s)best[h[0]]={i,s:h[1]}; });
+    const m=Array(ncol).fill('skip'); for(const r in best)m[best[r].i]=r;
+    for(let i=0;i<ncol;i++){ // check the header against the values
+      if(m[i]==='desc'&&isKind(i))m[i]='kind';
+      else if(['amt','exp','inc','bal'].includes(m[i])&&share(i,pNum)<.5)m[i]='skip';
+      else if(m[i]==='date'&&share(i,pDateFull)<.5)m[i]='skip';
+    }
+    if(!m.includes('desc')){ const d=pickDesc(m,new Set()); if(d>=0)m[d]='desc'; }
+    if(good(m))return{map:m,hdr:true,ok:true};
   }
-  return{rows:out,skipped,dupes,redacted};
+  const map=Array(ncol).fill('skip');
+  let iD=-1; for(let i=0;i<ncol;i++)if(share(i,pDateFull)>=.5){iD=i;break}
+  if(iD>=0)map[iD]='date';
+  let num=[]; const txt=[]; for(let i=0;i<ncol;i++){ if(i===iD)continue; if(col(i).length&&share(i,pNum)>=.7)num.push(i); else if(col(i).length)txt.push(i); }
+  const dec=num.filter(i=>share(i,c=>/\./.test(c))>=.5); if(dec.length)num=dec;
+  const names=categorize(); const iK=txt.find(isKind); if(iK!=null)map[iK]='kind';
+  const iDs=pickDesc(map,new Set(num)); if(iDs>=0)map[iDs]='desc';
+  const iC=txt.filter(i=>i!==iDs&&i!==iK).find(i=>share(i,c=>!!pCatId(c,names))>=.3); if(iC!=null)map[iC]='cat';
+  if(num.length===1)map[num[0]]='amt';
+  else if(num.length>=2){ const both=data.filter(r=>pNum((r[num[0]]||'').trim())&&pNum((r[num[1]]||'').trim())).length/Math.max(1,data.length); if(both>=.8)map[num[0]]='amt'; else{map[num[0]]='exp';map[num[1]]='inc'} }
+  const rest=num.filter(i=>map[i]==='skip'); if(rest.length)map[rest[rest.length-1]]='bal'; // a leftover number column is usually the running balance
+  return{map,hdr,ok:good(map)};
 }
-async function pasteDialog(){
-  const ta=el('textarea',{rows:7,placeholder:'Paste rows from Excel, Google Sheets or your bank here.\nDate\tDescription\tAmount\tCategory (optional)',style:'font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px'});
-  const posE=el('input',{type:'checkbox'}), skipD=el('input',{type:'checkbox',checked:true}); skipD.checked=true;
-  const prev=el('div',{class:'mt'}); const upd=()=>{
-    const r=parsePasted(ta.value,{posExpense:posE.checked}); prev.replaceChildren();
-    if(!ta.value.trim())return;
-    const usable=r.rows.filter(x=>!(skipD.checked&&x.dupe));
-    prev.append(el('div',{class:'sub'},r.rows.length+' row'+(r.rows.length===1?'':'s')+' recognised'+(r.skipped?', '+r.skipped+' skipped':'')+(r.dupes?', '+r.dupes+' look like duplicates':'')+(r.redacted?', '+r.redacted+' had a card or Social Security number replaced with [removed]':'')+(usable.length?' · '+usable.filter(x=>!x.cat).length+' without a category':'')));
-    if(r.rows.length)prev.append(el('div',{class:'tablewrap',style:'max-height:190px'},el('table',{class:'datatable'},el('thead',null,el('tr',null,['Date','Description','Category','Amount'].map(h=>el('th',null,h)))),
-      el('tbody',null,r.rows.slice(0,8).map(x=>el('tr',{style:x.dupe&&skipD.checked?'opacity:.45':''},el('td',null,x.date),el('td',null,x.desc||'–'),el('td',null,x.cat?nameOf(x.cat):'–'),el('td',null,money(x.amt,true))))))));
-  };
-  ta.addEventListener('input',upd); posE.addEventListener('change',upd); skipD.addEventListener('change',upd);
-  const body=el('div',null,el('p',{class:'sub',style:'margin-top:0'},'Works with tab- or comma-separated text with or without a header row. Columns: Date, Description, Amount (or Expense + Income), optional Category. Descriptions you have categorized before are matched automatically.'),ta,
-    el('label',{class:'chk'},posE,el('span',null,'Positive amounts are expenses (credit card statements)')),el('label',{class:'chk'},skipD,el('span',null,'Skip rows already in my transactions')),prev);
-  const go_=await dlg({title:'Paste transactions',body,buttons:[{label:'Cancel',value:null},{label:'Add transactions',value:true,cls:'primary'}]}); if(!go_)return;
-  const r=parsePasted(ta.value,{posExpense:posE.checked}); const rows=r.rows.filter(x=>!(skipD.checked&&x.dupe));
-  if(!rows.length){toast('Nothing to add.');return} rows.forEach(x=>{delete x.dupe;addTx(x)}); edited('transactions','tx');
-  TX.sort={k:'date',dir:-1}; TX.page=0; RENDER.transactions(); toast('Added '+rows.length+' transaction'+(rows.length===1?'':'s')+'.'+(rows.filter(x=>!x.cat).length?' Some need a category.':''));
+function pOkDate(iso){ if(!ISO_D.test(iso))return false; const d=new Date(iso+'T00:00:00'); return !isNaN(d)&&localISO(d)===iso; }
+/* Turn rows + column choices into transactions. */
+function pBuild(rows,map,opt){
+  const at=r=>map.indexOf(r), iD=at('date'), iDs=at('desc'), iA=at('amt'), iE=at('exp'), iI=at('inc'), iC=at('cat'), iK=at('kind'), iB=at('bal');
+  const data=opt.hdr?rows.slice(1):rows;
+  let a=0,b=0,dots=0; for(const r of data){ const m=/^(\d{1,2})([-/.])(\d{1,2})[-/.]\d{2,4}/.exec(r[iD]||''); if(m){ if(+m[1]>12)a++; if(+m[3]>12)b++; if(m[2]==='.')dots++; } } const dmy=(a>0&&b===0)||(dots>0&&b===0);
+  const dt=s=>{ s=String(s||'').trim(); if(!/\d/.test(s))return ''; if(dmy){ const m=/^(\d{1,2})[-/.](\d{1,2})[-/.](\d{2,4})(.*)$/.exec(s); if(m)s=m[2]+'/'+m[1]+'/'+m[3]+m[4]; } const x=normDate(s); return pOkDate(x)?x:''; };
+  const useKind=iK>=0&&iA>=0&&!data.some(r=>{const n=parseNum(r[iA]); return n!=null&&n<0}); // a debit/credit label only matters when amounts carry no sign
+  const items=[]; let skipped=0; const skippedRows=[];
+  for(const r of data){
+    const date=iD>=0?dt(r[iD]):''; let amt=null;
+    if(iA>=0){ amt=parseNum(r[iA]); if(useKind&&amt!=null){ const k=kindSign(r[iK]); if(k)amt=k*Math.abs(amt); } } else{ const e=iE>=0?parseNum(r[iE]):null, i=iI>=0?parseNum(r[iI]):null; if(e!=null||i!=null)amt=(i||0)-Math.abs(e||0); }
+    if(!date||amt==null||amt===0){ skipped++; if(skippedRows.length<5)skippedRows.push(r.join(' | ').slice(0,140)); continue; }
+    items.push({r,date,amt});
+  }
+  let note='', flip=false;
+  if(useKind){ flip=false; }
+  else if(iA>=0&&opt.sign==='pos'){ flip=true; }
+  else if(iA>=0&&opt.sign==='auto'&&items.length&&items.every(x=>x.amt>0)){ flip=true; note='Every amount is positive, so they are treated as spending. If these are deposits, change "Amounts" below.'; }
+  if(dmy)note+=(note?' ':'')+'Dates are read as day/month/year.';
+  const hist=histMap(), names=categorize(), existing=new Set(S.tx.map(t=>t.date+'|'+(t.desc||'').toLowerCase()+'|'+t.amt));
+  const out=[]; let dupes=0, redacted=0;
+  for(const{r,date,amt}of items){
+    const rd_=redactSensitive(String(iDs>=0?r[iDs]:'').trim()); if(rd_.hit)redacted++; const desc=rd_.text.slice(0,200); let cat='';
+    if(iC>=0&&r[iC])cat=pCatId(r[iC],names);
+    if(!cat&&desc){ const h=hist.get(desc.toLowerCase())||hist.get('~'+descKey(desc)); if(h&&h.cat)cat=h.cat; }
+    let v=amt; if(flip&&!(opt.sign==='auto'&&cat&&ROW[cat].g==='income'))v=-v;
+    const bn=iB>=0?parseNum(r[iB]):null; const t={date,desc,cat,amt:round2(v),bal:bn==null?'':bn}; t.dupe=existing.has(date+'|'+desc.toLowerCase()+'|'+t.amt); if(t.dupe)dupes++; out.push(t);
+  }
+  return{rows:out,skipped,skippedRows,dupes,redacted,note};
 }
+async function pasteDialog(initial){
+  const ta=el('textarea',{rows:6,'aria-label':'Pasted transactions',spellcheck:'false',placeholder:'Paste here with Ctrl+V (Cmd+V on Mac).\nCopy rows from Excel, Google Sheets, a bank website or a CSV file. Dates, descriptions, amounts and categories are found automatically.',style:'width:100%;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px'});
+  const status=el('div',{class:'sub',role:'status','aria-live':'polite',style:'margin:8px 0 0'}), colsBox=el('div',{class:'pcols'}), reviewBox=el('div'), bulkBox=el('div');
+  const clip=el('button',{class:'btn sm',type:'button'},'Paste from clipboard'), fileIn=el('input',{type:'file',accept:'.csv,.tsv,.txt,text/csv,text/plain',hidden:true}), fileBtn=el('button',{class:'btn sm',type:'button',onclick:()=>fileIn.click()},'Choose a file…');
+  const signSel=el('select',{'aria-label':'How amounts are signed'},el('option',{value:'auto'},'Detect automatically'),el('option',{value:'neg'},'Negative = spending, positive = income'),el('option',{value:'pos'},'Positive = spending (credit card statements)'));
+  const signFld=el('label',{class:'fld',style:'min-width:240px;flex:1'},'Amounts',signSel);
+  const skipD=el('input',{type:'checkbox',checked:true}); skipD.checked=true;
+  const opts=el('div',{class:'popts'},signFld,el('label',{class:'chk'},skipD,el('span',null,'Skip rows already in my transactions')));
+  const body=el('div',null,el('p',{class:'sub',style:'margin-top:0'},'Paste rows and check the preview. Change a column or a category if it looks wrong, then add.'),ta,el('div',{class:'row',style:'margin-top:8px'},clip,fileBtn,fileIn),status,colsBox,opts,bulkBox,reviewBox);
+  let sp={rows:[]}, map=[], hdr=false, res=null, ui=[], shown=0, addBtn=null, flash='';
+  const roleSummary=()=>{ const n=map.filter(r=>r!=='skip').map(r=>P_ROLES.find(x=>x[0]===r)[1]); const ig=hdr&&sp.rows[0]?map.map((r,i)=>r==='skip'&&sp.rows[0][i]?sp.rows[0][i].slice(0,18):'').filter(Boolean):[]; return (n.length?n.join(', '):'none chosen')+(ig.length?' · ignoring '+ig.slice(0,3).join(', ')+(ig.length>3?'…':''):''); };
+  const usable=()=>map.includes('date')&&(map.includes('amt')||map.includes('exp')||map.includes('inc'));
+  function summarize(){
+    if(!res){ addBtn.textContent='Add transactions'; addBtn.disabled=true; return; }
+    let n=0,need=0,ex=0,ic=0,d0='',d1=''; res.rows.forEach((t,i)=>{ const u=ui[i]; const inc=u?u.inc.checked:!(t.dupe&&skipD.checked), cat=u?u.sel.value:t.cat; if(inc){n++; if(!cat)need++; if(t.amt<0)ex+=-t.amt; else ic+=t.amt; if(!d0||t.date<d0)d0=t.date; if(!d1||t.date>d1)d1=t.date;} });
+    status.textContent=res.rows.length+' row'+(res.rows.length===1?'':'s')+' found'+(res.skipped?', '+res.skipped+' skipped (no date or amount)':'')+(res.dupes?', '+res.dupes+' look like duplicates':'')+(res.redacted?', '+res.redacted+' had a card or Social Security number replaced with [removed]':'')+'.'+(res.note?' '+res.note:'')+(n?' Adding '+n+': '+money(ex,true)+' spending, '+money(ic,true)+' income, '+dLabel(d0)+(d1!==d0?' to '+dLabel(d1):'')+'.':'')+(flash?' '+flash:'');
+    addBtn.textContent=n?'Add '+n+' transaction'+(n===1?'':'s'):'Add transactions'; addBtn.disabled=!n;
+    bulkBox.replaceChildren(); if(need){ const bs=catSelect('',{'aria-label':'Category for rows without one'},'Choose a category'); bulkBox.append(el('div',{class:'pbulk'},el('span',null,need+' selected row'+(need===1?' has':'s have')+' no category. Set them all to:'),el('div',{style:'width:230px'},bs),el('button',{class:'btn sm',type:'button',onclick:()=>{ if(!bs.value)return; res.rows.forEach((t,i)=>{ const u=ui[i]; if(u){ if(u.inc.checked&&!u.sel.value)u.sel.value=bs.value; } else if(!t.cat&&!(t.dupe&&skipD.checked))t.cat=bs.value; }); summarize(); }},'Apply'))); }
+  }
+  function propagate(i){ flash=''; const v=ui[i]&&ui[i].sel.value, k=descKey(res.rows[i].desc); if(!v||k.length<3)return; let n=0; res.rows.forEach((t,j)=>{ if(j===i||descKey(t.desc)!==k)return; const u=ui[j]; if(u){ if(!u.sel.value){u.sel.value=v;n++} } else if(!t.cat){t.cat=v;n++} }); if(n)flash='Also set '+n+' other row'+(n===1?'':'s')+' with the same description.'; }
+  function drawReview(){
+    reviewBox.replaceChildren(); ui=[]; res=null; flash=''; signFld.hidden=!map.includes('amt');
+    if(!sp.rows.length){ status.textContent=''; bulkBox.replaceChildren(); summarize(); return; }
+    if(!usable()){ status.textContent='Choose which column is the date and which holds the amounts.'; bulkBox.replaceChildren(); const d=colsBox.querySelector('details'); if(d)d.open=true; summarize(); return; }
+    res=pBuild(sp.rows,map,{hdr,sign:signSel.value}); shown=Math.min(res.rows.length,P_REVIEW);
+    if(!res.rows.length){ status.textContent='No usable rows yet. '+res.skipped+' skipped because a date or amount could not be read. Check the column choices above.'; bulkBox.replaceChildren(); summarize(); return; }
+    const hasBal=map.includes('bal'); const tb=el('tbody'); res.rows.slice(0,shown).forEach((t,i)=>{
+      const inc=el('input',{type:'checkbox','aria-label':'Include row '+(i+1)}); inc.checked=!(t.dupe&&skipD.checked);
+      const sel=catSelect(t.cat,{'aria-label':'Category for row '+(i+1)+(t.desc?': '+t.desc:''),onchange:()=>{propagate(i);summarize()}}); const tr=el('tr',null,el('td',null,inc),el('td',null,t.date),el('td',null,t.desc||'–',t.dupe?el('span',{class:'ptag'},'duplicate'):null),el('td',null,sel),el('td',{class:'r'},money(t.amt,true)),hasBal?el('td',{class:'r'},t.bal===''?'':money(t.bal,true)):null);
+      const dim=()=>{tr.style.opacity=inc.checked?'':'.5'}; inc.addEventListener('change',()=>{u.touched=true;dim();summarize()}); const u={inc,sel,touched:false}; ui.push(u); dim(); tb.append(tr);
+    });
+    reviewBox.append(el('div',{class:'tablewrap ptbl',style:'max-height:min(340px,42vh);margin-top:10px'},el('table',{class:'datatable'},el('thead',null,el('tr',null,el('th',null,'Add'),el('th',null,'Date'),el('th',null,'Description'),el('th',null,'Category'),el('th',{class:'r'},'Amount'),hasBal?el('th',{class:'r'},'Balance'):null)),tb)));
+    if(res.rows.length>shown)reviewBox.append(el('p',{class:'sub'},'Showing the first '+shown+' rows. The other '+(res.rows.length-shown)+' will be added too, with the categories found automatically.'));
+    if(res.skippedRows.length)reviewBox.append(el('details',{class:'pskip'},el('summary',null,'Why were '+res.skipped+' row'+(res.skipped===1?'':'s')+' skipped?'),el('p',{class:'sub'},'These had no readable date or a zero or missing amount. First few:'),el('ul',null,res.skippedRows.map(s=>el('li',null,s)))));
+    summarize();
+  }
+  function drawCols(){
+    colsBox.replaceChildren(); if(!sp.rows.length)return;
+    const ncol=map.length, data=sp.rows.slice(hdr?1:0,(hdr?1:0)+3), sels=[];
+    const hchk=el('input',{type:'checkbox',onchange:e=>{hdr=e.target.checked;drawReview()}}); hchk.checked=hdr;
+    const head=el('tr',null,Array.from({length:ncol},(_,i)=>{ const s=el('select',{'aria-label':'What column '+(i+1)+' contains',onchange:e=>{ const v=e.target.value; map[i]=v; if(v!=='skip')map.forEach((r,j)=>{ if(j!==i&&r===v){map[j]='skip';sels[j].value='skip'} }); sum.textContent='Columns: '+roleSummary()+' (change)'; drawReview(); }},P_ROLES.map(([v,l])=>el('option',{value:v},l))); s.value=map[i]; sels.push(s); return el('th',null,s); }));
+    const tbl=el('table',{class:'datatable pmap'},el('thead',null,head),el('tbody',null,data.map(r=>el('tr',null,Array.from({length:ncol},(_,i)=>el('td',null,(r[i]||'').slice(0,40)))))));
+    const sum=el('summary',null,'Columns: '+roleSummary()+' (change)');
+    colsBox.append(el('details',{class:'pdet',open:!(usable())||null},sum,el('label',{class:'chk'},hchk,el('span',null,'First row is column names, not a transaction')),el('div',{class:'tablewrap',style:'max-height:none'},tbl)));
+  }
+  function upd(fresh){
+    if(fresh){ sp=pSplit(ta.value); if(sp.rows.length){ const g=pGuess(sp.rows); map=g.map.slice(); hdr=g.hdr; } else{map=[];hdr=false} drawCols(); }
+    ta.rows=sp.rows.length?3:6; drawReview(); if(fresh&&sp.capped)status.textContent='Only the first '+P_MAX_LINES.toLocaleString()+' lines were read. '+status.textContent;
+  }
+  let tm=0; ta.addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(()=>upd(true),140)}); signSel.addEventListener('change',drawReview);
+  skipD.addEventListener('change',()=>{ if(!res)return; ui.forEach((u,i)=>{ if(!u.touched)u.inc.checked=!(res.rows[i].dupe&&skipD.checked); }); drawReview_keep(); });
+  function drawReview_keep(){ ui.forEach((u,i)=>{ const tr=u.inc.closest('tr'); if(tr)tr.style.opacity=u.inc.checked?'':'.5'; }); summarize(); }
+  clip.addEventListener('click',async()=>{ try{ const t=await navigator.clipboard.readText(); if(!t.trim()){status.textContent='Your clipboard is empty. Copy some rows first.';return} ta.value=t; upd(true); }catch(e){ status.textContent='Your browser did not allow clipboard access. Click the box above and press Ctrl+V (Cmd+V on Mac).'; } });
+  const readFile=f=>{ if(!f)return; if(f.size>5e6){status.textContent='That file is over 5 MB. Split it or use Data > Import.';return} const fr=new FileReader(); fr.onload=()=>{ta.value=String(fr.result||'');upd(true)}; fr.onerror=()=>{status.textContent='That file could not be read.'}; fr.readAsText(f); };
+  fileIn.addEventListener('change',()=>{readFile(fileIn.files[0]);fileIn.value=''});
+  ta.addEventListener('dragover',e=>e.preventDefault()); ta.addEventListener('drop',e=>{ const f=e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0]; if(f){e.preventDefault();readFile(f)} });
+  const pr=dlg({title:'Paste transactions',cls:'wide',body,buttons:[{label:'Cancel',value:null},{label:'Add transactions',value:true,cls:'primary'}]});
+  addBtn=document.querySelector('dialog[open] .btns .btn.primary'); addBtn.disabled=true;
+  if(initial){ta.value=initial;upd(true)} ta.focus();
+  const go_=await pr; if(!go_||!res)return;
+  const picked=[]; res.rows.forEach((t,i)=>{ const u=ui[i]; const inc=u?u.inc.checked:!(t.dupe&&skipD.checked); if(!inc)return; const x={date:t.date,desc:t.desc,cat:u?u.sel.value:t.cat,amt:t.amt,bal:t.bal}; picked.push(x); });
+  if(!picked.length){toast('Nothing to add.');return}
+  const snap=JSON.stringify(S); picked.forEach(addTx); edited('transactions','tx');
+  TX.sort={k:'date',dir:-1}; TX.page=0; RENDER.transactions(); const nc=picked.filter(x=>!x.cat).length;
+  undoToast('Added '+picked.length+' transaction'+(picked.length===1?'':'s')+'.'+(nc?' '+nc+' still need a category.':''),snap);
+}
+function pLooksTx(txt){ try{ const r=pSplit(txt).rows; return r.length>=1&&pGuess(r).ok; }catch(e){ return false; } }
+document.addEventListener('paste',e=>{ if(document.querySelector('dialog[open]'))return; const t=e.target; if(t&&(/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)||t.isContentEditable))return; const txt=(e.clipboardData&&e.clipboardData.getData('text'))||''; if(!/[\n\t]/.test(txt.trim()))return; if(page!=='transactions'&&!pLooksTx(txt))return; e.preventDefault(); if(page!=='transactions')go('transactions'); pasteDialog(txt); });
 RENDER.transactions=function(){
   const root=$('#p-transactions'); root.replaceChildren(); calc();
-  root.append(el('div',{class:'page-h'},el('div',null,el('h2',null,'Transactions'),el('p',null,'Log spending and income. Every chart reads from here.')),el('button',{class:'btn',type:'button',onclick:pasteDialog},'Paste from spreadsheet…')));
+  root.append(el('div',{class:'page-h'},el('div',null,el('h2',null,'Transactions'),el('p',null,'Log spending and income. Every chart reads from here. Tip: copy rows from a spreadsheet or your bank, then press Ctrl+V (Cmd+V on Mac) on this page.')),el('button',{class:'btn primary',type:'button',onclick:()=>pasteDialog()},'Paste transactions…')));
   // quick add
   const date=el('input',{type:'date',value:TX.lastDate,'aria-label':'Date'}), desc=el('input',{type:'text',placeholder:'Description',list:'descList',maxlength:200,'aria-label':'Description',autocomplete:'off'}), amt=el('input',{type:'text',inputmode:'decimal',placeholder:'0.00','aria-label':'Amount'});
   const cat=catSelect('',{'aria-label':'Category'}); let type=TX.lastType;
@@ -2201,7 +2409,7 @@ RENDER.transactions=function(){
     let a=S.tx; const ql=TX.q.trim().toLowerCase();
     if(TX.month)a=a.filter(t=>mkOf(t.date)===TX.month); if(TX.cat)a=a.filter(t=>t.cat===TX.cat); if(TX.type)a=a.filter(t=>TX.type==='exp'?t.amt<0:t.amt>0); if(TX.uncat)a=a.filter(t=>!t.cat);
     if(ql)a=a.filter(t=>(t.desc||'').toLowerCase().includes(ql)||(t.cat&&nameOf(t.cat).toLowerCase().includes(ql))||String(Math.abs(t.amt)).includes(ql.replace(/[$,]/g,'')));
-    const {k,dir}=TX.sort; const key=t=>k==='date'?t.date:k==='desc'?(t.desc||'').toLowerCase():k==='cat'?(t.cat?nameOf(t.cat).toLowerCase():'~'):k==='exp'?(t.amt<0?-t.amt:-1):k==='inc'?(t.amt>0?t.amt:-1):k==='n'?t.n:(t.bal===''?-Infinity:t.bal);
+    const {k,dir}=TX.sort; const key=t=>k==='date'?t.date:k==='desc'?(t.desc||'').toLowerCase():k==='cat'?(t.cat?nameOf(t.cat).toLowerCase():'~'):k==='amt'?t.amt:k==='exp'?(t.amt<0?-t.amt:-1):k==='inc'?(t.amt>0?t.amt:-1):k==='n'?t.n:(t.bal===''?-Infinity:t.bal);
     return a.slice().sort((x,y)=>{const A=key(x),B=key(y); return (A<B?-1:A>B?1:0)*dir||(x.n-y.n)*dir});
   }
   function list(){
@@ -2219,14 +2427,14 @@ RENDER.transactions=function(){
       const dsI=el('input',{type:'text',value:t.desc||'','aria-label':'Description, transaction '+t.n,maxlength:200,onchange:e=>{ const v=e.target.value.trim(); if(looksSensitive(v)){toast(SENSITIVE_MSG,6000);e.target.value=t.desc||'';return} t.desc=v;edited('transactions','tx');}});
       const mainTd=el('td',{class:'main'},t.cat?GROUPS[ROW[t.cat].g].label:'');
       const cI=catSelect(t.cat,{'aria-label':'Category, transaction '+t.n,style:'min-width:170px',onchange:e=>{t.cat=e.target.value;mainTd.textContent=t.cat?GROUPS[ROW[t.cat].g].label:'';edited('transactions','tx');sumUpdate();}});
-      const eI=el('input',{type:'text',inputmode:'decimal',value:t.amt<0?fmtIn(-t.amt):'','aria-label':'Expense amount, transaction '+t.n,style:'width:104px',placeholder:'',onchange:e=>{setAmt('exp',e.target.value)}}), iI=el('input',{type:'text',inputmode:'decimal',value:t.amt>0?fmtIn(t.amt):'','aria-label':'Income amount, transaction '+t.n,style:'width:104px',onchange:e=>{setAmt('inc',e.target.value)}});
-      const setAmt=(kind,raw)=>{ const n=parseNum(raw); if(raw.trim()===''||n===0||n==null){ if(raw.trim()!==''&&n==null)toast('Enter a number.'); if(raw.trim()===''&&((kind==='exp'&&t.amt<0)||(kind==='inc'&&t.amt>0)))t.amt=0; }
-        else t.amt=round2(kind==='exp'?-Math.abs(n):Math.abs(n)); eI.value=t.amt<0?fmtIn(-t.amt):''; iI.value=t.amt>0?fmtIn(t.amt):''; edited('transactions','tx'); sumUpdate(); };
+      const aI=el('input',{type:'text',inputmode:'decimal',value:fmtIn(t.amt),class:t.amt>0?'amt-in':null,'aria-label':'Amount, transaction '+t.n+'. Negative is an expense, positive is income.',style:'width:112px',onchange:e=>{setAmt(e.target.value)}});
+      const setAmt=raw=>{ const n=parseNum(raw); if(n==null){ toast('Enter a number. Use a minus sign for an expense.'); aI.value=fmtIn(t.amt); return } t.amt=round2(n); aI.value=fmtIn(t.amt); aI.classList.toggle('amt-in',t.amt>0); edited('transactions','tx'); sumUpdate(); };
       const bI=el('input',{type:'text',inputmode:'decimal',value:t.bal===''||t.bal==null?'':fmtIn(t.bal),'aria-label':'Balance, transaction '+t.n,style:'width:104px',onchange:e=>{const n=parseNum(e.target.value); t.bal=n==null?'':n; edited('transactions','tx');}});
       const del=el('button',{class:'btn sm ghost',type:'button','aria-label':'Delete transaction',title:'Delete',onclick:async()=>{ if(!(await confirmDlg('Delete this transaction?',(t.desc||'Untitled')+' · '+money(Math.abs(t.amt),true)+' on '+dLabel(t.date)+'. You can undo right after.','Delete')))return; const i=S.tx.indexOf(t); if(i<0)return; S.tx.splice(i,1); TX.sel.delete(t.n); edited('transactions','tx'); list(); toast('Deleted.',7000,{label:'Undo',fn:()=>{S.tx.push(t);edited('transactions','tx');list()}}); }},'✕');
-      tb.append(el('tr',{class:(TX.flash===t.n&&!(TX.flash=null))?'flash':null},el('td',{style:'width:34px;text-align:center'},cb),el('td',{class:'n'},t.n),el('td',null,dI),el('td',null,dsI),el('td',null,cI),mainTd,el('td',{class:'num'},eI),el('td',{class:'num'},iI),el('td',{class:'num'},bI),el('td',null,del)));
+      tb.append(el('tr',{class:(TX.flash===t.n&&!(TX.flash=null))?'flash':null},el('td',{style:'width:34px;text-align:center'},cb),el('td',{class:'n'},t.n),el('td',null,dI),el('td',null,dsI),el('td',null,cI),mainTd,el('td',{class:'num'},aI),el('td',{class:'num'},bI),el('td',null,del)));
     }
-    const tbl=el('table',{class:'tx'},el('thead',null,el('tr',null,el('th',{style:'cursor:default'},selAll),th('n','#'),th('date','Date'),th('desc','Description'),th('cat','Category'),el('th',{style:'cursor:default'},'Main category'),th('exp','Expense'),th('inc','Income'),th('bal','Balance'),el('th',{style:'cursor:default'},el('span',{class:'sr'},'Actions')))),tb);
+    const amtTh=th('amt','Amount'); amtTh.title='Negative = expense, positive = income';
+    const tbl=el('table',{class:'tx'},el('thead',null,el('tr',null,el('th',{style:'cursor:default'},selAll),th('n','#'),th('date','Date'),th('desc','Description'),th('cat','Category'),el('th',{style:'cursor:default'},'Main category'),amtTh,th('bal','Balance'),el('th',{style:'cursor:default'},el('span',{class:'sr'},'Actions')))),tb);
     box.replaceChildren(el('div',{style:'overflow:auto;max-height:calc(100vh - 120px)'},slice.length?tbl:el('div',{class:'empty'},S.tx.length?'No transactions match these filters.':'No transactions yet. Add one above, paste rows from a spreadsheet, or import a CSV.')));
     pager.replaceChildren(el('span',null,rows.length?'Showing '+(TX.page*PAGE_SIZE+1)+'–'+Math.min(rows.length,(TX.page+1)*PAGE_SIZE)+' of '+rows.length.toLocaleString():''),
       el('div',{class:'row',style:'align-items:center'},el('button',{class:'btn sm',type:'button',disabled:TX.page===0||null,onclick:()=>{TX.page--;list()}},'‹ Prev'),el('span',null,'Page '+(TX.page+1)+' of '+pages),el('button',{class:'btn sm',type:'button',disabled:TX.page>=pages-1||null,onclick:()=>{TX.page++;list()}},'Next ›')));
@@ -2241,7 +2449,7 @@ RENDER.transactions=function(){
       el('button',{class:'btn sm ghost',type:'button',onclick:()=>{TX.sel.clear();list()}},'Clear selection'));
   }
   list();
-  if(TX.openPaste){TX.openPaste=false;setTimeout(pasteDialog,50)}
+  if(TX.openPaste){TX.openPaste=false;setTimeout(()=>pasteDialog(),50)}
 };
 
 /* ============ alive layer: motion, celebrations, quests, insights, What If ============ */
@@ -2468,7 +2676,7 @@ const FAQ=[
  {id:'milestones',q:'How do the milestones and forecast dates work?',a:'Dashboard milestones compare your net worth to each goal: an emergency fund of half your annual take-home income (counted from your cash above $1,000), a wealth threshold of age × income ÷ 10, and 10×, 15×, 20×, 25× and 30× your expected retirement income.\nThe retirement and FI/RE dates, and the Milestones chart in Extra Charts, use cash plus investments. Dates are projections from your recent averages.',kw:'fire retirement emergency fund wealth threshold forecast'},
  {id:'xp',q:'How do achievements, XP and levels work?',a:'There are 112 achievements: the 82 from the original spreadsheet plus 30 new ones. Each is worth XP by rarity and unlocks automatically when your data meets its rule.\nYour level is 1 + total XP ÷ 925, rounded down, up to level 100. Tap any badge to see its rule and your progress.'},
  {id:'differ',q:'Why do some numbers differ from the old spreadsheet?',a:'The web version fixes a bug where the retirement and FI/RE dates counted the Cash row twice and left out investments. A few achievements are stricter now (current-month ones need a balance entered), and a few charts were redrawn to use a single axis.'},
- {id:'advice',q:'Is this financial advice?',a:'No. It is an educational tool, not tax, legal or investment advice, and its forecasts are estimates. It is still an alpha. Talk to a qualified professional before big money decisions.'},
+ {id:'advice',q:'Is this financial advice?',a:'No. It is an educational tool, not tax, legal or investment advice, and its forecasts are estimates. It is still a beta. Talk to a qualified professional before big money decisions.'},
  {id:'delete',q:'How do I delete my data?',a:'On Get Started, under Your data, click Clear all data and confirm. You can also clear this site\'s data in your browser settings. Export a CSV first if you might want it back, because deleting cannot be undone.'},
  {id:'reuse',q:'Can I copy the code or host my own version?',a:'Not without permission. The app is free for your own finances, and its code, design and artwork are protected. Details are in the Terms of use & license below.'}
 ];
