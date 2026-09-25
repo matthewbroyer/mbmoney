@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-GjtOTNDftIqp9CSexbYPQ9/H5e+o1HfdZh6kL6eiw6o=' 'sha256-bGapo3EdzxlIa7MyviDOv4x9mGrYns+Z+1haOWenX3U=' 'sha256-uK9AKRgaIj1NWk0EP8/iLEF4TbaW9S9w1O/7jhZaABA=' 'sha256-fbAJUVS1r4r7UMD6KN5rsIVl+//cA01aTwgULnpLij4='; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-GjtOTNDftIqp9CSexbYPQ9/H5e+o1HfdZh6kL6eiw6o=' 'sha256-bGapo3EdzxlIa7MyviDOv4x9mGrYns+Z+1haOWenX3U=' 'sha256-uK9AKRgaIj1NWk0EP8/iLEF4TbaW9S9w1O/7jhZaABA=' 'sha256-1h/S6fY+s/7ZzEGP+wtbaTjOOZizqLVJnwbRSACAljI='; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>mbmoney.online | Free net worth and budget tracker</title>
@@ -1349,15 +1349,16 @@ function importCSVText(text,mode){
     const iD=col('date','transaction date','posted date','posting date'), iDs=col('description','memo','payee','name','details'),
           iA=col('amount','value'), iDeb=col('debit','withdrawal','withdrawals'), iCr=col('credit','deposit','deposits'), iC=col('category');
     if(iD<0||(iA<0&&iDeb<0&&iCr<0))throw uerr('Unrecognised CSV. Expected an mbmoney.online export (first column "Type") or a bank export with Date, Description and Amount columns.');
-    const nm=categorize();
+    const nm=categorize(); const batch=[];
     for(const r of rows.slice(1)){
       const dt=normDate(r[iD]); let amt=iA>=0?parseNum(r[iA]):null;
       if(amt==null){ const d=iDeb>=0?parseNum(r[iDeb]):null, c=iCr>=0?parseNum(r[iCr]):null; if(d!=null||c!=null)amt=(c||0)-Math.abs(d||0); }
       if(!dt||amt==null){info.skipped++;continue}
       let cat=''; if(iC>=0&&r[iC]){const id=nm.get(r[iC].trim().toLowerCase()); if(id&&GROUPS[ROW[id].g].kind==='cat')cat=id;}
       if(!cat)info.uncategorized++;
-      N.tx.push({n:++seq,date:dt,desc:clean(r[iDs]||'',200),cat,amt:round2(amt),bal:''}); info.tx++;
+      batch.push({date:dt,desc:clean(r[iDs]||'',200),cat,amt:round2(amt),bal:''}); info.tx++;
     }
+    for(const t of chronoBatch(batch)){ t.n=++seq; N.tx.push(t); }
     if(!info.tx)throw uerr('No valid transaction rows were found.');
     info.bankFormat=true;
   }
@@ -2590,6 +2591,10 @@ function histMap(){ // description -> last category/type (also keyed by a loose 
   const m=new Map(); for(const t of S.tx){ if(t.desc&&t.cat){ const v={cat:t.cat,sign:t.amt<0?'exp':'inc'}; m.set(t.desc.trim().toLowerCase(),v); const k=descKey(t.desc); if(k.length>=3)m.set('~'+k,v); } } return m;
 }
 function addTx(t){ t.n=++S.seq; S.tx.push(t); return t; }
+/* Put a batch in oldest-first order before numbering. Bank exports list newest first, so flip those first to keep same-day rows in the right order. */
+function chronoBatch(a){ const b=a.slice(); if(b.length>1&&b[0].date>b[b.length-1].date)b.reverse(); return b.sort((x,y)=>x.date<y.date?-1:x.date>y.date?1:0); }
+/* Display # = position by date (oldest = 1), so it has no gaps after deletes. t.n stays the internal id. */
+function txRank(){ const m=new Map(); S.tx.slice().sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:a.n-b.n).forEach((t,i)=>m.set(t,i+1)); return m; }
 /* ---------- paste transactions ---------- */
 const P_ROLES=[['skip','Ignore'],['date','Date'],['desc','Description'],['amt','Amount'],['exp','Expense or debit'],['inc','Income or credit'],['cat','Category'],['bal','Balance'],['kind','Debit/credit label']];
 const P_MAX_LINES=20000, P_REVIEW=300;
@@ -2765,7 +2770,7 @@ async function pasteDialog(initial){
   const go_=await pr; if(!go_||!res)return;
   const picked=[]; res.rows.forEach((t,i)=>{ const u=ui[i]; const inc=u?u.inc.checked:!(t.dupe&&skipD.checked); if(!inc)return; const x={date:t.date,desc:t.desc,cat:u?u.sel.value:t.cat,amt:t.amt,bal:t.bal}; picked.push(x); });
   if(!picked.length){toast('Nothing to add.');return}
-  const snap=JSON.stringify(S); picked.forEach(addTx); edited('transactions','tx');
+  const snap=JSON.stringify(S); chronoBatch(picked).forEach(addTx); edited('transactions','tx');
   TX.sort={k:'date',dir:-1}; TX.page=0; RENDER.transactions(); const nc=picked.filter(x=>!x.cat).length;
   undoToast('Added '+picked.length+' transaction'+(picked.length===1?'':'s')+'.'+(nc?' '+nc+' still need a category.':''),snap);
 }
@@ -2811,10 +2816,10 @@ RENDER.transactions=function(){
   const box=el('div',{class:'card mt',style:'padding:0;overflow:hidden'}); const pager=el('div',{class:'pager'});
   root.append(sumBar,bulk,box,pager);
   function view(){
-    let a=S.tx; const ql=TX.q.trim().toLowerCase();
+    TX.rank=txRank(); let a=S.tx; const ql=TX.q.trim().toLowerCase();
     if(TX.month)a=a.filter(t=>mkOf(t.date)===TX.month); if(TX.cat)a=a.filter(t=>t.cat===TX.cat); if(TX.type)a=a.filter(t=>TX.type==='exp'?t.amt<0:t.amt>0); if(TX.uncat)a=a.filter(t=>!t.cat);
     if(ql)a=a.filter(t=>(t.desc||'').toLowerCase().includes(ql)||(t.cat&&nameOf(t.cat).toLowerCase().includes(ql))||String(Math.abs(t.amt)).includes(ql.replace(/[$,]/g,'')));
-    const {k,dir}=TX.sort; const key=t=>k==='date'?t.date:k==='desc'?(t.desc||'').toLowerCase():k==='cat'?(t.cat?nameOf(t.cat).toLowerCase():'~'):k==='amt'?t.amt:k==='exp'?(t.amt<0?-t.amt:-1):k==='inc'?(t.amt>0?t.amt:-1):k==='n'?t.n:(t.bal===''?-Infinity:t.bal);
+    const {k,dir}=TX.sort; const key=t=>k==='date'?t.date:k==='desc'?(t.desc||'').toLowerCase():k==='cat'?(t.cat?nameOf(t.cat).toLowerCase():'~'):k==='amt'?t.amt:k==='exp'?(t.amt<0?-t.amt:-1):k==='inc'?(t.amt>0?t.amt:-1):k==='n'?TX.rank.get(t):(t.bal===''?-Infinity:t.bal);
     return a.slice().sort((x,y)=>{const A=key(x),B=key(y); return (A<B?-1:A>B?1:0)*dir||(x.n-y.n)*dir});
   }
   function list(){
@@ -2827,16 +2832,17 @@ RENDER.transactions=function(){
     const selAll=el('input',{type:'checkbox','aria-label':'Select all on this page',onchange:e=>{slice.forEach(t=>e.target.checked?TX.sel.add(t.n):TX.sel.delete(t.n));list()}}); selAll.checked=slice.length>0&&slice.every(t=>TX.sel.has(t.n));
     const tb=el('tbody');
     for(const t of slice){
-      const cb=el('input',{type:'checkbox','aria-label':'Select transaction '+t.n,onchange:e=>{e.target.checked?TX.sel.add(t.n):TX.sel.delete(t.n);bulkBar()}}); cb.checked=TX.sel.has(t.n);
-      const dI=el('input',{type:'date',value:t.date,'aria-label':'Date, transaction '+t.n,style:'width:140px',onchange:e=>{const d=normDate(e.target.value); if(!d){e.target.value=t.date;return} t.date=d; edited('transactions','tx');}});
-      const dsI=el('input',{type:'text',value:t.desc||'','aria-label':'Description, transaction '+t.n,maxlength:200,onchange:e=>{ const v=e.target.value.trim(); if(looksSensitive(v)){toast(SENSITIVE_MSG,6000);e.target.value=t.desc||'';return} t.desc=v;edited('transactions','tx');}});
+      const no=TX.rank.get(t);
+      const cb=el('input',{type:'checkbox','aria-label':'Select transaction '+no,onchange:e=>{e.target.checked?TX.sel.add(t.n):TX.sel.delete(t.n);bulkBar()}}); cb.checked=TX.sel.has(t.n);
+      const dI=el('input',{type:'date',value:t.date,'aria-label':'Date, transaction '+no,style:'width:140px',onchange:e=>{const d=normDate(e.target.value); if(!d){e.target.value=t.date;return} t.date=d; edited('transactions','tx');}});
+      const dsI=el('input',{type:'text',value:t.desc||'','aria-label':'Description, transaction '+no,maxlength:200,onchange:e=>{ const v=e.target.value.trim(); if(looksSensitive(v)){toast(SENSITIVE_MSG,6000);e.target.value=t.desc||'';return} t.desc=v;edited('transactions','tx');}});
       const mainTd=el('td',{class:'main'},t.cat?GROUPS[ROW[t.cat].g].label:'');
-      const cI=catSelect(t.cat,{'aria-label':'Category, transaction '+t.n,style:'min-width:170px',onchange:e=>{t.cat=e.target.value;mainTd.textContent=t.cat?GROUPS[ROW[t.cat].g].label:'';edited('transactions','tx');sumUpdate();}});
-      const aI=el('input',{type:'text',inputmode:'decimal',value:fmtIn(t.amt),class:t.amt>0?'amt-in':null,'aria-label':'Amount, transaction '+t.n+'. Negative is an expense, positive is income.',style:'width:112px',onchange:e=>{setAmt(e.target.value)}});
+      const cI=catSelect(t.cat,{'aria-label':'Category, transaction '+no,style:'min-width:170px',onchange:e=>{t.cat=e.target.value;mainTd.textContent=t.cat?GROUPS[ROW[t.cat].g].label:'';edited('transactions','tx');sumUpdate();}});
+      const aI=el('input',{type:'text',inputmode:'decimal',value:fmtIn(t.amt),class:t.amt>0?'amt-in':null,'aria-label':'Amount, transaction '+no+'. Negative is an expense, positive is income.',style:'width:112px',onchange:e=>{setAmt(e.target.value)}});
       const setAmt=raw=>{ const n=parseNum(raw); if(n==null){ toast('Enter a number. Use a minus sign for an expense.'); aI.value=fmtIn(t.amt); return } t.amt=round2(n); aI.value=fmtIn(t.amt); aI.classList.toggle('amt-in',t.amt>0); edited('transactions','tx'); sumUpdate(); };
-      const bI=el('input',{type:'text',inputmode:'decimal',value:t.bal===''||t.bal==null?'':fmtIn(t.bal),'aria-label':'Balance, transaction '+t.n,style:'width:104px',onchange:e=>{const n=parseNum(e.target.value); t.bal=n==null?'':n; edited('transactions','tx');}});
+      const bI=el('input',{type:'text',inputmode:'decimal',value:t.bal===''||t.bal==null?'':fmtIn(t.bal),'aria-label':'Balance, transaction '+no,style:'width:104px',onchange:e=>{const n=parseNum(e.target.value); t.bal=n==null?'':n; edited('transactions','tx');}});
       const del=el('button',{class:'btn sm ghost',type:'button','aria-label':'Delete transaction',title:'Delete',onclick:async()=>{ if(!(await confirmDlg('Delete this transaction?',(t.desc||'Untitled')+' · '+money(Math.abs(t.amt),true)+' on '+dLabel(t.date)+'. You can undo right after.','Delete')))return; const i=S.tx.indexOf(t); if(i<0)return; S.tx.splice(i,1); TX.sel.delete(t.n); edited('transactions','tx'); list(); toast('Deleted.',7000,{label:'Undo',fn:()=>{S.tx.push(t);edited('transactions','tx');list()}}); }},'✕');
-      tb.append(el('tr',{class:(TX.flash===t.n&&!(TX.flash=null))?'flash':null},el('td',{style:'width:34px;text-align:center'},cb),el('td',{class:'n'},t.n),el('td',null,dI),el('td',null,dsI),el('td',null,cI),mainTd,el('td',{class:'num'},aI),el('td',{class:'num'},bI),el('td',null,del)));
+      tb.append(el('tr',{class:(TX.flash===t.n&&!(TX.flash=null))?'flash':null},el('td',{style:'width:34px;text-align:center'},cb),el('td',{class:'n'},no),el('td',null,dI),el('td',null,dsI),el('td',null,cI),mainTd,el('td',{class:'num'},aI),el('td',{class:'num'},bI),el('td',null,del)));
     }
     const amtTh=th('amt','Amount'); amtTh.title='Negative = expense, positive = income';
     const tbl=el('table',{class:'tx'},el('thead',null,el('tr',null,el('th',{style:'cursor:default'},selAll),th('n','#'),th('date','Date'),th('desc','Description'),th('cat','Category'),el('th',{style:'cursor:default'},'Main category'),amtTh,th('bal','Balance'),el('th',{style:'cursor:default'},el('span',{class:'sr'},'Actions')))),tb);
