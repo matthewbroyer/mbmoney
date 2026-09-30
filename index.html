@@ -21,7 +21,7 @@
 <meta name="author" content="Matthew Broyer">
 <meta name="copyright" content="© 2024–2026 Matthew Broyer. All rights reserved.">
 <meta name="description" content="Free net worth and budget tracker. Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231e6b3c'/%3E%3Cg transform='translate(3.2 1.6) scale(1.067) translate(0 -1)' fill='none' stroke='%23ffffff' stroke-width='2.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19V11.5C4 7.5 11 7.5 11 11.5V19M11 11.5C11 6.5 20 6.5 20 10.5V19'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%231E6B3C'/%3E%3Cpath d='M20 48V39M32 48V32M44 48V35' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M17 27L27.5 20.5L35 24L46 16' fill='none' stroke='%23F2B640' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('pwmt.theme')==='dark'?'dark':'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
 <style>
 /* ---- theme: "Utility" — neutral desktop-software palette, one forest-green accent, light + dark ---- */
@@ -1116,7 +1116,7 @@ select.ach-rar{width:auto;min-width:170px;flex:0 0 auto}
 </style>
 </head>
 <body>
-<div id="splash" role="status" aria-live="polite"><div class="sp-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color:var(--accent-ink)" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path transform="translate(0 -1)" d="M4 19V11.5C4 7.5 11 7.5 11 11.5V19M11 11.5C11 6.5 20 6.5 20 10.5V19"/></svg></div><div class="sp-bar"><i></i></div><div class="sp-t">Loading your finances…</div></div>
+<div id="splash" role="status" aria-live="polite"><div class="sp-logo"><svg viewBox="12 12 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 48V39M32 48V32M44 48V35" stroke="currentColor" style="color:var(--accent-ink)" stroke-width="6"/><path d="M17 27L27.5 20.5L35 24L46 16" stroke="#F2B640" stroke-width="4.5"/></svg></div><div class="sp-bar"><i></i></div><div class="sp-t">Loading your finances…</div></div>
 <noscript><style>#splash{display:none}</style></noscript>
 <script>try{if(window.top!==window.self)document.documentElement.className+=' framed'}catch(e){document.documentElement.className+=' framed'}</script>
 <script>setTimeout(function(){var s=document.getElementById('splash');if(s)s.remove()},6000)</script>
@@ -1124,7 +1124,7 @@ select.ach-rar{width:auto;min-width:170px;flex:0 0 auto}
 <div id="framedMsg" role="alert"><b>Open this app directly.</b> For your protection, mbmoney.online does not run inside another page. <a href="https://mbmoney.online/" target="_top" rel="noopener">Open mbmoney.online</a></div>
 <header class="top">
   <div class="wrap">
-    <div class="brand"><div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color:var(--accent-ink)" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path transform="translate(0 -1)" d="M4 19V11.5C4 7.5 11 7.5 11 11.5V19M11 11.5C11 6.5 20 6.5 20 10.5V19"/></svg></div><div class="bt"><h1>mbmoney.online</h1><span>BETA 4.2 · Web edition</span></div></div>
+    <div class="brand"><div class="logo" aria-hidden="true"><svg viewBox="12 12 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 48V39M32 48V32M44 48V35" stroke="currentColor" style="color:var(--accent-ink)" stroke-width="6"/><path d="M17 27L27.5 20.5L35 24L46 16" stroke="#F2B640" stroke-width="4.5"/></svg></div><div class="bt"><h1>mbmoney.online</h1><span>BETA 4.2 · Web edition</span></div></div>
     <div class="tabwrap"><button class="tabarrow l" type="button" aria-label="Show earlier tabs" hidden>‹</button><nav class="tabs" aria-label="Sections"></nav><button class="tabarrow r" type="button" aria-label="Show more tabs" hidden>›</button></div>
     <div class="actions">
       <button class="btn sm" id="searchBtn" type="button" title="Search the whole site (press / or Ctrl+K)" aria-label="Search"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="5.5"/><path d="M13.5 13.5L17 17"/></svg><span class="lbl">Search</span><kbd class="kb">Ctrl K</kbd></button>
