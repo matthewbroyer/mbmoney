@@ -17,14 +17,14 @@
 <meta property="og:description" content="Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mbmoney.online/">
-<meta name="theme-color" content="#1e6b3c">
+<meta name="theme-color" content="#087f5b">
 <meta name="author" content="Matthew Broyer">
 <meta name="copyright" content="© 2024–2026 Matthew Broyer. All rights reserved.">
 <meta name="description" content="Free net worth and budget tracker. Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%231E6B3C'/%3E%3Cpath d='M20 48V39M32 48V32M44 48V35' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M17 27L27.5 20.5L35 24L46 16' fill='none' stroke='%23F2B640' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23087F5B'/%3E%3Cpath d='M20 48V39M32 48V32M44 48V35' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M17 27L27.5 20.5L35 24L46 16' fill='none' stroke='%23F2B640' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('pwmt.theme')==='dark'?'dark':'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
 <style>
-/* ---- theme: "Utility" — neutral desktop-software palette, one forest-green accent, light + dark ---- */
+/* ---- theme: "Utility" — neutral desktop-software palette, one emerald accent, light + dark ---- */
 :root{
   color-scheme:light;
   --font:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -33,9 +33,9 @@
   --r:6px; --r-sm:4px; --ctl:38px; --ctl-sm:32px; --ease:120ms ease;
   --bg:#f3f4f6; --surface:#ffffff; --surface-2:#f6f7f9; --surface-3:#eceef2; --ink:#1b1f24; --ink-2:#48505c; --muted:#5f6773;
   --grid:rgba(20,24,31,.07); --axis:rgba(20,24,31,.24); --border:#dfe2e7; --border-strong:#c6cbd3;
-  --accent:#1e6b3c; --accent-hover:#175631; --accent-ink:#ffffff; --accent-soft:rgba(30,107,60,.09); --accent-line:rgba(30,107,60,.38);
-  --accent-grad:var(--accent); --accent-2:#2f7d5b;
-  --s1:#1e6b3c; --s2:#b07a1f; --s3:#5a9e72; --s4:#6b7684; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --accent:#087f5b; --accent-hover:#066648; --accent-ink:#ffffff; --accent-soft:rgba(8,127,91,.09); --accent-line:rgba(8,127,91,.38);
+  --accent-grad:var(--accent); --accent-2:#1f9a74;
+  --s1:#087f5b; --s2:#b07a1f; --s3:#4fb28f; --s4:#6b7684; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
   --seq-track:#e6e9ee; --seq-fill:var(--accent); --done-fill:var(--accent);
   --good:#16a34a; --good-ink:#0b7a35; --warn:#e5a100; --warn-ink:#8a5a00; --serious:#ec835a; --crit:#c9302c;
   --shadow:0 1px 2px rgba(20,24,31,.06);
@@ -50,9 +50,9 @@
     color-scheme:dark;
     --bg:#16181c; --surface:#1e2126; --surface-2:#25292f; --surface-3:#2d3238; --ink:#e9ecf0; --ink-2:#b4bbc5; --muted:#8e97a3;
     --grid:rgba(255,255,255,.07); --axis:rgba(255,255,255,.2); --border:#30353c; --border-strong:#434a53;
-    --accent:#5bb57e; --accent-hover:#77c796; --accent-ink:#06180d; --accent-soft:rgba(91,181,126,.13); --accent-line:rgba(91,181,126,.45);
-    --accent-grad:var(--accent); --accent-2:#6cc3a0;
-    --s1:#5bb57e; --s2:#d9a24a; --s3:#a6d8b8; --s4:#8a94a1; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --accent:#35c395; --accent-hover:#5ad3ab; --accent-ink:#04180f; --accent-soft:rgba(53,195,149,.13); --accent-line:rgba(53,195,149,.45);
+    --accent-grad:var(--accent); --accent-2:#5ed0ad;
+    --s1:#35c395; --s2:#d9a24a; --s3:#9be0c6; --s4:#8a94a1; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
     --seq-track:#2f343b; --seq-fill:var(--accent); --done-fill:var(--accent);
     --good:#22c55e; --good-ink:#4ade80; --warn:#f0b429; --warn-ink:#f5c95c; --crit:#ff6b6b;
     --shadow:0 1px 2px rgba(0,0,0,.3);
@@ -66,9 +66,9 @@
   color-scheme:dark;
   --bg:#16181c; --surface:#1e2126; --surface-2:#25292f; --surface-3:#2d3238; --ink:#e9ecf0; --ink-2:#b4bbc5; --muted:#8e97a3;
   --grid:rgba(255,255,255,.07); --axis:rgba(255,255,255,.2); --border:#30353c; --border-strong:#434a53;
-  --accent:#5bb57e; --accent-hover:#77c796; --accent-ink:#06180d; --accent-soft:rgba(91,181,126,.13); --accent-line:rgba(91,181,126,.45);
-  --accent-grad:var(--accent); --accent-2:#6cc3a0;
-  --s1:#5bb57e; --s2:#d9a24a; --s3:#a6d8b8; --s4:#8a94a1; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --accent:#35c395; --accent-hover:#5ad3ab; --accent-ink:#04180f; --accent-soft:rgba(53,195,149,.13); --accent-line:rgba(53,195,149,.45);
+  --accent-grad:var(--accent); --accent-2:#5ed0ad;
+  --s1:#35c395; --s2:#d9a24a; --s3:#9be0c6; --s4:#8a94a1; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
   --seq-track:#2f343b; --seq-fill:var(--accent); --done-fill:var(--accent);
   --good:#22c55e; --good-ink:#4ade80; --warn:#f0b429; --warn-ink:#f5c95c; --crit:#ff6b6b;
   --shadow:0 1px 2px rgba(0,0,0,.3);
