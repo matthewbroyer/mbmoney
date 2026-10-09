@@ -8,20 +8,35 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-frkb48jsfyrGxg8S9gmxpyI1vDdXB8xNFML8xACYNf8=' 'sha256-bGapo3EdzxlIa7MyviDOv4x9mGrYns+Z+1haOWenX3U=' 'sha256-uK9AKRgaIj1NWk0EP8/iLEF4TbaW9S9w1O/7jhZaABA=' 'sha256-PnmtvLkQ+V5SzHlxlrSQ7Hjh/pzO39wZjVM0m5E+bwE='; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-frkb48jsfyrGxg8S9gmxpyI1vDdXB8xNFML8xACYNf8=' 'sha256-bGapo3EdzxlIa7MyviDOv4x9mGrYns+Z+1haOWenX3U=' 'sha256-uK9AKRgaIj1NWk0EP8/iLEF4TbaW9S9w1O/7jhZaABA=' 'sha256-k7i2l+LAh4gM2MZ1vGh8JGqJOtpet6dG+H3sw5pVs0E='; style-src 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>mbmoney.online | Free net worth and budget tracker</title>
 <link rel="canonical" href="https://mbmoney.online/">
 <meta property="og:title" content="mbmoney.online | Free net worth and budget tracker">
 <meta property="og:description" content="Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mbmoney.online/">
-<meta name="theme-color" content="#087f5b">
+<meta property="og:site_name" content="mbmoney.online">
+<meta property="og:image" content="https://mbmoney.online/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="mbmoney.online: free net worth and budget tracker. No account, and your data stays in your browser.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="mbmoney.online | Free net worth and budget tracker">
+<meta name="twitter:description" content="Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
+<meta name="twitter:image" content="https://mbmoney.online/og-image.png">
+<meta name="theme-color" content="#0a8460">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="mbmoney">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="author" content="Matthew Broyer">
 <meta name="copyright" content="© 2024–2026 Matthew Broyer. All rights reserved.">
 <meta name="description" content="Free net worth and budget tracker. Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23087F5B'/%3E%3Cpath d='M20 48V39M32 48V32M44 48V35' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M17 27L27.5 20.5L35 24L46 16' fill='none' stroke='%23F2B640' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='mbbg' gradientUnits='userSpaceOnUse' x1='6' y1='2' x2='58' y2='62'%3E%3Cstop offset='0' stop-color='%2334D6A4'/%3E%3Cstop offset='.5' stop-color='%230B9168'/%3E%3Cstop offset='1' stop-color='%2306566B'/%3E%3C/linearGradient%3E%3ClinearGradient id='mbbar' gradientUnits='userSpaceOnUse' x1='0' y1='26' x2='0' y2='50'%3E%3Cstop offset='0' stop-color='%23fff'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='.62'/%3E%3C/linearGradient%3E%3ClinearGradient id='mbgold' gradientUnits='userSpaceOnUse' x1='12' y1='28' x2='52' y2='12'%3E%3Cstop offset='0' stop-color='%23FFD166'/%3E%3Cstop offset='1' stop-color='%23FF9F45'/%3E%3C/linearGradient%3E%3ClinearGradient id='mbshine' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='40'%3E%3Cstop offset='0' stop-color='%23fff' stop-opacity='.30'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/linearGradient%3E%3CclipPath id='mbclip'%3E%3Crect rx='15'/%3E%3C/clipPath%3E%3C/defs%3E%3Crect rx='15' fill='url%28%23mbbg%29'/%3E%3Cg clip-path='url%28%23mbclip%29'%3E%3Crect width='64' height='40' fill='url%28%23mbshine%29'/%3E%3C/g%3E%3Crect x='14' y='35' width='9' height='15' rx='3' fill='url%28%23mbbar%29'/%3E%3Crect x='27.5' y='28' width='9' height='22' rx='3' fill='url%28%23mbbar%29'/%3E%3Crect x='41' y='32' width='9' height='18' rx='3' fill='url%28%23mbbar%29'/%3E%3Cpath d='M14 26L26 19L36 23.5L50 13' fill='none' stroke='url%28%23mbgold%29' stroke-width='4.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='13' r='3.4' fill='%23FFE29A'/%3E%3C/svg%3E">
 <script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('pwmt.theme')==='dark'?'dark':'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
 <style>
 /* ---- theme: "Utility" — neutral desktop-software palette, one emerald accent, light + dark ---- */
@@ -83,7 +98,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Inter,ui-sans
 h1,h2,h3,h4{margin:0;font-weight:650;line-height:1.2}
 button,input,select,textarea{font:inherit;color:inherit}
 a{color:var(--accent)}
-.wrap{max-width:1280px;margin:0 auto;padding:0 16px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 16px;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
 /* header */
 .top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--border)}
 .top .wrap{display:flex;align-items:center;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
@@ -1113,10 +1128,172 @@ select.ach-rar{width:auto;min-width:170px;flex:0 0 auto}
 .bk-chip .bk-short{display:none}
 @media(max-width:860px){.bk-chip .bk-long{display:none}.bk-chip .bk-short{display:inline}}
 @media(max-width:520px){.bk-chip{display:none}#dataBtn{position:relative}#dataBtn.bk-warn::after{content:"";position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:2px;background:var(--warn);box-shadow:0 0 0 2px var(--surface)}.dm-foot{font-size:12.5px}.dm-panel{min-width:0;width:min(292px,calc(100vw - 24px))}}
+.dbt{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,.8fr) minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--grid)}
+.dbt.head{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);padding:12px 0 6px;font-weight:650}
+.dbt .num{font-variant-numeric:tabular-nums}
+.goal{display:flex;flex-direction:column;gap:6px;box-shadow:none}
+.goal-h{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.goal-h b{font-weight:650}
+.rv-big{font-size:30px;font-weight:650;letter-spacing:-.01em;margin-top:2px}
+.rv-item{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--grid);font-size:13.5px}
+.rv-ck{width:20px;text-align:center;color:var(--muted)}
+.rv-item.ok .rv-ck{color:var(--good-ink);font-weight:700}
+@media(max-width:760px){.dbt{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 10px}.dbt.head{display:none}.dbt>:first-child{grid-column:1/-1}.dbt .num::before{content:attr(data-l);display:block;font-size:11px;color:var(--muted)}.dbt .sub-act{grid-column:1/-1;justify-content:flex-start}}
+
+/* =====================================================================
+   MODERN LAYER (BETA 4.5): depth, gradient and softer geometry on top of
+   the Utility theme. Same emerald + gold palette, light and dark.
+   ===================================================================== */
+:root{
+  --r:16px; --r-sm:10px; --ctl:40px; --ctl-sm:34px; --ease:170ms cubic-bezier(.2,.7,.3,1);
+  --font:"Inter var",Inter,"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+:root[data-theme="light"]{
+  --bg:#f3f6f7; --surface:#ffffff; --surface-2:#f5f8f8; --surface-3:#e9efef; --ink:#14201d; --ink-2:#44524e; --muted:#586560;
+  --grid:rgba(20,32,29,.07); --axis:rgba(20,32,29,.26); --border:#e0e8e6; --border-strong:#c8d3d0;
+  --accent:#087f5b; --accent-hover:#066648; --accent-ink:#ffffff; --accent-soft:rgba(8,127,91,.10); --accent-line:rgba(8,127,91,.34); --accent-2:#1f9a74;
+  --grad:linear-gradient(135deg,#0a8460 0%,#066d5a 55%,#065a60 100%);
+  --grad-hero:linear-gradient(135deg,#08724f 0%,#07655a 52%,#0a4b5c 100%);
+  --grad-soft:linear-gradient(135deg,rgba(8,127,91,.11),rgba(6,90,96,.05));
+  --accent-grad:var(--grad);
+  --shadow:0 1px 2px rgba(16,36,30,.05),0 8px 24px -14px rgba(16,36,30,.16);
+  --shadow-pop:0 20px 48px -16px rgba(16,36,30,.38),0 2px 8px rgba(16,36,30,.08);
+  --shadow-btn:0 8px 18px -8px rgba(8,127,91,.65);
+  --glass:rgba(255,255,255,.74); --mesh1:rgba(31,184,134,.15); --mesh2:rgba(255,176,66,.11); --hover-band:rgba(20,32,29,.04);
+}
+:root[data-theme="dark"]{
+  --bg:#0c1114; --surface:#141a1e; --surface-2:#1a2127; --surface-3:#222a31; --ink:#e8efed; --ink-2:#b4c1bd; --muted:#8c9b96;
+  --grid:rgba(255,255,255,.07); --axis:rgba(255,255,255,.22); --border:#242e34; --border-strong:#37434b;
+  --accent:#3fd0a0; --accent-hover:#66dcb7; --accent-ink:#04180f; --accent-soft:rgba(63,208,160,.14); --accent-line:rgba(63,208,160,.42); --accent-2:#62dcb5;
+  --grad:linear-gradient(135deg,#4ee0b1 0%,#25bb88 55%,#19a6a3 100%);
+  --grad-hero:linear-gradient(135deg,#0f5f4a 0%,#0c4a47 55%,#0b3548 100%);
+  --grad-soft:linear-gradient(135deg,rgba(63,208,160,.14),rgba(25,166,163,.06));
+  --accent-grad:var(--grad);
+  --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 30px -16px rgba(0,0,0,.75);
+  --shadow-pop:0 24px 54px -16px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.05);
+  --shadow-btn:0 8px 20px -8px rgba(63,208,160,.55);
+  --glass:rgba(16,22,26,.74); --mesh1:rgba(40,200,150,.11); --mesh2:rgba(255,176,66,.05); --hover-band:rgba(255,255,255,.05);
+}
+html{background:var(--bg)}
+body{font-size:14.5px;background:radial-gradient(1000px 560px at 6% -12%,var(--mesh1),transparent 62%),radial-gradient(820px 520px at 104% -6%,var(--mesh2),transparent 60%),var(--bg);background-repeat:no-repeat;background-attachment:scroll}
+h1,h2,h3,h4{font-weight:650}
+.page-h h2{font-size:26px;font-weight:750;letter-spacing:-.025em}
+@media(max-width:520px){.page-h h2{font-size:22px}}
+.sect-t{letter-spacing:.08em;font-weight:650}
+
+/* header: frosted bar, pill tabs */
+.top{background:var(--glass);backdrop-filter:saturate(1.6) blur(16px);-webkit-backdrop-filter:saturate(1.6) blur(16px);border-bottom:1px solid color-mix(in srgb,var(--border) 75%,transparent);box-shadow:0 10px 28px -22px rgba(16,36,30,.45)}
+.top .wrap{padding-top:9px;padding-bottom:9px;row-gap:8px}
+a.brand{text-decoration:none;color:inherit;border-radius:14px;padding:3px 10px 3px 3px;margin-left:-3px;transition:background-color var(--ease)}
+a.brand:hover{background:var(--accent-soft)}
+a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.brand .logo{width:38px;height:38px;border-radius:0;background:none;box-shadow:none;display:block;flex:none;filter:drop-shadow(0 5px 9px rgba(8,127,91,.38));transition:transform var(--ease)}
+a.brand:hover .logo{transform:scale(1.06) rotate(-3deg)}
+.brand .logo svg{width:38px;height:38px;display:block}
+.brand h1{font-size:16px;font-weight:720;letter-spacing:-.015em;color:var(--ink)}
+.brand span{font-size:11px;color:var(--muted)}
+nav.tabs{gap:2px;padding:3px;background:var(--surface-2);border:1px solid var(--border);border-radius:999px}
+nav.tabs button{border-radius:999px;min-height:34px;padding:0 13px;box-shadow:none;background:none;color:var(--ink-2)}
+nav.tabs button:hover{background:var(--accent-soft);color:var(--ink)}
+nav.tabs button[aria-current="page"]{background:var(--surface);color:var(--accent);font-weight:650;box-shadow:0 1px 3px rgba(16,36,30,.16),0 0 0 1px var(--border)}
+:root[data-theme="dark"] nav.tabs button[aria-current="page"]{background:var(--surface-3);box-shadow:0 1px 3px rgba(0,0,0,.5),0 0 0 1px var(--border-strong)}
+nav.tabs button:focus-visible{outline-offset:1px}
+.tabarrow{border-radius:50%}
+.lvlchip{border-radius:999px;padding:0 12px 0 3px;border-color:var(--border)}
+.lvlchip .lv{border-radius:999px;background:var(--grad);color:var(--accent-ink);min-width:26px}
+.bk-chip{border-radius:999px}
+.bk-chip::before{border-radius:50%}
+.themesw .tk{border-radius:999px}
+.themesw .th{border-radius:999px;background:var(--grad)}
+.totop{border-radius:50%}
+
+/* cards */
+.card{border-radius:var(--r);box-shadow:var(--shadow);border-color:var(--border)}
+.card.tile:hover{box-shadow:var(--shadow);border-color:var(--accent-line)}
+.tile .val{font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.banner{background:var(--grad-soft);border:1px solid var(--accent-line);border-radius:var(--r)}
+.insight .ic{border-radius:12px;background:var(--grad-soft)}
+.empty-state{background:var(--grad-soft)}
+.lvl{border-left-width:1px;border-left-color:var(--border);background:var(--grad-soft),var(--surface)}
+.ach.unlocked{box-shadow:var(--shadow)}
+
+/* hero: the net worth card */
+.hero{position:relative;overflow:hidden;border:0;border-left:0;color:#fff;background:var(--grad-hero);box-shadow:0 24px 48px -24px rgba(6,90,96,.75),0 2px 6px rgba(6,60,60,.2);padding:24px 26px;
+  --ink:#fff; --ink-2:#fff; --muted:#fff; --s1:#9bf1d2; --surface:#08724f; --good-ink:#c9fbe8; --crit:#ffe0e0; --border:rgba(255,255,255,.22)}
+.hero::before{content:"";position:absolute;right:-70px;top:-100px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,200,107,.34),transparent 66%);pointer-events:none}
+.hero::after{content:"";position:absolute;left:-90px;bottom:-130px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(52,214,164,.26),transparent 66%);pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero .big{color:#fff;-webkit-text-fill-color:#fff;background:none;font-weight:760;letter-spacing:-.035em;text-shadow:0 2px 20px rgba(0,0,0,.2)}
+.hero .big.neg{color:#ffe0e0;-webkit-text-fill-color:#ffe0e0}
+.hero .lbl{color:#fff}
+.hero .side .tile{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:10px 14px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.hero .tile .lbl{color:#fff}
+.hero .tile .val{color:#fff}
+@media(max-width:520px){.hero{padding:18px}.hero .side{gap:8px}.hero .side .tile{padding:8px 12px}}
+@media print{.hero{background:#fff;color:#000;border:1px solid #999;box-shadow:none;--ink:#000;--ink-2:#222;--muted:#444;--s1:#087f5b;--surface:#fff}
+  .hero .big,.hero .tile .val{color:#000;-webkit-text-fill-color:#000;text-shadow:none}.hero .lbl,.hero .tile .lbl{color:#333}.hero::before,.hero::after{display:none}.hero .side .tile{background:none;border-color:#999}}
+
+/* buttons, chips, inputs */
+.btn{background:var(--surface);border-color:var(--border-strong);box-shadow:0 1px 1px rgba(16,36,30,.04)}
+.btn:hover{background:var(--surface-2);border-color:var(--accent-line)}
+.btn.primary{background:var(--grad);border-color:transparent;color:var(--accent-ink);box-shadow:var(--shadow-btn),inset 0 1px 0 rgba(255,255,255,.22)}
+.btn.primary:hover:not(:disabled){background:var(--grad);border-color:transparent;filter:brightness(1.08);box-shadow:var(--shadow-btn),inset 0 1px 0 rgba(255,255,255,.28)}
+.btn.primary:active:not(:disabled){filter:brightness(.95);transform:translateY(1px)}
+.btn.primary:disabled,.btn.primary:disabled:hover{background:color-mix(in srgb,var(--accent) 35%,var(--surface-2));box-shadow:none}
+.chip{border-radius:999px}
+.chip[aria-pressed="true"]{background:var(--grad);border-color:transparent;color:var(--accent-ink)}
+.fld .chips .chip,.chips.seg .chip{border-radius:0}
+.fld .chips .chip:first-child,.chips.seg .chip:first-child{border-radius:var(--r-sm) 0 0 var(--r-sm)}
+.fld .chips .chip:last-child,.chips.seg .chip:last-child{border-radius:0 var(--r-sm) var(--r-sm) 0}
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px var(--accent-line)}
+.pill{border-radius:999px;font-size:12px;font-weight:600;padding:3px 10px;background:var(--surface-2);border:1px solid var(--border)}
+.pill.ok{background:color-mix(in srgb,var(--good) 14%,var(--surface));color:var(--good-ink);border-color:color-mix(in srgb,var(--good) 42%,transparent)}
+.pill-btn{font:inherit;font-size:12px;font-weight:600;color:var(--ink);cursor:pointer;gap:7px;text-align:left;transition:border-color var(--ease),background-color var(--ease)}
+.pill-btn::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--muted)}
+.pill-btn.ok::before{background:var(--good)}
+.pill-btn.warn::before{background:var(--warn)}
+.pill-btn:hover{border-color:var(--accent)}
+.pill-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(pointer:coarse){.pill-btn{min-height:36px;padding:0 14px}}
+.dash-view{display:flex;justify-content:flex-end;margin:-2px 0 10px}
+.dash-view .chips.seg{width:auto}.dash-view .chips.seg .chip{flex:none;padding:0 18px;min-height:var(--ctl-sm)}
+
+/* meters and bars: rounded, gradient fills */
+.meter .track,.pbar,.nu .track,.brow .mini,.lvlchip .xb,.lvl .bar,.hrow .trk{border-radius:999px}
+.meter .fill,.pbar i,.nu .track i,.lvlchip .xb i,.lvl .bar i,.hrow .trk .f:not(.over),.brow .mini i:not(.over){border-radius:999px;background:linear-gradient(90deg,var(--accent-2),var(--accent))}
+.hrow .trk .f.over,.brow .mini i.over{border-radius:999px}
+.meter.done .fill{background:var(--grad)}
+
+/* overlays */
+dialog{border-radius:22px;border:1px solid var(--border);box-shadow:var(--shadow-pop)}
+dialog.palette{border-radius:20px}
+dialog::backdrop{background:rgba(6,18,16,.5);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.dm-panel{border-radius:16px}
+.toast{border-radius:14px}
+.notice{border-radius:18px}
+.unlock{border-radius:18px}
+.tip{border-radius:12px}
+
+/* splash */
+#splash{background:radial-gradient(900px 520px at 20% 0%,var(--mesh1),transparent 62%),radial-gradient(700px 440px at 100% 100%,var(--mesh2),transparent 60%),var(--bg)}
+.sp-logo{width:88px;height:88px;border-radius:0;background:none;box-shadow:none;filter:drop-shadow(0 16px 26px rgba(8,127,91,.45))}
+.sp-logo svg{width:88px;height:88px;display:block}
+@media(prefers-reduced-motion:no-preference){.sp-logo{animation:splashpulse 1.8s ease-in-out infinite}}
+#splash .sp-bar{width:140px;height:4px;border-radius:999px}
+#splash .sp-bar i{border-radius:999px;background:var(--grad)}
+
+/* mobile bottom bar */
+@media(max-width:860px){
+  .bnav{background:var(--glass);backdrop-filter:saturate(1.6) blur(18px);-webkit-backdrop-filter:saturate(1.6) blur(18px);border-top:1px solid var(--border)}
+  .bnav button{border-radius:14px;box-shadow:none}
+  .bnav button[aria-current="page"]{background:var(--accent-soft);color:var(--accent);box-shadow:none}
+  .bn-sheet{border-radius:20px}
+  .bn-item{border-radius:12px}
+}
 </style>
 </head>
 <body>
-<div id="splash" role="status" aria-live="polite"><div class="sp-logo"><svg viewBox="12 12 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 48V39M32 48V32M44 48V35" stroke="currentColor" style="color:var(--accent-ink)" stroke-width="6"/><path d="M17 27L27.5 20.5L35 24L46 16" stroke="#F2B640" stroke-width="4.5"/></svg></div><div class="sp-bar"><i></i></div><div class="sp-t">Loading your finances…</div></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="mbbg" gradientUnits="userSpaceOnUse" x1="6" y1="2" x2="58" y2="62"><stop offset="0" stop-color="#34D6A4"/><stop offset=".5" stop-color="#0B9168"/><stop offset="1" stop-color="#06566B"/></linearGradient><linearGradient id="mbbar" gradientUnits="userSpaceOnUse" x1="0" y1="26" x2="0" y2="50"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity=".62"/></linearGradient><linearGradient id="mbgold" gradientUnits="userSpaceOnUse" x1="12" y1="28" x2="52" y2="12"><stop offset="0" stop-color="#FFD166"/><stop offset="1" stop-color="#FF9F45"/></linearGradient><linearGradient id="mbshine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="40"><stop offset="0" stop-color="#fff" stop-opacity=".30"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg><div id="splash" role="status" aria-live="polite"><div class="sp-logo"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="15" fill="url(#mbbg)"/><path d="M0 15Q0 0 15 0H49Q64 0 64 15V26C46 38 22 36 0 22Z" fill="url(#mbshine)"/><rect x="14" y="35" width="9" height="15" rx="3" fill="url(#mbbar)"/><rect x="27.5" y="28" width="9" height="22" rx="3" fill="url(#mbbar)"/><rect x="41" y="32" width="9" height="18" rx="3" fill="url(#mbbar)"/><path d="M14 26L26 19L36 23.5L50 13" fill="none" stroke="url(#mbgold)" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="13" r="3.4" fill="#FFE29A"/></svg></div><div class="sp-bar"><i></i></div><div class="sp-t">Loading your finances…</div></div>
 <noscript><style>#splash{display:none}</style></noscript>
 <script>try{if(window.top!==window.self)document.documentElement.className+=' framed'}catch(e){document.documentElement.className+=' framed'}</script>
 <script>setTimeout(function(){var s=document.getElementById('splash');if(s)s.remove()},6000)</script>
@@ -1124,7 +1301,7 @@ select.ach-rar{width:auto;min-width:170px;flex:0 0 auto}
 <div id="framedMsg" role="alert"><b>Open this app directly.</b> For your protection, mbmoney.online does not run inside another page. <a href="https://mbmoney.online/" target="_top" rel="noopener">Open mbmoney.online</a></div>
 <header class="top">
   <div class="wrap">
-    <div class="brand"><div class="logo" aria-hidden="true"><svg viewBox="12 12 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 48V39M32 48V32M44 48V35" stroke="currentColor" style="color:var(--accent-ink)" stroke-width="6"/><path d="M17 27L27.5 20.5L35 24L46 16" stroke="#F2B640" stroke-width="4.5"/></svg></div><div class="bt"><h1>mbmoney.online</h1><span>BETA 4.2 · Web edition</span></div></div>
+    <a class="brand" id="brandLink" href="#dashboard" title="Go to the Dashboard"><div class="logo" aria-hidden="true"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="15" fill="url(#mbbg)"/><path d="M0 15Q0 0 15 0H49Q64 0 64 15V26C46 38 22 36 0 22Z" fill="url(#mbshine)"/><rect x="14" y="35" width="9" height="15" rx="3" fill="url(#mbbar)"/><rect x="27.5" y="28" width="9" height="22" rx="3" fill="url(#mbbar)"/><rect x="41" y="32" width="9" height="18" rx="3" fill="url(#mbbar)"/><path d="M14 26L26 19L36 23.5L50 13" fill="none" stroke="url(#mbgold)" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="13" r="3.4" fill="#FFE29A"/></svg></div><div class="bt"><h1>mbmoney.online</h1><span>BETA 4.5 · Web edition</span></div></a>
     <div class="tabwrap"><button class="tabarrow l" type="button" aria-label="Show earlier tabs" hidden>‹</button><nav class="tabs" aria-label="Sections"></nav><button class="tabarrow r" type="button" aria-label="Show more tabs" hidden>›</button></div>
     <div class="actions">
       <button class="btn sm" id="searchBtn" type="button" title="Search the whole site (press / or Ctrl+K)" aria-label="Search"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="5.5"/><path d="M13.5 13.5L17 17"/></svg><span class="lbl">Search</span><kbd class="kb">Ctrl K</kbd></button>
@@ -1145,6 +1322,7 @@ select.ach-rar{width:auto;min-width:170px;flex:0 0 auto}
   <section class="page" id="p-budget" hidden></section>
   <section class="page" id="p-transactions" hidden></section>
   <section class="page" id="p-subs" hidden></section>
+  <section class="page" id="p-plan" hidden></section>
 </main>
 <button class="totop" id="toTop" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 16V4M4.5 9.5L10 4l5.5 5.5"/></svg></button>
 <footer><div class="wrap">mbmoney.online © 2024–2026 Matthew Broyer. All rights reserved. Your data stays in your browser unless you export it. Not financial advice. <a href="#" id="privacyLink">Privacy</a> · <a href="#" id="termsLink">Terms of use</a></div></footer>
@@ -1154,8 +1332,8 @@ select.ach-rar{width:auto;min-width:170px;flex:0 0 auto}
 const ACH_BASE=[{"name": "Data Wrangler", "desc": "Imported your first transactions. The numbers obey you now.", "rar": "Common", "xp": 50}, {"name": "First Steps", "desc": "Logged your first 25 transactions.", "rar": "Common", "xp": 50}, {"name": "Net Worth Newbie", "desc": "Tracked your net worth for a month. Knowledge is power.", "rar": "Common", "xp": 75}, {"name": "One Month Wonder", "desc": "Tracked your budget for a month. Impressive restraint.", "rar": "Common", "xp": 75}, {"name": "Ledger Apprentice", "desc": "Tracked 100 transactions total.", "rar": "Common", "xp": 100}, {"name": "Frugal Fighter I", "desc": "Lived below your means for a whole month. Adulting unlocked.", "rar": "Uncommon", "xp": 100}, {"name": "Double Tracker I", "desc": "Tracked net worth 2 months in a row. You’re serious now.", "rar": "Uncommon", "xp": 100}, {"name": "Double Tracker II", "desc": "Tracked your budget 2 months in a row. Consistency achieved.", "rar": "Uncommon", "xp": 100}, {"name": "Keeping Tabs", "desc": "Reached 250 transactions logged.", "rar": "Uncommon", "xp": 150}, {"name": "Income Rookie", "desc": "Recorded $10,000 in total income. Cha-ching!", "rar": "Uncommon", "xp": 150}, {"name": "Triple Tracker I", "desc": "Tracked net worth 3 consecutive months. Patience pays.", "rar": "Uncommon", "xp": 150}, {"name": "Triple Tracker II", "desc": "Tracked your budget 3 consecutive months. Routine mode: ON.", "rar": "Uncommon", "xp": 150}, {"name": "Thousandaire", "desc": "Saved your first $1,000. Ka-ching!", "rar": "Uncommon", "xp": 150}, {"name": "Paper Trail", "desc": "500 transactions recorded. Discipline unlocked.", "rar": "Uncommon", "xp": 200}, {"name": "Retirement Rookie I", "desc": "Contributed to a retirement account for 1 month. Long game begun.", "rar": "Uncommon", "xp": 200}, {"name": "Debt Slayer I", "desc": "All credit cards defeated. You feel lighter already.", "rar": "Rare", "xp": 200}, {"name": "Credit Climber I", "desc": "Credit score hit 650+. Respect earned.", "rar": "Rare", "xp": 200}, {"name": "Bronze Saver", "desc": "10% average savings rate. Not bad for a rookie.", "rar": "Rare", "xp": 200}, {"name": "Side Hustler I", "desc": "Earned $1,000 from business income. First taste of freedom.", "rar": "Rare", "xp": 200}, {"name": "Quarter Milestone", "desc": "Saved $2,500. Getting serious.", "rar": "Rare", "xp": 200}, {"name": "Side Hustler II", "desc": "Earned $5,000 from business income. The grind continues.", "rar": "Rare", "xp": 200}, {"name": "Five Digits Saved", "desc": "Saved $5,000. Wealth mode: activated.", "rar": "Rare", "xp": 250}, {"name": "Above Water", "desc": "Positive net worth unlocked! Floating comfortably.", "rar": "Rare", "xp": 300}, {"name": "Bookkeeper", "desc": "1,000 transactions tracked. Habit formed.", "rar": "Rare", "xp": 300}, {"name": "Retirement Rookie II", "desc": "Contributed to a retirement account 2 months in a row. Steady grind.", "rar": "Rare", "xp": 300}, {"name": "Income Tracker I", "desc": "Recorded $50,000 total income. Money talks.", "rar": "Rare", "xp": 350}, {"name": "Retirement Adept I", "desc": "3 months consecutive retirement contributions. Future secured.", "rar": "Rare", "xp": 350}, {"name": "Retirement Adept II", "desc": "6 months consecutive retirement contributions. Patience rewarded.", "rar": "Rare", "xp": 400}, {"name": "Cash Stash I", "desc": "Hold $10,000 in cash equivalents. Safety first.", "rar": "Rare", "xp": 400}, {"name": "Market Player I", "desc": "Hold $10,000 in investments. Wall Street mode engaged.", "rar": "Rare", "xp": 400}, {"name": "Base Camp", "desc": "Reach $25,000 net worth. The climb begins.", "rar": "Rare", "xp": 400}, {"name": "Half Funded Hero", "desc": "Saved 3 months of expenses. Halfway to security.", "rar": "Rare", "xp": 500}, {"name": "Car-Free Champ", "desc": "Paid off your auto loan. Freedom wheels unlocked.", "rar": "Rare", "xp": 500}, {"name": "Half-Century Networth", "desc": "Reach $50,000 net worth. Wealth unlocked.", "rar": "Rare", "xp": 500}, {"name": "The Vault is Ready", "desc": "Accounts aligned. Vault pressure stable.", "rar": "Rare", "xp": 500}, {"name": "Side Hustler III", "desc": "Earned $10,000 from business income. You’re cooking now.", "rar": "Epic", "xp": 300}, {"name": "Half-Year Hero I", "desc": "Tracked net worth for 6 consecutive months. Growth unlocked.", "rar": "Epic", "xp": 300}, {"name": "Half-Year Hero II", "desc": "Tracked your budget for 6 consecutive months. Discipline achieved.", "rar": "Epic", "xp": 300}, {"name": "Debt Slayer II", "desc": "Paid off $10,000 in total debt. Chains removed.", "rar": "Epic", "xp": 400}, {"name": "Investor Initiate", "desc": "Contributed to an investment account. Wall Street, meet you.", "rar": "Epic", "xp": 400}, {"name": "Number Cruncher", "desc": "2,500 transactions entered. Spreadsheet mastery.", "rar": "Epic", "xp": 400}, {"name": "Credit Climber II", "desc": "700+ credit score. Impressive stamina.", "rar": "Epic", "xp": 500}, {"name": "Year Tracker I", "desc": "Tracked net worth 12 consecutive months. Level up.", "rar": "Epic", "xp": 500}, {"name": "Year Tracker II", "desc": "Tracked monthly budget 12 consecutive months. Persistence unlocked.", "rar": "Epic", "xp": 500}, {"name": "Silver Saver", "desc": "20% average savings rate. Money wizardry achieved.", "rar": "Epic", "xp": 500}, {"name": "Finance Fanatic", "desc": "5,000 transactions logged. Money moves only.", "rar": "Epic", "xp": 500}, {"name": "Side Hustler IV", "desc": "Earned $50,000 from business income. The grind pays off.", "rar": "Epic", "xp": 600}, {"name": "Income Tracker II", "desc": "Recorded $100,000 total income. Feeling legendary.", "rar": "Epic", "xp": 600}, {"name": "Retirement Master I", "desc": "12 months consecutive retirement contributions. Long game complete.", "rar": "Epic", "xp": 600}, {"name": "Credit Master", "desc": "750+ credit score. Respect unlocked.", "rar": "Epic", "xp": 700}, {"name": "Gold Saver", "desc": "30% average savings rate. Financial wizard.", "rar": "Epic", "xp": 700}, {"name": "Side Hustler V", "desc": "Earned $100,000 from business income. Big moves.", "rar": "Epic", "xp": 700}, {"name": "Emergency Expert", "desc": "Emergency fund fully funded. Sleep easy.", "rar": "Epic", "xp": 700}, {"name": "Retirement Master II", "desc": "Contributed to retirement account 2 years in a row. Patience rewarded.", "rar": "Epic", "xp": 700}, {"name": "Two-Year Tracker I", "desc": "Tracked net worth for 2 consecutive years. Growth mastered.", "rar": "Epic", "xp": 800}, {"name": "Two-Year Tracker II", "desc": "Tracked budget for 2 consecutive years. Iron discipline.", "rar": "Epic", "xp": 800}, {"name": "Income Tracker III", "desc": "Recorded $250,000 total income. Big stacks.", "rar": "Epic", "xp": 800}, {"name": "Side Hustler VI", "desc": "Earned $250,000 from business income. Entrepreneur mode.", "rar": "Epic", "xp": 900}, {"name": "Transaction Titan", "desc": "7,500 transactions total. The grind pays off.", "rar": "Legendary", "xp": 600}, {"name": "Six-Figure Networth", "desc": "Reach $100,000 net worth. Milestone unlocked.", "rar": "Legendary", "xp": 1000}, {"name": "Homeowner Hero", "desc": "Bought your first home. Castle secured.", "rar": "Legendary", "xp": 1000}, {"name": "Credit Elite", "desc": "800+ credit score. Financial god mode.", "rar": "Legendary", "xp": 1000}, {"name": "Three-Year Tracker I", "desc": "Tracked net worth 3 consecutive years. Legendary persistence.", "rar": "Legendary", "xp": 1000}, {"name": "Three-Year Tracker II", "desc": "Tracked budget 3 consecutive years. Dedication unlocked.", "rar": "Legendary", "xp": 1000}, {"name": "Retirement Master III", "desc": "3 consecutive years of contributions. The long game mastered.", "rar": "Legendary", "xp": 1000}, {"name": "Platinum Saver", "desc": "40% average savings rate. Money wizard 2.0.", "rar": "Legendary", "xp": 1000}, {"name": "Grand Accountant", "desc": "9,999 transactions entered. Ledger legend.", "rar": "Legendary", "xp": 1000}, {"name": "Income Tracker IV", "desc": "Recorded $500,000 total income. Stacks secured.", "rar": "Legendary", "xp": 1200}, {"name": "Side Hustler VII", "desc": "Earned $500,000 from business income. CEO mode.", "rar": "Legendary", "xp": 1500}, {"name": "Debt-Free Legend", "desc": "Debt-free (excluding mortgage). Chains removed forever.", "rar": "Legendary", "xp": 1500}, {"name": "Quarter-Millionaire", "desc": "$250,000 net worth. Power unlocked.", "rar": "Legendary", "xp": 1500}, {"name": "Five-Year Tracker I", "desc": "Tracked net worth 5 consecutive years. Absolute discipline.", "rar": "Legendary", "xp": 1500}, {"name": "Five-Year Tracker II", "desc": "Tracked budget 5 consecutive years. Obsessive mode.", "rar": "Legendary", "xp": 1500}, {"name": "Retirement Master IV", "desc": "5 consecutive years of contributions. Retirement pro.", "rar": "Legendary", "xp": 1500}, {"name": "Income Tracker V", "desc": "Recorded $1,000,000 total income. Milestone achieved.", "rar": "Legendary", "xp": 2000}, {"name": "Side Hustler VIII", "desc": "Earned $1,000,000 from business income. Empire built.", "rar": "Legendary", "xp": 2500}, {"name": "Mortgage Crusher", "desc": "Paid off mortgage. Freedom unlocked.", "rar": "Legendary", "xp": 2500}, {"name": "Millionaire Status", "desc": "$1,000,000 net worth. Legendary status achieved.", "rar": "Legendary", "xp": 3000}, {"name": "FI Achiever", "desc": "Financial independence reached. Work optional.", "rar": "Legendary", "xp": 5000}, {"name": "Titan of Wealth I", "desc": "Reach $2,500,000 net worth. You monster.", "rar": "Exotic", "xp": 7500}, {"name": "Titan of Wealth II", "desc": "Reach $5,000,000 net worth. Unstoppable.", "rar": "Exotic", "xp": 10000}, {"name": "Titan of Wealth III", "desc": "Reach $10,000,000 net worth. God mode engaged.", "rar": "Exotic", "xp": 20000}];
 const ABOUT_TEXT="Made for people whose paycheck lands in one credit union checking account.\n\nKeep Monthly Budget and Transactions up to date. The Dashboard turns them into your net worth, savings rate and spending patterns. Extra Charts and What If? go deeper. Achievements turn the habit into XP.\n\nBuilt after studying the Bogleheads® Wiki and reading \"If You Can\" by William J. Bernstein. Bogleheads® is a registered trademark of The John C. Bogle Center for Financial Literacy. This app is independent and is not affiliated with or endorsed by the Bogle Center, the Bogleheads community or the author.";
 const LICENSE_TEXT="The short version: use this free web app as much as you like for your own money. No account, no fees, no tracking. Don't copy it, reuse its code or design, or pass it off as yours. Details below.\n\n1. Free to use\nYou get a free, personal, non-exclusive, non-transferable permission to use this web app (the \"App\") in your browser for your own personal finances. It is meant for adults. You don't need an account or a login, and you don't pay anything.\n\n2. Hands off the code (this part is firm)\nThe App's source code, design, layout, charts, badge and achievement artwork, and written content are protected by copyright, and I keep all rights to them. Unless I give you written permission first, you agree not to:\n• copy, scrape, mirror, re-host or republish the App, or any part of its code, design, artwork or text, on any site, app or product, free or paid;\n• build a clone, a \"remix\" or an \"inspired-by\" version from its code, or take it apart to reuse it somewhere else;\n• sell, rent, sublicense or give away the App, or bundle it into anything else;\n• use the App to run a finance service for other people, or for any other commercial purpose;\n• remove or hide the copyright notice or these terms, or claim the App as your own work;\n• interfere with the App or the site it lives on, including with bots or automated scraping.\nViewing the page source to see how something works is fine. Copying or reusing the code without permission breaks these terms and my copyright, and I may respond with takedown requests to hosts and search engines and with any legal remedies available to me.\n\n3. Use it sensibly\nUse the App only for lawful, personal purposes. Don't store other people's private information in it. Don't enter passwords, Social Security numbers, or full card or account numbers. Don't try to break, overload or probe the App or the site it lives on.\n\n4. Your data stays with you\nThere are no accounts and no servers holding your data. Everything you enter is saved in your own browser (local storage) and never leaves your device unless you export it. That means I can't see it and can't recover it. If you clear your browser data or switch devices, it's gone unless you exported a CSV backup. Export one now and then. The privacy policy has the details.\n\n5. Not financial advice\nThis is an educational tool and gives no financial, tax, legal or investment advice. Its numbers, forecasts and projections are estimates based on what you enter and on simple assumptions, and the FAQ explains how the main ones are calculated. It's still a beta, so it may contain mistakes. I'm not your financial advisor, accountant or lawyer. Big money decisions are yours, and a qualified professional is a good idea for the important ones.\n\n6. No warranty\nThe App is provided \"as is\" and \"as available\", without warranties of any kind, express or implied, including accuracy, reliability, fitness for a particular purpose, or that it will always be available or error-free.\n\n7. Limit of liability\nTo the fullest extent the law allows, I'm not liable for any loss or damage (including lost data or financial decisions) that comes from using, or not being able to use, the App. If your local law doesn't allow some of these limits, they apply only as far as the law permits.\n\n8. Changes and the off switch\nI may update, change or shut down the App, or update these terms, at any time. The \"last updated\" date on this page shows the latest version. If you keep using the App after a change, you accept the new terms. If you break these terms, your permission to use the App ends automatically.\n\n9. Everything else\nIf any part of these terms turns out to be unenforceable, the rest still applies. Names of other products, books, sites and organizations mentioned in the App belong to their owners (for example, Bogleheads® is a registered trademark of The John C. Bogle Center for Financial Literacy). Mentioning them doesn't mean they endorse this App or are affiliated with it. These terms are governed by the laws of the State of New Hampshire, and any dispute will be handled in the courts located in Rockingham County, New Hampshire.\n\n© 2024–2026 Matthew Broyer. All rights reserved.";
-const PRIVACY_TEXT="The short version: this app does not collect your data. There is no account, no database, no analytics, no ads and no cookies. What you enter stays in your browser.\n\n1. What you enter\nAn optional name, date of birth, take-home and retirement income, account balances, credit score, notes, and transactions (date, description, category, amount). The date of birth only feeds age-based numbers, so you can leave it blank.\n\n2. Where it is stored\nIn your browser's local storage, on this device only. The app uses three entries: pwmt.web.v1 (your data), pwmt.theme (light or dark) and pwmt.notice (that you dismissed the storage notice). No cookies are set. Local storage is not encrypted, so anyone who can use this browser profile can see your data. On a shared computer, use a private window or clear your data when you finish.\n\n3. What leaves your device\nNothing, unless you export it. Export saves a JSON or CSV file to your device, and what happens to that file afterward is up to you. While the app runs it makes no network requests: no fonts, scripts, images, analytics or error reports are loaded from or sent to any other site.\nThis site is hosted on GitHub Pages, and its domain name is managed through Namecheap. When you load the page, GitHub, like any web host, receives your request and may log technical details such as your IP address, browser type and time of request. Namecheap may see lookups of the domain name. That happens on their side, outside the app, under their own privacy statements, and nothing you enter is part of it. I add no analytics and keep no logs of my own.\n\n4. Deleting your data\nGet Started, then Your data, then Clear all data removes everything from local storage after you confirm. For the undo button, a copy is held in memory only, never saved, and it is gone when you leave or reload the page. The theme and notice entries stay until you clear this site's data in your browser settings, which also deletes everything else. I can't delete your data for you, because I never receive it.\n\n5. Export and import\nData, then Save backup now or Export All saves everything you entered as a JSON or CSV file in a place you choose (or your Downloads folder, depending on the browser). The browser remembers only that file so it can save there again; it never tells this site the folder path. Data, then Import Backup brings it back, or adds a bank export. Import happens in your browser and the file is never uploaded.\n\n6. Sensitive information\nPlease don't enter passwords, Social Security numbers, or full card or account numbers. The app blocks or removes what looks like a card or Social Security number in text fields and imports, but it can't catch everything.\n\n7. Children\nThis app is for adults managing their own money. It is not directed to children. It collects no information from anyone, because it collects nothing.\n\n8. Changes\nIf the app's behavior changes, I will update this page and its \"last updated\" date.";
-const RELEASES=[{"title": "mbmoney.online © 2026 · BETA 4.2 Web Edition · September 26, 2026", "lines": ["• New backups: Data, then Save backup now (or Ctrl+S) saves a full JSON backup. The first time you pick the folder and file name, for example a synced OneDrive or Google Drive folder. After that it saves to the same file in one click. Chrome and Edge on a computer; other browsers save to Downloads.", "• Export All (JSON) and Export All (CSV) let you choose where each file goes. Import Backup takes either one, opens in your backup folder, and still works with bank CSVs and drag and drop.", "• A backup status next to the Data menu shows when you last backed up, and turns amber after 7 days or if you never have. On phones it shows as a dot on the Data button.", "• Merging a backup into the same data no longer doubles your transactions. Rows already here are skipped.", "• Charts recolored to match the forest green theme: greens for your main series, ochre for spending and debt, slate for the rest, and one green everywhere instead of two.", "• Fixed: the Spending power bar no longer slides back and forth, and its key now shows the dollar amounts.", "• Spending power now keeps back everything left in this month's budget (every row you planned but have not spent yet, including rent, bills, wants, saving and debt), not just saving and subscriptions. Left to spend is what is free after that, and the bar turns red if your budget is more than your income.", "• Fixed: Subscriptions columns line up, over-budget bars on the Dashboard are no longer shorter than on-target ones, and transaction amounts always show two decimals.", "• Over budget is marked with ▲ as well as red on the Dashboard and Monthly Budget.", "• Mobile: transactions show as two-line entries instead of a sideways-scrolling table, budget category names wrap instead of being cut off, and the Dashboard tip card and net worth trend use the full width.", "• The app now always opens in light mode unless you picked dark last time.", "• Smaller fixes: the Settings page is titled Settings, the Budget / Net worth switch is one joined toggle, month labels on charts no longer skip, and the What If? chart shows your age."]}, {"title": "mbmoney.online © 2026 · BETA 4.1 Web Edition · September 23, 2026", "lines": ["• New forest green theme in dark and light mode, with a cleaner desktop-app look: flat header with underlined tabs, squarer cards and buttons, and denser tables and forms.", "• Charts now use green for net worth and your main series. Budget progress bars match the theme, and over budget is still red.", "• Faster feel: removed hover lifts, shimmer effects and page entrance animations.", "• The Expense / Income switch on Transactions now lines up with the other fields.", "• Mobile: the bottom tab labels no longer get cut off, and the header fits on one row.", "• New green site icon."]}, {"title": "mbmoney.online © 2026 · BETA 4.0 Web Edition · September 20, 2026", "lines": ["• New Subscriptions tab: track recurring charges with price, billing cycle, next charge date and pause/cancel. Recurring charges in your transactions are suggested automatically, price changes are flagged, and everything is saved in the same CSV.", "• New Spending power card on the Dashboard: left to spend this month (with a per-day amount), cash on hand, and typical monthly capacity.", "• New blue theme in dark and light mode. Charts redrawn to read more clearly: solid bars, no glow, calmer colors, over/under budget in red/green, and a Goal timeline in place of the Visual forecast chart.", "• Fixed: some locked achievements showed 100% progress. Progress now tops out at 99% until the achievement unlocks, Tidy Books tells you how many transactions still need a category, and amounts that exactly hit a target now count.", "• Now in BETA (was ALPHA). All pages, CSV import and export, and paste tools are in place and tested, and the forecasts are still estimates. Expect fixes as more people use it.", "• New logo and site icon.", "• Renamed from Personal Wealth Management Tool to mbmoney.online. New name in the header, page title, footer, downloads and this app's text. Your saved data carries over.", "• New categories: Alcohol, Hobbies & Sports, Clothing, Childcare & Kids, Pets, Home & Auto Insurance, Interest & Dividends, Rental Income, Government Benefits and 529 / Education Savings. Existing data and CSV files work as before.", "• Paste Transactions reads more bank and spreadsheet layouts: title rows, balance columns, debit and credit columns, a debit/credit label column, amounts like $(10.28). Pasting on any page opens it. Picking a category fills other rows with the same description, and the preview shows your totals before you add.", "• Transactions tab: the Expense and Income columns are now one Amount column (negative is an expense, positive is income). Paste Transactions can set a column as Balance.", "• Life events & notes on Monthly Budget is now a full-width box. Write as much as you need and add as many notes per month as you like. An All notes list shows every month.", "• Easier pasting: press Ctrl+V anywhere on Transactions, or load a file. Columns are detected for you (tabs, commas, bank web text, debit and credit columns), and you can fix them, pick categories row by row, and undo the import.", "• Runs in your browser as one web page. No spreadsheet software, no accounts, no server. Your data autosaves as you type.", "• Move data in and out as one CSV. Paste rows from Excel, Google Sheets or your bank, or import a bank-style CSV (duplicates are flagged). Demo data and a CSV template are built in.", "• Dark and light themes, gradient charts with hover tooltips, and a table view for every chart.", "• Numbers count up, charts draw in, and achievements unlock with confetti. New: a Level chip in the header, a \"Next up\" card and rotating insights on the Dashboard.", "• New What If? tab: sliders for extra investing, expected return and time horizon, with a live projection.", "• Monthly Budget shows one month at a time: planned vs. actual, copy from last month, fill forward, and a monthly net worth check-in (balances, credit score, life-event note).", "• Transactions: quick add with description memory, search and filters, inline editing, bulk category and delete, paste from a spreadsheet.", "• Dashboard: 50/30/20 check, this-month snapshot and a net worth hero. Extra Charts redrawn with one axis per chart and better unusual-expense detection.", "• Achievements: all 82 originals plus 30 new, redrawn badges, live progress on locked ones, tap for details.", "• Site search (press / or Ctrl/Cmd + K), expandable FAQ, \"last updated\" stamps, a back-to-top button, loading animations and a short storage notice.", "• Confirmation before every destructive action: deleting a transaction, clearing a month or all data, replacing your data on import.", "• Rewritten terms of use, a new privacy policy, a guided About tour, shorter on-page copy and more space under the header.", "• Faster to use: one Data menu for import and export, larger tap targets, screens that respond in under 400 ms, and Transactions filters tucked behind a button.", "• Harder to break: undo after clearing data, importing, loading demo data, bulk edits and clearing a month. The Add form flags missing amounts, future dates and duplicates before you save.", "• Easier to finish: Get Started opens with a setup checklist that shows your progress and your next step.", "• Safer by design: a strict content security policy blocks outside connections and unapproved scripts. Imports are size-limited, damaged saved data is repaired on load, and card or Social Security numbers are blocked or removed from text.", "• Accessibility pass: skip link, page headings, labeled form fields in every table row, labeled dialogs, higher contrast in light mode, and tabs that can be scrolled both ways.", "• Demo data now uses generic store and service names instead of real brands.", "• Demo data uses a sample profile (John Doe, age 28).", "• Fixed: the retirement and FI/RE dates counted the Cash row twice and left out investments. They now use cash + investments, matching the Milestones chart.", "• Changed: \"current month\" achievements (debt-free, car-free, etc.) now need a balance entered and a prior balance owed, so they no longer unlock on an empty sheet. Streaks only count months up to the current one.", "• Changed: type expenses and debts as positive numbers. The app handles the sign.", "• The privacy policy now names the hosting (GitHub Pages) and the domain manager (Namecheap). The page refuses to run inside another site's frame."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.1 · October 21, 2025", "lines": ["• Minor formula corrections for improved accuracy.", "• 'Get Started' page refinements for a smoother onboarding experience.", "• Added the 'Essential Banking Checklist' to improve user stability.", "• Updated spreadsheet description.", "• Introduced the 'Achievements' tab.", "• Includes 82 new achievements.", "• Custom images.", "• Unique descriptions.", "• Defined rarity and difficulty levels.", "• Implemented a leveling system to enhance user engagement and motivation.", "• Each achievement grants you XP.", "• Added a level progress bar displaying current XP and XP required."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.0 · August 28, 2025", "lines": ["• Copyright update.", "• Foundation for the 'Achievements' tab has been planned.", "• 'Dashboard' accessibility updates."]}, {"title": "Personal Wealth Management Tool © 2025 · BETA 2.2 · April 1, 2025", "lines": ["• Updated various terms for accesibility reasons and better calculations.", "• Updated tab sequence.", "• Updated a various charting forumulas."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.1 · September 17, 2024", "lines": ["• Added the 'Extra Charts' tab.", "• 'Monthly Update' tab now includes credit score tracking."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.0 · September 1, 2024", "lines": ["• Essential rebuild; starting from a fresh workbook.", "• ‘Get Started’: Condensed pages ‘Getting Started’, ‘Settings’, and ‘License’ into one.", "• ‘Dashboard’: The new dashboard is the updates biggest feature!", "• ‘Transactions’: Removed columns for bloating/accessibility reasons.", "• ‘Monthly Tracking’: Combined the ‘Net Worth’ and ‘Budget’ tracking tabs into one.", "• ‘Chart Data’: This page contains all of the formulas required for data validation.", "• Updated the theme to better reflect wealth accumulation.", "• Enhanced the mobile user experience.", "• Improved the flow of information throughout the spreadsheet.", "• Updated the spreadsheet description to more accurately represent the project.", "• Removed the ‘Quick Tools’ tab.", "• Removed the option to sign up for update notifications.", "• Reduced spreadsheet length to 80 years."]}, {"title": "Personal Wealth Management Tool © 2024 · Full Version 1.1 · July 5, 2024", "lines": ["• Updated the project name to 'Personal Wealth Management Tool'", "• Updated various tab names and colors.", "• Introducing the new 'Quick Tools' tab!", "• Custom Budget Calculator", "• Savings Goal Calculator", "• Portfolio Rebalancing Tool", "• 'My Budget Planner' chart is no longer displaying \"over budget\" at net zero.", "• RE: Optimized the 'Input Transactions' page.", "• RE: Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · Full Version 1.0 · May 28, 2024", "lines": ["• Optimized the 'Input Transactions' page.", "• Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.1 · April 30, 2024", "lines": ["• 'Set Budget Targets' tab now shows your current category totals.", "• 'Set Budget Targets' pie chart updated for better presentation.", "• Cells that require inputs are now validated to reduce possible errors.", "• Fixed 'Historical Charts' Month-over-Month bug, and updated pie charts.", "• Unlocked 'Input Transactions' tab to enable table sorting."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.0 · April 26, 2024", "lines": ["• The project moves into private BETA testing with multiple testers.", "• Implemented assets vs. liabilities overview and budget overview charts.", "• Introduced settings page, user themes, and retirement planning options.", "• Enhanced customer support features.", "• Obtained spreadsheet copyright protection; official licensing agreement."]}, {"title": "Personal Wealth Management · ALPHA · April 12, 2024", "lines": ["• Effortlessly categorize spending, income, needs, wants, savings & debts.", "• See your financial health at a glance.", "• Track progress with clear charts and historical timelines.", "• Plan & monitor spending to reach your financial goals.", "• Track net worth, savings, and debt repayments."]}];
+const PRIVACY_TEXT="The short version: this app does not collect your data. There is no account, no database, no analytics, no ads and no cookies. What you enter stays in your browser.\n\n1. What you enter\nAn optional name, date of birth, take-home and retirement income, account balances, credit score, notes, and transactions (date, description, category, amount). The date of birth only feeds age-based numbers, so you can leave it blank.\n\n2. Where it is stored\nIn your browser's local storage, on this device only. The app uses three entries: pwmt.web.v1 (your data), pwmt.theme (light or dark) and pwmt.notice (that you dismissed the storage notice). No cookies are set. Local storage is not encrypted, so anyone who can use this browser profile can see your data. On a shared computer, use a private window or clear your data when you finish.\n\n3. What leaves your device\nNothing, unless you export it. Export saves a JSON or CSV file to your device, and what happens to that file afterward is up to you. While the app runs it makes no network requests: no fonts, scripts, images, analytics or error reports are loaded from or sent to any other site. If you install the app, your browser also keeps a copy of the app's own files (not your data) so it can open with no signal.\nThis site is hosted on GitHub Pages, and its domain name is managed through Namecheap. When you load the page, GitHub, like any web host, receives your request and may log technical details such as your IP address, browser type and time of request. Namecheap may see lookups of the domain name. That happens on their side, outside the app, under their own privacy statements, and nothing you enter is part of it. I add no analytics and keep no logs of my own.\n\n4. Deleting your data\nGet Started, then Your data, then Clear all data removes everything from local storage after you confirm. For the undo button, a copy is held in memory only, never saved, and it is gone when you leave or reload the page. The theme and notice entries stay until you clear this site's data in your browser settings, which also deletes everything else. I can't delete your data for you, because I never receive it.\n\n5. Export and import\nData, then Save backup now or Export All saves everything you entered as a JSON or CSV file in a place you choose (or your Downloads folder, depending on the browser). The browser remembers only that file so it can save there again; it never tells this site the folder path. Data, then Import Backup brings it back, or adds a bank export. Import happens in your browser and the file is never uploaded.\n\n6. Sensitive information\nPlease don't enter passwords, Social Security numbers, or full card or account numbers. The app blocks or removes what looks like a card or Social Security number in text fields and imports, but it can't catch everything.\n\n7. Children\nThis app is for adults managing their own money. It is not directed to children. It collects no information from anyone, because it collects nothing.\n\n8. Changes\nIf the app's behavior changes, I will update this page and its \"last updated\" date.";
+const RELEASES=[{"title": "mbmoney.online © 2026 · BETA 4.5 Web Edition · October 9, 2026", "lines": ["• New look: a gradient logo and icons, a frosted header, pill tabs, softer cards, gradient buttons and a gradient net worth card, in light and dark. Same green and gold theme.", "• Clicking the logo or title takes you back to the Dashboard.", "• The Dashboard status pill now follows your monthly routine: it says when your check-in is due, when it is time to import transactions, and when you are all caught up. Tap it to jump there.", "• New 2-minute snapshot for first-time setup: enter your take-home pay and a few balances to see net worth and runway right away.", "• New Simple view on the Dashboard keeps the essentials and hides the charts. Your choice is remembered on this device.", "• New monthly check-in reminder: download a repeating calendar file (.ics) for any calendar app.", "• New year-end summary: download a CSV with the year's totals, monthly cash flow, top spending categories and net worth change.", "• 9 new achievements for the Plan features, snapshot, reminders and reviews (121 in all)."]}, {"title": "mbmoney.online © 2026 · BETA 4.4 Web Edition · October 9, 2026", "lines": ["• New Plan tab with a cash-flow calendar: your checking balance day by day for the next 30, 60 or 90 days from your pay schedule, tracked bills and average spending, with the lowest point and how much is safe to spend until payday.", "• New savings goals: set a target and date, link a goal to an account so it follows your check-in balances, and see what you need each month. One tap adds an emergency fund goal sized to your essentials.", "• New debt payoff planner: add each credit card or loan's APR and minimum payment once (balances come from your check-in), compare avalanche with snowball, and see the interest and months an extra payment saves.", "• New on the Dashboard: a resilience strip (runway in months, essentials vs. income) and a monthly review that explains why net worth changed, with a checklist.", "• Your CSV and JSON backups now carry debt terms, goals and your pay schedule. Older files still import."]}, {"title": "mbmoney.online © 2026 · BETA 4.3 Web Edition · October 9, 2026", "lines": ["• New: install mbmoney.online as an app. On Chrome, Edge and Android use the Install button on the Settings page. On iPhone or iPad, tap Share, then Add to Home Screen. It opens full screen with its own icon and loads with no signal after the first visit.", "• New app icons and a link preview image for sharing."]}, {"title": "mbmoney.online © 2026 · BETA 4.2 Web Edition · September 26, 2026", "lines": ["• New backups: Data, then Save backup now (or Ctrl+S) saves a full JSON backup. The first time you pick the folder and file name, for example a synced OneDrive or Google Drive folder. After that it saves to the same file in one click. Chrome and Edge on a computer; other browsers save to Downloads.", "• Export All (JSON) and Export All (CSV) let you choose where each file goes. Import Backup takes either one, opens in your backup folder, and still works with bank CSVs and drag and drop.", "• A backup status next to the Data menu shows when you last backed up, and turns amber after 7 days or if you never have. On phones it shows as a dot on the Data button.", "• Merging a backup into the same data no longer doubles your transactions. Rows already here are skipped.", "• Charts recolored to match the forest green theme: greens for your main series, ochre for spending and debt, slate for the rest, and one green everywhere instead of two.", "• Fixed: the Spending power bar no longer slides back and forth, and its key now shows the dollar amounts.", "• Spending power now keeps back everything left in this month's budget (every row you planned but have not spent yet, including rent, bills, wants, saving and debt), not just saving and subscriptions. Left to spend is what is free after that, and the bar turns red if your budget is more than your income.", "• Fixed: Subscriptions columns line up, over-budget bars on the Dashboard are no longer shorter than on-target ones, and transaction amounts always show two decimals.", "• Over budget is marked with ▲ as well as red on the Dashboard and Monthly Budget.", "• Mobile: transactions show as two-line entries instead of a sideways-scrolling table, budget category names wrap instead of being cut off, and the Dashboard tip card and net worth trend use the full width.", "• The app now always opens in light mode unless you picked dark last time.", "• Smaller fixes: the Settings page is titled Settings, the Budget / Net worth switch is one joined toggle, month labels on charts no longer skip, and the What If? chart shows your age."]}, {"title": "mbmoney.online © 2026 · BETA 4.1 Web Edition · September 23, 2026", "lines": ["• New forest green theme in dark and light mode, with a cleaner desktop-app look: flat header with underlined tabs, squarer cards and buttons, and denser tables and forms.", "• Charts now use green for net worth and your main series. Budget progress bars match the theme, and over budget is still red.", "• Faster feel: removed hover lifts, shimmer effects and page entrance animations.", "• The Expense / Income switch on Transactions now lines up with the other fields.", "• Mobile: the bottom tab labels no longer get cut off, and the header fits on one row.", "• New green site icon."]}, {"title": "mbmoney.online © 2026 · BETA 4.0 Web Edition · September 20, 2026", "lines": ["• New Subscriptions tab: track recurring charges with price, billing cycle, next charge date and pause/cancel. Recurring charges in your transactions are suggested automatically, price changes are flagged, and everything is saved in the same CSV.", "• New Spending power card on the Dashboard: left to spend this month (with a per-day amount), cash on hand, and typical monthly capacity.", "• New blue theme in dark and light mode. Charts redrawn to read more clearly: solid bars, no glow, calmer colors, over/under budget in red/green, and a Goal timeline in place of the Visual forecast chart.", "• Fixed: some locked achievements showed 100% progress. Progress now tops out at 99% until the achievement unlocks, Tidy Books tells you how many transactions still need a category, and amounts that exactly hit a target now count.", "• Now in BETA (was ALPHA). All pages, CSV import and export, and paste tools are in place and tested, and the forecasts are still estimates. Expect fixes as more people use it.", "• New logo and site icon.", "• Renamed from Personal Wealth Management Tool to mbmoney.online. New name in the header, page title, footer, downloads and this app's text. Your saved data carries over.", "• New categories: Alcohol, Hobbies & Sports, Clothing, Childcare & Kids, Pets, Home & Auto Insurance, Interest & Dividends, Rental Income, Government Benefits and 529 / Education Savings. Existing data and CSV files work as before.", "• Paste Transactions reads more bank and spreadsheet layouts: title rows, balance columns, debit and credit columns, a debit/credit label column, amounts like $(10.28). Pasting on any page opens it. Picking a category fills other rows with the same description, and the preview shows your totals before you add.", "• Transactions tab: the Expense and Income columns are now one Amount column (negative is an expense, positive is income). Paste Transactions can set a column as Balance.", "• Life events & notes on Monthly Budget is now a full-width box. Write as much as you need and add as many notes per month as you like. An All notes list shows every month.", "• Easier pasting: press Ctrl+V anywhere on Transactions, or load a file. Columns are detected for you (tabs, commas, bank web text, debit and credit columns), and you can fix them, pick categories row by row, and undo the import.", "• Runs in your browser as one web page. No spreadsheet software, no accounts, no server. Your data autosaves as you type.", "• Move data in and out as one CSV. Paste rows from Excel, Google Sheets or your bank, or import a bank-style CSV (duplicates are flagged). Demo data and a CSV template are built in.", "• Dark and light themes, gradient charts with hover tooltips, and a table view for every chart.", "• Numbers count up, charts draw in, and achievements unlock with confetti. New: a Level chip in the header, a \"Next up\" card and rotating insights on the Dashboard.", "• New What If? tab: sliders for extra investing, expected return and time horizon, with a live projection.", "• Monthly Budget shows one month at a time: planned vs. actual, copy from last month, fill forward, and a monthly net worth check-in (balances, credit score, life-event note).", "• Transactions: quick add with description memory, search and filters, inline editing, bulk category and delete, paste from a spreadsheet.", "• Dashboard: 50/30/20 check, this-month snapshot and a net worth hero. Extra Charts redrawn with one axis per chart and better unusual-expense detection.", "• Achievements: all 82 originals plus 30 new, redrawn badges, live progress on locked ones, tap for details.", "• Site search (press / or Ctrl/Cmd + K), expandable FAQ, \"last updated\" stamps, a back-to-top button, loading animations and a short storage notice.", "• Confirmation before every destructive action: deleting a transaction, clearing a month or all data, replacing your data on import.", "• Rewritten terms of use, a new privacy policy, a guided About tour, shorter on-page copy and more space under the header.", "• Faster to use: one Data menu for import and export, larger tap targets, screens that respond in under 400 ms, and Transactions filters tucked behind a button.", "• Harder to break: undo after clearing data, importing, loading demo data, bulk edits and clearing a month. The Add form flags missing amounts, future dates and duplicates before you save.", "• Easier to finish: Get Started opens with a setup checklist that shows your progress and your next step.", "• Safer by design: a strict content security policy blocks outside connections and unapproved scripts. Imports are size-limited, damaged saved data is repaired on load, and card or Social Security numbers are blocked or removed from text.", "• Accessibility pass: skip link, page headings, labeled form fields in every table row, labeled dialogs, higher contrast in light mode, and tabs that can be scrolled both ways.", "• Demo data now uses generic store and service names instead of real brands.", "• Demo data uses a sample profile (John Doe, age 28).", "• Fixed: the retirement and FI/RE dates counted the Cash row twice and left out investments. They now use cash + investments, matching the Milestones chart.", "• Changed: \"current month\" achievements (debt-free, car-free, etc.) now need a balance entered and a prior balance owed, so they no longer unlock on an empty sheet. Streaks only count months up to the current one.", "• Changed: type expenses and debts as positive numbers. The app handles the sign.", "• The privacy policy now names the hosting (GitHub Pages) and the domain manager (Namecheap). The page refuses to run inside another site's frame."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.1 · October 21, 2025", "lines": ["• Minor formula corrections for improved accuracy.", "• 'Get Started' page refinements for a smoother onboarding experience.", "• Added the 'Essential Banking Checklist' to improve user stability.", "• Updated spreadsheet description.", "• Introduced the 'Achievements' tab.", "• Includes 82 new achievements.", "• Custom images.", "• Unique descriptions.", "• Defined rarity and difficulty levels.", "• Implemented a leveling system to enhance user engagement and motivation.", "• Each achievement grants you XP.", "• Added a level progress bar displaying current XP and XP required."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.0 · August 28, 2025", "lines": ["• Copyright update.", "• Foundation for the 'Achievements' tab has been planned.", "• 'Dashboard' accessibility updates."]}, {"title": "Personal Wealth Management Tool © 2025 · BETA 2.2 · April 1, 2025", "lines": ["• Updated various terms for accesibility reasons and better calculations.", "• Updated tab sequence.", "• Updated a various charting forumulas."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.1 · September 17, 2024", "lines": ["• Added the 'Extra Charts' tab.", "• 'Monthly Update' tab now includes credit score tracking."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.0 · September 1, 2024", "lines": ["• Essential rebuild; starting from a fresh workbook.", "• ‘Get Started’: Condensed pages ‘Getting Started’, ‘Settings’, and ‘License’ into one.", "• ‘Dashboard’: The new dashboard is the updates biggest feature!", "• ‘Transactions’: Removed columns for bloating/accessibility reasons.", "• ‘Monthly Tracking’: Combined the ‘Net Worth’ and ‘Budget’ tracking tabs into one.", "• ‘Chart Data’: This page contains all of the formulas required for data validation.", "• Updated the theme to better reflect wealth accumulation.", "• Enhanced the mobile user experience.", "• Improved the flow of information throughout the spreadsheet.", "• Updated the spreadsheet description to more accurately represent the project.", "• Removed the ‘Quick Tools’ tab.", "• Removed the option to sign up for update notifications.", "• Reduced spreadsheet length to 80 years."]}, {"title": "Personal Wealth Management Tool © 2024 · Full Version 1.1 · July 5, 2024", "lines": ["• Updated the project name to 'Personal Wealth Management Tool'", "• Updated various tab names and colors.", "• Introducing the new 'Quick Tools' tab!", "• Custom Budget Calculator", "• Savings Goal Calculator", "• Portfolio Rebalancing Tool", "• 'My Budget Planner' chart is no longer displaying \"over budget\" at net zero.", "• RE: Optimized the 'Input Transactions' page.", "• RE: Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · Full Version 1.0 · May 28, 2024", "lines": ["• Optimized the 'Input Transactions' page.", "• Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.1 · April 30, 2024", "lines": ["• 'Set Budget Targets' tab now shows your current category totals.", "• 'Set Budget Targets' pie chart updated for better presentation.", "• Cells that require inputs are now validated to reduce possible errors.", "• Fixed 'Historical Charts' Month-over-Month bug, and updated pie charts.", "• Unlocked 'Input Transactions' tab to enable table sorting."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.0 · April 26, 2024", "lines": ["• The project moves into private BETA testing with multiple testers.", "• Implemented assets vs. liabilities overview and budget overview charts.", "• Introduced settings page, user themes, and retirement planning options.", "• Enhanced customer support features.", "• Obtained spreadsheet copyright protection; official licensing agreement."]}, {"title": "Personal Wealth Management · ALPHA · April 12, 2024", "lines": ["• Effortlessly categorize spending, income, needs, wants, savings & debts.", "• See your financial health at a glance.", "• Track progress with clear charts and historical timelines.", "• Plan & monitor spending to reach your financial goals.", "• Track net worth, savings, and debt repayments."]}];
 'use strict';
 /* ============ helpers ============ */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
@@ -1201,7 +1379,7 @@ const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','De
 const MONFULL=['January','February','March','April','May','June','July','August','September','October','November','December'];
 const mLabel=mk=>MON[+mk.slice(5,7)-1]+" '"+mk.slice(2,4);
 const mLabelLong=mk=>MONFULL[+mk.slice(5,7)-1]+' '+mk.slice(0,4);
-const APP_UPDATED='2026-09-26';
+const APP_UPDATED='2026-10-09';
 const dLabel=iso=>MON[+iso.slice(5,7)-1]+' '+ +iso.slice(8,10)+', '+iso.slice(0,4);
 function normDate(s){
   s=String(s==null?'':s).trim(); if(!s)return '';
@@ -1273,7 +1451,7 @@ const STORE_KEY='pwmt.web.v1';
 function defaultStart(){return mAdd(CUR,-11)+'-01'}
 function freshState(){
   return{ v:1, settings:{name:'',dob:'',start:defaultStart(),income:50000,retire:50000},
-    checklist:CK_LABELS.map(()=>false), names:{}, budget:{}, bal:{}, credit:{}, notes:{}, tx:[], seq:0, subs:[], subIgnore:[], demo:false, flags:{}, updated:null, touched:{} };
+    checklist:CK_LABELS.map(()=>false), names:{}, budget:{}, bal:{}, credit:{}, notes:{}, tx:[], seq:0, subs:[], subIgnore:[], debts:{}, goals:[], pay:null, demo:false, flags:{}, updated:null, touched:{} };
 }
 let S=freshState();
 const nameOf=id=>(S.names[id]&&S.names[id].trim())||ROW[id].name;
@@ -1309,6 +1487,10 @@ function cleanState(o){
   if(Array.isArray(o.subs)){ let id=0; for(const x of o.subs.slice(0,500)){ if(!x||typeof x!=='object'||typeof x.name!=='string'||!x.name.trim()||!fin(x.amt))continue;
     f.subs.push({id:++id,name:x.name.slice(0,80),amt:Math.abs(x.amt),cycle:['weekly','monthly','quarterly','yearly'].includes(x.cycle)?x.cycle:'monthly',next:ISO_D.test(x.next||'')?x.next:'',cat:hasRow(x.cat)&&GROUPS[ROW[x.cat].g].kind==='cat'?x.cat:'subs',status:['active','paused','cancelled'].includes(x.status)?x.status:'active',match:typeof x.match==='string'?x.match.slice(0,80):''}); } }
   if(Array.isArray(o.subIgnore))f.subIgnore=o.subIgnore.filter(x=>typeof x==='string'&&x).slice(0,500).map(x=>x.slice(0,80));
+  for(const [id,v] of Object.entries(own(o.debts)))if(hasRow(id)&&LIAB_GROUPS.includes(ROW[id].g)&&v&&typeof v==='object'){ const d={apr:fin(v.apr)&&v.apr>=0&&v.apr<=100?v.apr:null,min:fin(v.min)&&v.min>=0?v.min:null,due:Number.isInteger(v.due)&&v.due>=1&&v.due<=31?v.due:null}; if(d.apr!=null||d.min!=null||d.due!=null)f.debts[id]=d; }
+  if(Array.isArray(o.goals)){ let gid=0; for(const x of o.goals.slice(0,50)){ if(!x||typeof x!=='object'||typeof x.name!=='string'||!x.name.trim()||!fin(x.target)||x.target<=0)continue;
+    f.goals.push({id:++gid,name:x.name.slice(0,80),target:x.target,saved:fin(x.saved)&&x.saved>=0?x.saved:0,date:ISO_D.test(x.date||'')?x.date:'',monthly:fin(x.monthly)&&x.monthly>0?x.monthly:null,link:hasRow(x.link)&&ASSET_GROUPS.includes(ROW[x.link].g)?x.link:''}); } }
+  { const py=own(o.pay), semi=py.freq==='semi1'||py.freq==='semi2'; if(['weekly','biweekly','monthly','semi1','semi2'].includes(py.freq)&&fin(py.amt)&&py.amt>0&&(semi||ISO_D.test(py.next||'')))f.pay={freq:py.freq,next:semi?'':py.next,amt:py.amt}; }
   f.demo=o.demo===true; for(const [k,v] of Object.entries(own(o.flags)))if(typeof v==='boolean')f.flags[k]=v;
   f.updated=fin(o.updated)?o.updated:null; for(const [k,v] of Object.entries(own(o.touched)))if(fin(v))f.touched[k]=v;
   if(o.seen&&Array.isArray(o.seen.ids)&&fin(o.seen.xp))f.seen={ids:o.seen.ids.filter(fin).slice(0,1000),xp:o.seen.xp};
@@ -1370,6 +1552,9 @@ function toCSV(){
   for(const mk of Object.keys(S.notes).sort()) for(const nt of S.notes[mk]) if(nt) out.push(['Note',mk+'-01','Life Events','','',csvSafe(nt),'']);
   for(const x of S.subs) out.push(['Subscription',x.next||'',csvSafe(x.name),nameOf(x.cat),x.amt,[x.cycle,x.status,x.match||''].join('|'),'']);
   for(const k of S.subIgnore) out.push(['Subscription Ignore','',csvSafe(k),'','','','']);
+  for(const id of Object.keys(S.debts)){ const t=S.debts[id]; out.push(['Debt Terms','',csvSafe(nameOf(id)),GROUPS[ROW[id].g].label,isNum(t.apr)?t.apr:'',[isNum(t.min)?t.min:'',t.due||''].join('|'),'']); }
+  for(const g of S.goals) out.push(['Goal',g.date||'',csvSafe(g.name),g.link&&ROW[g.link]?nameOf(g.link):'',g.target,[g.link?'':(g.saved||''),isNum(g.monthly)?g.monthly:''].join('|'),'']);
+  if(S.pay)out.push(['Paycheck',S.pay.next||'',S.pay.freq,'',S.pay.amt,'','']);
   const txs=S.tx.slice().sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:a.n-b.n);
   for(const t of txs) out.push(['Transaction',t.date,csvSafe(t.desc),t.cat&&ROW[t.cat]?nameOf(t.cat):'',t.amt,'',t.bal===''||t.bal==null?'':t.bal]);
   // Description column is unused for transactions; keep Item = description
@@ -1428,6 +1613,17 @@ function importCSVText(text,mode){
         N.subs=N.subs||[]; const o={id:N.subs.reduce((m,x)=>Math.max(m,x.id||0),0)+1,name:nm,amt:Math.abs(round2(amt)),cycle:['weekly','monthly','quarterly','yearly'].includes(cy)?cy:'monthly',next:dt||'',cat:(cname&&rowId(cname,g=>GROUPS[g].kind==='cat'))||'subs',status:['active','paused','cancelled'].includes(stt)?stt:'active',match:(mt||'').slice(0,80)};
         const dup=N.subs.find(x=>x.name.toLowerCase()===nm.toLowerCase()); if(dup)Object.assign(dup,o,{id:dup.id}); else N.subs.push(o); info.other++;
       }else if(type==='subscription ignore'){ const k=csvUnsafe(get(r,iI)).trim().slice(0,80); N.subIgnore=N.subIgnore||[]; if(k&&!N.subIgnore.includes(k))N.subIgnore.push(k); info.other++;
+      }else if(type==='debt terms'){
+        const id=rowId(get(r,iI),g=>LIAB_GROUPS.includes(g)); if(!id){info.skipped++;continue}
+        const [mn,du]=csvUnsafe(get(r,iDs)).split('|').map(x=>(x||'').trim()); const a=pctNum(val), m=parseNum(mn), d=parseInt(du,10);
+        const o={apr:a!=null&&a>=0&&a<=100?a:null,min:m!=null&&m>=0?m:null,due:d>=1&&d<=31?d:null}; if(o.apr!=null||o.min!=null||o.due!=null){ N.debts=N.debts||{}; N.debts[id]=o; } info.other++;
+      }else if(type==='goal'){
+        const nm=clean(csvUnsafe(get(r,iI)).trim(),80), t=parseNum(val); if(!nm||t==null||t<=0){info.skipped++;continue}
+        const cname=get(r,iC).trim(), link=cname?(rowId(cname,g=>ASSET_GROUPS.includes(g))||''):''; const [sv0,mo]=csvUnsafe(get(r,iDs)).split('|').map(x=>(x||'').trim()); const sv1=parseNum(sv0), m1=parseNum(mo);
+        N.goals=N.goals||[]; const o={name:nm,target:round2(t),saved:link?0:(sv1!=null&&sv1>0?round2(sv1):0),date:dt||'',monthly:m1!=null&&m1>0?round2(m1):null,link};
+        const dup=N.goals.find(x=>x.name.toLowerCase()===nm.toLowerCase()); if(dup)Object.assign(dup,o); else N.goals.push(Object.assign({id:N.goals.reduce((m,x)=>Math.max(m,x.id||0),0)+1},o)); info.other++;
+      }else if(type==='paycheck'){
+        const fr=get(r,iI).trim().toLowerCase(), a=parseNum(val); if(!PAY_PER_YEAR[fr]||a==null||a<=0||((fr==='weekly'||fr==='biweekly'||fr==='monthly')&&!dt)){info.skipped++;continue} N.pay={freq:fr,next:dt||'',amt:round2(a)}; info.other++;
       }else if(type==='row'){/* handled */}
       else info.skipped++;
     }
@@ -1616,8 +1812,7 @@ function dashboard(){
   const ytdExp=sum(ytd.map(m=>M.agg(m).expAll-M.agg(m).expSav));
   const w12=win(12).map(monthRow), cur=w12[w12.length-1];
   const jan=yr+'-01'; const from=M.startMK&&mDiff(M.startMK,jan)>0?M.startMK:jan;
-  const d={ b, assets:b.assets, liab:b.liab, nw:b.nw, status:b.assets===0?'UPDATE: Monthly Budget & Transactions':'Today',
-    ytdInc, ytdExp, nwChange:b.nw-bal(from).nw };
+  const d={ b, assets:b.assets, liab:b.liab, nw:b.nw, ytdInc, ytdExp, nwChange:b.nw-bal(from).nw };
   const inc=cur&&cur.mk===CUR?cur.income:null, ex=cur&&cur.mk===CUR?cur.expense:null;
   d.rate=inc?(inc-(ex||0))/inc:null;
   d.dti=inc?(cur.grp.debt||0)/inc:null;
@@ -1980,6 +2175,8 @@ function achCtx(){
   C.checklistAll=S.checklist.every(Boolean);
   C.ageTarget=T.dob?yearFrac(T.dob,TODAY)*T.income/10:null;
   C.exported=!!(S.flags&&S.flags.exported);
+  { const fl=S.flags||{}; C.quick=!!fl.quickstart; C.reminder=!!fl.reminder; C.yearsum=!!fl.yearsummary; C.reviewed=Object.keys(fl).filter(k=>/^reviewed-\d{4}-\d{2}$/.test(k)&&fl[k]).length;
+    C.goals=S.goals.length; C.goalsDone=S.goals.filter(g=>goalInfo(g).done).length; const dr=debtRows(); C.debtMapped=dr.length>0&&dr.every(r=>r.apr!=null&&r.min!=null); C.pay=!!S.pay; }
   return C;
 }
 /* spec makers: return fn(C)->{cur,target,strict?,fmt?} or {done} */
@@ -2057,6 +2254,15 @@ const NEW_ACH=[
  {name:'Two-Year Regular',desc:'Logged transactions 104 weeks in a row. Two years without missing a week.',rar:'Legendary',xp:1500,f:K.wk(104)},
  {name:'Prodigious Accumulator',desc:'Net worth reached twice the "Millionaire Next Door" benchmark for your age and income.',rar:'Legendary',xp:2000,f:C=>({cur:C.snap?C.nw:0,target:C.ageTarget?C.ageTarget*2:Infinity,fmt:'$'})},
  {name:'Fat FI/RE',desc:'Net worth reached 30× your retirement income goal.',rar:'Legendary',xp:3000,f:C=>({cur:C.snap?C.nw:0,target:C.T.retire*30,fmt:'$'})},
+ {name:'Quick Start',desc:'Took the 2-minute snapshot to set up your numbers.',rar:'Common',xp:50,f:C=>({done:C.quick})},
+ {name:'Calendar Keeper',desc:'Saved a monthly check-in reminder to your calendar.',rar:'Common',xp:50,f:C=>({done:C.reminder})},
+ {name:'Goal Setter',desc:'Added a savings goal on the Plan tab.',rar:'Common',xp:75,f:C=>({done:C.goals>0})},
+ {name:'Payday Planner',desc:'Set your pay schedule for the cash-flow calendar.',rar:'Common',xp:75,f:C=>({done:C.pay})},
+ {name:'Review Day',desc:'Marked a month as reviewed on the Dashboard.',rar:'Uncommon',xp:100,f:C=>({done:C.reviewed>=1})},
+ {name:'Year in Review',desc:'Saved your year-end summary.',rar:'Uncommon',xp:100,f:C=>({done:C.yearsum})},
+ {name:'Know Your Debt',desc:'Entered the APR and minimum payment for every credit card and loan.',rar:'Uncommon',xp:150,f:C=>({done:C.debtMapped})},
+ {name:'Review Habit',desc:'Reviewed 3 different months.',rar:'Rare',xp:300,f:C=>({cur:C.reviewed,target:3,fmt:'n'})},
+ {name:'Goal Reached',desc:'Reached a savings goal.',rar:'Rare',xp:300,f:C=>({done:C.goalsDone>0})},
 ];
 NEW_ACH[3].f=C=>({cur:C.catsUsed,target:15,fmt:'n'});
 let ACH=null;
@@ -2120,12 +2326,12 @@ const GLYPH={
  piggy:'M4 12a8 6 0 0 1 14-3l3 1v4l-2 1v3h-3v-2H9v2H6v-3c-1.5-1-2-2-2-3zM15 10h.01M12 5.5V7'
 };
 function iconFor(n){
-  const rules=[[/Backed/,'backup'],[/Tidy|Wrangler/,'receipt'],[/Category/,'grid'],[/Bonus|Diversified/,'coins'],[/Side Hustler/,'briefcase'],
+  const rules=[[/Goal|Quick Start/,'flag'],[/Know Your Debt/,'shield'],[/Backed/,'backup'],[/Tidy|Wrangler/,'receipt'],[/Category/,'grid'],[/Bonus|Diversified/,'coins'],[/Side Hustler/,'briefcase'],
    [/Retirement|Barista|Lean Life|Fat FI|Standard Ret/,'umbrella'],[/FI Achiever/,'flag'],[/Credit/,'card'],[/Debt Slayer|Debt-Free|Downhill|Snowball/,'shield'],
    [/Mortgage|Homeowner/,'house'],[/Car-Free/,'car'],[/Vault/,'lock'],[/Fortress|Cash Stash|Emergency/,'bank'],[/Saver|Save|Yourself|Half Funded|Thousandaire|Five Digits|Quarter Milestone/,'piggy'],
    [/Market|Investor/,'trend'],[/Titan|Millionaire|Quarter-Million/,'crown'],[/Accumulator/,'gem'],[/Networth|Net Worth|Base Camp|Above Water|On the Rise|Compounding|Unstoppable/,'mountain'],
    [/Under Budget|Budget|Every Dollar/,'scale'],[/Weekly|Habit|Regular|Clockwork/,'clock'],[/Frugal/,'percent'],[/Income/,'coins'],
-   [/Tracker|Hero|Wonder/,'calendar'],[/Ledger|Steps|Tabs|Trail|Bookkeeper|Cruncher|Fanatic|Accountant|Transaction/,'receipt']];
+   [/Tracker|Hero|Wonder|Calendar|Review Day|Payday|Year in Review/,'calendar'],[/Ledger|Steps|Tabs|Trail|Bookkeeper|Cruncher|Fanatic|Accountant|Transaction/,'receipt']];
   for(const[r,g]of rules)if(r.test(n))return g; return 'star';
 }
 function tierOf(n){
@@ -2198,18 +2404,39 @@ function buildDemo(){
       {id:3,name:'Password manager',amt:36,cycle:'yearly',next:mAdd(CUR,4)+'-12',cat:'subs',status:'active',match:'password manager'},
       {id:4,name:'Gym membership',amt:29,cycle:'monthly',next:nx(18),cat:'hfit',status:'paused',match:'gym membership'},
       {id:5,name:'Meal kit',amt:59.94,cycle:'weekly',next:TODAY,cat:'groc',status:'cancelled',match:'meal kit'}]; }
+  N.debts={l_cc1:{apr:24.99,min:85,due:12},l_cc2:{apr:21.49,min:35,due:12},l_auto:{apr:6.4,min:300,due:5},l_edu:{apr:5.5,min:150,due:20}};
+  N.goals=[{id:1,name:'Emergency fund (6 months)',target:12000,saved:0,date:mAdd(CUR,10)+'-28',monthly:null,link:'b_ef'},{id:2,name:'Vacation fund',target:2500,saved:900,date:mAdd(CUR,8)+'-15',monthly:200,link:''}];
+  N.pay={freq:'semi1',next:'',amt:2100};
   N.seq=seq; { const now=Date.now(); N.updated=now; N.touched={tx:now,budget:now,bal:now,config:now}; } return N;
 }
 
+/* ============ install as app (PWA) ============ */
+let deferredInstall=null;
+const isStandalone=()=>(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
+const isIOS=()=>/iPad|iPhone|iPod/.test(navigator.userAgent||'')||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+function paintInstall(){
+  const slot=document.getElementById('installSlot'); if(!slot)return; slot.replaceChildren();
+  if(isStandalone())return;
+  if(deferredInstall)slot.append(el('div',{class:'banner mt',style:'margin-bottom:0'},el('div',null,el('b',null,'Install mbmoney.online as an app.'),' Opens full screen, like an app. Works with no signal once it has loaded.'),el('button',{class:'btn primary',type:'button',onclick:doInstall},'Install mbmoney.online')));
+  else if(isIOS())slot.append(el('div',{class:'banner mt',style:'margin-bottom:0'},el('div',null,el('b',null,'Install on iPhone or iPad.'),' Tap ',el('b',null,'Share'),', then ',el('b',null,'Add to Home Screen'),'. The Home Screen app may start empty, because iPhone keeps its data separate from Safari. Save a backup in Safari first, then import it in the app.')));
+}
+async function doInstall(){
+  if(!deferredInstall)return; const d=deferredInstall; deferredInstall=null; // the event can only be used once
+  try{ d.prompt(); await d.userChoice; }catch(e){}
+  paintInstall();
+}
+window.addEventListener('beforeinstallprompt',e=>{ e.preventDefault(); deferredInstall=e; paintInstall(); });
+window.addEventListener('appinstalled',()=>{ deferredInstall=null; paintInstall(); });
+
 /* ============ app shell ============ */
-const PAGES=['dashboard','transactions','budget','subs','extra','whatif','achievements','start']; // ordered by how often you visit
-const NAV_LABEL={dashboard:'Dashboard',transactions:'Transactions',budget:'Budget',subs:'Subscriptions',extra:'Charts',whatif:'What If?',achievements:'Achievements',start:'Settings'};
+const PAGES=['dashboard','transactions','budget','subs','plan','extra','whatif','achievements','start']; // ordered by how often you visit
+const NAV_LABEL={dashboard:'Dashboard',transactions:'Transactions',budget:'Budget',subs:'Subscriptions',plan:'Plan',extra:'Charts',whatif:'What If?',achievements:'Achievements',start:'Settings'};
 const NAV_MOBILE=['dashboard','transactions','budget','subs'], NAV_MOBILE_LABEL={dashboard:'Home',transactions:'Transactions',budget:'Budget',subs:'Subs'};
 const NAV_ICON={dashboard:'M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-3H4zM14 7h6V4h-6z',transactions:'M5 4h14v16l-3-2-2 2-2-2-2 2-2-2-3 2zM9 9h6M9 13h6',budget:'M4 20V10M10 20V4M16 20v-7M22 20H2',subs:'M4 7h16v12H4zM4 11h16M8 3v4M16 3v4M9 15h2',
-  extra:'M3 20h18M6 16l4-5 3 3 6-8',whatif:'M4 18c3-9 5-9 8-4s5 5 8-4M18 6h3v3',achievements:'M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 20h8',start:'M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1',
+  plan:'M5 21V4M5 5h12l-2.5 3.5L17 12H5',extra:'M3 20h18M6 16l4-5 3 3 6-8',whatif:'M4 18c3-9 5-9 8-4s5 5 8-4M18 6h3v3',achievements:'M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 20h8',start:'M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1',
   more:'M5 12h.01M12 12h.01M19 12h.01'};
 const navIcon=p=>sv('svg',{viewBox:'0 0 24 24',width:20,height:20,'aria-hidden':'true',fill:'none',style:'stroke:currentColor','stroke-width':p==='more'?3.2:1.8,'stroke-linecap':'round','stroke-linejoin':'round'},sv('path',{d:NAV_ICON[p]}));
-const PAGE_LABEL={start:'Get Started',dashboard:'Dashboard',extra:'Extra Charts',whatif:'What If?',achievements:'Achievements',budget:'Monthly Budget',transactions:'Transactions',subs:'Subscriptions'};
+const PAGE_LABEL={start:'Get Started',dashboard:'Dashboard',extra:'Extra Charts',whatif:'What If?',achievements:'Achievements',budget:'Monthly Budget',transactions:'Transactions',subs:'Subscriptions',plan:'Plan'};
 const RENDER={}; let booted=false;
 let page='dashboard'; const dirty={}; let selfPage=null;
 function onDataChanged(kind){ for(const p of PAGES)if(p!==selfPage)dirty[p]=true; selfPage=null; }
@@ -2243,7 +2470,7 @@ function go(p,noHash){
   if(booted&&!noHash){ const h=$('#p-'+p+' h2'); if(h){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); } }
   if(booted&&typeof playIn==='function')playIn(p);
 }
-function hasAnyData(){return S.tx.length>0||S.subs.length>0||Object.keys(S.budget).length>0||Object.keys(S.bal).length>0||Object.keys(S.notes).length>0||Object.keys(S.credit).length>0}
+function hasAnyData(){return S.tx.length>0||S.subs.length>0||S.goals.length>0||Object.keys(S.debts).length>0||Object.keys(S.budget).length>0||Object.keys(S.bal).length>0||Object.keys(S.notes).length>0||Object.keys(S.credit).length>0}
 function replaceState(N){ setTimeout(()=>{ if(typeof refreshBackupUI==='function')refreshBackupUI(); },0); const flags=S.flags||{}; S=N; { const now=Date.now(); S.touched=S.touched||{}; if(hasAnyData()){S.updated=now; if(S.tx.length)S.touched.tx=now; if(Object.keys(S.budget).length)S.touched.budget=now; if(Object.keys(S.bal).length)S.touched.bal=now; if(S.subs.length)S.touched.subs=now; S.touched.config=now}else{S.updated=null;S.touched={}} } S.flags=Object.assign({},N.flags||{},flags); VERSION++; M.ver=-1; ACH=ACH; persist(); for(const p of PAGES)dirty[p]=true; if(typeof checkUnlocks==='function')checkUnlocks(true); }
 function effTheme(){ const a=document.documentElement.getAttribute('data-theme'); return a||(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); }
 function setTheme(t){
@@ -2344,6 +2571,7 @@ function initShell(){
   window.addEventListener('dragover',e=>{ if(e.dataTransfer&&[...e.dataTransfer.types].includes('Files'))e.preventDefault(); });
   window.addEventListener('drop',e=>{ if(e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0]){e.preventDefault(); importFile(e.dataTransfer.files[0]);} });
   window.addEventListener('hashchange',()=>{const p=location.hash.slice(1); if(PAGES.includes(p)&&p!==page)go(p,true)});
+  const bl=$('#brandLink'); if(bl)bl.addEventListener('click',e=>{ if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button)return; e.preventDefault(); if(page==='dashboard'){ window.scrollTo({top:0,behavior:REDUCED?'auto':'smooth'}); } else go('dashboard'); });
 }
 
 /* ============ Dashboard ============ */
@@ -2365,8 +2593,8 @@ function sparkline(vals,w,h){
 }
 function deltaText(v,fmt){ if(!isNum(v)||v===0)return el('span',null,'–'); return el('span',{class:v>0?'pos':'neg'},(v>0?'▲ ':'▼ ')+(fmt||money)(Math.abs(v))); }
 function emptyBanner(){
-  return el('div',{class:'banner'},el('div',null,el('b',null,'Start with the demo, or add your own.'),' Your data stays in this browser. No account needed.'),
-    el('div',{class:'row'},el('button',{class:'btn primary',type:'button',onclick:loadDemo},'See it with demo data'),el('button',{class:'btn',type:'button',onclick:pickImport},'Import a backup or CSV')));
+  return el('div',{class:'banner'},el('div',null,el('b',null,'Start with a 2-minute snapshot, or look around with demo data.'),' Your data stays in this browser. No account needed.'),
+    el('div',{class:'row'},el('button',{class:'btn primary',type:'button',onclick:()=>quickStart()},'Start 2-minute snapshot'),el('button',{class:'btn',type:'button',onclick:loadDemo},'See it with demo data'),el('button',{class:'btn',type:'button',onclick:pickImport},'Import a backup or CSV')));
 }
 async function loadDemo(){
   if(hasAnyData()){ const ok=await dlg({title:'Replace your data with the demo?',body:el('p',null,'Your current data in this browser will be replaced by sample data. Save a backup first if you want to keep it.'),buttons:[{label:'Cancel',value:null},{label:'Load demo',value:true,cls:'danger'}]}); if(!ok)return; }
@@ -2398,10 +2626,13 @@ function thisMonthCard(){
 }
 RENDER.dashboard=function(){
   const root=$('#p-dashboard'); root.replaceChildren(); const d=dashboard(); calc();
-  root.append(el('div',{class:'page-h'},el('div',null,el('h2',null,S.settings.name?'Welcome, '+S.settings.name+'!':'Welcome!'),el('p',null,dLabel(TODAY)+' · ',el('span',{class:'pill'+(d.status==='Today'?'':' warn')},d.status))),
+  root.append(el('div',{class:'page-h'},el('div',null,el('h2',null,S.settings.name?'Welcome, '+S.settings.name+'!':'Welcome!'),el('p',null,dLabel(TODAY)+' · ',statusPill())),
     el('div',{class:'row'},el('button',{class:'btn primary',type:'button',onclick:()=>{BUD.view='networth';BUD.month=CUR;go('budget')}},'Monthly check-in'),el('button',{class:'btn',type:'button',onclick:()=>go('transactions')},'+ Add transactions'))));
   if(S.demo)root.append(el('div',{class:'banner'},el('div',null,el('b',null,'Demo data.'),' Everything below is sample data. Clear it to start your own.'),el('button',{class:'btn danger sm',type:'button',onclick:clearAll},'Clear demo data')));
   if(!hasAnyData()){root.append(emptyBanner())}
+  const SIMPLE=simpleView()&&hasAnyData();
+  if(hasAnyData()){ const vb=(v,l)=>el('button',{class:'chip',type:'button','aria-pressed':SIMPLE===v,onclick:()=>{ if(SIMPLE===v)return; setSimpleView(v); RENDER.dashboard(); }},l);
+    root.append(el('div',{class:'dash-view'},el('div',{class:'chips seg',role:'group','aria-label':'Dashboard view'},vb(true,'Simple'),vb(false,'Full')))); }
   // hero
   const nwSeries=dataNetWorth().slice(-12).map(r=>r.nw); const spW=matchMedia('(max-width:700px)').matches?Math.max(180,Math.min(560,innerWidth-74)):180; const sp=sparkline(nwSeries,spW,56); // full card width on phones
   root.append(el('div',{class:'card hero'},
@@ -2409,18 +2640,23 @@ RENDER.dashboard=function(){
     el('div',{class:'side'},el('div',{class:'tile'},el('div',{class:'lbl'},'Assets'),el('div',{class:'val'},money(d.assets))),el('div',{class:'tile'},el('div',{class:'lbl'},'Liabilities'),el('div',{class:'val'},money(d.liab))),
       el('div',{class:'tile'},el('div',{class:'lbl'},'Change this year'),el('div',{class:'val'},deltaText(d.nwChange)))),
     sp?el('div',{'aria-hidden':'true'},sp):null));
+  { const rc=resilienceCard(d); if(rc)root.append(rc); }
   { const spc=spendingPowerCard(); if(spc)root.append(spc); }
-  { const ic=insightsCard(d); if(ic)root.append(ic); }
+  { const rv=reviewCard(); if(rv)root.append(rv); }
+  if(!SIMPLE){ const ic=insightsCard(d); if(ic)root.append(ic); }
   // KPI tiles
+  if(!SIMPLE){
   root.append(el('div',{class:'sect-t'},'Year to date & key ratios'));
   root.append(el('div',{class:'grid g5 keep2'},
     tile('Total income YTD',money(d.ytdInc)),tile('Total expenses YTD',money(d.ytdExp),'Excludes savings contributions'),
     tile(d.rateLabel,d.rate==null?'–':pct(d.rate,1),'(income − expenses) ÷ income'),
     tile('Debt-to-income',d.dti==null?'–':pct(d.dti,1),'Debt payments ÷ income'),tile('Expense-to-income',d.eir==null?'–':pct(d.eir,1),'Expenses ÷ income')));
   { const nu=nextUpCard(evalAchSafe()); if(nu)root.append(nu); }
+  }
   // this month + milestones
   const ms=el('div',{class:'card'},el('h3',null,'Milestones'),el('div',{class:'sub'},'Based on net worth and the goals in Get Started'),el('div',{class:'mt'},d.milestones.map(m=>meter(m.name,m.p,m.done))));
   root.append(el('div',{class:'grid g2 mt'},thisMonthCard(),ms));
+  if(SIMPLE){ root.append(el('div',{class:'row',style:'justify-content:center;margin-top:16px'},el('button',{class:'btn',type:'button',onclick:()=>{ setSimpleView(false); RENDER.dashboard(); }},'Show charts, ratios and forecasts'))); return; }
   // forecast
   const fx=(t)=>t.iso?el('span',null,t.txt):el('span',null,t.txt);
   root.append(el('div',{class:'sect-t'},'Forecast'),el('div',{class:'sub',style:'margin:-6px 0 10px'},'Estimates from your recent averages, for planning only. Not financial advice.'));
@@ -2456,6 +2692,128 @@ function budgetActualCard(){
   if(rest>0){ let all=false; const b=el('button',{class:'btn sm ghost',type:'button',onclick:()=>{all=!all;draw(all?items:shown);b.textContent=all?'Show fewer':'Show '+rest+' more'}},'Show '+rest+' more'); card.append(b); }
   return card;
 }
+/* ============ BETA 4.5: check-in status, 2-minute snapshot, simple view, reminder, year-end summary ============ */
+function lastTxDate(){ let m=''; for(const t of S.tx)if(t.date&&t.date>m)m=t.date; return m; }
+function checkinStatus(){
+  if(!hasAnyData())return{text:'New here? Start with a 2-minute snapshot',cls:'',tip:'Enter a few balances to see your net worth right away',act:()=>quickStart()};
+  const mon=MONFULL[+CUR.slice(5,7)-1];
+  if(!bal(CUR).entered)return{text:mon+' check-in due',cls:'warn',tip:'Enter this month\'s balances on the Monthly Budget tab',act:()=>{ BUD.view='networth'; BUD.month=CUR; dirty.budget=true; go('budget'); }};
+  const lt=lastTxDate();
+  if(!lt)return{text:mon+' checked in. Add transactions to see spending',cls:'',tip:'Import or paste your bank transactions',act:()=>go('transactions')};
+  const gap=daysSerial(TODAY)-daysSerial(lt);
+  if(gap>=10)return{text:'Time to import transactions. Last one was '+gap+' days ago',cls:'warn',tip:'Your newest transaction is dated '+dLabel(lt),act:()=>{ TX.openPaste=true; go('transactions'); }};
+  return{text:'All caught up. '+mon+' is checked in',cls:'ok',tip:'Transactions through '+dLabel(lt),act:()=>{ BUD.view='networth'; BUD.month=CUR; dirty.budget=true; go('budget'); }};
+}
+function statusPill(){ const s=checkinStatus(); return el('button',{class:'pill pill-btn'+(s.cls?' '+s.cls:''),type:'button',title:s.tip,onclick:s.act},s.text); }
+
+/* simple dashboard view: remembered on this device */
+let _simple=null;
+function simpleView(){ if(_simple==null){ try{ _simple=localStorage.getItem('pwmt.simple')==='1'; }catch(e){ _simple=false; } } return _simple; }
+function setSimpleView(v){ _simple=!!v; try{ localStorage.setItem('pwmt.simple',v?'1':'0'); }catch(e){} }
+
+/* 2-minute snapshot: a handful of numbers, saved as this month's check-in */
+const QS_FIELDS=[['b_check','Checking account','What is in checking right now'],['b_ef','Savings / emergency fund',''],['b_401k','Retirement accounts','401(k), IRA, Roth'],['b_tax','Other investments','Brokerage, crypto'],
+  ['l_cc1','Credit card balances','Total owed across cards'],['l_pers','Loans','Mortgage, auto, student, personal']];
+async function quickStart(pre){
+  const P=pre||{}, T=S.settings, cur=S.bal[CUR]||{};
+  const box=(v,ph)=>{ const i=el('input',{type:'text',inputmode:'decimal',autocomplete:'off',placeholder:ph||'0',value:v==null?'':String(v)}); i.addEventListener('focus',()=>i.select()); return i; };
+  const name=el('input',{type:'text',maxlength:60,autocomplete:'given-name',placeholder:'optional',value:P.name!=null?P.name:(T.name||'')});
+  const income=box(P.income!=null?P.income:(hasAnyData()&&T.income?T.income:''),'e.g. 52000');
+  const inp={}; for(const [id] of QS_FIELDS)inp[id]=box(P[id]!=null?P[id]:(isNum(cur[id])?cur[id]:''));
+  const fld=(l,i,h)=>el('label',{class:'fld'},l,i,h?el('span',{class:'sub'},h):null);
+  const body=el('div',{class:'grid',style:'gap:12px'},
+    el('p',{class:'sub',style:'margin:0'},'Rough numbers are fine, and you can skip anything that does not apply. This becomes your '+mLabelLong(CUR)+' check-in. Fine-tune each account later on the Monthly Budget tab.'),
+    el('div',{class:'grid g2 keep2',style:'gap:12px'},fld('Your name',name),fld('Yearly take-home pay ($)',income)),
+    el('div',{class:'sect-t',style:'margin:2px 0 0'},'What you have'),
+    el('div',{class:'grid g2 keep2',style:'gap:12px'},QS_FIELDS.slice(0,4).map(([id,l,h])=>fld(l+' ($)',inp[id],h))),
+    el('div',{class:'sect-t',style:'margin:2px 0 0'},'What you owe'),
+    el('div',{class:'grid g2 keep2',style:'gap:12px'},QS_FIELDS.slice(4).map(([id,l,h])=>fld(l+' ($)',inp[id],h))));
+  const r=await dlg({title:'2-minute snapshot',body,buttons:[{label:'Cancel',value:null},{label:'Save snapshot',value:'save',cls:'primary'}]}); if(r!=='save')return;
+  const raw={name:name.value,income:income.value}; for(const [id] of QS_FIELDS)raw[id]=inp[id].value;
+  const nm=name.value.trim(); if(looksSensitive(nm)){ toast(SENSITIVE_MSG,6000); return quickStart(raw); }
+  const vals={}; let bad=false;
+  for(const [id] of QS_FIELDS){ const t=raw[id].trim(); if(t==='')continue; const n=parseNum(t); if(n==null||n<0){ bad=true; break; } vals[id]=round2(n); }
+  let inc=null; if(!bad&&raw.income.trim()!==''){ inc=parseNum(raw.income); if(inc==null||inc<0)bad=true; }
+  if(bad){ toast('Please enter amounts as positive numbers.'); return quickStart(raw); }
+  if(!Object.keys(vals).length&&!(inc>0)){ toast('Enter at least one amount to save a snapshot.'); return quickStart(raw); }
+  const snap=hasAnyData()?JSON.stringify(S):null;
+  if(nm)T.name=nm.slice(0,60); if(inc>0)T.income=round2(inc);
+  if(Object.keys(vals).length){ const bag=S.bal[CUR]||(S.bal[CUR]={}); Object.assign(bag,vals); }
+  if(vals.l_pers&&!(S.names.l_pers&&S.names.l_pers.trim()))S.names.l_pers='Loans';
+  S.flags=S.flags||{}; S.flags.quickstart=true;
+  edited('qs','names'); edited('qs','bal'); edited('qs','settings');
+  go('dashboard');
+  const msg='Snapshot saved as your '+mLabelLong(CUR)+' check-in. Add transactions next to see spending.';
+  if(snap)undoToast(msg,snap); else toast(msg,6000);
+}
+
+/* monthly check-in reminder (.ics) */
+function icsEsc(t){ return String(t).replace(/\\/g,'\\\\').replace(/;/g,'\;').replace(/,/g,'\\,').replace(/\r?\n/g,'\\n'); }
+function icsFold(line){ const out=[]; while(line.length>73){ out.push(line.slice(0,73)); line=' '+line.slice(73); } out.push(line); return out.join('\r\n'); }
+function lastDayOfMonth(mk){ return new Date(Date.UTC(+mk.slice(0,4),+mk.slice(5,7),0)).getUTCDate(); }
+function nextCheckinDate(rule){ for(let i=0;i<3;i++){ const mk=mAdd(CUR,i), d=rule==='last'?lastDayOfMonth(mk):+rule, iso=mk+'-'+pad(d); if(iso>=TODAY)return iso; } return mAdd(CUR,1)+'-01'; }
+function buildICS(rule,time){
+  const first=nextCheckinDate(rule), hhmm=(/^\d{2}:\d{2}$/.test(time)?time:'09:00').replace(':','')+'00', n=new Date();
+  const stamp=n.getUTCFullYear()+pad(n.getUTCMonth()+1)+pad(n.getUTCDate())+'T'+pad(n.getUTCHours())+pad(n.getUTCMinutes())+pad(n.getUTCSeconds())+'Z';
+  const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//mbmoney.online//Check-in reminder//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+    'UID:checkin-'+n.getTime().toString(36)+'@mbmoney.online','DTSTAMP:'+stamp,'DTSTART:'+first.replace(/-/g,'')+'T'+hhmm,'DURATION:PT15M',
+    'RRULE:FREQ=MONTHLY;BYMONTHDAY='+(rule==='last'?'-1':String(+rule)),
+    'SUMMARY:'+icsEsc('Money check-in'),'DESCRIPTION:'+icsEsc('Enter your month-end balances and import this month\'s transactions. Open https://mbmoney.online/'),
+    'BEGIN:VALARM','ACTION:DISPLAY','DESCRIPTION:Money check-in','TRIGGER:PT0S','END:VALARM','END:VEVENT','END:VCALENDAR'];
+  return lines.map(icsFold).join('\r\n')+'\r\n';
+}
+async function checkinReminder(){
+  const when=el('select',null,[['last','Last day of the month'],['1','1st of the month'],['15','15th of the month']].map(([v,l])=>el('option',{value:v},l)));
+  const time=el('input',{type:'time',value:'09:00'});
+  const body=el('div',{class:'grid',style:'gap:12px'},
+    el('p',{class:'sub',style:'margin:0'},'This saves a small calendar file (.ics). Open it to add a repeating monthly reminder in Apple Calendar, Google Calendar, Outlook or any calendar app. The file is made in your browser and nothing is sent anywhere.'),
+    el('div',{class:'grid g2 keep2',style:'gap:12px'},el('label',{class:'fld'},'Repeat on',when),el('label',{class:'fld'},'At',time)));
+  const r=await dlg({title:'Monthly check-in reminder',body,buttons:[{label:'Cancel',value:null},{label:'Download reminder',value:'go',cls:'primary'}]}); if(r!=='go')return;
+  downloadText(buildICS(when.value,time.value),'mbmoney-checkin-reminder.ics','text/calendar;charset=utf-8');
+  S.flags=S.flags||{}; S.flags.reminder=true; changed('flags'); dirty.achievements=true; if(typeof queueUnlockCheck==='function')queueUnlockCheck();
+  toast('Reminder file saved. Open it to add it to your calendar.',5000);
+}
+
+/* year-end summary (CSV) */
+function yearChoices(){ const ys=new Set([CUR.slice(0,4)]); for(const t of S.tx)if(t.date)ys.add(t.date.slice(0,4)); for(const m of Object.keys(S.bal))ys.add(m.slice(0,4)); for(const m of Object.keys(S.budget))ys.add(m.slice(0,4)); return [...ys].filter(y=>/^\d{4}$/.test(y)&&y<=CUR.slice(0,4)).sort().reverse(); }
+function yearSummaryCSV(y){
+  calc(); const R=[], add=(...c)=>R.push(c), mks=[];
+  for(let m=1;m<=12;m++){ const mk=y+'-'+pad(m); if(mDiff(mk,CUR)<=0)mks.push(mk); }
+  const A=mks.map(mk=>({mk,r:monthRow(mk),a:M.agg(mk)}));
+  const inc=sum(A.map(x=>x.r.income)), exp=sum(A.map(x=>x.r.expense)), sav=sum(A.map(x=>x.r.savings)), debt=sum(A.map(x=>x.a.grp.debt||0));
+  add('mbmoney.online year in review',y); add('Created',TODAY); if(y===CUR.slice(0,4))add('Note','Year to date through '+dLabel(TODAY)); add();
+  add('Summary','Amount');
+  add('Total income',round2(inc)); add('Total spending (excludes savings)',round2(exp)); add('Savings contributions',round2(sav)); add('Debt payments',round2(debt));
+  add('Savings rate',inc>0?pct((inc-exp)/inc,1):''); 
+  const ent=mks.filter(m=>bal(m).entered), endM=ent.length?ent[ent.length-1]:null, prior=(+y-1)+'-12', startM=bal(prior).entered?prior:(ent.length?ent[0]:null);
+  if(endM){ const e=bal(endM); if(startM&&startM!==endM){ const s0=bal(startM); add('Net worth, '+mLabelLong(startM),round2(s0.nw)); add('Net worth, '+mLabelLong(endM),round2(e.nw)); add('Net worth change',round2(e.nw-s0.nw)); } else add('Net worth, '+mLabelLong(endM),round2(e.nw));
+    add('Assets, '+mLabelLong(endM),round2(e.assets)); add('Liabilities, '+mLabelLong(endM),round2(e.liab)); }
+  else add('Net worth','No check-in entered for '+y);
+  add(); add('Month','Income','Spending','Savings contributions','Debt payments','Net cash flow');
+  for(const x of A)add(mLabelLong(x.mk),round2(x.r.income),round2(x.r.expense),round2(x.r.savings),round2(x.a.grp.debt||0),round2(x.r.income-x.r.expense));
+  const cats={}; for(const x of A)for(const g of ['needs','wants'])for(const id of ROW_BY_GROUP[g]){ const v=x.a.exp[id]||0; if(v)cats[id]=(cats[id]||0)+v; }
+  const top=Object.entries(cats).sort((p,q)=>q[1]-p[1]).slice(0,12);
+  if(top.length){ add(); add('Top spending categories','Spent','Share of spending'); for(const [id,v] of top)add(csvSafe(nameOf(id)),round2(v),exp>0?pct(v/exp,1):''); }
+  const src={}; for(const x of A)for(const id of ROW_BY_GROUP.income){ const v=x.a.inc[id]||0; if(v)src[id]=(src[id]||0)+v; }
+  const srcs=Object.entries(src).sort((p,q)=>q[1]-p[1]);
+  if(srcs.length){ add(); add('Income by source','Amount'); for(const [id,v] of srcs)add(csvSafe(nameOf(id)),round2(v)); }
+  const subs=S.subs.filter(s=>s.status==='active');
+  if(subs.length){ add(); add('Active subscriptions today','Per month','Per year'); for(const s of subs.slice().sort((p,q)=>subMonthly(q)-subMonthly(p)))add(csvSafe(s.name),round2(subMonthly(s)),round2(subMonthly(s)*12)); add('Total',round2(sum(subs.map(subMonthly))),round2(sum(subs.map(subMonthly))*12)); }
+  return R.map(r=>r.map(csvCell).join(',')).join('\r\n')+'\r\n';
+}
+async function yearEndSummary(){
+  if(!hasAnyData()){ toast('Nothing to summarize yet. Add some data first.'); return; }
+  const ys=yearChoices(), def=(+CUR.slice(5,7)<=2&&ys.includes(String(+CUR.slice(0,4)-1)))?String(+CUR.slice(0,4)-1):CUR.slice(0,4);
+  const sel=el('select',null,ys.map(y=>el('option',{value:y,selected:y===def||null},y)));
+  const body=el('div',{class:'grid',style:'gap:12px'},
+    el('p',{class:'sub',style:'margin:0'},'Saves a CSV with your income, spending, savings and debt payments for the year, month by month, plus your top spending categories and the change in net worth. It opens in any spreadsheet app. Made in your browser.'),
+    el('label',{class:'fld'},'Year',sel));
+  const r=await dlg({title:'Year-end summary',body,buttons:[{label:'Cancel',value:null},{label:'Download CSV',value:'go',cls:'primary'}]}); if(r!=='go')return;
+  const y=sel.value; downloadText(yearSummaryCSV(y),'mbmoney-year-in-review-'+y+'.csv','text/csv;charset=utf-8');
+  S.flags=S.flags||{}; S.flags.yearsummary=true; changed('flags'); dirty.achievements=true; if(typeof queueUnlockCheck==='function')queueUnlockCheck();
+  toast('Year-end summary for '+y+' saved to your Downloads.',5000);
+}
+
 async function clearAll(){
   const ok=await dlg({title:'Clear all data?',body:el('p',null,'This removes every transaction, budget, balance and setting from this browser. Save a backup first if you want to keep a copy.'),buttons:[{label:'Cancel',value:null},{label:'Clear everything',value:true,cls:'danger'}]});
   if(!ok)return; const snap=JSON.stringify(S); const f=S.flags; replaceState(freshState()); S.flags=f||{}; S.flags.exported=S.flags.exported; go('start'); undoToast('All data cleared.',snap);
@@ -2537,14 +2895,18 @@ const CSV_DOC_LINES=[
   'Credit Score and Note: Date + Value (or Description for notes).',
   'Transaction: Date, Item = description, Category = category name, Value = amount. Negative = expense, positive = income. Balance (optional) = running account balance.',
   'Subscription: Date = next charge, Item = name, Category = category name, Value = amount per charge, Description = cycle|status (for example monthly|active).',
+  'Debt Terms: Item = the credit card or loan name, Value = APR in percent, Description = minimum payment|due day (for example 85|12).',
+  'Goal: Date = target date (optional), Item = name, Category = the account it follows (optional), Value = target amount, Description = saved so far|monthly amount.',
+  'Paycheck: Item = weekly, biweekly, semi1 (1st and 15th), semi2 (15th and last day) or monthly, Date = next payday, Value = take-home per paycheck.',
   'Row: renames a category or account. Item = internal id, Description = your name for it.',
   'A plain bank export with Date, Description and Amount columns also works and is added to your transactions.'];
 RENDER.start=function(){
   const root=$('#p-start'); root.replaceChildren(); const T=S.settings;
   root.append(el('div',{class:'page-h'},el('div',null,el('h2',null,'Settings'),el('p',null,hasAnyData()?'Your details, setup steps, banking checklist and backups. Everything stays in this browser.':'Log spending, check in monthly, and get your net worth, savings rate and retirement date. Free, no account, and your data stays in your browser.')),
-    el('span',{class:'pill'},'BETA 4.2 · Web')));
+    el('span',{class:'pill'},'BETA 4.5 · Web')));
   if(!hasAnyData())root.append(emptyBanner());
   root.append(stepsEl());
+  root.append(el('div',{id:'installSlot'})); paintInstall();
   const g=el('div',{class:'grid g2 mt'}); root.append(g);
   // settings
   const set=(k,v)=>{T[k]=v; edited('start','settings');};
@@ -2572,7 +2934,7 @@ RENDER.start=function(){
   dc.append(el('div',{class:'row'},el('button',{class:'btn'+(hasAnyData()?' primary':''),type:'button',onclick:()=>saveBackup('json',false)},'Save backup now'),el('button',{class:'btn',type:'button',onclick:()=>saveBackup('json',true)},'Export All (JSON)…'),el('button',{class:'btn',type:'button',onclick:pickImport},'Import Backup (JSON or CSV)…'),el('button',{class:'btn',type:'button',onclick:()=>saveBackup('csv',true)},'Export All (CSV)…')));
   dc.append(el('div',{class:'row data-tools'},
     el('button',{class:'btn sm ghost',type:'button',onclick:()=>{TX.openPaste=true;go('transactions')}},'Paste transactions'),el('button',{class:'btn sm ghost',type:'button',onclick:downloadTemplate},'Download CSV template'),
-    el('button',{class:'btn sm ghost',type:'button',onclick:loadDemo},'Load demo data'),el('button',{class:'btn sm ghost danger push',type:'button',onclick:clearAll},'Clear all data')));
+    el('button',{class:'btn sm ghost',type:'button',onclick:checkinReminder},'Check-in reminder'),el('button',{class:'btn sm ghost',type:'button',onclick:yearEndSummary},'Year-end summary'),el('button',{class:'btn sm ghost',type:'button',onclick:loadDemo},'Load demo data'),el('button',{class:'btn sm ghost danger push',type:'button',onclick:clearAll},'Clear all data')));
   dc.append(el('details',{class:'mt',id:'sec-csv'},el('summary',null,'CSV format'),
     el('div',{class:'relnote'},'One flat file holds everything. Columns: ',el('code',{class:'k'},CSV_HEADER.join(', ')),'.\n'+CSV_DOC_LINES.join('\n'))));
   root.append(dc);
@@ -3400,6 +3762,370 @@ RENDER.subs=function(){
   }
 };
 
+/* ============ Plan: cash-flow calendar, savings goals, debt payoff (BETA 4.4) ============ */
+const PLAN={strategy:'avalanche',extra:0,cfDays:60,cfStart:null,cfDaily:null,cfBuffer:0,cfOpen:false};
+const PAY_FREQ=[['weekly','Every week'],['biweekly','Every 2 weeks'],['semi1','Twice a month (1st and 15th)'],['semi2','Twice a month (15th and last day)'],['monthly','Once a month']];
+const PAY_PER_YEAR={weekly:52,biweekly:26,semi1:24,semi2:24,monthly:12};
+const lastDayOf=mk=>new Date(+mk.slice(0,4),+mk.slice(5,7),0).getDate();
+const monthsBetween=(a,b)=>(daysSerial(b)-daysSerial(a))/30.4375;
+/* The month of the most recent check-in. Debts and goals read their balances from there, so there is one place to type them. */
+function checkinMonth(){ for(let m=CUR,i=0;i<24;i++,m=mAdd(m,-1)){ if(bal(m).entered)return m; } return null; }
+function curBal(id){ const bm=checkinMonth(); if(!bm)return null; const v=(S.bal[bm]||{})[id]; if(isNum(v))return v; for(let m=bm,i=0;i<24;i++,m=mAdd(m,-1)){ const x=(S.bal[m]||{})[id]; if(isNum(x))return x; } return null; }
+/* growth per month of a balance row over the last few check-ins; null unless it is growing */
+function recentPace(id){ const bm=checkinMonth(); if(!bm)return null; const now=(S.bal[bm]||{})[id]; if(!isNum(now))return null;
+  for(let k=3;k>=1;k--){ const v=(S.bal[mAdd(bm,-k)]||{})[id]; if(isNum(v)){ const p=(now-v)/k; return p>0?p:null; } } return null; }
+/* what it costs to keep the lights on: needs + debt payments, averaged over the last three finished months */
+function essentialsMonthly(){
+  calc(); const rows=mRange(mAdd(CUR,-3),mAdd(CUR,-1)).map(monthRow).filter(r=>(r.grp.needs||0)+(r.grp.debt||0)>0);
+  if(rows.length)return{value:sum(rows.map(r=>(r.grp.needs||0)+(r.grp.debt||0)))/rows.length,from:'your last '+rows.length+' month'+(rows.length===1?'':'s')+' of transactions'};
+  const b=bud(CUR), v=(b.grp.needs||0)+(b.grp.debt||0); if(v>0)return{value:v,from:'this month\'s budget'};
+  const c=monthRow(CUR), v2=(c.grp.needs||0)+(c.grp.debt||0); if(v2>0)return{value:v2,from:'this month so far'};
+  return null;
+}
+function incomeMonthly(){
+  const rows=mRange(mAdd(CUR,-3),mAdd(CUR,-1)).map(monthRow).filter(r=>r.income>0);
+  if(rows.length)return sum(rows.map(r=>r.income))/rows.length;
+  const b=bud(CUR).inc; if(b>0)return b; return S.settings.income>0?S.settings.income/12:null;
+}
+function moneyIn(v){ return v==null||v===''?'':String(round2(v)); }
+const pctNum=s=>{ const n=parseNum(String(s==null?'':s).replace('%','')); return n; };
+
+/* ---------- debts ---------- */
+function debtRows(){
+  const bm=checkinMonth(), out=[]; if(!bm)return out;
+  for(const g of LIAB_GROUPS)for(const id of ROW_BY_GROUP[g]){ const v=(S.bal[bm]||{})[id]; if(!isNum(v)||!(v>0))continue; const t=S.debts[id]||{};
+    out.push({id,name:nameOf(id),bal:v,mk:bm,apr:isNum(t.apr)?t.apr:null,min:isNum(t.min)?t.min:null,due:t.due||null,kind:g==='cc'?'Card':'Loan'}); }
+  return out;
+}
+/* month-by-month payoff. roll=true: the whole budget (all minimums + extra) keeps going, so a paid-off debt's minimum moves to the next one. */
+function simDebts(list,extra,strategy,roll){
+  const ds=list.map(d=>({id:d.id,name:d.name,bal:d.bal,r:(d.apr||0)/1200,min:d.min||0,paid:null,int:0}));
+  const budget=sum(ds.map(d=>d.min))+extra, pts=[sum(ds.map(d=>d.bal))]; let m=0,tot=0;
+  if(!(budget>0))return{months:0,done:false,interest:0,pts,debts:ds,empty:true};
+  const open=()=>ds.filter(d=>d.bal>0.005);
+  const byStrat=strategy==='snowball'?((a,b)=>a.bal-b.bal||b.r-a.r):((a,b)=>b.r-a.r||a.bal-b.bal);
+  while(open().length&&m<600){ m++;
+    for(const d of open()){ const i=d.bal*d.r; d.bal+=i; d.int+=i; tot+=i; }
+    let pool=roll?budget:sum(open().map(d=>d.min));
+    for(const d of open()){ const p=Math.min(d.min,d.bal,Math.max(0,pool)); d.bal-=p; pool-=p; if(d.bal<=0.005&&d.paid==null)d.paid=m; }
+    while(pool>0.005){ const o=open().sort(byStrat); if(!o.length)break; const t=o[0], p=Math.min(pool,t.bal); t.bal-=p; pool-=p; if(t.bal<=0.005&&t.paid==null)t.paid=m; }
+    pts.push(sum(ds.map(d=>Math.max(0,d.bal))));
+  }
+  return{months:m,done:!open().length,interest:tot,pts,debts:ds};
+}
+async function debtEdit(r){
+  const t=S.debts[r.id]||{};
+  const apr=el('input',{type:'text',inputmode:'decimal',value:isNum(t.apr)?String(t.apr):'',placeholder:'e.g. 24.99'});
+  const min=el('input',{type:'text',inputmode:'decimal',value:isNum(t.min)?String(t.min):'',placeholder:'0.00'});
+  const due=el('input',{type:'text',inputmode:'numeric',value:t.due?String(t.due):'',placeholder:'optional, 1 to 31'});
+  const body=el('div',{class:'grid',style:'gap:12px'},
+    el('p',{class:'sub',style:'margin:0'},r.name+' · '+money(r.bal,true)+' owed at your '+mLabel(r.mk)+' check-in. The balance comes from Monthly Budget, so you only type it once.'),
+    el('div',{class:'grid g2 keep2',style:'gap:12px'},el('label',{class:'fld'},'APR (% a year)',apr),el('label',{class:'fld'},'Minimum payment ($/mo)',min)),
+    el('label',{class:'fld'},'Payment due day of month (optional)',due),
+    el('p',{class:'sub',style:'margin:0'},'APR is on your statement. The due day lets the cash-flow calendar show the payment on the right date.'));
+  const btns=[{label:'Cancel',value:null},{label:'Save',value:'save',cls:'primary'}]; if(S.debts[r.id])btns.unshift({label:'Clear',value:'clear',cls:'danger'});
+  const res=await dlg({title:'Terms for '+r.name,body,buttons:btns}); if(!res)return;
+  if(res==='clear'){ delete S.debts[r.id]; edited('plan','plan'); RENDER.plan(); toast('Cleared.'); return; }
+  const a=apr.value.trim()===''?null:pctNum(apr.value), m=min.value.trim()===''?null:parseNum(min.value), d=due.value.trim()===''?null:parseInt(due.value,10);
+  if(a!=null&&(a<0||a>100)){ toast('APR should be between 0 and 100.'); return; } if(m!=null&&m<0){ toast('The minimum payment cannot be negative.'); return; } if(d!=null&&!(d>=1&&d<=31)){ toast('Due day should be 1 to 31, or blank.'); return; }
+  const o={apr:a==null?null:round2(a),min:m==null?null:round2(m),due:d}; if(o.apr==null&&o.min==null&&o.due==null)delete S.debts[r.id]; else S.debts[r.id]=o;
+  edited('plan','plan'); RENDER.plan(); toast('Saved.');
+}
+function debtCard(){
+  const rows=debtRows(), card=el('div',{class:'card'});
+  card.append(el('h3',null,'Debt payoff planner'),el('div',{class:'sub'},rows.length?'Balances come from your '+mLabel(rows[0].mk)+' check-in. Add each debt\'s APR and minimum payment, then test an extra payment.':'Compare paying highest-rate first (avalanche) with smallest-balance first (snowball).'));
+  if(!rows.length){ card.append(el('div',{class:'empty'},'No credit card or loan balances in your latest check-in. Add them on Monthly Budget, in the net worth check-in, then set each one\'s APR here.'),
+    el('div',{class:'row',style:'justify-content:center'},el('button',{class:'btn',type:'button',onclick:()=>{BUD.view='networth';BUD.month=CUR;dirty.budget=true;go('budget')}},'Open the check-in'))); return card; }
+  card.append(el('div',{class:'dbt head','aria-hidden':'true'},el('div',null,'Debt'),el('div',null,'Balance'),el('div',null,'APR'),el('div',null,'Minimum'),el('div')));
+  for(const r of rows) card.append(el('div',{class:'dbt'},
+    el('button',{class:'sub-name',type:'button',onclick:()=>debtEdit(r),'aria-label':'Edit terms for '+r.name},el('b',null,r.name),el('span',{class:'sub'},r.kind+(r.due?' · due on the '+r.due+ordSuffix(r.due):''))),
+    el('div',{class:'num','data-l':'Balance'},money(r.bal,true)),
+    el('div',{class:'num','data-l':'APR'},r.apr==null?el('span',{class:'pill warn'},'Add APR'):r.apr+'%'),
+    el('div',{class:'num','data-l':'Minimum'},r.min==null?el('span',{class:'pill warn'},'Add minimum'):money(r.min,true)),
+    el('div',{class:'sub-act'},el('button',{class:'btn sm ghost',type:'button',onclick:()=>debtEdit(r)},'Edit'))));
+  const tot=sum(rows.map(r=>r.bal)), minTot=sum(rows.map(r=>r.min||0));
+  card.append(el('div',{class:'kv'},el('span',null,'Total owed'),el('b',null,money(tot,true))),el('div',{class:'kv'},el('span',null,'Total minimum payments'),el('b',null,money(minTot,true)+' a month')));
+  const missA=rows.filter(r=>r.apr==null), missM=rows.filter(r=>r.min==null);
+  if(missA.length||missM.length)card.append(el('p',{class:'sub',style:'margin-top:10px'},(missA.length?'Missing an APR: '+missA.map(r=>r.name).join(', ')+' (counted as 0% interest). ':'')+(missM.length?'Missing a minimum payment: '+missM.map(r=>r.name).join(', ')+' (counted as $0, so only your extra payment goes to it). ':'')));
+  // controls
+  const out=el('div',{class:'mt'});
+  const stratSel=el('select',{'aria-label':'Payoff order'},[['avalanche','Avalanche: highest APR first'],['snowball','Snowball: smallest balance first']].map(([k,l])=>el('option',{value:k,selected:PLAN.strategy===k||null},l)));
+  const extraIn=el('input',{type:'text',inputmode:'decimal',value:moneyIn(PLAN.extra)||'0','aria-label':'Extra payment per month'});
+  const slider=el('input',{type:'range',min:0,max:1000,step:25,value:Math.min(1000,PLAN.extra),'aria-label':'Extra payment slider'}); const pp=()=>slider.style.setProperty('--pp',(Math.min(1000,PLAN.extra)/1000*100)+'%'); pp();
+  const redraw=()=>drawDebtResults(out,rows);
+  stratSel.addEventListener('change',()=>{ PLAN.strategy=stratSel.value; redraw(); });
+  extraIn.addEventListener('input',()=>{ const v=parseNum(extraIn.value); PLAN.extra=v!=null&&v>=0?Math.min(1e6,v):0; slider.value=Math.min(1000,PLAN.extra); pp(); redraw(); });
+  slider.addEventListener('input',()=>{ PLAN.extra=+slider.value; extraIn.value=String(PLAN.extra); pp(); redraw(); });
+  card.append(el('div',{class:'sect-t'},'Try a plan'),el('div',{class:'grid g2 keep2',style:'gap:12px;align-items:end'},el('label',{class:'fld'},'Payoff order',stratSel),el('label',{class:'fld'},'Extra each month ($)',extraIn)),el('div',{class:'mt'},slider),out);
+  redraw(); return card;
+}
+const ordSuffix=n=>(n%100>=11&&n%100<=13)?'th':({1:'st',2:'nd',3:'rd'})[n%10]||'th';
+function drawDebtResults(box,rows){
+  const E=PLAN.extra, base=simDebts(rows,0,PLAN.strategy,false), plan=simDebts(rows,E,PLAN.strategy,true), alt=simDebts(rows,E,PLAN.strategy==='avalanche'?'snowball':'avalanche',true);
+  const when=s=>s.done?mLabelLong(mAdd(CUR,s.months)):'Not within 50 years', yrs=m=>m<12?m+' mo':(m/12).toFixed(1)+' yrs';
+  if(plan.empty){ box.replaceChildren(el('div',{class:'empty'},'Enter a minimum payment for at least one debt, or an extra monthly amount, to see a payoff date.')); return; }
+  const saved=base.done&&plan.done?base.interest-plan.interest:null, monthsSaved=base.done&&plan.done?base.months-plan.months:null;
+  const kids=[];
+  kids.push(el('div',{class:'grid g4 keep2'},
+    tile('Debt-free',plan.done?mLabelLong(mAdd(CUR,plan.months)):'–',plan.done?'In '+yrs(plan.months)+' at '+money(sum(rows.map(r=>r.min||0))+E)+' a month':'Not paid off within 50 years at these payments'),
+    tile('Interest you will pay',plan.done?money(plan.interest):'–','Total interest from today until the last payment'),
+    tile('Interest saved',saved!=null?money(Math.max(0,saved)):'–',!base.done&&plan.done?'Minimums alone never pay everything off':E>0||rows.length>1?'Compared with paying only the minimums':'Add an extra payment to see savings',saved>0?'pos':''),
+    tile('Time saved',monthsSaved!=null?yrs(Math.max(0,monthsSaved)):'–',!base.done&&plan.done?'Minimums alone never pay everything off':'Compared with paying only the minimums')));
+  // order list
+  const ord=plan.debts.slice().sort((a,b)=>(a.paid==null)-(b.paid==null)||(a.paid||0)-(b.paid||0));
+  kids.push(el('div',{class:'sect-t'},'Payoff order'),el('div',{class:'card',style:'padding:6px 16px'},ord.map((d,i)=>el('div',{class:'kv'},el('span',null,(i+1)+'. '+d.name),el('b',null,d.paid!=null?'Paid off '+mLabelLong(mAdd(CUR,d.paid)):'Not within 50 years')))));
+  // compare
+  const cmp=(label,s)=>el('div',{class:'kv'},el('span',null,label),el('b',null,s.empty?'–':s.done?mLabelLong(mAdd(CUR,s.months))+' · '+money(s.interest)+' interest':'Not within 50 years'));
+  kids.push(el('div',{class:'sect-t'},'Side by side'+(E>0?' with +'+money(E)+' a month':'')),el('div',{class:'card',style:'padding:6px 16px'},
+    cmp('Minimums only',base),cmp('Avalanche (highest APR first)',PLAN.strategy==='avalanche'?plan:alt),cmp('Snowball (smallest balance first)',PLAN.strategy==='snowball'?plan:alt)),
+    el('p',{class:'sub',style:'margin-top:8px'},'When a debt is paid off, its minimum payment moves to the next one, so the total you pay each month stays the same. Estimates use each debt\'s APR as a fixed rate with monthly interest. Real statements differ a little. Not financial advice.'));
+  // warnings
+  const warn=rows.filter(r=>r.min!=null&&r.apr!=null&&r.min>0&&r.bal*r.apr/1200>=r.min);
+  if(warn.length)kids.push(el('p',{class:'sub neg'},'The minimum payment on '+warn.map(r=>r.name).join(', ')+' is no more than one month\'s interest, so it only shrinks if you pay extra.'));
+  // chart
+  const L=Math.min(120,Math.max(plan.months,base.done?base.months:Math.min(base.months,120))+1), mk=i=>mAdd(CUR,i);
+  const cats=Array.from({length:L+1},(_,i)=>({label:mLabel(mk(i)),long:mLabelLong(mk(i)),tick:i%12===0?mLabel(mk(i)):''}));
+  const fill=s=>Array.from({length:L+1},(_,i)=>i<s.pts.length?s.pts[i]:(s.done?0:null));
+  const chart=xyChart({cats,yMin:0,sparse:50,aria:'Debt balance over time',series:[{name:'Your plan',color:'var(--s1)',type:'line',area:true,w:2.5,data:fill(plan)},{name:'Minimums only',color:'var(--muted)',type:'line',area:false,w:2,dash:'5 4',data:fill(base)}]});
+  const cc=el('div',{class:'card chartcard mt'},el('header',null,el('div',null,el('h3',null,'Total debt over time'),el('div',{class:'sub'},'Your plan against paying only the minimums'))),chart);
+  kids.push(cc); box.replaceChildren(...kids); if(chart.draw)requestAnimationFrame(()=>chart.draw());
+}
+
+/* ---------- savings goals ---------- */
+function goalInfo(g){
+  const linked=g.link?curBal(g.link):null, saved=g.link&&linked!=null?linked:(g.saved||0), rem=Math.max(0,g.target-saved), done=saved>=g.target;
+  const ml=g.date?monthsBetween(TODAY,g.date):null;
+  const planned=isNum(g.monthly)&&g.monthly>0?g.monthly:null, rec=planned==null&&g.link?recentPace(g.link):null, pace=planned!=null?planned:rec;
+  const need=!done&&g.date?(ml>=1?rem/ml:rem):null;
+  const proj=!done&&pace?mAdd(CUR,Math.ceil(rem/pace)):null;
+  let status,cls='';
+  if(done){ status='Done'; cls='ok'; }
+  else if(need!=null&&pace){ if(pace>=need*.98){ status='On track'; cls='ok'; } else{ status='Behind by '+money(need-pace)+'/mo'; cls='warn'; } }
+  else if(need!=null)status='Needs '+money(need)+'/mo';
+  else if(proj)status='Done by '+mLabelLong(proj);
+  else status='Set a monthly amount or date';
+  return{saved,rem,done,ml,need,pace,paceSrc:planned!=null?'your plan':rec?'your recent pace':'',proj,status,cls,p:g.target>0?saved/g.target:0,past:!done&&g.date&&g.date<TODAY};
+}
+async function goalEdit(g,preset){
+  const src=g||preset||{};
+  const name=el('input',{type:'text',value:src.name||'',maxlength:80,placeholder:'e.g. Emergency fund'});
+  const target=el('input',{type:'text',inputmode:'decimal',value:src.target!=null?String(src.target):'',placeholder:'0.00'});
+  const accts=[]; for(const gr of ['cash','invest'])for(const id of ROW_BY_GROUP[gr])accts.push(id);
+  const link=el('select',null,el('option',{value:''},'I\'ll enter the amount myself'),accts.map(id=>el('option',{value:id,selected:src.link===id||null},'Track '+nameOf(id)+' balance')));
+  const saved=el('input',{type:'text',inputmode:'decimal',value:src.saved?String(src.saved):'',placeholder:'0.00'});
+  const savedBox=el('label',{class:'fld'},'Saved so far ($)',saved);
+  const date=el('input',{type:'date',value:src.date||''});
+  const monthly=el('input',{type:'text',inputmode:'decimal',value:isNum(src.monthly)?String(src.monthly):'',placeholder:'optional'});
+  const sync=()=>{ savedBox.style.display=link.value?'none':''; }; link.addEventListener('change',sync); sync();
+  const body=el('div',{class:'grid',style:'gap:12px'},el('label',{class:'fld'},'Goal name',name),
+    el('div',{class:'grid g2 keep2',style:'gap:12px'},el('label',{class:'fld'},'Target amount ($)',target),el('label',{class:'fld'},'Target date (optional)',date)),
+    el('label',{class:'fld'},'Where is the money?',link),savedBox,
+    el('label',{class:'fld'},'You plan to add each month ($)',monthly),
+    el('p',{class:'sub',style:'margin:0'},'Pick an account and the goal follows its balance from your monthly check-in. Leave the monthly amount blank and a linked goal uses your recent pace.'));
+  const btns=[{label:'Cancel',value:null},{label:g?'Save':'Add goal',value:'save',cls:'primary'}]; if(g)btns.unshift({label:'Delete',value:'del',cls:'danger'});
+  const r=await dlg({title:g?'Edit goal':'Add a savings goal',body,buttons:btns}); if(!r)return;
+  if(r==='del'){ if(!(await confirmDlg('Delete '+g.name+'?','It is removed from your goals. Your balances are not touched.','Delete')))return; const snap=JSON.stringify(S); S.goals=S.goals.filter(x=>x!==g); edited('plan','plan'); RENDER.plan(); undoToast('Goal deleted.',snap); return; }
+  const nm=name.value.trim(), t=parseNum(target.value), sv_=saved.value.trim()===''?0:parseNum(saved.value), mo=monthly.value.trim()===''?null:parseNum(monthly.value);
+  if(!nm){ toast('Give the goal a name.'); return; } if(looksSensitive(nm)){ toast(SENSITIVE_MSG,6000); return; }
+  if(t==null||t<=0){ toast('Enter a target amount above zero.'); return; } if(sv_==null||sv_<0){ toast('Saved so far cannot be negative.'); return; } if(mo!=null&&mo<0){ toast('The monthly amount cannot be negative.'); return; }
+  const o={name:nm.slice(0,80),target:round2(t),saved:link.value?0:round2(sv_),date:ISO_D.test(date.value)?date.value:'',monthly:mo==null||mo===0?null:round2(mo),link:link.value};
+  if(g)Object.assign(g,o); else S.goals.push(Object.assign({id:S.goals.reduce((m,x)=>Math.max(m,x.id||0),0)+1},o));
+  edited('plan','plan'); RENDER.plan(); toast(g?'Saved.':'Goal added.');
+}
+function goalsCard(){
+  const card=el('div',{class:'card'}), head=el('div',{class:'row',style:'justify-content:space-between;align-items:flex-start;gap:8px 12px'},el('div',{style:'flex:1 1 220px;min-width:0'},el('h3',null,'Savings goals'),el('div',{class:'sub'},'Targets with a date, and what it takes to hit them.')),el('button',{class:'btn primary sm',type:'button',onclick:()=>goalEdit(null)},'+ Add goal'));
+  card.append(head);
+  const ess=essentialsMonthly();
+  const efGoal=(mo)=>({name:'Emergency fund ('+mo+' months)',target:round2(mo*(ess?ess.value:(S.settings.income>0?S.settings.income/12*.7:1000))),link:'b_ef',monthly:null,date:'',saved:0});
+  if(!S.goals.length){
+    card.append(el('div',{class:'empty'},'No goals yet. Start with an emergency fund, or add your own.'),
+      el('div',{class:'quick',style:'justify-content:center'},
+        el('button',{class:'chip',type:'button',onclick:()=>goalEdit(null,efGoal(3))},'Emergency fund · 3 months'),el('button',{class:'chip',type:'button',onclick:()=>goalEdit(null,efGoal(6))},'Emergency fund · 6 months'),
+        el('button',{class:'chip',type:'button',onclick:()=>goalEdit(null,{name:'Starter emergency fund',target:1000,link:'b_ef'})},'Starter fund · $1,000')),
+      ess?el('p',{class:'sub',style:'text-align:center'},'Your essentials (needs and debt payments) average '+money(ess.value)+' a month, from '+ess.from+'.'):null);
+    return card; }
+  const grid=el('div',{class:'grid g2 mt'}); card.append(grid);
+  for(const g of S.goals){ const i=goalInfo(g);
+    grid.append(el('div',{class:'card goal'},
+      el('div',{class:'goal-h'},el('div',{style:'min-width:0'},el('b',null,g.name),el('div',{class:'sub'},g.link?'Follows '+nameOf(g.link):'Entered by hand')),el('span',{class:'pill'+(i.cls==='warn'?' warn':'')},i.status)),
+      meter(money(i.saved)+' of '+money(g.target),i.p,i.done),
+      g.date?el('div',{class:'kv'},el('span',null,'Target date'),el('b',null,dLabel(g.date)+(i.past?' (passed)':''))):null,
+      !i.done&&i.need!=null?el('div',{class:'kv'},el('span',null,'Needed each month'),el('b',null,money(i.need))):null,
+      !i.done&&i.pace?el('div',{class:'kv'},el('span',null,'At '+i.paceSrc),el('b',null,money(i.pace)+'/mo'+(i.proj?' · done '+mLabel(i.proj):''))):null,
+      el('div',{class:'sub-act',style:'margin-top:6px'},el('button',{class:'btn sm ghost',type:'button',onclick:()=>goalEdit(g)},'Edit')))); }
+  if(!S.goals.some(g=>g.link==='b_ef')&&ess)card.append(el('div',{class:'row mt'},el('button',{class:'btn sm',type:'button',onclick:()=>goalEdit(null,efGoal(6))},'+ Emergency fund goal'),el('span',{class:'sub'},'6 months of essentials is about '+money(6*ess.value)+'.')));
+  return card;
+}
+
+/* ---------- cash-flow calendar ---------- */
+function payDates(from,to){
+  const p=S.pay, out=[]; if(!p)return out;
+  if(p.freq==='weekly'||p.freq==='biweekly'){ const step=p.freq==='weekly'?7:14; let d=p.next; if(d<from)d=addDaysISO(d,Math.ceil((daysSerial(from)-daysSerial(d))/step)*step); while(d<=to&&out.length<400){ out.push(d); d=addDaysISO(d,step); } }
+  else if(p.freq==='monthly'){ out.push(...subCharges({next:p.next,cycle:'monthly'},from,to)); }
+  else for(let mk=from.slice(0,7);mk<=to.slice(0,7);mk=mAdd(mk,1)){ for(const x of (p.freq==='semi1'?[1,15]:[15,lastDayOf(mk)])){ const d=mk+'-'+pad(x); if(d>=from&&d<=to)out.push(d); } }
+  return out;
+}
+function cfStartBalance(){
+  let best=null; for(const t of S.tx){ if(isNum(t.bal)&&t.date<=TODAY&&(!best||t.date>best.date||(t.date===best.date&&t.n>best.n)))best=t; }
+  let bm=null; for(let m=CUR,i=0;i<24;i++,m=mAdd(m,-1)){ if(bal(m).entered&&isNum((S.bal[m]||{}).b_check)){ bm=m; break; } }
+  if(bm){ const end=bm===CUR?TODAY:bm+'-'+pad(lastDayOf(bm));
+    if(!best||best.date<=end){ const since=bm===CUR?0:sum(S.tx.filter(t=>t.date>end&&t.date<=TODAY).map(t=>t.amt));
+      return{value:round2(S.bal[bm].b_check+since),short:'From your '+mLabel(bm)+' check-in'+(since?' plus transactions':''),note:'Checking balance from your '+mLabel(bm)+' check-in'+(since?', plus '+money(since,true)+' of transactions since':'')}; } }
+  if(best)return{value:best.bal,short:'From your latest running balance',note:'Running balance on your '+shortDate(best.date)+' transaction'};
+  return null;
+}
+function cfDailySpend(){
+  const from=addDaysISO(TODAY,-90); let first=null, tot=0; const any=t=>S.subs.some(s=>subMatches(s,t));
+  for(const t of S.tx){ if(t.date<from||t.date>TODAY)continue; if(first==null||t.date<first)first=t.date; if(!(t.amt<0))continue; if(catGroup(t.cat)==='debt'||any(t))continue; tot+=-t.amt; }
+  if(first==null)return null; const days=Math.min(90,Math.max(1,Math.round(daysSerial(TODAY)-daysSerial(first))+1)); if(days<14)return null;
+  return{value:tot/days,days};
+}
+function cfEvents(end){
+  const ev=[];
+  for(const x of subDueUntil(end))ev.push({d:x.d,label:x.s.name,amt:-x.amt,kind:'bill'});
+  if(S.pay)for(const d of payDates(addDaysISO(TODAY,1),end))ev.push({d,label:'Paycheck',amt:S.pay.amt,kind:'pay'});
+  for(const r of debtRows()){ if(!(r.min>0&&r.due))continue; for(let mk=CUR;mk<=end.slice(0,7);mk=mAdd(mk,1)){ const d=mk+'-'+pad(Math.min(r.due,lastDayOf(mk))); if(d>TODAY&&d<=end)ev.push({d,label:r.name+' payment',amt:-r.min,kind:'debt'}); } }
+  return ev.sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:a.amt-b.amt);
+}
+function cfProject(){
+  const end=addDaysISO(TODAY,PLAN.cfDays), st=cfStartBalance(), b0=isNum(PLAN.cfStart)?PLAN.cfStart:(st?st.value:null); if(!isNum(b0))return null;
+  const dv=cfDailySpend(), debts=debtRows(), spread=sum(debts.filter(r=>r.min>0&&!r.due).map(r=>r.min))/30.4375;
+  const everyday=isNum(PLAN.cfDaily)?PLAN.cfDaily:(dv?dv.value:0), daily=everyday+spread;
+  const ev=cfEvents(end), by=new Map(); for(const e of ev){ (by.get(e.d)||by.set(e.d,[]).get(e.d)).push(e); }
+  let b=b0, min=b0, minD=TODAY, neg=null; const vals=[b0], cats=[{label:'Today',long:dLabel(TODAY),tick:'Today'}];
+  for(let i=1;i<=PLAN.cfDays;i++){ const d=addDaysISO(TODAY,i); b-=daily; for(const e of by.get(d)||[]){ b+=e.amt; e.bal=b; }
+    if(b<min){ min=b; minD=d; } if(b<0&&neg==null)neg=d; vals.push(b); cats.push({label:shortDate(d),long:dLabel(d),tick:(i%7===0)?shortDate(d):''}); }
+  const nextPay=S.pay?payDates(addDaysISO(TODAY,1),end)[0]||null:null; let safe=null, sdays=null;
+  if(nextPay){ sdays=Math.max(1,Math.round(daysSerial(nextPay)-daysSerial(TODAY))); const before=sum(ev.filter(e=>e.amt<0&&e.d<nextPay).map(e=>-e.amt)); safe=b0-before-spread*sdays-(PLAN.cfBuffer||0); }
+  return{b0,st,end,ev,vals,cats,min,minD,neg,daily,everyday,spread,dv,nextPay,safe,sdays,bills:sum(ev.filter(e=>e.kind!=='pay').map(e=>-e.amt)),income:sum(ev.filter(e=>e.kind==='pay').map(e=>e.amt))};
+}
+async function payEdit(){
+  const p=S.pay||{}, f=el('select',null,PAY_FREQ.map(([k,l])=>el('option',{value:k,selected:(p.freq||'biweekly')===k||null},l)));
+  const nx=el('input',{type:'date',value:p.next||''}), amt=el('input',{type:'text',inputmode:'decimal',value:p.amt?String(p.amt):'',placeholder:'0.00'});
+  const nxBox=el('label',{class:'fld'},'Next payday',nx); const sync=()=>{ nxBox.style.display=(f.value==='semi1'||f.value==='semi2')?'none':''; }; f.addEventListener('change',sync); sync();
+  const hint=S.settings.income>0?'Your yearly take-home of '+money(S.settings.income)+' works out to about '+money(S.settings.income/PAY_PER_YEAR[f.value])+' a paycheck at '+PAY_FREQ.find(x=>x[0]===f.value)[1].toLowerCase()+'.':'';
+  const body=el('div',{class:'grid',style:'gap:12px'},el('label',{class:'fld'},'How often are you paid?',f),nxBox,el('label',{class:'fld'},'Take-home per paycheck ($)',amt),
+    el('p',{class:'sub',style:'margin:0'},'Used only for the cash-flow calendar. '+hint));
+  const btns=[{label:'Cancel',value:null},{label:'Save',value:'save',cls:'primary'}]; if(S.pay)btns.unshift({label:'Remove',value:'del',cls:'danger'});
+  const r=await dlg({title:'Your pay schedule',body,buttons:btns}); if(!r)return;
+  if(r==='del'){ S.pay=null; edited('plan','plan'); RENDER.plan(); toast('Pay schedule removed.'); return; }
+  const a=parseNum(amt.value), semi=(f.value==='semi1'||f.value==='semi2'); if(a==null||a<=0){ toast('Enter your take-home pay per paycheck.'); return; } if(!semi&&!ISO_D.test(nx.value)){ toast('Pick your next payday.'); return; }
+  S.pay={freq:f.value,next:semi?'':nx.value,amt:round2(a)}; edited('plan','plan'); RENDER.plan(); toast('Saved.');
+}
+function cashCard(){
+  const card=el('div',{class:'card'}), P=cfProject();
+  const days=el('select',{'aria-label':'Days to project',style:'width:auto;flex:none'},[30,60,90].map(n=>el('option',{value:n,selected:PLAN.cfDays===n||null},'Next '+n+' days')));
+  days.addEventListener('change',()=>{ PLAN.cfDays=+days.value; RENDER.plan(); });
+  card.append(el('div',{class:'row',style:'justify-content:space-between;align-items:flex-start;gap:8px 12px'},el('div',{style:'flex:1 1 240px;min-width:0'},el('h3',null,'Cash-flow calendar'),el('div',{class:'sub'},'Your checking balance, day by day, from paydays, bills and everyday spending.')),
+    el('div',{class:'row',style:'flex-wrap:nowrap'},days,el('button',{class:'btn sm',type:'button',onclick:payEdit},S.pay?'Pay schedule':'+ Pay schedule'))));
+  if(!P){ card.append(el('div',{class:'empty'},'Add your checking balance in the monthly check-in, or log transactions that include a running balance, and your forecast appears here.'),
+    el('div',{class:'row',style:'justify-content:center'},el('button',{class:'btn',type:'button',onclick:()=>{BUD.view='networth';BUD.month=CUR;dirty.budget=true;go('budget')}},'Open the check-in'))); return card; }
+  if(P.neg)card.append(el('div',{class:'banner',style:'margin-top:12px'},el('div',null,el('b',null,'Projected to run short on '+dLabel(P.neg)+'. '),'The lowest point is '+money(P.min)+' on '+dLabel(P.minD)+'. This is an estimate from your bills and average spending.')));
+  card.append(el('div',{class:'grid g4 keep2 mt'},
+    tile('Balance today',money(P.b0),P.st&&!isNum(PLAN.cfStart)?P.st.short:'Your own number'),
+    tile('Lowest point',money(P.min),shortDate(P.minD)+(P.min<0?' · below zero':''),P.min<0?'neg':''),
+    tile('Next payday',P.nextPay?shortDate(P.nextPay):'–',P.nextPay?relDays(P.nextPay)+' · '+money(S.pay.amt):'Add your pay schedule'),
+    tile('Safe to spend until payday',P.safe!=null?money(Math.max(0,P.safe)):'–',P.safe!=null?(P.safe>0?'About '+money(P.safe/P.sdays)+' a day for '+P.sdays+' day'+(P.sdays===1?'':'s')+', after tracked bills due before then':'Bills due before payday use up what you have'):'Needs a pay schedule',P.safe!=null&&P.safe<0?'neg':'')));
+  const chart=xyChart({cats:P.cats,sparse:46,aria:'Projected checking balance',series:[{name:'Projected balance',color:'var(--s1)',type:'line',area:true,w:2.5,data:P.vals}]});
+  const cc=el('div',{class:'card chartcard mt'},el('header',null,el('div',null,el('h3',null,'Projected checking balance'),el('div',{class:'sub'},'Through '+dLabel(P.end)))),chart); card.append(cc); requestAnimationFrame(()=>{ if(chart.draw)chart.draw(); });
+  // upcoming
+  const up=P.ev.slice(0,14);
+  card.append(el('div',{class:'sect-t'},'Coming up'));
+  if(!up.length)card.append(el('div',{class:'empty'},'No bills or paychecks in this window. Add rent, loan payments and other bills on the Subscriptions tab, and your pay schedule above.'));
+  else card.append(el('div',{class:'sub-up'},up.map(x=>el('div',{class:'up-row'},el('div',{class:'up-d'},el('b',null,MON[+x.d.slice(5,7)-1]),el('span',null,String(+x.d.slice(8,10)))),
+    el('div',{class:'up-n'},el('div',null,x.label),el('div',{class:'sub'},relDays(x.d)+(isNum(x.bal)?' · balance after '+money(x.bal):''))),el('b',{class:'up-a'+(x.amt>0?' pos':'')},(x.amt>0?'+':'−')+money(Math.abs(x.amt),true))))));
+  if(P.ev.length>14)card.append(el('div',{class:'sub mt'},'+ '+(P.ev.length-14)+' more in this window'));
+  // assumptions
+  const dvTxt=P.dv?money(P.dv.value,true)+' a day, the average of your last '+P.dv.days+' days':'No estimate yet (needs two weeks of transactions)';
+  const sIn=el('input',{type:'text',inputmode:'decimal',value:isNum(PLAN.cfStart)?String(PLAN.cfStart):'',placeholder:P.st?String(P.st.value):'0.00'}), dIn=el('input',{type:'text',inputmode:'decimal',value:isNum(PLAN.cfDaily)?String(PLAN.cfDaily):'',placeholder:P.dv?String(round2(P.dv.value)):'0.00'}), bIn=el('input',{type:'text',inputmode:'decimal',value:PLAN.cfBuffer?String(PLAN.cfBuffer):'',placeholder:'0'});
+  const applyA=()=>{ const s=parseNum(sIn.value), d=parseNum(dIn.value), b=parseNum(bIn.value); PLAN.cfStart=sIn.value.trim()===''?null:s; PLAN.cfDaily=dIn.value.trim()===''?null:(d!=null&&d>=0?d:null); PLAN.cfBuffer=b!=null&&b>0?b:0; PLAN.cfOpen=true; RENDER.plan(); };
+  [sIn,dIn,bIn].forEach(i=>i.addEventListener('change',applyA));
+  const det=el('details',{class:'sp-how',open:PLAN.cfOpen||null},el('summary',null,'Assumptions you can change'),
+    el('div',{class:'grid g3',style:'gap:18px;margin-top:8px'},
+      el('div',null,el('div',{class:'sp-h'},'What is counted'),
+        el('div',{class:'kv'},el('span',null,'Starting balance'),el('b',null,money(P.b0,true))),el('div',{class:'sub'},isNum(PLAN.cfStart)?'You set this yourself.':P.st.note+'.'),
+        el('div',{class:'kv'},el('span',null,'Paychecks in window'),el('b',null,S.pay?money(P.income,true):'None added')),
+        el('div',{class:'kv'},el('span',null,'Bills in window'),el('b',null,'− '+money(P.bills,true))),
+        el('div',{class:'kv'},el('span',null,'Everyday spending'),el('b',null,'− '+money(P.everyday*PLAN.cfDays,true))),
+        P.spread>0?el('div',{class:'kv'},el('span',null,'Debt minimums with no due day'),el('b',null,'− '+money(P.spread*PLAN.cfDays,true))):null,
+        el('div',{class:'sub',style:'margin-top:4px'},'Everyday spending: '+(isNum(PLAN.cfDaily)?money(PLAN.cfDaily,true)+' a day, your number':dvTxt)+'. It leaves out the bills you track and debt payments. Anything not on your Subscriptions list, such as rent, is averaged in here.')),
+      el('div',null,el('div',{class:'sp-h'},'Change them'),el('label',{class:'fld'},'Starting balance ($)',sIn),el('label',{class:'fld',style:'margin-top:8px'},'Everyday spending per day ($)',dIn),el('label',{class:'fld',style:'margin-top:8px'},'Keep a cushion of ($)',bIn),el('div',{class:'sub',style:'margin-top:6px'},'Leave a box empty to use the estimate. Changes apply until you reload.')),
+      el('div',null,el('div',{class:'sp-h'},'Good to know'),el('div',{class:'sub'},'Paychecks and debt payments count from tomorrow, so anything that posted today is already in your balance. Bills come from the Subscriptions tab, with exact dates. This is a forecast from your own numbers, not a promise.'))));
+  card.append(det); return card;
+}
+RENDER.plan=function(){
+  const root=$('#p-plan'); root.replaceChildren(); calc();
+  root.append(el('div',{class:'page-h'},el('div',null,el('h2',null,'Plan'),el('p',null,'Where you are headed: your cash for the next few weeks, savings goals, and paying down debt.'))));
+  if(!hasAnyData())root.append(emptyBanner());
+  root.append(cashCard(),el('div',{class:'mt'}),goalsCard(),el('div',{class:'mt'}),debtCard());
+};
+
+/* ---------- dashboard: resilience strip + what changed ---------- */
+function resilienceCard(d){
+  const liq=(()=>{ const bm=checkinMonth(); return bm?{value:bal(bm).cash,mk:bm}:null; })(), ess=essentialsMonthly(), inc=incomeMonthly();
+  if(!liq&&!ess)return null;
+  const mo=liq&&ess&&ess.value>0?liq.value/ess.value:null;
+  const word=mo==null?'':mo<1?'Under a month of cover':mo<3?'Building: aim for 3 to 6 months':mo<6?'Solid: 3 to 6 months':'Strong: 6 months or more';
+  const wrap=el('div'); wrap.append(el('div',{class:'sect-t'},'Financial resilience'),
+    el('div',{class:'grid g3 keep2'},
+      tile('Runway',mo!=null?(mo<10?mo.toFixed(1):Math.round(mo))+' months':'–',mo!=null?word+'. Cash and emergency fund ÷ '+money(ess.value)+' a month of essentials':'Add balances and a month of spending to see this'),
+      tile('Essentials vs. income',ess&&inc>0?pct(ess.value/inc,0):'–',ess&&inc>0?'Needs and debt payments are '+money(ess.value)+' of '+money(inc)+' average monthly income':'Log income and spending to see this'),
+      tile('Debt-to-income',d.dti==null?'–':pct(d.dti,1),'Debt payments ÷ income this month')));
+  wrap.append(el('div',{class:'sub',style:'margin-top:8px'},'Essentials come from '+(ess?ess.from:'your data')+'. ',el('a',{href:'#',onclick:e=>{e.preventDefault();go('plan')}},'Set goals and a payoff plan →')));
+  return wrap;
+}
+const REV={mk:null};
+function nwWhy(mk){
+  let prev=null; for(let m=mAdd(mk,-1),i=0;i<6;i++,m=mAdd(m,-1)){ if(bal(m).entered){ prev=m; break; } } if(!prev||!bal(mk).entered)return null;
+  const B=bal(mk), P=bal(prev), months=mRange(mAdd(prev,1),mk), ag=months.map(m=>calc().agg(m));
+  const income=sum(ag.map(a=>a.incInc)), spend=sum(ag.map(a=>a.expAll-a.expSav-(a.grp.debt||0))), saved=sum(ag.map(a=>a.expSav)), debtPaid=sum(ag.map(a=>a.grp.debt||0));
+  const delta=B.nw-P.nw, kept=income-spend, other=delta-kept;
+  // categories that grew most against the same-length stretch before
+  const pa=calc().agg(mAdd(mk,-1)), ca=calc().agg(mk), movers=[];
+  for(const id of Object.keys(ca.exp)){ if(catGroup(id)==='savings'||catGroup(id)==='debt')continue; const dv=(ca.exp[id]||0)-(pa.exp[id]||0); if(dv>=25)movers.push({id,dv}); }
+  movers.sort((a,b)=>b.dv-a.dv);
+  const grp=[['Cash',B.cash-P.cash],['Investments',B.invest-P.invest],['Home, vehicles and other assets',B.use-P.use],['Credit cards',-(B.cc-P.cc)],['Loans',-(B.loan-P.loan)]];
+  return{mk,prev,delta,income,spend,saved,debtPaid,kept,other,movers:movers.slice(0,3),grp,hasTx:ag.some(a=>a.expAll>0||a.incInc>0)};
+}
+function reviewCard(){
+  const ms=[]; for(let m=CUR,i=0;i<18;i++,m=mAdd(m,-1)){ if(bal(m).entered)ms.push(m); } if(!ms.length)return null;
+  if(!REV.mk||!ms.includes(REV.mk))REV.mk=ms[0];
+  const card=el('div',{class:'card mt'}), mk=REV.mk, w=nwWhy(mk);
+  const sel=el('select',{'aria-label':'Month to review',style:'width:auto;flex:none;max-width:190px'},ms.map(m=>el('option',{value:m,selected:m===mk||null},mLabelLong(m))));
+  sel.addEventListener('change',()=>{ REV.mk=sel.value; card.replaceWith(reviewCard()); });
+  card.append(el('div',{class:'row',style:'justify-content:space-between;align-items:flex-start;gap:8px 12px'},el('div',{style:'flex:1 1 200px;min-width:0'},el('h3',null,'Monthly review'),el('div',{class:'sub'},'What changed, and what needs a look.')),sel));
+  const left=el('div'), right=el('div'), flag='reviewed-'+mk;
+  if(!w){ left.append(el('div',{class:'sp-h'},'What changed'),el('div',{class:'sub'},ms.length<2?'Check in again next month and this shows why your net worth moved.':'There is no earlier check-in within six months to compare with.')); }
+  else{ const up=w.delta>=0;
+    left.append(el('div',{class:'sp-h'},'Why net worth '+(up?'rose':'fell')),el('div',{class:'rv-big'+(up?'':' neg')},(up?'+':'−')+money(Math.abs(w.delta))),el('div',{class:'sub'},'Since your '+mLabel(w.prev)+' check-in'));
+    const row=(l,v,tip)=>el('div',{class:'kv',title:tip||null},el('span',null,l),el('b',{class:v>0?'pos':v<0?'neg':''},(v>0?'+':v<0?'−':'')+money(Math.abs(v))));
+    if(w.hasTx)left.append(el('div',{class:'mt'}),row('Income',w.income),row('Everyday spending',-w.spend,'Needs, wants and fees. Leaves out savings transfers and debt payments, which move money between your own accounts.'),row('Kept from cash flow',w.kept),
+      row('Market moves, values and interest',w.other,'Whatever is left once cash flow is accounted for: investment gains or losses, home or vehicle value changes, loan interest, and anything not logged.'));
+    else left.append(el('div',{class:'sub mt'},'Log income and spending for this period to split the change into cash flow and market moves.'));
+    if(mk===CUR&&w.hasTx)left.append(el('div',{class:'sub',style:'margin-top:6px'},mLabel(CUR)+' is still in progress, so this split shifts as you log more.'));
+    left.append(el('details',{class:'sp-how',style:'margin-top:8px'},el('summary',null,'By account type'),w.grp.map(([l,v])=>row(l,v)),
+      w.movers.length?[el('div',{class:'sp-h',style:'margin-top:10px'},'Spending that grew most'),w.movers.map(x=>el('div',{class:'kv'},el('span',null,nameOf(x.id)),el('b',{class:'neg'},'+'+money(x.dv))))]:null,
+      w.hasTx?el('div',{class:'sub',style:'margin-top:8px'},'Saved or invested '+money(w.saved)+' and paid '+money(w.debtPaid)+' toward debt. Those move money, they do not change net worth by themselves.'):null)); }
+  // checklist
+  const item=(ok,text,act)=>el('div',{class:'rv-item'+(ok?' ok':'')},el('span',{class:'rv-ck','aria-hidden':'true'},ok?'✓':'○'),el('div',{style:'flex:1;min-width:0'},text),act||null);
+  const A=calc().agg(mk), unc=S.tx.filter(t=>mkOf(t.date)===mk&&!t.cat).length, over=[]; { const b=bud(mk); for(const id of EXP_GROUPS.flatMap(g=>ROW_BY_GROUP[g])){ const p=b.by[id]; if(isNum(p)&&p>0&&(A.exp[id]||0)>p*1.001)over.push(id); } }
+  const gi=S.goals.map(goalInfo), behind=gi.filter(x=>x.cls==='warn').length, st=backupStatus(), due=subDueUntil(addDaysISO(TODAY,30));
+  const missing=debtRows().filter(r=>r.apr==null||r.min==null).length;
+  right.append(el('div',{class:'sp-h'},'Checklist'),
+    item(bal(CUR).entered,bal(CUR).entered?'This month\'s check-in is done':'Enter this month\'s balances',bal(CUR).entered?null:el('button',{class:'btn sm',type:'button',onclick:()=>{BUD.view='networth';BUD.month=CUR;dirty.budget=true;go('budget')}},'Check in')),
+    item(unc===0,unc===0?'Every '+mLabel(mk)+' transaction has a category':unc+' transaction'+(unc===1?'':'s')+' in '+mLabel(mk)+' without a category',unc?el('button',{class:'btn sm',type:'button',onclick:()=>{TX.uncat=true;TX.month=mk;TX.page=0;dirty.transactions=true;go('transactions')}},'Review'):null),
+    item(over.length===0,over.length===0?'Nothing over its plan in '+mLabel(mk):over.length+' categor'+(over.length===1?'y':'ies')+' over plan: '+over.slice(0,3).map(nameOf).join(', ')+(over.length>3?'…':''),null),
+    item(!behind,S.goals.length?(behind?behind+' of '+S.goals.length+' goal'+(S.goals.length===1?'':'s')+(behind===1?' is':' are')+' behind':'All '+S.goals.length+' goal'+(S.goals.length===1?' is':'s are')+' on track or done'):'No savings goals yet',el('button',{class:'btn sm ghost',type:'button',onclick:()=>go('plan')},'Plan')),
+    item(!missing,debtRows().length?(missing?missing+' debt'+(missing===1?' needs':'s need')+' an APR or minimum':'Debt terms are filled in'):'No debts in your latest check-in',missing?el('button',{class:'btn sm',type:'button',onclick:()=>go('plan')},'Add'):null),
+    item(!st.warn&&!!st.b,st.b?st.text:'No backup yet',(st.warn||!st.b)?el('button',{class:'btn sm',type:'button',onclick:()=>saveBackup('json',false)},'Back up'):null),
+    el('div',{class:'sub',style:'margin-top:6px'},due.length?money(sum(due.map(x=>x.amt)),true)+' in '+due.length+' tracked charge'+(due.length===1?'':'s')+' due in the next 30 days.':'No tracked charges due in the next 30 days.'));
+  const done=S.flags&&S.flags[flag];
+  right.append(el('div',{style:'margin-top:10px'},el('button',{class:'btn'+(done?'':' primary'),type:'button',onclick:()=>{ S.flags=S.flags||{}; S.flags[flag]=!done; changed('flags'); dirty.achievements=true; if(typeof queueUnlockCheck==='function')queueUnlockCheck(); card.replaceWith(reviewCard()); toast(done?'Review reopened.':mLabelLong(mk)+' marked as reviewed.'); }},done?'✓ Reviewed. Reopen':'Mark '+mLabel(mk)+' as reviewed')));
+  right.append(el('div',{class:'row',style:'margin-top:8px;gap:2px'},el('button',{class:'btn sm ghost',type:'button',onclick:checkinReminder},'Monthly calendar reminder'),el('button',{class:'btn sm ghost',type:'button',onclick:yearEndSummary},'Year-end summary')));
+  card.append(el('div',{class:'grid g2 mt',style:'gap:24px'},left,right));
+  return card;
+}
+
 /* ============ Spending power (three views of the same question) ============ */
 function spendingPower(){
   calc(); const a=M.agg(CUR), b=bud(CUR), monthEnd=CUR+'-'+pad(new Date(+CUR.slice(0,4),+CUR.slice(5,7),0).getDate());
@@ -3497,13 +4223,18 @@ for(const p of PAGES){ const f=RENDER[p]; if(typeof f!=='function')continue; REN
 const FAQ=[
  {id:'storage',q:'Where is my data stored?',a:'Only in this browser (local storage). It saves as you type. Nothing goes to a server, and there are no accounts.\nClearing site data, using a private window, or switching browsers or devices removes your access to it. Export a CSV now and then as your backup.'},
  {id:'backup',q:'How do I back up my data or move to another device?',a:'Open Data in the top bar and click Save backup now (or press Ctrl+S). The first time, you pick the folder and file name, for example a synced OneDrive or Google Drive folder. After that it saves to the same file in one click (Chrome and Edge on a computer; other browsers save to Downloads). JSON is the most complete backup; Export All (CSV) gives you a spreadsheet copy. The chip next to Data shows when you last backed up.\nOn the other device, click Import Backup and choose that file, or drag it onto the page. If data already exists there, you choose Merge or Replace.'},
+ {id:'install',q:'Can I install it like an app?',a:'Yes. In Chrome or Edge, use the Install button on the Settings page (or the install icon in the address bar). On iPhone or iPad, tap Share, then Add to Home Screen.\nIt then opens full screen with its own icon, and loads with no signal once it has been opened online at least once. Your data still lives only on your device.\nOn iPhone the installed app may start empty, because it does not share storage with Safari. Save a backup in Safari first, then import it in the app.',kw:'pwa install home screen offline app icon'},
+ {id:'plan',q:'What does the Plan tab do?',a:'Plan answers "where am I headed?" with three tools.\nThe cash-flow calendar projects your checking balance day by day from your pay schedule, the bills on your Subscriptions tab, debt payments that have a due day, and your average everyday spending. It shows the lowest point and how much is safe to spend until payday.\nSavings goals follow an account balance from your monthly check-in, or an amount you type, and show what you need each month to hit the date.\nThe debt payoff planner reads your credit card and loan balances from the check-in, so you add each debt\'s APR and minimum payment once. It compares avalanche (highest APR first) with snowball (smallest balance first) and shows what an extra payment saves.\nIt all comes from your own numbers, so it is only as good as what you enter. These are estimates, not advice.',kw:'plan cash flow calendar forecast goals savings emergency fund debt payoff avalanche snowball apr payday safe to spend'},
+ {id:'review',q:'What are the resilience numbers and the monthly review on the Dashboard?',a:'Runway is your cash and emergency fund divided by your monthly essentials (needs plus debt payments, averaged over your last three finished months). It is how many months you could cover the basics if income stopped.\nThe monthly review explains why your net worth moved since the previous check-in. Income minus everyday spending is the part from cash flow. Whatever is left is market moves, value changes in your home or vehicle, loan interest, and anything you have not logged. Savings transfers and debt payments are not counted as spending, because they move money between your own accounts.\nThe checklist beside it points at what needs attention, and you can mark a month as reviewed.',kw:'resilience runway emergency review monthly net worth change why explain checklist'},
+ {id:'snapshot',q:'What is the 2-minute snapshot, and the Simple view?',a:'The snapshot is a short form for first-time setup: your take-home pay and a few balances (checking, savings, retirement, investments, cards, loans). It is saved as this month\'s check-in, so the Dashboard shows your net worth and runway right away. You can fine-tune each account later on Monthly Budget.\nThe Simple view on the Dashboard keeps the essentials (net worth, resilience, safe to spend, monthly review) and hides the charts, ratios and forecasts. The choice is remembered on this device.',kw:'quick start setup first time simple view dashboard declutter'},
+ {id:'yearend',q:'How do the check-in reminder and the year-end summary work?',a:'The reminder downloads a small calendar file (.ics). Open it in Apple Calendar, Google Calendar, Outlook or any calendar app to get a repeating monthly reminder for your check-in. It is made in your browser and nothing is sent anywhere.\nThe year-end summary downloads a CSV with the year\'s income, spending, savings and debt payments, month by month, your top spending categories and the change in net worth. Both are under Settings, in Your data.',kw:'calendar ics reminder year end summary annual export csv tax'},
  {id:'cookies',q:'Does this site use cookies or tracking?',a:'No cookies, ads, analytics or accounts. Local storage holds your data plus two small settings: light or dark mode, and whether you dismissed the storage notice. None of it is sent anywhere.\nThe app loads nothing from other websites. The privacy policy below has the full list.',kw:'privacy cookie consent tracking analytics'},
  {id:'start',q:'What should I enter first?',a:'On Get Started, enter your birth date, tracking start month, take-home income and expected retirement income. Then set a plan on Monthly Budget, add month-end balances in the Net worth & check-in view, and log spending on Transactions. Want a look first? Click Load demo data.'},
  {id:'signs',q:'Do I enter expenses as negative numbers?',a:'No. Type positive numbers everywhere. On Transactions you pick Expense or Income, budget amounts are positive, and debts (credit cards, loans) are positive balances.\nOnly the exported CSV stores expenses as negatives. The importer handles that for you.'},
  {id:'csv',q:'What does the CSV look like? Can I import my bank export?',a:'One flat file with the columns Type, Date, Item, Category, Value, Description and Balance. Open "CSV format" under Your data for each row type, or download the template.\nA plain bank export with Date, Description and Amount columns also works. Its rows are added to your transactions.',kw:'import export format columns template'},
  {id:'networth',q:'How is net worth calculated?',a:'Assets (cash, investments, a car or home) minus liabilities (credit cards and loans), taken from the month-end balances you enter. The charts show it month by month, so regular check-ins give the best picture.'},
  {id:'milestones',q:'How do the milestones and forecast dates work?',a:'Dashboard milestones compare your net worth to each goal: an emergency fund of half your annual take-home income (counted from your cash above $1,000), a wealth threshold of age × income ÷ 10, and 10×, 15×, 20×, 25× and 30× your expected retirement income.\nThe retirement and FI/RE dates, and the Milestones chart in Extra Charts, use cash plus investments. Dates are projections from your recent averages.',kw:'fire retirement emergency fund wealth threshold forecast'},
- {id:'xp',q:'How do achievements, XP and levels work?',a:'There are 112 achievements: the 82 from the original spreadsheet plus 30 new ones. Each is worth XP by rarity and unlocks automatically when your data meets its rule.\nYour level is 1 + total XP ÷ 925, rounded down, up to level 100. Tap any badge to see its rule and your progress.'},
+ {id:'xp',q:'How do achievements, XP and levels work?',a:'There are 121 achievements: the 82 from the original spreadsheet plus 39 new ones. Each is worth XP by rarity and unlocks automatically when your data meets its rule.\nYour level is 1 + total XP ÷ 925, rounded down, up to level 100. Tap any badge to see its rule and your progress.'},
  {id:'differ',q:'Why do some numbers differ from the old spreadsheet?',a:'The web version fixes a bug where the retirement and FI/RE dates counted the Cash row twice and left out investments. A few achievements are stricter now (current-month ones need a balance entered), and a few charts were redrawn to use a single axis.'},
  {id:'advice',q:'Is this financial advice?',a:'No. It is an educational tool, not tax, legal or investment advice, and its forecasts are estimates. It is still a beta. Talk to a qualified professional before big money decisions.'},
  {id:'delete',q:'How do I delete my data?',a:'On Get Started, under Your data, click Clear all data and confirm. You can also clear this site\'s data in your browser settings. Export a CSV first if you might want it back, because deleting cannot be undone.'},
@@ -3563,8 +4294,8 @@ function openFaq(i){
 const faqIndex=id=>FAQ.findIndex(f=>f.id===id);
 
 /* ---------- site search ---------- */
-const PAGE_SUB={start:'Settings, checklist, your data, FAQ and terms',dashboard:'Net worth, key ratios, milestones and trends',extra:'Projection, allocation, unusual expenses and more charts',whatif:'Sliders that show how changes grow over time',achievements:'Badges, XP and your level',budget:'Plan the month and check in on balances',transactions:'Log, search and edit spending and income',subs:'Recurring charges, upcoming bills and suggestions'};
-const PAGE_KW={start:'configuration setup birth date income retirement checklist banking import export faq about release notes license terms privacy',dashboard:'home overview net worth assets liabilities savings rate debt income expenses forecast',extra:'charts projection portfolio allocation credit score forecast unusual',whatif:'playground simulator compound interest invest return years',achievements:'xp level quest badges rarity',budget:'monthly budget planned actual balances credit score check-in note copy fill clear',transactions:'spending expenses income paste bank statement categories filter',subs:'subscriptions recurring streaming membership bills cancel upcoming renewals'};
+const PAGE_SUB={start:'Settings, checklist, your data, FAQ and terms',dashboard:'Net worth, key ratios, milestones and trends',extra:'Projection, allocation, unusual expenses and more charts',whatif:'Sliders that show how changes grow over time',achievements:'Badges, XP and your level',budget:'Plan the month and check in on balances',transactions:'Log, search and edit spending and income',subs:'Recurring charges, upcoming bills and suggestions',plan:'Cash-flow calendar, savings goals and debt payoff'};
+const PAGE_KW={start:'configuration setup birth date income retirement checklist banking import export faq about release notes license terms privacy',dashboard:'home overview net worth assets liabilities savings rate debt income expenses forecast',extra:'charts projection portfolio allocation credit score forecast unusual',whatif:'playground simulator compound interest invest return years',achievements:'xp level quest badges rarity',budget:'monthly budget planned actual balances credit score check-in note copy fill clear',transactions:'spending expenses income paste bank statement categories filter',subs:'subscriptions recurring streaming membership bills cancel upcoming renewals',plan:'plan cash flow calendar forecast balance payday paycheck safe to spend savings goals emergency fund debt payoff avalanche snowball apr minimum payment'};
 function buildIndex(){
   const I=[]; const add=(type,title,sub,kw,run,w)=>I.push({type,title,sub:sub||'',t:title.toLowerCase(),k:((sub||'')+' '+(kw||'')).toLowerCase(),run,w:w||0});
   for(const p of PAGES)add('page',PAGE_LABEL[p],PAGE_SUB[p],PAGE_KW[p],()=>go(p),5);
@@ -3576,6 +4307,13 @@ function buildIndex(){
   act('Import a backup or CSV','Restore a JSON backup or load a CSV','upload restore bank json csv import',()=>pickImport());
   act('Add a transaction','Jump to quick add','new spending expense income log',()=>{ go('transactions'); setTimeout(()=>{ const i=$('input[aria-label=Description]'); if(i)i.focus(); },80); });
   act('Paste transactions from a spreadsheet','Excel, Google Sheets or bank rows','paste import bulk',()=>{ TX.openPaste=true; dirty.transactions=true; go('transactions'); });
+  act('Add a savings goal','Set a target and a date','goal savings emergency fund target',()=>{ go('plan'); setTimeout(()=>goalEdit(null),80); });
+  act('Set up your pay schedule','For the cash-flow calendar','paycheck payday income schedule',()=>{ go('plan'); setTimeout(payEdit,80); });
+  act('Take the 2-minute snapshot','Enter a few balances to get started','quick start setup snapshot first new',()=>{ if(S.demo){ toast('Clear the demo data first, then take your snapshot.'); return; } quickStart(); });
+  act('Monthly check-in reminder','Download a repeating calendar reminder (.ics)','calendar reminder ics google outlook apple',()=>checkinReminder());
+  act('Year-end summary','Download a CSV of your year','year end summary annual review export tax',()=>yearEndSummary());
+  act('Simple or full Dashboard','Switch the Dashboard view','simple full view declutter charts',()=>{ setSimpleView(!simpleView()); dirty.dashboard=true; go('dashboard'); });
+  act('Debt payoff planner','Avalanche vs snowball, with extra payments','debt payoff apr loan credit card interest minimum',()=>go('plan'));
   act('Monthly check-in','Enter this month\'s balances','balances net worth update',()=>{ BUD.view='networth'; BUD.month=CUR; dirty.budget=true; go('budget'); });
   act('Load demo data','Fill the app with sample data','sample example try',()=>loadDemo());
   act('Clear all data','Remove everything from this browser','delete reset erase remove',()=>clearAll());
@@ -3693,6 +4431,7 @@ function initSite(){
   booted=true; go(start,true); if(typeof checkUnlocks==='function')checkUnlocks(true); if(typeof initSite==='function')initSite();
   if(!storageOK)setSaveMsg('Autosave unavailable');
   window.addEventListener('beforeunload',()=>{try{localStorage.setItem(STORE_KEY,JSON.stringify(S))}catch(e){}});
+  if('serviceWorker' in navigator&&/^https?:/.test(location.protocol)){ const reg=()=>navigator.serviceWorker.register('sw.js').catch(()=>{}); if(document.readyState==='complete')reg(); else window.addEventListener('load',reg); }
 })();
 
 </script>

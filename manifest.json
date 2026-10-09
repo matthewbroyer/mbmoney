@@ -1,0 +1,35 @@
+{
+  "name": "mbmoney.online",
+  "short_name": "mbmoney",
+  "description": "Free net worth and budget tracker. No account, and your data stays in your browser.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f3f6f7",
+  "theme_color": "#0a8460",
+  "categories": [
+    "finance",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
