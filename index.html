@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-frkb48jsfyrGxg8S9gmxpyI1vDdXB8xNFML8xACYNf8=' 'sha256-bGapo3EdzxlIa7MyviDOv4x9mGrYns+Z+1haOWenX3U=' 'sha256-uK9AKRgaIj1NWk0EP8/iLEF4TbaW9S9w1O/7jhZaABA=' 'sha256-SiGDoMJfyt9CVsr2RXrjtykGLX30UuqtFqJuqZaQuCA='; style-src 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-frkb48jsfyrGxg8S9gmxpyI1vDdXB8xNFML8xACYNf8=' 'sha256-bGapo3EdzxlIa7MyviDOv4x9mGrYns+Z+1haOWenX3U=' 'sha256-uK9AKRgaIj1NWk0EP8/iLEF4TbaW9S9w1O/7jhZaABA=' 'sha256-0HDBNK++Fm0tOO+tRBpgB5G5xUJndq8mmgv99z5U9mk='; style-src 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>mbmoney.online | Free net worth and budget tracker</title>
@@ -30,7 +30,7 @@
 <meta name="theme-color" content="#0a8460">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="mbmoney">
+<meta name="apple-mobile-web-app-title" content="Money">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="author" content="Matthew Broyer">
@@ -2466,7 +2466,7 @@ function go(p,noHash){
   $$('nav.tabs button').forEach(b=>{ const on=b.dataset.p===p; if(on)b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); if(on&&booted){ const n=$('nav.tabs'), nr=n.getBoundingClientRect(), br=b.getBoundingClientRect(); if(nr.width&&br.left<nr.left)n.scrollLeft-=(nr.left-br.left)+8; else if(nr.width&&br.right>nr.right)n.scrollLeft+=(br.right-nr.right)+8; } });
   if(dirty[p]!==false){ try{RENDER[p]()}catch(e){ $('#p-'+p).replaceChildren(el('div',{class:'card'},el('b',null,'This page could not be drawn.'),el('p',null,'Your data is still saved in this browser. Try another tab or reload the page. If it keeps happening, use Data > Save backup now to back up your data first.'))); } dirty[p]=false; }
   if(!noHash)history.replaceState(null,'','#'+p);
-  document.title=PAGE_LABEL[p]+' | mbmoney.online';
+  document.title='Money | '+NAV_LABEL[p];
   window.scrollTo({top:0});
   if(booted&&!noHash){ const h=$('#p-'+p+' h2'); if(h){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); } }
   if(booted&&typeof playIn==='function')playIn(p);

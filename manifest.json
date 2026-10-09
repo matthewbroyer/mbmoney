@@ -1,6 +1,6 @@
 {
-  "name": "mbmoney.online",
-  "short_name": "mbmoney",
+  "name": "Money",
+  "short_name": "Money",
   "description": "Free net worth and budget tracker. No account, and your data stays in your browser.",
   "start_url": "./",
   "scope": "./",

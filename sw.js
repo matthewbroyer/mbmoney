@@ -1,7 +1,7 @@
 /* mbmoney.online service worker.
    Network-first for the app's own files, so updates arrive on the next visit; the cache is only the offline fallback.
    It never touches your data (that lives in localStorage) and ignores every request that is not a same-origin GET. */
-const VERSION = 'mbmoney-v3';
+const VERSION = 'mbmoney-v4';
 const SHELL = ['./', 'index.html', 'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 const INDEX = new URL('index.html', self.registration.scope).href;
 
