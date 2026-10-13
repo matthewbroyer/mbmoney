@@ -5,21 +5,21 @@
   Free to use for your own personal finances. Copying, re-hosting or reusing this code, design or artwork
   without written permission is not allowed. See "Terms of use & license" inside the app.
 -->
-<html lang="en">
+<html lang="en" data-app-short="Money" data-app-domain="mbmoney.online">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-frkb48jsfyrGxg8S9gmxpyI1vDdXB8xNFML8xACYNf8=' 'sha256-bGapo3EdzxlIa7MyviDOv4x9mGrYns+Z+1haOWenX3U=' 'sha256-uK9AKRgaIj1NWk0EP8/iLEF4TbaW9S9w1O/7jhZaABA=' 'sha256-FDQP95lmpEryZ5NmC9FHDLLePSxFly82C5f4aAHu8f0='; style-src 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-frkb48jsfyrGxg8S9gmxpyI1vDdXB8xNFML8xACYNf8=' 'sha256-bGapo3EdzxlIa7MyviDOv4x9mGrYns+Z+1haOWenX3U=' 'sha256-uK9AKRgaIj1NWk0EP8/iLEF4TbaW9S9w1O/7jhZaABA=' 'sha256-5x7WEExvcgeAaRESTNNwJHHar6MIGaQ6W+bSzlUvcag=' 'sha256-/c5M3x0kqBXpRaXUfqJEfpDsuT5lXBlW2RcUkihp7dQ='; style-src 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#087F5B">
-<title>mbmoney.online | Free net worth and budget tracker</title>
+<title>Money | Dashboard</title>
 <link rel="canonical" href="https://mbmoney.online/">
 <meta property="og:title" content="mbmoney.online | Free net worth and budget tracker">
 <meta property="og:description" content="Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mbmoney.online/">
 <meta property="og:site_name" content="mbmoney.online">
-<meta property="og:image" content="https://mbmoney.online/og-image.png?v=2">
+<meta property="og:image" content="https://mbmoney.online/og-image.png?v=3">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -27,16 +27,17 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="mbmoney.online | Free net worth and budget tracker">
 <meta name="twitter:description" content="Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
-<meta name="twitter:image" content="https://mbmoney.online/og-image.png?v=2">
+<meta name="twitter:image" content="https://mbmoney.online/og-image.png?v=3">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Money">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" href="favicon.ico?v=2" sizes="48x48">
-<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+<link rel="icon" href="favicon.ico?v=3" sizes="48x48">
+<link rel="icon" href="favicon.svg?v=3" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 <meta name="author" content="Matthew Broyer">
 <meta name="copyright" content="© 2024–2026 Matthew Broyer. All rights reserved.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "mbmoney.online", "alternateName": "Money", "url": "https://mbmoney.online/", "description": "Free net worth and budget tracker. Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (runs in a web browser)", "browserRequirements": "Requires JavaScript", "inLanguage": "en", "isAccessibleForFree": true, "image": "https://mbmoney.online/og-image.png", "author": {"@type": "Person", "name": "Matthew Broyer"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <meta name="description" content="Free net worth and budget tracker. Log spending, check in monthly and see your savings rate and retirement date. No account, and your data stays in your browser.">
 <script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('pwmt.theme')==='dark'?'dark':'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
 <style>
@@ -485,7 +486,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-delay:0ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
 
 .insight,.nextup{margin-top:14px}
-@media(max-width:520px){.saved{display:none}.lvlchip{padding:4px 8px 4px 4px}.lvlchip>span:nth-child(2){display:none}.actions{gap:4px}.brand .bt span{display:none}}
+@media(max-width:520px){.saved{display:none}.lvlchip{padding:4px 8px 4px 4px}.lvlchip>span:nth-child(2){display:none}.actions{gap:4px}}
 
 /* ================= site chrome ================= */
 #splash{position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:radial-gradient(900px 500px at 20% 0%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 60%),radial-gradient(700px 500px at 100% 10%,color-mix(in srgb,var(--accent-2) 10%,transparent),transparent 60%),var(--bg);pointer-events:none;transition:opacity .45s ease,transform .45s ease}
@@ -766,8 +767,7 @@ nav.tabs button[aria-current="page"] svg{opacity:1}
 .tabwrap{order:3;flex:1 1 100%}.top .wrap{row-gap:2px}.actions{margin-left:auto}.brand{margin-right:0}
 @media(max-width:1060px){nav.tabs button svg{display:none}nav.tabs button{padding:7px 11px}}
 .bnav,.bn-sheet{display:none}
-@media(max-width:860px){
-  .tabwrap{display:none}
+@media(max-width:767px){
   .bnav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;z-index:90;padding:6px 6px calc(6px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--surface) 90%,transparent);backdrop-filter:saturate(1.6) blur(16px);-webkit-backdrop-filter:saturate(1.6) blur(16px);border-top:1px solid var(--border-strong)}
   .bnav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:52px;background:none;border:0;border-radius:12px;color:var(--muted);font:600 11px/1.1 inherit;font-family:inherit;letter-spacing:-.01em;cursor:pointer;padding:4px 2px;min-width:0;overflow:hidden}
   .bnav button[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
@@ -781,7 +781,6 @@ nav.tabs button[aria-current="page"] svg{opacity:1}
   .toast,.unlock{bottom:calc(84px + env(safe-area-inset-bottom))}
   .notice{bottom:calc(80px + env(safe-area-inset-bottom))!important}
   body.has-notice .totop{bottom:calc(250px + env(safe-area-inset-bottom))}
-  .top .wrap{padding-top:8px;padding-bottom:8px}
 }
 @media print{.bnav,.bn-sheet{display:none!important}}
 
@@ -1022,8 +1021,7 @@ dialog.palette{border-radius:8px}
 .dm-big .badgewrap{filter:none}
 
 /* --- mobile bottom nav --- */
-@media(max-width:860px){
-  .top .wrap{padding-bottom:8px}
+@media(max-width:767px){
   .bnav{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none;border-top:1px solid var(--border-strong);padding-top:0;gap:2px}
   .bnav button{border-radius:0;position:relative;min-height:54px}
   .bnav button[aria-current="page"]{background:none;color:var(--accent);box-shadow:inset 0 2px 0 var(--accent)}
@@ -1046,8 +1044,7 @@ dialog.palette{border-radius:8px}
 @media print{.top{box-shadow:none}.hero,.lvl{border-left-width:1px}}
 /* header actions share one compact height */
 .actions .btn,.actions .lvlchip,#searchBtn{min-height:var(--ctl-sm)}
-@media(max-width:860px){.bnav button{font-size:10.5px;letter-spacing:-.02em}}
-@media(max-width:430px){.brand .bt{display:none}.top .wrap{flex-wrap:nowrap}}
+@media(max-width:767px){.bnav button{font-size:10.5px;letter-spacing:-.02em}}
 
 /* budget progress bars follow the app accent (over-budget stays red) */
 .hrow .trk .f:not(.over),.brow .mini i:not(.over){background:var(--accent)}
@@ -1216,9 +1213,7 @@ input[type=checkbox],input[type=radio],input[type=range],progress{accent-color:v
 :root[data-theme="dark"]{--s1:#35c395;--s2:#d9a24a;--s3:#a6dcc6;--s4:#8a94a1}
 .neg,.rv-big.neg,.sp-big.neg,.sp-side .val.neg,.hrow .hv.is-over,.ba-over,.brow .ac span.is-over,.btn.danger,.btn.ghost.danger{color:var(--crit-ink)}
 
-/* app bar: solid surface, accent stripe on top, underline tabs */
-.top{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid var(--border);box-shadow:inset 0 3px 0 var(--accent),var(--shadow)}
-.top .wrap{padding-top:10px;padding-bottom:0;row-gap:4px}
+/* brand block (the sidebar, rail and phone bars come from mb-suite-sidebar.css) */
 a.brand{display:flex;flex-direction:row;align-items:center;gap:9px;text-decoration:none;color:inherit;border-radius:var(--r-sm);padding:3px 8px 3px 3px;margin-left:-3px;transition:background-color var(--ease)}
 a.brand:hover{background:var(--surface-2)}
 .brand .logo{width:28px;height:28px;border-radius:var(--r);background:none;box-shadow:none;filter:none;display:block;flex:none;overflow:hidden;transform:none!important}
@@ -1227,11 +1222,6 @@ a.brand:hover{background:var(--surface-2)}
 .brand h1{font-size:14.5px;font-weight:650;letter-spacing:-.005em;color:var(--ink)}
 .brand h1 .tld{font-style:normal;color:var(--accent)}
 .brand span{font-size:11px;color:var(--muted)}
-nav.tabs{gap:0;padding:0;background:none;border:0;border-radius:0}
-nav.tabs button{position:relative;border-radius:0;min-height:40px;padding:0 12px;color:var(--ink-2);font-weight:500;background:none;box-shadow:none}
-nav.tabs button:hover{background:var(--surface-2);color:var(--ink)}
-nav.tabs button[aria-current="page"],:root[data-theme="dark"] nav.tabs button[aria-current="page"]{background:none;color:var(--accent);font-weight:600;box-shadow:inset 0 -2px 0 var(--accent)}
-.tabarrow{border-radius:var(--r-sm)}
 .lvlchip{border-radius:var(--r-sm)}
 .lvlchip .lv{border-radius:3px;background:var(--accent);color:var(--accent-ink)}
 .bk-chip{border-radius:var(--r-sm)}
@@ -1311,8 +1301,7 @@ dialog::backdrop{background:var(--scrim);backdrop-filter:none;-webkit-backdrop-f
 #splash .sp-bar i{border-radius:2px;background:var(--accent)}
 
 /* phones: bottom bar */
-@media(max-width:860px){
-  .top .wrap{padding-bottom:8px}
+@media(max-width:767px){
   .bnav{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none;border-top:1px solid var(--border-strong)}
   .bnav button{border-radius:0;box-shadow:none}
   .bnav button[aria-current="page"]{background:none;color:var(--accent);box-shadow:inset 0 2px 0 var(--accent)}
@@ -1364,7 +1353,7 @@ dialog::backdrop{background:var(--scrim);backdrop-filter:none;-webkit-backdrop-f
 }
 
 /* ---- page wash: accent-derived, fades into the neutral page by ~680px ---- */
-html{background:linear-gradient(180deg,var(--wash-top) 0,var(--wash-mid) 420px,var(--bg) 680px) no-repeat,var(--bg)}
+html{min-height:100%;background:linear-gradient(180deg,var(--wash-top) 0,var(--wash-mid) 420px,var(--bg) 680px) 0 0/100% 680px no-repeat,var(--bg)}  /* v3 fix: fixed 680px size + min-height so short pages don't show a seam */
 body{background:none}
 
 /* ---- app bar: gradient accent line + gradient underline on the current tab ---- */
@@ -1452,27 +1441,213 @@ body{background:none}
 /* phones: keep banner text in its own column so it never meets the art */
 @media(max-width:600px){.cu-banner .cu-txt{max-width:54%}}
 </style>
+<style id="mb-suite-sidebar">
+/* =====================================================================
+   MB SUITE v3 · LEFT SIDEBAR NAVIGATION  (replaces mb-suite-appbar.css)
+   Load order: mb-suite-core.css → app adapter → mb-suite-cutouts.css (v2) → this file → <app>-v3.css
+   Needs v1 tokens (--surface, --border, --accent, --r-sm, --page-max, --gutter …) and, if present,
+   v2's --g-line / --cut-mid for the gradient accents (falls back to flat accent without v2).
+
+   Markup (see v3-updates/demo/index.html for a working page):
+   <body class="mb-shell">
+     <aside class="mb-side" aria-label="App">
+       <a class="brand" href="./" aria-label="mbname.online: go to Home"> .logo + .bt(b + span) </a>
+       <nav class="side-nav" aria-label="Sections"> <button aria-current="page"><svg class="uic"/><span>Home</span></button> … </nav>
+       <nav class="side-nav side-end" aria-label="More"> Settings / Help items (optional) </nav>
+     </aside>
+     <div class="mb-main">
+       <header class="page-bar">
+         <a class="brand phone-brand" href="./" …>  (same brand block; shown on phones only)
+         <h1 class="page-title">Home</h1>
+         <div class="actions"> search · status chip · Data · theme switch · primary action </div>
+       </header>
+       <main class="wrap"> … </main>
+     </div>
+     <nav class="bnav" aria-label="Sections"> phone bottom bar (max 5 items, rest in a More sheet) </nav>
+   </body>
+
+   Breakpoints (identical in every app):
+     ≥1024px  sidebar 240px with labels
+     768–1023 rail 76px: icon over a short label, logo only
+     <768     no sidebar; page-bar becomes the top bar with the brand; docked bottom bar
+   ===================================================================== */
+:root{
+  --side-w:240px; --rail-w:76px; --bar-h:56px;
+  --g-rail:linear-gradient(180deg,var(--accent),var(--cut-mid,var(--accent)));
+}
+
+/* family accent line across the whole window (sidebar included) */
+.mb-shell::before{content:"";position:fixed;left:0;right:0;top:0;height:3px;background:var(--g-line,var(--accent));z-index:60;pointer-events:none}
+
+/* ---- sidebar ---- */
+.mb-side{position:fixed;top:0;bottom:0;left:0;width:var(--side-w);z-index:40;display:flex;flex-direction:column;gap:2px;
+  padding:15px 0 12px;background:var(--surface);border-right:1px solid var(--border);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.mb-side .brand{margin:0 8px 12px;padding:6px 8px}
+.side-nav{display:flex;flex-direction:column;gap:2px;padding:0 8px}
+.side-nav.side-end{margin-top:auto;padding-top:8px;border-top:1px solid var(--border)}
+.side-label{margin:14px 20px 4px;font-size:var(--fs-xs,11.5px);font-weight:650;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.side-nav button,.side-nav a{position:relative;display:flex;align-items:center;gap:10px;width:100%;min-height:40px;padding:0 12px;border:0;border-radius:var(--r-sm);
+  background:none;font:500 14px var(--font);color:var(--ink-2);text-align:left;text-decoration:none;cursor:pointer;
+  transition:background-color var(--ease),color var(--ease)}
+.side-nav .uic,.side-nav svg{flex:none;width:18px;height:18px;opacity:.75}
+.side-nav button:hover,.side-nav a:hover{background:var(--surface-2);color:var(--ink)}
+.side-nav [aria-current="page"],.side-nav [aria-current="page"]:hover{color:var(--accent);font-weight:600;
+  background:var(--g-rail) left center/3px 60% no-repeat,var(--accent-soft)}
+.side-nav [aria-current="page"] svg{opacity:1}
+.side-nav button:focus-visible,.side-nav a:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.side-nav .count{margin-left:auto;font-size:12px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.side-nav .dot{position:absolute;left:24px;top:8px;width:8px;height:8px;border-radius:2px;background:var(--warn)}
+
+/* ---- the brand block: ALWAYS a link to the home / start view ---- */
+a.brand{display:flex;align-items:center;gap:9px;min-width:0;border-radius:var(--r-sm);color:inherit;text-decoration:none;transition:background-color var(--ease)}
+a.brand:hover{background:var(--surface-2)}
+a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.brand .logo,.brand .logo svg{display:block;flex:none;width:28px;height:28px;border-radius:var(--r)}
+.brand .bt{display:flex;flex-direction:column;min-width:0;line-height:1.15}
+.brand b{font-size:14.5px;font-weight:650;letter-spacing:-.005em;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand .bt span{font-size:11px;color:var(--muted);letter-spacing:.01em;white-space:nowrap}
+
+/* ---- main column + page bar ---- */
+.mb-main{margin-left:var(--side-w);min-width:0}
+.page-bar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;min-height:var(--bar-h);
+  padding:3px max(var(--gutter),calc((100% - var(--page-max)) / 2 + var(--gutter))) 0;
+  background:color-mix(in srgb,var(--surface) 96%,transparent);border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+.page-bar .phone-brand{display:none}
+.page-title{margin:0;font-size:18px;font-weight:650;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.page-bar .actions{margin-left:auto;display:flex;align-items:center;gap:6px}
+.page-bar .actions>*{min-height:var(--ctl-sm)}
+.mb-main>.wrap{max-width:var(--page-max);margin:0 auto;padding:20px max(var(--gutter),env(safe-area-inset-right)) 48px max(var(--gutter),env(safe-area-inset-left))}
+
+/* ---- phone bottom bar (hidden until <768px) ---- */
+.bnav{display:none}
+
+/* ---- tablet: compact rail ---- */
+@media (max-width:1023px){
+  .mb-side{width:var(--rail-w);padding-top:12px}
+  .mb-side .brand{justify-content:center;margin:0 10px 10px;padding:8px 0}
+  .mb-side .brand .bt,.side-label,.side-nav .count{display:none}
+  .side-nav{padding:0 6px}
+  .side-nav button,.side-nav a{flex-direction:column;justify-content:center;gap:3px;min-height:56px;padding:6px 2px;font-size:10.5px;text-align:center;line-height:1.15}
+  .side-nav [aria-current="page"],.side-nav [aria-current="page"]:hover{background:var(--g-rail) left center/3px 50% no-repeat,var(--accent-soft)}
+  .side-nav .dot{left:auto;right:12px}
+  .mb-main{margin-left:var(--rail-w)}
+}
+/* ---- phones: top bar with the brand + docked bottom bar ---- */
+@media (max-width:767px){
+  .mb-side{display:none}
+  .mb-main{margin-left:0}
+  .page-bar{padding:3px max(12px,env(safe-area-inset-right)) 0 max(12px,env(safe-area-inset-left));gap:8px}
+  .page-bar .phone-brand{display:flex;margin-left:-3px;padding:3px 6px 3px 3px}
+  .page-bar .page-title{display:none}               /* the view's own h2 / banner names the page on phones */
+  .page-bar .actions .hide-phone{display:none}
+  .bnav{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;
+    padding:0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);background:var(--surface);border-top:1px solid var(--border-strong)}
+  .bnav button,.bnav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:56px;border:0;border-radius:0;background:none;
+    font:500 11px var(--font);color:var(--ink-2);text-decoration:none}
+  .bnav svg{width:20px;height:20px}
+  .bnav [aria-current="page"]{color:var(--accent);font-weight:600;background:var(--g-underline,linear-gradient(var(--accent),var(--accent))) top/100% 2px no-repeat}
+  body.mb-shell{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
+}
+@media (max-width:420px){.page-bar .phone-brand .bt span{display:none}}
+@media print{.mb-side,.bnav,.page-bar .actions,.mb-shell::before{display:none!important}.mb-main{margin-left:0}}
+</style>
+<style id="mb-suite-v3">
+/* =====================================================================
+   MB SUITE v3 · components: install card (Settings/More) and the share dialog.
+   Load after mb-suite-sidebar.css. Uses v1 tokens only; v2 gradients are picked up where present.
+   ===================================================================== */
+/* ---- install card ---- */
+.mb-install{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--border);border-left:3px solid var(--accent);
+  border-radius:var(--r);background:var(--surface)}
+.mb-install>.uic{flex:none;width:22px;height:22px;color:var(--accent)}
+.mb-install>div{flex:1;min-width:0}
+.mb-install b{display:block;font-size:14px;font-weight:600;color:var(--ink)}
+.mb-install p{margin:2px 0 0;font-size:12.5px;color:var(--ink-2)}
+.mb-install p b{display:inline;font-size:inherit}
+.mb-install .btn{flex:none}
+.mb-install.is-done{border-left-color:var(--good)}
+.mb-install.is-done>.uic{color:var(--good-ink)}
+@media (max-width:520px){.mb-install{flex-wrap:wrap}.mb-install .btn{width:100%}}
+
+/* ---- share button (put it where the milestone is shown) ---- */
+.mb-share-btn .uic{width:16px;height:16px}
+
+/* ---- share dialog ---- */
+dialog.mb-share{width:min(460px,calc(100vw - 24px));max-height:calc(100dvh - 24px);padding:0;border:1px solid var(--border);border-radius:var(--r-lg);
+  background:var(--surface);color:var(--ink);box-shadow:var(--shadow-pop);overflow:auto}
+dialog.mb-share::backdrop{background:var(--scrim)}
+.mb-share .ms-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 16px;border-bottom:1px solid var(--border)}
+.mb-share h3{margin:0;font-size:16px;font-weight:650}
+.mb-share .ms-prev{position:relative;margin:16px 16px 0;aspect-ratio:1;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background:var(--surface-2)}
+.mb-share .ms-prev img{display:block;width:100%;height:100%}
+.mb-share .ms-wait{position:absolute;inset:0;display:grid;place-items:center;margin:0;color:var(--muted);font-size:13px}
+.mb-share .ms-opts{display:flex;flex-wrap:wrap;gap:4px 16px;padding:12px 16px 0}
+.mb-share .ms-opts:empty{display:none}
+.mb-share .ms-opt{display:inline-flex;align-items:center;gap:8px;min-height:36px;font-size:13.5px}
+.mb-share .ms-note{margin:10px 16px 0;font-size:12px;color:var(--muted)}
+.mb-share .ms-btns{display:flex;justify-content:flex-end;gap:8px;padding:14px 16px 16px;margin-top:12px;border-top:1px solid var(--border)}
+@media (max-width:520px){.mb-share .ms-btns .btn{flex:1}}
+.mb-share [hidden],[data-mb-install][hidden]{display:none!important}
+/* v2 banner on phones: keep the text column clear of the art */
+@media (max-width:600px){:where(.cu-banner) .cu-txt{max-width:54%}}   /* same as the v2 adapters; low specificity so an adapter can override */
+</style>
+<style id="money-v3">
+/* =====================================================================
+   MB SUITE v3 · mbmoney.online adapter (loads after mb-suite-sidebar.css and mb-suite-v3.css)
+   Only what money's own markup needs on top of the shared sidebar.
+   ===================================================================== */
+/* the page bar names the view on tablets and desktops, so each view's own h2 is kept for
+   screen readers and in-page focus but not shown twice; phones hide the page-bar title and show the h2 */
+@media(min-width:768px){
+  .page-h h2:not(.cu-t){position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .page-h h2+p{margin-top:0}
+}
+/* rail (768-1023px): long labels get a short form; the button keeps the full name as its accessible name */
+@media(min-width:768px) and (max-width:1023px){
+  .side-nav [data-short]{font-size:0}
+  .side-nav [data-short]::after{content:attr(data-short);font-size:10.5px}
+}
+/* sidebar nav icons come from the app's own set (drawn at 20px); show them at the suite's 18px */
+.side-nav svg{stroke-width:1.9}
+/* header actions: no wrapping inside the 56px bar */
+.page-bar .actions{flex-wrap:nowrap;min-width:0}
+.page-bar .saved{align-items:center;white-space:nowrap}
+@media(min-width:521px){.page-bar .saved{display:inline-flex}}
+@media(max-width:1180px) and (min-width:768px){.page-bar #searchBtn kbd{display:none}}
+@media(max-width:900px) and (min-width:768px){.page-bar .saved{display:none}}
+/* footer sits in the main column; leave room for the phone bottom bar */
+.mb-main>footer .wrap{max-width:var(--page-max)}
+/* sections jump below the 56px sticky page bar */
+[id^="sec-"],[id^="faq-"]{scroll-margin-top:72px}
+/* share button on the net worth card and the level card */
+.hero .mb-share-btn{margin-top:10px}
+.lvl .mb-share-btn{justify-self:end}
+</style>
 </head>
-<body>
-<div id="splash" role="status" aria-live="polite"><div class="sp-wreath"><svg class="cu-art inline cu-p-soft" viewBox="0 0 320 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><path class="b" transform="translate(289.4 194.7) rotate(95) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="r" transform="translate(254.8 254.8) rotate(125) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="s" transform="translate(194.7 289.4) rotate(155) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="b" transform="translate(125.3 289.4) rotate(185) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="r" transform="translate(65.2 254.8) rotate(215) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="s" transform="translate(30.6 194.7) rotate(245) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="b" transform="translate(30.6 125.3) rotate(275) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="r" transform="translate(65.2 65.2) rotate(305) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="s" transform="translate(125.3 30.6) rotate(335) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="b" transform="translate(194.7 30.6) rotate(365) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="r" transform="translate(254.8 65.2) rotate(395) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="s" transform="translate(289.4 125.3) rotate(425) scale(0.5)" d="M0 0 C 24 -15 70 -17 104 0 C 70 17 24 15 0 0Z"/><path class="d" transform="translate(260 160) rotate(78) scale(0.82)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="m" transform="translate(246.6 210) rotate(108) scale(1)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="s" transform="translate(210 246.6) rotate(138) scale(0.82)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="n" transform="translate(160 260) rotate(168) scale(1)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="m" transform="translate(110 246.6) rotate(198) scale(0.82)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="s" transform="translate(73.4 210) rotate(228) scale(1)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="d" transform="translate(60 160) rotate(258) scale(0.82)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="m" transform="translate(73.4 110) rotate(288) scale(1)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="s" transform="translate(110 73.4) rotate(318) scale(0.82)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="n" transform="translate(160 60) rotate(348) scale(1)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="m" transform="translate(210 73.4) rotate(378) scale(0.82)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="s" transform="translate(246.6 110) rotate(408) scale(1)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="b" cx="160" cy="160" r="6"/></svg><div class="sp-logo"><svg aria-hidden="true" focusable="false" viewBox="0 0 64 64"><defs><linearGradient id="g1" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#2b9172"/><stop offset=".55" stop-color="#087F5B"/><stop offset="1" stop-color="#066649"/></linearGradient><clipPath id="c1"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#c1)"><rect width="64" height="64" fill="url(#g1)"/><ellipse cx="14" cy="6" rx="40" ry="26" fill="#fff" opacity="0.14"/><rect x="16" y="36" width="7" height="13" rx="1.5" fill="#fff" fill-opacity=".55"/><rect x="28.5" y="30" width="7" height="19" rx="1.5" fill="#fff" fill-opacity=".55"/><rect x="41" y="33" width="7" height="16" rx="1.5" fill="#fff" fill-opacity=".55"/><path d="M15 27L26 19L35 23.5L48 14" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="48" cy="14" r="3.6" fill="#fff"/></g><rect x=".5" y=".5" width="63" height="63" rx="17.5" fill="none" stroke="#fff" stroke-opacity="0.24"/></svg></div></div><div class="sp-bar"><i></i></div><div class="sp-t">Loading your finances…</div></div>
+<body class="mb-shell">
+<div id="splash" role="status" aria-live="polite"><div class="sp-wreath"><svg class="cu-art inline cu-p-soft" viewBox="0 0 320 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><circle class="b" cx="268" cy="160" r="16"/><circle class="s" cx="268" cy="160" r="10.6"/><path class="n" transform="translate(260.1 200.5) rotate(112) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="d" cx="236.4" cy="236.4" r="16"/><circle class="m" cx="236.4" cy="236.4" r="10.6"/><path class="m" transform="translate(202.2 259.4) rotate(157) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="b" cx="160" cy="268" r="16"/><circle class="s" cx="160" cy="268" r="10.6"/><path class="n" transform="translate(119.5 260.1) rotate(202) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="d" cx="83.6" cy="236.4" r="16"/><circle class="m" cx="83.6" cy="236.4" r="10.6"/><path class="m" transform="translate(60.6 202.2) rotate(247) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="b" cx="52" cy="160" r="16"/><circle class="s" cx="52" cy="160" r="10.6"/><path class="n" transform="translate(59.9 119.5) rotate(292) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="d" cx="83.6" cy="83.6" r="16"/><circle class="m" cx="83.6" cy="83.6" r="10.6"/><path class="m" transform="translate(117.8 60.6) rotate(337) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="b" cx="160" cy="52" r="16"/><circle class="s" cx="160" cy="52" r="10.6"/><path class="n" transform="translate(200.5 59.9) rotate(382) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="d" cx="236.4" cy="83.6" r="16"/><circle class="m" cx="236.4" cy="83.6" r="10.6"/><path class="m" transform="translate(259.4 117.8) rotate(427) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/></svg><div class="sp-logo"><svg aria-hidden="true" focusable="false" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="mbmo-sp-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#2b9172"/><stop offset=".55" stop-color="#087F5B"/><stop offset="1" stop-color="#066649"/></linearGradient><clipPath id="mbmo-sp-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#mbmo-sp-c)"><rect width="64" height="64" fill="url(#mbmo-sp-g)"/><g transform="translate(0,2.3)"><rect x="16" y="36" width="7" height="13" rx="1.5" fill="#ffffff" fill-opacity="0.55"/><rect x="28.5" y="30" width="7" height="19" rx="1.5" fill="#ffffff" fill-opacity="0.55"/><rect x="41" y="33" width="7" height="16" rx="1.5" fill="#ffffff" fill-opacity="0.55"/><path d="M 15,27 26,19 35,23.5 48,14" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="48" cy="14" r="3.5999999" fill="#ffffff"/></g></g></svg></div></div><div class="sp-bar"><i></i></div><div class="sp-t">Loading your finances…</div></div>
 <noscript><style>#splash{display:none}</style></noscript>
 <script>try{if(window.top!==window.self)document.documentElement.className+=' framed'}catch(e){document.documentElement.className+=' framed'}</script>
 <script>setTimeout(function(){var s=document.getElementById('splash');if(s)s.remove()},6000)</script>
 <a class="skip" href="#main" id="skipLink">Skip to content</a>
 <div id="framedMsg" role="alert"><b>Open this app directly.</b> For your protection, mbmoney.online does not run inside another page. <a href="https://mbmoney.online/" target="_top" rel="noopener">Open mbmoney.online</a></div>
-<header class="top">
-  <div class="wrap">
-    <a class="brand" id="brandLink" href="#dashboard" title="Go to the Dashboard"><div class="logo" aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 64 64"><defs><linearGradient id="g2" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#2b9172"/><stop offset=".55" stop-color="#087F5B"/><stop offset="1" stop-color="#066649"/></linearGradient><clipPath id="c2"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#c2)"><rect width="64" height="64" fill="url(#g2)"/><rect x="16" y="36" width="7" height="13" rx="1.5" fill="#fff" fill-opacity=".55"/><rect x="28.5" y="30" width="7" height="19" rx="1.5" fill="#fff" fill-opacity=".55"/><rect x="41" y="33" width="7" height="16" rx="1.5" fill="#fff" fill-opacity=".55"/><path d="M15 27L26 19L35 23.5L48 14" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="48" cy="14" r="3.6" fill="#fff"/></g></svg></div><div class="bt"><h1>mbmoney<i class="tld">.online</i></h1><span>Official Web App · v1.1</span></div></a>
-    <div class="tabwrap"><button class="tabarrow l" type="button" aria-label="Show earlier tabs" hidden>‹</button><nav class="tabs" aria-label="Sections"></nav><button class="tabarrow r" type="button" aria-label="Show more tabs" hidden>›</button></div>
-    <div class="actions">
+<aside class="mb-side" aria-label="App">
+  <a class="brand" href="./" aria-label="mbmoney.online: go to Dashboard"><span class="logo"><svg aria-hidden="true" focusable="false" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="mbmo-side-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#2b9172"/><stop offset=".55" stop-color="#087F5B"/><stop offset="1" stop-color="#066649"/></linearGradient><clipPath id="mbmo-side-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#mbmo-side-c)"><rect width="64" height="64" fill="url(#mbmo-side-g)"/><g transform="translate(0,2.3)"><rect x="16" y="36" width="7" height="13" rx="1.5" fill="#ffffff" fill-opacity="0.55"/><rect x="28.5" y="30" width="7" height="19" rx="1.5" fill="#ffffff" fill-opacity="0.55"/><rect x="41" y="33" width="7" height="16" rx="1.5" fill="#ffffff" fill-opacity="0.55"/><path d="M 15,27 26,19 35,23.5 48,14" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="48" cy="14" r="3.5999999" fill="#ffffff"/></g></g></svg></span><span class="bt"><b>mbmoney<i class="tld">.online</i></b><span>Official Web App · v1.2</span></span></a>
+  <nav class="side-nav" id="sideNav" aria-label="Sections"></nav>
+  <nav class="side-nav side-end" id="sideEnd" aria-label="More"></nav>
+</aside>
+<div class="mb-main">
+<header class="page-bar">
+  <a class="brand phone-brand" href="./" aria-label="mbmoney.online: go to Dashboard"><span class="logo"><svg aria-hidden="true" focusable="false" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="mbmo-ph-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#2b9172"/><stop offset=".55" stop-color="#087F5B"/><stop offset="1" stop-color="#066649"/></linearGradient><clipPath id="mbmo-ph-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#mbmo-ph-c)"><rect width="64" height="64" fill="url(#mbmo-ph-g)"/><g transform="translate(0,2.3)"><rect x="16" y="36" width="7" height="13" rx="1.5" fill="#ffffff" fill-opacity="0.55"/><rect x="28.5" y="30" width="7" height="19" rx="1.5" fill="#ffffff" fill-opacity="0.55"/><rect x="41" y="33" width="7" height="16" rx="1.5" fill="#ffffff" fill-opacity="0.55"/><path d="M 15,27 26,19 35,23.5 48,14" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="48" cy="14" r="3.5999999" fill="#ffffff"/></g></g></svg></span><span class="bt"><b>mbmoney<i class="tld">.online</i></b><span>Official Web App · v1.2</span></span></a>
+  <h1 class="page-title" id="pageTitle">Dashboard</h1>
+  <div class="actions">
       <button class="btn sm" id="searchBtn" type="button" title="Search the whole site (press / or Ctrl+K)" aria-label="Search"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="5.5"/><path d="M13.5 13.5L17 17"/></svg><span class="lbl">Search</span><kbd class="kb">Ctrl K</kbd></button>
-      <button class="lvlchip" id="lvlChip" type="button" hidden></button>
+      <button class="lvlchip hide-phone" id="lvlChip" type="button" hidden></button>
       <span class="saved" id="saved" aria-live="polite"></span>
       <button class="bk-chip" id="bkChip" type="button" hidden></button>
       <div class="datamenu"><button class="btn sm" id="dataBtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="dataPanel">Data <span aria-hidden="true">▾</span></button><div class="dm-panel" id="dataPanel" role="menu" hidden><button class="dm-item dm-main" id="bkNowBtn" type="button" role="menuitem" title="Shortcut: Ctrl+S (Cmd+S on Mac)"><b>Save backup now</b><span id="bkNowSub">Choose where to keep your backup file</span></button><div class="dm-sep" role="separator"></div><button class="dm-item" id="jsonBtn" type="button" role="menuitem"><b>Export All (JSON)&hellip;</b><span>Full backup. Best for restoring</span></button><button class="dm-item" id="impBtn" type="button" role="menuitem"><b>Import Backup (JSON or CSV)&hellip;</b><span>Or drop a file anywhere on the page</span></button><button class="dm-item" id="expBtn" type="button" role="menuitem"><b>Export All (CSV)&hellip;</b><span>Spreadsheet copy. Can be re-imported</span></button><div class="dm-sep" role="separator"></div><div class="dm-foot" id="bkFoot"></div></div></div>
       <button class="themesw" id="themeBtn" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Switch to dark mode"><span class="tk"><svg class="i-sun" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10" cy="10" r="3.4"/><path d="M10 2.5v2M10 15.5v2M2.5 10h2M15.5 10h2M4.7 4.7l1.4 1.4M13.9 13.9l1.4 1.4M4.7 15.3l1.4-1.4M13.9 6.1l1.4-1.4"/></svg><svg class="i-moon" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true" fill="currentColor"><path d="M16.5 12.3A7 7 0 0 1 7.7 3.5a7 7 0 1 0 8.8 8.8z"/></svg><i class="th"></i></span></button>
     </div>
-  </div>
 </header>
 <main class="wrap" id="main" tabindex="-1">
   <section class="page" id="p-start" hidden></section>
@@ -1485,16 +1660,266 @@ body{background:none}
   <section class="page" id="p-subs" hidden></section>
   <section class="page" id="p-plan" hidden></section>
 </main>
-<button class="totop" id="toTop" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 16V4M4.5 9.5L10 4l5.5 5.5"/></svg></button>
 <footer><div class="wrap">mbmoney.online © 2024–2026 Matthew Broyer. All rights reserved. Your data stays in your browser unless you export it. Not financial advice. <a href="#" id="privacyLink">Privacy</a> · <a href="#" id="termsLink">Terms of use</a></div></footer>
+</div>
+<button class="totop" id="toTop" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 16V4M4.5 9.5L10 4l5.5 5.5"/></svg></button>
+<script>
+/* MB Suite v3 · browser tab titles: "<Short name> | <Page>"  e.g. "Money | Budget"
+   Put the short name on <html data-app-short="Money"> and call MBTitle.set('Budget') whenever the view changes.
+   The static <title> in index.html should already read "Money | Dashboard" (the start view) so the tab is right before JS runs.
+   Dialogs and legal pages may use their own name: MBTitle.set('Privacy'). No dependencies; safe to inline (recompute CSP hashes if you do). */
+(function () {
+  var app = document.documentElement.getAttribute('data-app-short') || (document.title.split('|')[0] || '').trim() || 'App';
+  window.MBTitle = {
+    app: app,
+    set: function (page) { document.title = page ? app + ' | ' + page : app; }
+  };
+})();
+/* =====================================================================
+   MB Suite v3 · "Install app" card for the Settings / More page. No dependencies.
+   1) Put this where the card should appear (Settings or More), once:
+        <div data-mb-install data-app-name="Money"
+             data-note="Opens in its own window with its own icon. Works offline after the first visit."></div>
+   2) Load this file (or inline it) once. If the Settings view is re-rendered by your app, call MBInstall.render() after it renders.
+   3) Register the service worker once, at the end of the app's main script:  MBInstall.registerSW('sw.js');
+   What the card shows:
+     - Chrome / Edge / Android when the browser offers install: an "Install <name>" button (opens the browser's own dialog).
+     - iPhone / iPad (no install API): "Tap Share, then Add to Home Screen."
+     - Already installed (running as the app): a one-line "Installed on this device" status.
+     - Anything else (Firefox, a browser that hasn't offered install yet, file://): nothing; the box stays hidden.
+   Never shows a button that does nothing. Needs HTTPS (or localhost) for the install prompt and the service worker.
+   ===================================================================== */
+(function () {
+  var deferred = null;
+  function standalone() { return (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true; }
+  function ios() { return /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); }
+  function esc(s) { return String(s || '').replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  var ICON = '<svg class="uic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 7v7M9 11l3 3 3-3M10 18.5h4"/></svg>';
+  function render() {
+    var boxes = document.querySelectorAll('[data-mb-install]');
+    for (var i = 0; i < boxes.length; i++) {
+      var box = boxes[i], name = box.getAttribute('data-app-name') || document.documentElement.getAttribute('data-app-short') || 'this app';
+      var note = box.getAttribute('data-note') || 'Opens in its own window with its own icon.';
+      var html = '';
+      if (standalone()) {
+        html = '<div class="mb-install is-done" role="status">' + ICON + '<div><b>Installed on this device</b><p>You are using the app version of ' + esc(name) + '.</p></div></div>';
+      } else if (deferred) {
+        html = '<div class="mb-install">' + ICON + '<div><b>Install ' + esc(name) + '</b><p>' + esc(note) + '</p></div>' +
+               '<button type="button" class="btn primary" data-mb-install-btn>Install</button></div>';
+      } else if (ios()) {
+        html = '<div class="mb-install">' + ICON + '<div><b>Add ' + esc(name) + ' to your Home Screen</b><p>On iPhone or iPad: tap <b>Share</b>, then <b>Add to Home Screen</b>. It opens full screen with its own icon.</p></div></div>';
+      }
+      box.innerHTML = html;
+      box.hidden = !html;
+    }
+  }
+  function install() {
+    if (!deferred) return Promise.resolve(false);
+    var d = deferred; deferred = null;                // the event can only be used once
+    try { d.prompt(); } catch (e) { render(); return Promise.resolve(false); }
+    return (d.userChoice || Promise.resolve({})).then(function (c) { render(); return c && c.outcome === 'accepted'; }, function () { render(); return false; });
+  }
+  function registerSW(url) {
+    if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+      return navigator.serviceWorker.register(url || 'sw.js').catch(function () {});
+    }
+    return Promise.resolve();
+  }
+  window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); deferred = e; render(); });
+  window.addEventListener('appinstalled', function () { deferred = null; render(); });
+  document.addEventListener('click', function (e) { var b = e.target.closest && e.target.closest('[data-mb-install-btn]'); if (b) install(); });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render); else render();
+  window.MBInstall = { render: render, install: install, registerSW: registerSW, canInstall: function () { return !!deferred; }, isInstalled: standalone };
+})();
+/* =====================================================================
+   MB Suite v3 · share cards for progress, updates and milestones. No dependencies.
+   Draws a 1080×1080 PNG on the device (canvas) in the app's own colors, shows a preview, then
+   opens the phone/computer share sheet (Web Share API with files) or saves the image.
+   Nothing is uploaded anywhere; the card holds only what the preview shows.
+
+   Usage:
+     MBShare.open({
+       kicker: 'Milestone',                         // small accent label (optional)
+       headline: 'Net worth up 12% this year',      // the one thing worth sharing
+       sub: 'January to October 2026',              // one supporting line (optional)
+       stats: [{ label: 'Months tracked', value: '10' }, { label: 'Savings rate', value: '22%' }],   // 0-3 (optional)
+       art: document.querySelector('#share-art svg'),   // an NA-/CU- template <svg> already in the page (optional)
+       fileName: 'mbmoney-milestone.png',
+       options: [ { id: 'amounts', label: 'Show dollar amounts', value: false } ],   // optional privacy toggles
+       build: function (opts) { return { headline: …, stats: … } }                  // re-builds the text when a toggle changes
+     });
+   Requires on <html>: data-app-short="Money" and data-app-domain="mbmoney.online".
+   The badge is read from the first ".brand .logo svg" in the page.
+   CSP: needs img-src data: blob: (the art is drawn from a data: URL, the preview is a blob: URL). Inline it and recompute hashes if the app uses script hashes.
+   ===================================================================== */
+(function () {
+  var W = 1080, FONT = '"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif';
+
+  function resolve(v, fallback) {          // turn a CSS custom property into a concrete color the canvas understands
+    var el = document.createElement('i'); el.style.color = 'var(' + v + ',' + (fallback || '#888') + ')';
+    el.style.display = 'none'; document.body.appendChild(el);
+    var c = getComputedStyle(el).color; el.remove(); return c;
+  }
+  function svgImage(svgEl, roleColors) {
+    return new Promise(function (ok) {
+      if (!svgEl) return ok(null);
+      var clone = svgEl.cloneNode(true);
+      clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+      clone.removeAttribute('style'); clone.removeAttribute('class');
+      var vb = (clone.getAttribute('viewBox') || '0 0 300 150').split(/[\s,]+/);
+      clone.setAttribute('width', vb[2]); clone.setAttribute('height', vb[3]);
+      var css = Object.keys(roleColors).map(function (k) { return '.' + k + '{fill:' + roleColors[k] + '}'; }).join('') +
+        '.sd{fill:none;stroke:' + roleColors.d + ';stroke-width:3;stroke-linecap:round}.sm{fill:none;stroke:' + roleColors.m + ';stroke-width:3;stroke-linecap:round}';
+      var st = document.createElementNS('http://www.w3.org/2000/svg', 'style'); st.textContent = css; clone.insertBefore(st, clone.firstChild);
+      var img = new Image();
+      img.onload = function () { ok(img); }; img.onerror = function () { ok(null); };
+      img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(clone));
+    });
+  }
+  function wrap(g, text, maxW, maxLines) {
+    var words = String(text || '').split(/\s+/), lines = [], line = '';
+    words.forEach(function (w) {
+      var t = line ? line + ' ' + w : w;
+      if (g.measureText(t).width > maxW && line) { lines.push(line); line = w; } else line = t;
+    });
+    if (line) lines.push(line);
+    if (lines.length > maxLines) { lines = lines.slice(0, maxLines); lines[maxLines - 1] = lines[maxLines - 1].replace(/\s*\S*$/, '') + '…'; }
+    return lines;
+  }
+  function rr(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+
+  // Share cards are always drawn in the LIGHT palette (they leave the app, so they shouldn't depend on dark mode).
+  // Every color derives from the app's brand color (--brand), the same way mb-suite-cutouts.css derives the art roles.
+  function rgb(str) { var m = String(str).match(/[\d.]+/g) || [0, 0, 0]; return [+m[0], +m[1], +m[2]]; }
+  function hex(c) { return '#' + c.map(function (v) { return ('0' + Math.round(Math.max(0, Math.min(255, v))).toString(16)).slice(-2); }).join(''); }
+  function mix(a, b, t) { return a.map(function (v, i) { return v + (b[i] - v) * t; }); }   // t = share of b
+  function hueShift(c, deg) {                       // approximate the v2 "neighbor hue" (+34°) in HSL
+    var r = c[0] / 255, g = c[1] / 255, b = c[2] / 255, mx = Math.max(r, g, b), mn = Math.min(r, g, b), h = 0, l = (mx + mn) / 2, s = 0, dd = mx - mn;
+    if (dd) { s = l > .5 ? dd / (2 - mx - mn) : dd / (mx + mn); h = mx === r ? (g - b) / dd + (g < b ? 6 : 0) : mx === g ? (b - r) / dd + 2 : (r - g) / dd + 4; h *= 60; }
+    h = (h + deg + 360) % 360; var C = (1 - Math.abs(2 * l - 1)) * s, X = C * (1 - Math.abs((h / 60) % 2 - 1)), m = l - C / 2, q;
+    q = h < 60 ? [C, X, 0] : h < 120 ? [X, C, 0] : h < 180 ? [0, C, X] : h < 240 ? [0, X, C] : h < 300 ? [X, 0, C] : [C, 0, X];
+    return q.map(function (v) { return (v + m) * 255; });
+  }
+  function palette() {
+    var brand = rgb(resolve('--brand', resolve('--accent', '#087F5B'))), W8 = [255, 255, 255];
+    var P = { accent: hex(brand), ink: '#1b1f24', ink2: '#48505c', muted: '#5f6773', border: '#dfe2e7',
+      wash: hex(mix(brand, W8, .92)), mid: hex(mix(brand, W8, .48)), butter: '#ffd98a' };
+    var roles = { d: hex(brand), m: P.mid, s: hex(mix(brand, W8, .76)), n: hex(hueShift(brand, 34)), b: '#ffd98a', r: '#f7b8a8' };
+    return { C: P, roles: roles };
+  }
+
+  function draw(d) {
+    var root = document.documentElement, pal = palette(), C = pal.C, roles = pal.roles;
+    var app = root.getAttribute('data-app-short') || 'App', domain = root.getAttribute('data-app-domain') || location.hostname;
+    var badge = document.querySelector('.brand .logo svg');
+    return Promise.all([svgImage(badge, roles), svgImage(d.art, roles)]).then(function (imgs) {
+      var c = document.createElement('canvas'); c.width = W; c.height = W; var g = c.getContext('2d');
+      // text and tiles are drawn first; the art and the paper go *behind* them (destination-over) once we know where the text ends
+      // brand row
+      var x = 72, y = 92;
+      if (imgs[0]) g.drawImage(imgs[0], x, y - 4, 72, 72);
+      g.fillStyle = C.ink; g.font = '650 34px ' + FONT; g.textBaseline = 'middle';
+      var nm = domain.replace(/\.online$/, ''); g.fillText(nm, x + 92, y + 32);
+      if (/\.online$/.test(domain)) { var nw = g.measureText(nm).width; g.fillStyle = C.accent; g.fillText('.online', x + 92 + nw, y + 32); }
+      // kicker + headline + sub
+      g.textBaseline = 'alphabetic'; y = 300;
+      if (d.kicker) { g.fillStyle = C.accent; g.font = '700 30px ' + FONT; g.fillText(String(d.kicker).toUpperCase(), x, y); y += 26; }
+      g.fillStyle = C.ink; g.font = '750 76px ' + FONT;
+      wrap(g, d.headline, W - 2 * x, 3).forEach(function (l) { y += 86; g.fillText(l, x, y); });
+      if (d.sub) { g.fillStyle = C.ink2; g.font = '400 36px ' + FONT; y += 18; wrap(g, d.sub, W - 2 * x, 2).forEach(function (l) { y += 48; g.fillText(l, x, y); }); }
+      // stat tiles (white paper cards)
+      var st = (d.stats || []).slice(0, 3);
+      if (st.length) {
+        y += 56; var gap = 20, tw = (W - 2 * x - gap * (st.length - 1)) / st.length;
+        st.forEach(function (s, i) {
+          var tx = x + i * (tw + gap);
+          g.fillStyle = 'rgba(20,24,31,.06)'; rr(g, tx, y + 3, tw, 150, 12); g.fill();
+          g.fillStyle = '#ffffff'; rr(g, tx, y, tw, 150, 12); g.fill(); g.strokeStyle = C.border; g.lineWidth = 2; g.stroke();
+          g.fillStyle = C.accent; g.fillRect(tx, y + 18, 5, 114);
+          g.fillStyle = C.muted; g.font = '650 24px ' + FONT; g.fillText(String(s.label).toUpperCase(), tx + 28, y + 52);
+          g.fillStyle = C.ink; g.font = '700 54px ' + FONT; g.fillText(wrap(g, s.value, tw - 48, 1)[0], tx + 28, y + 118);
+        });
+      }
+      // art bleeding off the bottom-right corner, sized to fit between the content and the footer
+      var contentBottom = st.length ? y + 150 : y + 12;
+      if (imgs[1]) {
+        var ar = imgs[1].naturalWidth && imgs[1].naturalHeight ? imgs[1].naturalWidth / imgs[1].naturalHeight : 2;
+        var aw = ar >= 1.6 ? W * .92 : W * .56, ah = aw / ar, artBottom = W - 118, avail = artBottom - contentBottom - 20;
+        if (ah > avail && avail >= 140) { ah = avail; aw = ah * ar; }
+        g.globalCompositeOperation = 'destination-over';
+        g.drawImage(imgs[1], W - aw + 30, artBottom - ah, aw, ah);
+        g.globalCompositeOperation = 'source-over';
+      }
+      // paper background (behind everything): white sheet with an accent wash from the top-left, then the family accent line on top
+      g.globalCompositeOperation = 'destination-over';
+      var bg = g.createLinearGradient(0, 0, W * .7, W); bg.addColorStop(0, C.wash); bg.addColorStop(.6, '#ffffff'); g.fillStyle = bg; g.fillRect(0, 0, W, W);
+      g.fillStyle = '#ffffff'; g.fillRect(0, 0, W, W);
+      g.globalCompositeOperation = 'source-over';
+      var ln = g.createLinearGradient(0, 0, W, 0); ln.addColorStop(0, C.accent); ln.addColorStop(.55, C.mid); ln.addColorStop(1, C.butter); g.fillStyle = ln; g.fillRect(0, 0, W, 14);
+      // footer: where it came from (this is what helps the app grow)
+      g.fillStyle = C.ink2; g.font = '600 28px ' + FONT;
+      g.fillText((d.date ? d.date + '  ·  ' : '') + 'Made with ' + domain, x, W - 64);
+      g.fillStyle = C.muted; g.font = '400 24px ' + FONT; g.fillText('Free · No account · Your data stays on your device', x, W - 30);
+      return c;
+    });
+  }
+
+  function toBlob(c) { return new Promise(function (ok, bad) { try { c.toBlob(function (b) { b ? ok(b) : bad(new Error('blob')); }, 'image/png'); } catch (e) { bad(e); } }); }
+  function save(blob, name) { var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500); }
+
+  var dlg;
+  function open(cfg) {
+    var opts = {}; (cfg.options || []).forEach(function (o) { opts[o.id] = !!o.value; });
+    function data() { var extra = cfg.build ? cfg.build(opts) || {} : {}; var d = {}; Object.keys(cfg).forEach(function (k) { d[k] = cfg[k]; }); Object.keys(extra).forEach(function (k) { d[k] = extra[k]; }); return d; }
+    if (!dlg) {
+      dlg = document.createElement('dialog'); dlg.className = 'mb-share'; dlg.setAttribute('aria-labelledby', 'mbShareTitle');
+      dlg.innerHTML = '<div class="ms-head"><h3 id="mbShareTitle">Share</h3><button type="button" class="btn ghost sm" data-ms="close" aria-label="Close">Close</button></div>' +
+        '<div class="ms-prev"><img alt="" data-ms="img"><p class="ms-wait" data-ms="wait">Making your card…</p></div>' +
+        '<div class="ms-opts" data-ms="opts"></div>' +
+        '<p class="ms-note">The image is made on this device. It shows only what you see above: no location, notes or account details.</p>' +
+        '<div class="ms-btns"><button type="button" class="btn" data-ms="save">Save image</button><button type="button" class="btn primary" data-ms="share">Share…</button></div>';
+      document.body.appendChild(dlg);
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    }
+    var img = dlg.querySelector('[data-ms=img]'), wait = dlg.querySelector('[data-ms=wait]'), box = dlg.querySelector('[data-ms=opts]');
+    dlg.querySelector('#mbShareTitle').textContent = cfg.title || 'Share your progress';
+    box.innerHTML = (cfg.options || []).map(function (o) { return '<label class="ms-opt"><input type="checkbox" data-opt="' + o.id + '"' + (opts[o.id] ? ' checked' : '') + '> ' + o.label + '</label>'; }).join('');
+    var current = null, url = null;
+    function refresh() {
+      wait.hidden = false; img.hidden = true;
+      return draw(data()).then(toBlob).then(function (b) {
+        current = b; if (url) URL.revokeObjectURL(url); url = URL.createObjectURL(b); img.src = url; img.hidden = false; wait.hidden = true;
+        img.alt = 'Preview of the image you are about to share: ' + (data().headline || '');
+      }).catch(function () { wait.textContent = 'This browser could not make the image.'; });
+    }
+    box.onchange = function (e) { var id = e.target.getAttribute('data-opt'); if (id) { opts[id] = e.target.checked; refresh(); } };
+    var file = function () { return new File([current], cfg.fileName || 'share.png', { type: 'image/png' }); };
+    var shareBtn = dlg.querySelector('[data-ms=share]');
+    var canShareFiles = !!(navigator.canShare && navigator.share);
+    shareBtn.hidden = !canShareFiles;                                      // no share sheet here: Save image is the only action
+    dlg.querySelector('[data-ms=save]').classList.toggle('primary', !canShareFiles);
+    shareBtn.onclick = function () {
+      if (!current) return; var f = file();
+      if (navigator.canShare({ files: [f] })) navigator.share({ files: [f], title: cfg.headline || '' }).then(function () { dlg.close(); }, function () {});
+      else save(current, f.name);
+    };
+    dlg.querySelector('[data-ms=save]').onclick = function () { if (current) save(current, cfg.fileName || 'share.png'); };
+    dlg.querySelector('[data-ms=close]').onclick = function () { dlg.close(); };
+    if (!dlg.open) dlg.showModal();
+    return refresh();
+  }
+  window.MBShare = { open: open, draw: draw };
+})();
+</script>
+<template id="shareArt"><svg class="cu-art" viewBox="0 0 640 136" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false"><path class="s" d="M340 140 C430 94 610 94 700 140Z"/><circle class="b" cx="604" cy="30" r="18"/><rect class="d" x="423" y="125" width="58" height="14" rx="7"/><rect class="m" x="423" y="114" width="58" height="14" rx="7"/><rect class="d" x="423" y="103" width="58" height="14" rx="7"/><rect class="m" x="493" y="125" width="58" height="14" rx="7"/><rect class="d" x="493" y="114" width="58" height="14" rx="7"/><rect class="m" x="493" y="103" width="58" height="14" rx="7"/><rect class="d" x="493" y="92" width="58" height="14" rx="7"/><rect class="m" x="493" y="81" width="58" height="14" rx="7"/><rect class="d" x="493" y="70" width="58" height="14" rx="7"/><rect class="d" x="559" y="125" width="58" height="14" rx="7"/><rect class="m" x="559" y="114" width="58" height="14" rx="7"/><rect class="d" x="559" y="103" width="58" height="14" rx="7"/><rect class="m" x="559" y="92" width="58" height="14" rx="7"/><path class="sd" d="M522 70 C517.8 50.7 525.1 33.8 522 21.7"/><path class="d" transform="translate(522 21.7) rotate(-38) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="m" transform="translate(522 32.3) rotate(-150) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="b" cx="392" cy="96" r="13"/><circle class="s" cx="392" cy="96" r="8.6"/><circle class="s" cx="352" cy="112" r="9"/><circle class="b" cx="352" cy="112" r="5.9"/><circle class="r" cx="418" cy="40" r="7"/><path class="m" transform="translate(410 128)" d="M-15 1.1 C-15 -7.4 8.2 -7.7 15 -0.7 C15.3 6.6 -8.2 7.7 -15 1.1Z"/></svg></template>
 <input type="file" id="fileIn" accept=".json,application/json,.csv,text/csv,text/plain" hidden>
 <noscript><p style="padding:20px">This tool needs JavaScript.</p></noscript>
 <script>
 const ACH_BASE=[{"name": "Data Wrangler", "desc": "Imported your first transactions. The numbers obey you now.", "rar": "Common", "xp": 50}, {"name": "First Steps", "desc": "Logged your first 25 transactions.", "rar": "Common", "xp": 50}, {"name": "Net Worth Newbie", "desc": "Tracked your net worth for a month. Knowledge is power.", "rar": "Common", "xp": 75}, {"name": "One Month Wonder", "desc": "Tracked your budget for a month. Impressive restraint.", "rar": "Common", "xp": 75}, {"name": "Ledger Apprentice", "desc": "Tracked 100 transactions total.", "rar": "Common", "xp": 100}, {"name": "Frugal Fighter I", "desc": "Lived below your means for a whole month. Adulting unlocked.", "rar": "Uncommon", "xp": 100}, {"name": "Double Tracker I", "desc": "Tracked net worth 2 months in a row. You’re serious now.", "rar": "Uncommon", "xp": 100}, {"name": "Double Tracker II", "desc": "Tracked your budget 2 months in a row. Consistency achieved.", "rar": "Uncommon", "xp": 100}, {"name": "Keeping Tabs", "desc": "Reached 250 transactions logged.", "rar": "Uncommon", "xp": 150}, {"name": "Income Rookie", "desc": "Recorded $10,000 in total income. Cha-ching!", "rar": "Uncommon", "xp": 150}, {"name": "Triple Tracker I", "desc": "Tracked net worth 3 consecutive months. Patience pays.", "rar": "Uncommon", "xp": 150}, {"name": "Triple Tracker II", "desc": "Tracked your budget 3 consecutive months. Routine mode: ON.", "rar": "Uncommon", "xp": 150}, {"name": "Thousandaire", "desc": "Saved your first $1,000. Ka-ching!", "rar": "Uncommon", "xp": 150}, {"name": "Paper Trail", "desc": "500 transactions recorded. Discipline unlocked.", "rar": "Uncommon", "xp": 200}, {"name": "Retirement Rookie I", "desc": "Contributed to a retirement account for 1 month. Long game begun.", "rar": "Uncommon", "xp": 200}, {"name": "Debt Slayer I", "desc": "All credit cards defeated. You feel lighter already.", "rar": "Rare", "xp": 200}, {"name": "Credit Climber I", "desc": "Credit score hit 650+. Respect earned.", "rar": "Rare", "xp": 200}, {"name": "Bronze Saver", "desc": "10% average savings rate. Not bad for a rookie.", "rar": "Rare", "xp": 200}, {"name": "Side Hustler I", "desc": "Earned $1,000 from business income. First taste of freedom.", "rar": "Rare", "xp": 200}, {"name": "Quarter Milestone", "desc": "Saved $2,500. Getting serious.", "rar": "Rare", "xp": 200}, {"name": "Side Hustler II", "desc": "Earned $5,000 from business income. The grind continues.", "rar": "Rare", "xp": 200}, {"name": "Five Digits Saved", "desc": "Saved $5,000. Wealth mode: activated.", "rar": "Rare", "xp": 250}, {"name": "Above Water", "desc": "Positive net worth unlocked! Floating comfortably.", "rar": "Rare", "xp": 300}, {"name": "Bookkeeper", "desc": "1,000 transactions tracked. Habit formed.", "rar": "Rare", "xp": 300}, {"name": "Retirement Rookie II", "desc": "Contributed to a retirement account 2 months in a row. Steady grind.", "rar": "Rare", "xp": 300}, {"name": "Income Tracker I", "desc": "Recorded $50,000 total income. Money talks.", "rar": "Rare", "xp": 350}, {"name": "Retirement Adept I", "desc": "3 months consecutive retirement contributions. Future secured.", "rar": "Rare", "xp": 350}, {"name": "Retirement Adept II", "desc": "6 months consecutive retirement contributions. Patience rewarded.", "rar": "Rare", "xp": 400}, {"name": "Cash Stash I", "desc": "Hold $10,000 in cash equivalents. Safety first.", "rar": "Rare", "xp": 400}, {"name": "Market Player I", "desc": "Hold $10,000 in investments. Wall Street mode engaged.", "rar": "Rare", "xp": 400}, {"name": "Base Camp", "desc": "Reach $25,000 net worth. The climb begins.", "rar": "Rare", "xp": 400}, {"name": "Half Funded Hero", "desc": "Saved 3 months of expenses. Halfway to security.", "rar": "Rare", "xp": 500}, {"name": "Car-Free Champ", "desc": "Paid off your auto loan. Freedom wheels unlocked.", "rar": "Rare", "xp": 500}, {"name": "Half-Century Networth", "desc": "Reach $50,000 net worth. Wealth unlocked.", "rar": "Rare", "xp": 500}, {"name": "The Vault is Ready", "desc": "Accounts aligned. Vault pressure stable.", "rar": "Rare", "xp": 500}, {"name": "Side Hustler III", "desc": "Earned $10,000 from business income. You’re cooking now.", "rar": "Epic", "xp": 300}, {"name": "Half-Year Hero I", "desc": "Tracked net worth for 6 consecutive months. Growth unlocked.", "rar": "Epic", "xp": 300}, {"name": "Half-Year Hero II", "desc": "Tracked your budget for 6 consecutive months. Discipline achieved.", "rar": "Epic", "xp": 300}, {"name": "Debt Slayer II", "desc": "Paid off $10,000 in total debt. Chains removed.", "rar": "Epic", "xp": 400}, {"name": "Investor Initiate", "desc": "Contributed to an investment account. Wall Street, meet you.", "rar": "Epic", "xp": 400}, {"name": "Number Cruncher", "desc": "2,500 transactions entered. Spreadsheet mastery.", "rar": "Epic", "xp": 400}, {"name": "Credit Climber II", "desc": "700+ credit score. Impressive stamina.", "rar": "Epic", "xp": 500}, {"name": "Year Tracker I", "desc": "Tracked net worth 12 consecutive months. Level up.", "rar": "Epic", "xp": 500}, {"name": "Year Tracker II", "desc": "Tracked monthly budget 12 consecutive months. Persistence unlocked.", "rar": "Epic", "xp": 500}, {"name": "Silver Saver", "desc": "20% average savings rate. Money wizardry achieved.", "rar": "Epic", "xp": 500}, {"name": "Finance Fanatic", "desc": "5,000 transactions logged. Money moves only.", "rar": "Epic", "xp": 500}, {"name": "Side Hustler IV", "desc": "Earned $50,000 from business income. The grind pays off.", "rar": "Epic", "xp": 600}, {"name": "Income Tracker II", "desc": "Recorded $100,000 total income. Feeling legendary.", "rar": "Epic", "xp": 600}, {"name": "Retirement Master I", "desc": "12 months consecutive retirement contributions. Long game complete.", "rar": "Epic", "xp": 600}, {"name": "Credit Master", "desc": "750+ credit score. Respect unlocked.", "rar": "Epic", "xp": 700}, {"name": "Gold Saver", "desc": "30% average savings rate. Financial wizard.", "rar": "Epic", "xp": 700}, {"name": "Side Hustler V", "desc": "Earned $100,000 from business income. Big moves.", "rar": "Epic", "xp": 700}, {"name": "Emergency Expert", "desc": "Emergency fund fully funded. Sleep easy.", "rar": "Epic", "xp": 700}, {"name": "Retirement Master II", "desc": "Contributed to retirement account 2 years in a row. Patience rewarded.", "rar": "Epic", "xp": 700}, {"name": "Two-Year Tracker I", "desc": "Tracked net worth for 2 consecutive years. Growth mastered.", "rar": "Epic", "xp": 800}, {"name": "Two-Year Tracker II", "desc": "Tracked budget for 2 consecutive years. Iron discipline.", "rar": "Epic", "xp": 800}, {"name": "Income Tracker III", "desc": "Recorded $250,000 total income. Big stacks.", "rar": "Epic", "xp": 800}, {"name": "Side Hustler VI", "desc": "Earned $250,000 from business income. Entrepreneur mode.", "rar": "Epic", "xp": 900}, {"name": "Transaction Titan", "desc": "7,500 transactions total. The grind pays off.", "rar": "Legendary", "xp": 600}, {"name": "Six-Figure Networth", "desc": "Reach $100,000 net worth. Milestone unlocked.", "rar": "Legendary", "xp": 1000}, {"name": "Homeowner Hero", "desc": "Bought your first home. Castle secured.", "rar": "Legendary", "xp": 1000}, {"name": "Credit Elite", "desc": "800+ credit score. Financial god mode.", "rar": "Legendary", "xp": 1000}, {"name": "Three-Year Tracker I", "desc": "Tracked net worth 3 consecutive years. Legendary persistence.", "rar": "Legendary", "xp": 1000}, {"name": "Three-Year Tracker II", "desc": "Tracked budget 3 consecutive years. Dedication unlocked.", "rar": "Legendary", "xp": 1000}, {"name": "Retirement Master III", "desc": "3 consecutive years of contributions. The long game mastered.", "rar": "Legendary", "xp": 1000}, {"name": "Platinum Saver", "desc": "40% average savings rate. Money wizard 2.0.", "rar": "Legendary", "xp": 1000}, {"name": "Grand Accountant", "desc": "9,999 transactions entered. Ledger legend.", "rar": "Legendary", "xp": 1000}, {"name": "Income Tracker IV", "desc": "Recorded $500,000 total income. Stacks secured.", "rar": "Legendary", "xp": 1200}, {"name": "Side Hustler VII", "desc": "Earned $500,000 from business income. CEO mode.", "rar": "Legendary", "xp": 1500}, {"name": "Debt-Free Legend", "desc": "Debt-free (excluding mortgage). Chains removed forever.", "rar": "Legendary", "xp": 1500}, {"name": "Quarter-Millionaire", "desc": "$250,000 net worth. Power unlocked.", "rar": "Legendary", "xp": 1500}, {"name": "Five-Year Tracker I", "desc": "Tracked net worth 5 consecutive years. Absolute discipline.", "rar": "Legendary", "xp": 1500}, {"name": "Five-Year Tracker II", "desc": "Tracked budget 5 consecutive years. Obsessive mode.", "rar": "Legendary", "xp": 1500}, {"name": "Retirement Master IV", "desc": "5 consecutive years of contributions. Retirement pro.", "rar": "Legendary", "xp": 1500}, {"name": "Income Tracker V", "desc": "Recorded $1,000,000 total income. Milestone achieved.", "rar": "Legendary", "xp": 2000}, {"name": "Side Hustler VIII", "desc": "Earned $1,000,000 from business income. Empire built.", "rar": "Legendary", "xp": 2500}, {"name": "Mortgage Crusher", "desc": "Paid off mortgage. Freedom unlocked.", "rar": "Legendary", "xp": 2500}, {"name": "Millionaire Status", "desc": "$1,000,000 net worth. Legendary status achieved.", "rar": "Legendary", "xp": 3000}, {"name": "FI Achiever", "desc": "Financial independence reached. Work optional.", "rar": "Legendary", "xp": 5000}, {"name": "Titan of Wealth I", "desc": "Reach $2,500,000 net worth. You monster.", "rar": "Exotic", "xp": 7500}, {"name": "Titan of Wealth II", "desc": "Reach $5,000,000 net worth. Unstoppable.", "rar": "Exotic", "xp": 10000}, {"name": "Titan of Wealth III", "desc": "Reach $10,000,000 net worth. God mode engaged.", "rar": "Exotic", "xp": 20000}];
 const ABOUT_TEXT="Made for people whose paycheck lands in one credit union checking account.\n\nKeep Monthly Budget and Transactions up to date. The Dashboard turns them into your net worth, savings rate and spending patterns. Extra Charts and What If? go deeper. Achievements turn the habit into XP.\n\nBuilt after studying the Bogleheads® Wiki and reading \"If You Can\" by William J. Bernstein. Bogleheads® is a registered trademark of The John C. Bogle Center for Financial Literacy. This app is independent and is not affiliated with or endorsed by the Bogle Center, the Bogleheads community or the author.";
 const LICENSE_TEXT="The short version: use this free web app as much as you like for your own money. No account, no fees, no tracking. Don't copy it, reuse its code or design, or pass it off as yours. Details below.\n\n1. Free to use\nYou get a free, personal, non-exclusive, non-transferable permission to use this web app (the \"App\") in your browser for your own personal finances. It is meant for adults. You don't need an account or a login, and you don't pay anything.\n\n2. Hands off the code (this part is firm)\nThe App's source code, design, layout, charts, badge and achievement artwork, and written content are protected by copyright, and I keep all rights to them. Unless I give you written permission first, you agree not to:\n• copy, scrape, mirror, re-host or republish the App, or any part of its code, design, artwork or text, on any site, app or product, free or paid;\n• build a clone, a \"remix\" or an \"inspired-by\" version from its code, or take it apart to reuse it somewhere else;\n• sell, rent, sublicense or give away the App, or bundle it into anything else;\n• use the App to run a finance service for other people, or for any other commercial purpose;\n• remove or hide the copyright notice or these terms, or claim the App as your own work;\n• interfere with the App or the site it lives on, including with bots or automated scraping.\nViewing the page source to see how something works is fine. Copying or reusing the code without permission breaks these terms and my copyright, and I may respond with takedown requests to hosts and search engines and with any legal remedies available to me.\n\n3. Use it sensibly\nUse the App only for lawful, personal purposes. Don't store other people's private information in it. Don't enter passwords, Social Security numbers, or full card or account numbers. Don't try to break, overload or probe the App or the site it lives on.\n\n4. Your data stays with you\nThere are no accounts and no servers holding your data. Everything you enter is saved in your own browser (local storage) and never leaves your device unless you export it. That means I can't see it and can't recover it. If you clear your browser data or switch devices, it's gone unless you exported a CSV backup. Export one now and then. The privacy policy has the details.\n\n5. Not financial advice\nThis is an educational tool and gives no financial, tax, legal or investment advice. Its numbers, forecasts and projections are estimates based on what you enter and on simple assumptions, and the FAQ explains how the main ones are calculated. It's still a beta, so it may contain mistakes. I'm not your financial advisor, accountant or lawyer. Big money decisions are yours, and a qualified professional is a good idea for the important ones.\n\n6. No warranty\nThe App is provided \"as is\" and \"as available\", without warranties of any kind, express or implied, including accuracy, reliability, fitness for a particular purpose, or that it will always be available or error-free.\n\n7. Limit of liability\nTo the fullest extent the law allows, I'm not liable for any loss or damage (including lost data or financial decisions) that comes from using, or not being able to use, the App. If your local law doesn't allow some of these limits, they apply only as far as the law permits.\n\n8. Changes and the off switch\nI may update, change or shut down the App, or update these terms, at any time. The \"last updated\" date on this page shows the latest version. If you keep using the App after a change, you accept the new terms. If you break these terms, your permission to use the App ends automatically.\n\n9. Everything else\nIf any part of these terms turns out to be unenforceable, the rest still applies. Names of other products, books, sites and organizations mentioned in the App belong to their owners (for example, Bogleheads® is a registered trademark of The John C. Bogle Center for Financial Literacy). Mentioning them doesn't mean they endorse this App or are affiliated with it. These terms are governed by the laws of the State of New Hampshire, and any dispute will be handled in the courts located in Rockingham County, New Hampshire.\n\n© 2024–2026 Matthew Broyer. All rights reserved.";
-const PRIVACY_TEXT="The short version: this app does not collect your data. There is no account, no database, no analytics, no ads and no cookies. What you enter stays in your browser.\n\n1. What you enter\nAn optional name, date of birth, take-home and retirement income, account balances, credit score, notes, and transactions (date, description, category, amount). The date of birth only feeds age-based numbers, so you can leave it blank.\n\n2. Where it is stored\nIn your browser's local storage, on this device only. The app uses three entries: pwmt.web.v1 (your data), pwmt.theme (light or dark) and pwmt.notice (that you dismissed the storage notice). No cookies are set. Local storage is not encrypted, so anyone who can use this browser profile can see your data. On a shared computer, use a private window or clear your data when you finish.\n\n3. What leaves your device\nNothing, unless you export it. Export saves a JSON or CSV file to your device, and what happens to that file afterward is up to you. While the app runs it makes no network requests: no fonts, scripts, images, analytics or error reports are loaded from or sent to any other site. If you install the app, your browser also keeps a copy of the app's own files (not your data) so it can open with no signal.\nThis site is hosted on GitHub Pages, and its domain name is managed through Namecheap. When you load the page, GitHub, like any web host, receives your request and may log technical details such as your IP address, browser type and time of request. Namecheap may see lookups of the domain name. That happens on their side, outside the app, under their own privacy statements, and nothing you enter is part of it. I add no analytics and keep no logs of my own.\n\n4. Deleting your data\nGet Started, then Your data, then Clear all data removes everything from local storage after you confirm. For the undo button, a copy is held in memory only, never saved, and it is gone when you leave or reload the page. The theme and notice entries stay until you clear this site's data in your browser settings, which also deletes everything else. I can't delete your data for you, because I never receive it.\n\n5. Export and import\nData, then Save backup now or Export All saves everything you entered as a JSON or CSV file in a place you choose (or your Downloads folder, depending on the browser). The browser remembers only that file so it can save there again; it never tells this site the folder path. Data, then Import Backup brings it back, or adds a bank export. Import happens in your browser and the file is never uploaded.\n\n6. Sensitive information\nPlease don't enter passwords, Social Security numbers, or full card or account numbers. The app blocks or removes what looks like a card or Social Security number in text fields and imports, but it can't catch everything.\n\n7. Children\nThis app is for adults managing their own money. It is not directed to children. It collects no information from anyone, because it collects nothing.\n\n8. Changes\nIf the app's behavior changes, I will update this page and its \"last updated\" date.";
-const RELEASES=[{"title": "mbmoney.online © 2026 · BETA 4.6 Web Edition · October 9, 2026", "lines": ["• Lighter, fresher look (Paper Cutouts): a soft green tint across the top of each page, a gradient accent line and tab underline, gradient buttons and progress bars, and a leaf-art banner on the Dashboard. Layout, numbers and features are unchanged.", "• New logo and icons: the same chart mark on a softer gradient badge, with a matching share image for links.", "• Your data, backups and settings are unchanged."]}, {"title": "mbmoney.online © 2026 · BETA 4.5 Web Edition · October 9, 2026", "lines": ["• New look: a gradient logo and icons, a frosted header, pill tabs, softer cards, gradient buttons and a gradient net worth card, in light and dark. Same green and gold theme.", "• Clicking the logo or title takes you back to the Dashboard.", "• The Dashboard status pill now follows your monthly routine: it says when your check-in is due, when it is time to import transactions, and when you are all caught up. Tap it to jump there.", "• New 2-minute snapshot for first-time setup: enter your take-home pay and a few balances to see net worth and runway right away.", "• New Simple view on the Dashboard keeps the essentials and hides the charts. Your choice is remembered on this device.", "• New monthly check-in reminder: download a repeating calendar file (.ics) for any calendar app.", "• New year-end summary: download a CSV with the year's totals, monthly cash flow, top spending categories and net worth change.", "• 9 new achievements for the Plan features, snapshot, reminders and reviews (121 in all)."]}, {"title": "mbmoney.online © 2026 · BETA 4.4 Web Edition · October 9, 2026", "lines": ["• New Plan tab with a cash-flow calendar: your checking balance day by day for the next 30, 60 or 90 days from your pay schedule, tracked bills and average spending, with the lowest point and how much is safe to spend until payday.", "• New savings goals: set a target and date, link a goal to an account so it follows your check-in balances, and see what you need each month. One tap adds an emergency fund goal sized to your essentials.", "• New debt payoff planner: add each credit card or loan's APR and minimum payment once (balances come from your check-in), compare avalanche with snowball, and see the interest and months an extra payment saves.", "• New on the Dashboard: a resilience strip (runway in months, essentials vs. income) and a monthly review that explains why net worth changed, with a checklist.", "• Your CSV and JSON backups now carry debt terms, goals and your pay schedule. Older files still import."]}, {"title": "mbmoney.online © 2026 · BETA 4.3 Web Edition · October 9, 2026", "lines": ["• New: install mbmoney.online as an app. On Chrome, Edge and Android use the Install button on the Settings page. On iPhone or iPad, tap Share, then Add to Home Screen. It opens full screen with its own icon and loads with no signal after the first visit.", "• New app icons and a link preview image for sharing."]}, {"title": "mbmoney.online © 2026 · BETA 4.2 Web Edition · September 26, 2026", "lines": ["• New backups: Data, then Save backup now (or Ctrl+S) saves a full JSON backup. The first time you pick the folder and file name, for example a synced OneDrive or Google Drive folder. After that it saves to the same file in one click. Chrome and Edge on a computer; other browsers save to Downloads.", "• Export All (JSON) and Export All (CSV) let you choose where each file goes. Import Backup takes either one, opens in your backup folder, and still works with bank CSVs and drag and drop.", "• A backup status next to the Data menu shows when you last backed up, and turns amber after 7 days or if you never have. On phones it shows as a dot on the Data button.", "• Merging a backup into the same data no longer doubles your transactions. Rows already here are skipped.", "• Charts recolored to match the forest green theme: greens for your main series, ochre for spending and debt, slate for the rest, and one green everywhere instead of two.", "• Fixed: the Spending power bar no longer slides back and forth, and its key now shows the dollar amounts.", "• Spending power now keeps back everything left in this month's budget (every row you planned but have not spent yet, including rent, bills, wants, saving and debt), not just saving and subscriptions. Left to spend is what is free after that, and the bar turns red if your budget is more than your income.", "• Fixed: Subscriptions columns line up, over-budget bars on the Dashboard are no longer shorter than on-target ones, and transaction amounts always show two decimals.", "• Over budget is marked with ▲ as well as red on the Dashboard and Monthly Budget.", "• Mobile: transactions show as two-line entries instead of a sideways-scrolling table, budget category names wrap instead of being cut off, and the Dashboard tip card and net worth trend use the full width.", "• The app now always opens in light mode unless you picked dark last time.", "• Smaller fixes: the Settings page is titled Settings, the Budget / Net worth switch is one joined toggle, month labels on charts no longer skip, and the What If? chart shows your age."]}, {"title": "mbmoney.online © 2026 · BETA 4.1 Web Edition · September 23, 2026", "lines": ["• New forest green theme in dark and light mode, with a cleaner desktop-app look: flat header with underlined tabs, squarer cards and buttons, and denser tables and forms.", "• Charts now use green for net worth and your main series. Budget progress bars match the theme, and over budget is still red.", "• Faster feel: removed hover lifts, shimmer effects and page entrance animations.", "• The Expense / Income switch on Transactions now lines up with the other fields.", "• Mobile: the bottom tab labels no longer get cut off, and the header fits on one row.", "• New green site icon."]}, {"title": "mbmoney.online © 2026 · BETA 4.0 Web Edition · September 20, 2026", "lines": ["• New Subscriptions tab: track recurring charges with price, billing cycle, next charge date and pause/cancel. Recurring charges in your transactions are suggested automatically, price changes are flagged, and everything is saved in the same CSV.", "• New Spending power card on the Dashboard: left to spend this month (with a per-day amount), cash on hand, and typical monthly capacity.", "• New blue theme in dark and light mode. Charts redrawn to read more clearly: solid bars, no glow, calmer colors, over/under budget in red/green, and a Goal timeline in place of the Visual forecast chart.", "• Fixed: some locked achievements showed 100% progress. Progress now tops out at 99% until the achievement unlocks, Tidy Books tells you how many transactions still need a category, and amounts that exactly hit a target now count.", "• Now in BETA (was ALPHA). All pages, CSV import and export, and paste tools are in place and tested, and the forecasts are still estimates. Expect fixes as more people use it.", "• New logo and site icon.", "• Renamed from Personal Wealth Management Tool to mbmoney.online. New name in the header, page title, footer, downloads and this app's text. Your saved data carries over.", "• New categories: Alcohol, Hobbies & Sports, Clothing, Childcare & Kids, Pets, Home & Auto Insurance, Interest & Dividends, Rental Income, Government Benefits and 529 / Education Savings. Existing data and CSV files work as before.", "• Paste Transactions reads more bank and spreadsheet layouts: title rows, balance columns, debit and credit columns, a debit/credit label column, amounts like $(10.28). Pasting on any page opens it. Picking a category fills other rows with the same description, and the preview shows your totals before you add.", "• Transactions tab: the Expense and Income columns are now one Amount column (negative is an expense, positive is income). Paste Transactions can set a column as Balance.", "• Life events & notes on Monthly Budget is now a full-width box. Write as much as you need and add as many notes per month as you like. An All notes list shows every month.", "• Easier pasting: press Ctrl+V anywhere on Transactions, or load a file. Columns are detected for you (tabs, commas, bank web text, debit and credit columns), and you can fix them, pick categories row by row, and undo the import.", "• Runs in your browser as one web page. No spreadsheet software, no accounts, no server. Your data autosaves as you type.", "• Move data in and out as one CSV. Paste rows from Excel, Google Sheets or your bank, or import a bank-style CSV (duplicates are flagged). Demo data and a CSV template are built in.", "• Dark and light themes, gradient charts with hover tooltips, and a table view for every chart.", "• Numbers count up, charts draw in, and achievements unlock with confetti. New: a Level chip in the header, a \"Next up\" card and rotating insights on the Dashboard.", "• New What If? tab: sliders for extra investing, expected return and time horizon, with a live projection.", "• Monthly Budget shows one month at a time: planned vs. actual, copy from last month, fill forward, and a monthly net worth check-in (balances, credit score, life-event note).", "• Transactions: quick add with description memory, search and filters, inline editing, bulk category and delete, paste from a spreadsheet.", "• Dashboard: 50/30/20 check, this-month snapshot and a net worth hero. Extra Charts redrawn with one axis per chart and better unusual-expense detection.", "• Achievements: all 82 originals plus 30 new, redrawn badges, live progress on locked ones, tap for details.", "• Site search (press / or Ctrl/Cmd + K), expandable FAQ, \"last updated\" stamps, a back-to-top button, loading animations and a short storage notice.", "• Confirmation before every destructive action: deleting a transaction, clearing a month or all data, replacing your data on import.", "• Rewritten terms of use, a new privacy policy, a guided About tour, shorter on-page copy and more space under the header.", "• Faster to use: one Data menu for import and export, larger tap targets, screens that respond in under 400 ms, and Transactions filters tucked behind a button.", "• Harder to break: undo after clearing data, importing, loading demo data, bulk edits and clearing a month. The Add form flags missing amounts, future dates and duplicates before you save.", "• Easier to finish: Get Started opens with a setup checklist that shows your progress and your next step.", "• Safer by design: a strict content security policy blocks outside connections and unapproved scripts. Imports are size-limited, damaged saved data is repaired on load, and card or Social Security numbers are blocked or removed from text.", "• Accessibility pass: skip link, page headings, labeled form fields in every table row, labeled dialogs, higher contrast in light mode, and tabs that can be scrolled both ways.", "• Demo data now uses generic store and service names instead of real brands.", "• Demo data uses a sample profile (John Doe, age 28).", "• Fixed: the retirement and FI/RE dates counted the Cash row twice and left out investments. They now use cash + investments, matching the Milestones chart.", "• Changed: \"current month\" achievements (debt-free, car-free, etc.) now need a balance entered and a prior balance owed, so they no longer unlock on an empty sheet. Streaks only count months up to the current one.", "• Changed: type expenses and debts as positive numbers. The app handles the sign.", "• The privacy policy now names the hosting (GitHub Pages) and the domain manager (Namecheap). The page refuses to run inside another site's frame."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.1 · October 21, 2025", "lines": ["• Minor formula corrections for improved accuracy.", "• 'Get Started' page refinements for a smoother onboarding experience.", "• Added the 'Essential Banking Checklist' to improve user stability.", "• Updated spreadsheet description.", "• Introduced the 'Achievements' tab.", "• Includes 82 new achievements.", "• Custom images.", "• Unique descriptions.", "• Defined rarity and difficulty levels.", "• Implemented a leveling system to enhance user engagement and motivation.", "• Each achievement grants you XP.", "• Added a level progress bar displaying current XP and XP required."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.0 · August 28, 2025", "lines": ["• Copyright update.", "• Foundation for the 'Achievements' tab has been planned.", "• 'Dashboard' accessibility updates."]}, {"title": "Personal Wealth Management Tool © 2025 · BETA 2.2 · April 1, 2025", "lines": ["• Updated various terms for accesibility reasons and better calculations.", "• Updated tab sequence.", "• Updated a various charting forumulas."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.1 · September 17, 2024", "lines": ["• Added the 'Extra Charts' tab.", "• 'Monthly Update' tab now includes credit score tracking."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.0 · September 1, 2024", "lines": ["• Essential rebuild; starting from a fresh workbook.", "• ‘Get Started’: Condensed pages ‘Getting Started’, ‘Settings’, and ‘License’ into one.", "• ‘Dashboard’: The new dashboard is the updates biggest feature!", "• ‘Transactions’: Removed columns for bloating/accessibility reasons.", "• ‘Monthly Tracking’: Combined the ‘Net Worth’ and ‘Budget’ tracking tabs into one.", "• ‘Chart Data’: This page contains all of the formulas required for data validation.", "• Updated the theme to better reflect wealth accumulation.", "• Enhanced the mobile user experience.", "• Improved the flow of information throughout the spreadsheet.", "• Updated the spreadsheet description to more accurately represent the project.", "• Removed the ‘Quick Tools’ tab.", "• Removed the option to sign up for update notifications.", "• Reduced spreadsheet length to 80 years."]}, {"title": "Personal Wealth Management Tool © 2024 · Full Version 1.1 · July 5, 2024", "lines": ["• Updated the project name to 'Personal Wealth Management Tool'", "• Updated various tab names and colors.", "• Introducing the new 'Quick Tools' tab!", "• Custom Budget Calculator", "• Savings Goal Calculator", "• Portfolio Rebalancing Tool", "• 'My Budget Planner' chart is no longer displaying \"over budget\" at net zero.", "• RE: Optimized the 'Input Transactions' page.", "• RE: Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · Full Version 1.0 · May 28, 2024", "lines": ["• Optimized the 'Input Transactions' page.", "• Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.1 · April 30, 2024", "lines": ["• 'Set Budget Targets' tab now shows your current category totals.", "• 'Set Budget Targets' pie chart updated for better presentation.", "• Cells that require inputs are now validated to reduce possible errors.", "• Fixed 'Historical Charts' Month-over-Month bug, and updated pie charts.", "• Unlocked 'Input Transactions' tab to enable table sorting."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.0 · April 26, 2024", "lines": ["• The project moves into private BETA testing with multiple testers.", "• Implemented assets vs. liabilities overview and budget overview charts.", "• Introduced settings page, user themes, and retirement planning options.", "• Enhanced customer support features.", "• Obtained spreadsheet copyright protection; official licensing agreement."]}, {"title": "Personal Wealth Management · ALPHA · April 12, 2024", "lines": ["• Effortlessly categorize spending, income, needs, wants, savings & debts.", "• See your financial health at a glance.", "• Track progress with clear charts and historical timelines.", "• Plan & monitor spending to reach your financial goals.", "• Track net worth, savings, and debt repayments."]}];
+const PRIVACY_TEXT="The short version: this app does not collect your data. There is no account, no database, no analytics, no ads and no cookies. What you enter stays in your browser.\n\n1. What you enter\nAn optional name, date of birth, take-home and retirement income, account balances, credit score, notes, and transactions (date, description, category, amount). The date of birth only feeds age-based numbers, so you can leave it blank.\n\n2. Where it is stored\nIn your browser's local storage, on this device only. The app uses three entries: pwmt.web.v1 (your data), pwmt.theme (light or dark) and pwmt.notice (that you dismissed the storage notice). No cookies are set. Local storage is not encrypted, so anyone who can use this browser profile can see your data. On a shared computer, use a private window or clear your data when you finish.\n\n3. What leaves your device\nNothing, unless you export it or share an image. Export saves a JSON or CSV file to your device, and what happens to that file afterward is up to you. Share progress and Share your level draw a picture on your device and show it to you first. Dollar amounts are left off unless you turn them on, and account names, notes and transactions are never on it. Save image puts it in your downloads; Share hands it to your device's share sheet, and the app never learns where it went. While the app runs it makes no network requests: no fonts, scripts, images, analytics or error reports are loaded from or sent to any other site. If you install the app, your browser also keeps a copy of the app's own files (not your data) so it can open with no signal.\nThis site is hosted on GitHub Pages, and its domain name is managed through Namecheap. When you load the page, GitHub, like any web host, receives your request and may log technical details such as your IP address, browser type and time of request. Namecheap may see lookups of the domain name. That happens on their side, outside the app, under their own privacy statements, and nothing you enter is part of it. I add no analytics and keep no logs of my own.\n\n4. Deleting your data\nSettings, then Your data, then Clear all data removes everything from local storage after you confirm. For the undo button, a copy is held in memory only, never saved, and it is gone when you leave or reload the page. The theme and notice entries stay until you clear this site's data in your browser settings, which also deletes everything else. I can't delete your data for you, because I never receive it.\n\n5. Export and import\nData, then Save backup now or Export All saves everything you entered as a JSON or CSV file in a place you choose (or your Downloads folder, depending on the browser). The browser remembers only that file so it can save there again; it never tells this site the folder path. Data, then Import Backup brings it back, or adds a bank export. Import happens in your browser and the file is never uploaded.\n\n6. Sensitive information\nPlease don't enter passwords, Social Security numbers, or full card or account numbers. The app blocks or removes what looks like a card or Social Security number in text fields and imports, but it can't catch everything.\n\n7. Children\nThis app is for adults managing their own money. It is not directed to children. It collects no information from anyone, because it collects nothing.\n\n8. Changes\nIf the app's behavior changes, I will update this page and its \"last updated\" date.";
+const RELEASES=[{"title": "mbmoney.online © 2026 · BETA 4.7 Web Edition · October 13, 2026", "lines": ["• When you install it, the app is now named Money on your computer and phone.", "• Navigation moved to a sidebar on the left. On tablets it shrinks to a slim icon rail, and phones keep the bottom bar. The page you are on is named at the top.", "• The logo, name and \"Official Web App\" line all take you back to the Dashboard, on every screen size.", "• Browser tabs now read Money | Dashboard, Money | Budget and so on, so open tabs are easier to tell apart.", "• New app icons and logo, and new coin-and-sprout art on the Dashboard banner and the loading screen.", "• Share your progress: Share progress on the net worth card and Share your level on Achievements make a square image on your device. Dollar amounts stay off unless you turn them on, and nothing is uploaded.", "• The Install card in Settings now says \"Installed on this device\" when you are using the installed app.", "• Your data, backups and settings are unchanged."]}, {"title": "mbmoney.online © 2026 · BETA 4.6 Web Edition · October 9, 2026", "lines": ["• Lighter, fresher look (Paper Cutouts): a soft green tint across the top of each page, a gradient accent line and tab underline, gradient buttons and progress bars, and a leaf-art banner on the Dashboard. Layout, numbers and features are unchanged.", "• New logo and icons: the same chart mark on a softer gradient badge, with a matching share image for links.", "• Your data, backups and settings are unchanged."]}, {"title": "mbmoney.online © 2026 · BETA 4.5 Web Edition · October 9, 2026", "lines": ["• New look: a gradient logo and icons, a frosted header, pill tabs, softer cards, gradient buttons and a gradient net worth card, in light and dark. Same green and gold theme.", "• Clicking the logo or title takes you back to the Dashboard.", "• The Dashboard status pill now follows your monthly routine: it says when your check-in is due, when it is time to import transactions, and when you are all caught up. Tap it to jump there.", "• New 2-minute snapshot for first-time setup: enter your take-home pay and a few balances to see net worth and runway right away.", "• New Simple view on the Dashboard keeps the essentials and hides the charts. Your choice is remembered on this device.", "• New monthly check-in reminder: download a repeating calendar file (.ics) for any calendar app.", "• New year-end summary: download a CSV with the year's totals, monthly cash flow, top spending categories and net worth change.", "• 9 new achievements for the Plan features, snapshot, reminders and reviews (121 in all)."]}, {"title": "mbmoney.online © 2026 · BETA 4.4 Web Edition · October 9, 2026", "lines": ["• New Plan tab with a cash-flow calendar: your checking balance day by day for the next 30, 60 or 90 days from your pay schedule, tracked bills and average spending, with the lowest point and how much is safe to spend until payday.", "• New savings goals: set a target and date, link a goal to an account so it follows your check-in balances, and see what you need each month. One tap adds an emergency fund goal sized to your essentials.", "• New debt payoff planner: add each credit card or loan's APR and minimum payment once (balances come from your check-in), compare avalanche with snowball, and see the interest and months an extra payment saves.", "• New on the Dashboard: a resilience strip (runway in months, essentials vs. income) and a monthly review that explains why net worth changed, with a checklist.", "• Your CSV and JSON backups now carry debt terms, goals and your pay schedule. Older files still import."]}, {"title": "mbmoney.online © 2026 · BETA 4.3 Web Edition · October 9, 2026", "lines": ["• New: install mbmoney.online as an app. On Chrome, Edge and Android use the Install button on the Settings page. On iPhone or iPad, tap Share, then Add to Home Screen. It opens full screen with its own icon and loads with no signal after the first visit.", "• New app icons and a link preview image for sharing."]}, {"title": "mbmoney.online © 2026 · BETA 4.2 Web Edition · September 26, 2026", "lines": ["• New backups: Data, then Save backup now (or Ctrl+S) saves a full JSON backup. The first time you pick the folder and file name, for example a synced OneDrive or Google Drive folder. After that it saves to the same file in one click. Chrome and Edge on a computer; other browsers save to Downloads.", "• Export All (JSON) and Export All (CSV) let you choose where each file goes. Import Backup takes either one, opens in your backup folder, and still works with bank CSVs and drag and drop.", "• A backup status next to the Data menu shows when you last backed up, and turns amber after 7 days or if you never have. On phones it shows as a dot on the Data button.", "• Merging a backup into the same data no longer doubles your transactions. Rows already here are skipped.", "• Charts recolored to match the forest green theme: greens for your main series, ochre for spending and debt, slate for the rest, and one green everywhere instead of two.", "• Fixed: the Spending power bar no longer slides back and forth, and its key now shows the dollar amounts.", "• Spending power now keeps back everything left in this month's budget (every row you planned but have not spent yet, including rent, bills, wants, saving and debt), not just saving and subscriptions. Left to spend is what is free after that, and the bar turns red if your budget is more than your income.", "• Fixed: Subscriptions columns line up, over-budget bars on the Dashboard are no longer shorter than on-target ones, and transaction amounts always show two decimals.", "• Over budget is marked with ▲ as well as red on the Dashboard and Monthly Budget.", "• Mobile: transactions show as two-line entries instead of a sideways-scrolling table, budget category names wrap instead of being cut off, and the Dashboard tip card and net worth trend use the full width.", "• The app now always opens in light mode unless you picked dark last time.", "• Smaller fixes: the Settings page is titled Settings, the Budget / Net worth switch is one joined toggle, month labels on charts no longer skip, and the What If? chart shows your age."]}, {"title": "mbmoney.online © 2026 · BETA 4.1 Web Edition · September 23, 2026", "lines": ["• New forest green theme in dark and light mode, with a cleaner desktop-app look: flat header with underlined tabs, squarer cards and buttons, and denser tables and forms.", "• Charts now use green for net worth and your main series. Budget progress bars match the theme, and over budget is still red.", "• Faster feel: removed hover lifts, shimmer effects and page entrance animations.", "• The Expense / Income switch on Transactions now lines up with the other fields.", "• Mobile: the bottom tab labels no longer get cut off, and the header fits on one row.", "• New green site icon."]}, {"title": "mbmoney.online © 2026 · BETA 4.0 Web Edition · September 20, 2026", "lines": ["• New Subscriptions tab: track recurring charges with price, billing cycle, next charge date and pause/cancel. Recurring charges in your transactions are suggested automatically, price changes are flagged, and everything is saved in the same CSV.", "• New Spending power card on the Dashboard: left to spend this month (with a per-day amount), cash on hand, and typical monthly capacity.", "• New blue theme in dark and light mode. Charts redrawn to read more clearly: solid bars, no glow, calmer colors, over/under budget in red/green, and a Goal timeline in place of the Visual forecast chart.", "• Fixed: some locked achievements showed 100% progress. Progress now tops out at 99% until the achievement unlocks, Tidy Books tells you how many transactions still need a category, and amounts that exactly hit a target now count.", "• Now in BETA (was ALPHA). All pages, CSV import and export, and paste tools are in place and tested, and the forecasts are still estimates. Expect fixes as more people use it.", "• New logo and site icon.", "• Renamed from Personal Wealth Management Tool to mbmoney.online. New name in the header, page title, footer, downloads and this app's text. Your saved data carries over.", "• New categories: Alcohol, Hobbies & Sports, Clothing, Childcare & Kids, Pets, Home & Auto Insurance, Interest & Dividends, Rental Income, Government Benefits and 529 / Education Savings. Existing data and CSV files work as before.", "• Paste Transactions reads more bank and spreadsheet layouts: title rows, balance columns, debit and credit columns, a debit/credit label column, amounts like $(10.28). Pasting on any page opens it. Picking a category fills other rows with the same description, and the preview shows your totals before you add.", "• Transactions tab: the Expense and Income columns are now one Amount column (negative is an expense, positive is income). Paste Transactions can set a column as Balance.", "• Life events & notes on Monthly Budget is now a full-width box. Write as much as you need and add as many notes per month as you like. An All notes list shows every month.", "• Easier pasting: press Ctrl+V anywhere on Transactions, or load a file. Columns are detected for you (tabs, commas, bank web text, debit and credit columns), and you can fix them, pick categories row by row, and undo the import.", "• Runs in your browser as one web page. No spreadsheet software, no accounts, no server. Your data autosaves as you type.", "• Move data in and out as one CSV. Paste rows from Excel, Google Sheets or your bank, or import a bank-style CSV (duplicates are flagged). Demo data and a CSV template are built in.", "• Dark and light themes, gradient charts with hover tooltips, and a table view for every chart.", "• Numbers count up, charts draw in, and achievements unlock with confetti. New: a Level chip in the header, a \"Next up\" card and rotating insights on the Dashboard.", "• New What If? tab: sliders for extra investing, expected return and time horizon, with a live projection.", "• Monthly Budget shows one month at a time: planned vs. actual, copy from last month, fill forward, and a monthly net worth check-in (balances, credit score, life-event note).", "• Transactions: quick add with description memory, search and filters, inline editing, bulk category and delete, paste from a spreadsheet.", "• Dashboard: 50/30/20 check, this-month snapshot and a net worth hero. Extra Charts redrawn with one axis per chart and better unusual-expense detection.", "• Achievements: all 82 originals plus 30 new, redrawn badges, live progress on locked ones, tap for details.", "• Site search (press / or Ctrl/Cmd + K), expandable FAQ, \"last updated\" stamps, a back-to-top button, loading animations and a short storage notice.", "• Confirmation before every destructive action: deleting a transaction, clearing a month or all data, replacing your data on import.", "• Rewritten terms of use, a new privacy policy, a guided About tour, shorter on-page copy and more space under the header.", "• Faster to use: one Data menu for import and export, larger tap targets, screens that respond in under 400 ms, and Transactions filters tucked behind a button.", "• Harder to break: undo after clearing data, importing, loading demo data, bulk edits and clearing a month. The Add form flags missing amounts, future dates and duplicates before you save.", "• Easier to finish: Get Started opens with a setup checklist that shows your progress and your next step.", "• Safer by design: a strict content security policy blocks outside connections and unapproved scripts. Imports are size-limited, damaged saved data is repaired on load, and card or Social Security numbers are blocked or removed from text.", "• Accessibility pass: skip link, page headings, labeled form fields in every table row, labeled dialogs, higher contrast in light mode, and tabs that can be scrolled both ways.", "• Demo data now uses generic store and service names instead of real brands.", "• Demo data uses a sample profile (John Doe, age 28).", "• Fixed: the retirement and FI/RE dates counted the Cash row twice and left out investments. They now use cash + investments, matching the Milestones chart.", "• Changed: \"current month\" achievements (debt-free, car-free, etc.) now need a balance entered and a prior balance owed, so they no longer unlock on an empty sheet. Streaks only count months up to the current one.", "• Changed: type expenses and debts as positive numbers. The app handles the sign.", "• The privacy policy now names the hosting (GitHub Pages) and the domain manager (Namecheap). The page refuses to run inside another site's frame."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.1 · October 21, 2025", "lines": ["• Minor formula corrections for improved accuracy.", "• 'Get Started' page refinements for a smoother onboarding experience.", "• Added the 'Essential Banking Checklist' to improve user stability.", "• Updated spreadsheet description.", "• Introduced the 'Achievements' tab.", "• Includes 82 new achievements.", "• Custom images.", "• Unique descriptions.", "• Defined rarity and difficulty levels.", "• Implemented a leveling system to enhance user engagement and motivation.", "• Each achievement grants you XP.", "• Added a level progress bar displaying current XP and XP required."]}, {"title": "Personal Wealth Management Tool © 2025 · ALPHA 3.0 · August 28, 2025", "lines": ["• Copyright update.", "• Foundation for the 'Achievements' tab has been planned.", "• 'Dashboard' accessibility updates."]}, {"title": "Personal Wealth Management Tool © 2025 · BETA 2.2 · April 1, 2025", "lines": ["• Updated various terms for accesibility reasons and better calculations.", "• Updated tab sequence.", "• Updated a various charting forumulas."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.1 · September 17, 2024", "lines": ["• Added the 'Extra Charts' tab.", "• 'Monthly Update' tab now includes credit score tracking."]}, {"title": "Personal Wealth Management Tool © 2024 · BETA 2.0 · September 1, 2024", "lines": ["• Essential rebuild; starting from a fresh workbook.", "• ‘Get Started’: Condensed pages ‘Getting Started’, ‘Settings’, and ‘License’ into one.", "• ‘Dashboard’: The new dashboard is the updates biggest feature!", "• ‘Transactions’: Removed columns for bloating/accessibility reasons.", "• ‘Monthly Tracking’: Combined the ‘Net Worth’ and ‘Budget’ tracking tabs into one.", "• ‘Chart Data’: This page contains all of the formulas required for data validation.", "• Updated the theme to better reflect wealth accumulation.", "• Enhanced the mobile user experience.", "• Improved the flow of information throughout the spreadsheet.", "• Updated the spreadsheet description to more accurately represent the project.", "• Removed the ‘Quick Tools’ tab.", "• Removed the option to sign up for update notifications.", "• Reduced spreadsheet length to 80 years."]}, {"title": "Personal Wealth Management Tool © 2024 · Full Version 1.1 · July 5, 2024", "lines": ["• Updated the project name to 'Personal Wealth Management Tool'", "• Updated various tab names and colors.", "• Introducing the new 'Quick Tools' tab!", "• Custom Budget Calculator", "• Savings Goal Calculator", "• Portfolio Rebalancing Tool", "• 'My Budget Planner' chart is no longer displaying \"over budget\" at net zero.", "• RE: Optimized the 'Input Transactions' page.", "• RE: Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · Full Version 1.0 · May 28, 2024", "lines": ["• Optimized the 'Input Transactions' page.", "• Improved 'Retirement Overview' charts."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.1 · April 30, 2024", "lines": ["• 'Set Budget Targets' tab now shows your current category totals.", "• 'Set Budget Targets' pie chart updated for better presentation.", "• Cells that require inputs are now validated to reduce possible errors.", "• Fixed 'Historical Charts' Month-over-Month bug, and updated pie charts.", "• Unlocked 'Input Transactions' tab to enable table sorting."]}, {"title": "Personal Wealth Management © 2024 · BETA 1.0 · April 26, 2024", "lines": ["• The project moves into private BETA testing with multiple testers.", "• Implemented assets vs. liabilities overview and budget overview charts.", "• Introduced settings page, user themes, and retirement planning options.", "• Enhanced customer support features.", "• Obtained spreadsheet copyright protection; official licensing agreement."]}, {"title": "Personal Wealth Management · ALPHA · April 12, 2024", "lines": ["• Effortlessly categorize spending, income, needs, wants, savings & debts.", "• See your financial health at a glance.", "• Track progress with clear charts and historical timelines.", "• Plan & monitor spending to reach your financial goals.", "• Track net worth, savings, and debt repayments."]}];
 'use strict';
 /* ============ helpers ============ */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
@@ -2572,32 +2997,22 @@ function buildDemo(){
 }
 
 /* ============ install as app (PWA) ============ */
-let deferredInstall=null;
-const isStandalone=()=>(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
+/* The card, the browser's install prompt and the service worker registration come from MBInstall (MB Suite v3, inlined above).
+   The app only adds the iPhone note about Home Screen data being separate from Safari's. */
+const isStandalone=()=>MBInstall.isInstalled();
 const isIOS=()=>/iPad|iPhone|iPod/.test(navigator.userAgent||'')||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
-function paintInstall(){
-  const slot=document.getElementById('installSlot'); if(!slot)return; slot.replaceChildren();
-  if(isStandalone())return;
-  if(deferredInstall)slot.append(el('div',{class:'banner mt',style:'margin-bottom:0'},el('div',null,el('b',null,'Install mbmoney.online as an app.'),' Opens full screen, like an app. Works with no signal once it has loaded.'),el('button',{class:'btn primary',type:'button',onclick:doInstall},'Install mbmoney.online')));
-  else if(isIOS())slot.append(el('div',{class:'banner mt',style:'margin-bottom:0'},el('div',null,el('b',null,'Install on iPhone or iPad.'),' Tap ',el('b',null,'Share'),', then ',el('b',null,'Add to Home Screen'),'. The Home Screen app may start empty, because iPhone keeps its data separate from Safari. Save a backup in Safari first, then import it in the app.')));
-}
-async function doInstall(){
-  if(!deferredInstall)return; const d=deferredInstall; deferredInstall=null; // the event can only be used once
-  try{ d.prompt(); await d.userChoice; }catch(e){}
-  paintInstall();
-}
-window.addEventListener('beforeinstallprompt',e=>{ e.preventDefault(); deferredInstall=e; paintInstall(); });
-window.addEventListener('appinstalled',()=>{ deferredInstall=null; paintInstall(); });
+function paintInstall(){ MBInstall.render(); const n=document.getElementById('installIosNote'); if(n)n.hidden=!(isIOS()&&!isStandalone()); }
 
 /* ============ app shell ============ */
 const PAGES=['dashboard','transactions','budget','subs','plan','extra','whatif','achievements','start']; // ordered by how often you visit
 const NAV_LABEL={dashboard:'Dashboard',transactions:'Transactions',budget:'Budget',subs:'Subscriptions',plan:'Plan',extra:'Charts',whatif:'What If?',achievements:'Achievements',start:'Settings'};
+const NAV_RAIL={transactions:'Activity',subs:'Subs',achievements:'Awards'}; // short labels for the 76px tablet rail
 const NAV_MOBILE=['dashboard','transactions','budget','subs'], NAV_MOBILE_LABEL={dashboard:'Home',transactions:'Transactions',budget:'Budget',subs:'Subs'};
 const NAV_ICON={dashboard:'M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-3H4zM14 7h6V4h-6z',transactions:'M5 4h14v16l-3-2-2 2-2-2-2 2-2-2-3 2zM9 9h6M9 13h6',budget:'M4 20V10M10 20V4M16 20v-7M22 20H2',subs:'M4 7h16v12H4zM4 11h16M8 3v4M16 3v4M9 15h2',
   plan:'M5 21V4M5 5h12l-2.5 3.5L17 12H5',extra:'M3 20h18M6 16l4-5 3 3 6-8',whatif:'M4 18c3-9 5-9 8-4s5 5 8-4M18 6h3v3',achievements:'M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 20h8',start:'M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1',
   more:'M5 12h.01M12 12h.01M19 12h.01'};
-const navIcon=p=>sv('svg',{viewBox:'0 0 24 24',width:20,height:20,'aria-hidden':'true',fill:'none',style:'stroke:currentColor','stroke-width':p==='more'?3.2:1.8,'stroke-linecap':'round','stroke-linejoin':'round'},sv('path',{d:NAV_ICON[p]}));
-const PAGE_LABEL={start:'Get Started',dashboard:'Dashboard',extra:'Extra Charts',whatif:'What If?',achievements:'Achievements',budget:'Monthly Budget',transactions:'Transactions',subs:'Subscriptions',plan:'Plan'};
+const navIcon=p=>sv('svg',{class:'uic',viewBox:'0 0 24 24',width:20,height:20,'aria-hidden':'true',focusable:'false',fill:'none',style:'stroke:currentColor','stroke-width':p==='more'?3.2:1.8,'stroke-linecap':'round','stroke-linejoin':'round'},sv('path',{d:NAV_ICON[p]}));
+const PAGE_LABEL={start:'Settings',dashboard:'Dashboard',extra:'Extra Charts',whatif:'What If?',achievements:'Achievements',budget:'Monthly Budget',transactions:'Transactions',subs:'Subscriptions',plan:'Plan'};
 const RENDER={}; let booted=false;
 let page='dashboard'; const dirty={}; let selfPage=null;
 function onDataChanged(kind){ for(const p of PAGES)if(p!==selfPage)dirty[p]=true; selfPage=null; }
@@ -2623,10 +3038,11 @@ function go(p,noHash){
   if(!PAGES.includes(p))p='dashboard'; page=p;
   for(const q of PAGES){ const s=$('#p-'+q); s.hidden=q!==p; }
   $$('.bnav [data-p],.bn-sheet [data-p]').forEach(b=>{ const on=b.dataset.p===p||(b.dataset.p==='more'&&!NAV_MOBILE.includes(p)); if(on)b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });
-  $$('nav.tabs button').forEach(b=>{ const on=b.dataset.p===p; if(on)b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); if(on&&booted){ const n=$('nav.tabs'), nr=n.getBoundingClientRect(), br=b.getBoundingClientRect(); if(nr.width&&br.left<nr.left)n.scrollLeft-=(nr.left-br.left)+8; else if(nr.width&&br.right>nr.right)n.scrollLeft+=(br.right-nr.right)+8; } });
+  $$('.side-nav [data-p]').forEach(b=>{ if(b.dataset.p===p)b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });
+  { const pt=$('#pageTitle'); if(pt)pt.textContent=NAV_LABEL[p]; }
   if(dirty[p]!==false){ try{RENDER[p]()}catch(e){ $('#p-'+p).replaceChildren(el('div',{class:'card'},el('b',null,'This page could not be drawn.'),el('p',null,'Your data is still saved in this browser. Try another tab or reload the page. If it keeps happening, use Data > Save backup now to back up your data first.'))); } dirty[p]=false; }
   if(!noHash)history.replaceState(null,'','#'+p);
-  document.title='Money | '+NAV_LABEL[p];
+  MBTitle.set(NAV_LABEL[p]);
   window.scrollTo({top:0});
   if(booted&&!noHash){ const h=$('#p-'+p+' h2'); if(h){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); } }
   if(booted&&typeof playIn==='function')playIn(p);
@@ -2687,8 +3103,8 @@ async function importBackupJSON(file,text){
 }
 function initShell(){
   $('#skipLink').addEventListener('click',e=>{ e.preventDefault(); const m=$('#main'); m.focus(); m.scrollIntoView(); });
-  const nav=$('nav.tabs');
-  PAGES.forEach((p,i)=>nav.append(el('button',{type:'button','data-p':p,title:PAGE_LABEL[p]+' (press '+(i+1)+')',onclick:()=>go(p)},navIcon(p),el('span',null,NAV_LABEL[p]))));
+  const nav=$('#sideNav'), navEnd=$('#sideEnd'); // sidebar: the main sections, Settings pinned at the bottom
+  PAGES.forEach((p,i)=>(p==='start'?navEnd:nav).append(el('button',{type:'button','data-p':p,'aria-label':NAV_LABEL[p],title:PAGE_LABEL[p]+' (press '+(i+1)+')',onclick:()=>go(p)},navIcon(p),el('span',NAV_RAIL[p]?{'data-short':NAV_RAIL[p]}:null,NAV_LABEL[p]))));
   { // phone: bottom bar with the four everyday pages + a More sheet for the rest
     const sheet=el('div',{class:'bn-sheet',id:'bnSheet',role:'menu',hidden:true},PAGES.filter(p=>!NAV_MOBILE.includes(p)).map(p=>el('button',{type:'button',role:'menuitem',class:'bn-item','data-p':p,onclick:()=>{setSheet(false);go(p)}},navIcon(p),el('span',null,NAV_LABEL[p]))),
       el('button',{type:'button',role:'menuitem',class:'bn-item',onclick:()=>{setSheet(false);openSearch()}},sv('svg',{viewBox:'0 0 20 20',width:20,height:20,'aria-hidden':'true',fill:'none',style:'stroke:currentColor','stroke-width':1.8,'stroke-linecap':'round'},sv('circle',{cx:9,cy:9,r:5.5}),sv('path',{d:'M13.5 13.5L17 17'})),el('span',null,'Search')));
@@ -2702,16 +3118,6 @@ function initShell(){
   document.addEventListener('keydown',e=>{ // number keys jump straight to a page
     const t=e.target; if(e.ctrlKey||e.metaKey||e.altKey||(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT'||t.isContentEditable))||document.querySelector('dialog[open]'))return;
     const i=+e.key; if(i>=1&&i<=PAGES.length){ e.preventDefault(); go(PAGES[i-1]); } });
-  { const wrap=$('.tabwrap'), aL=$('.tabarrow.l'), aR=$('.tabarrow.r'); let drag=null, moved=false;
-    const upd=()=>{ const max=nav.scrollWidth-nav.clientWidth; aL.hidden=nav.scrollLeft<=2; aR.hidden=nav.scrollLeft>=max-2; };
-    const by=d=>nav.scrollBy({left:d*Math.max(120,nav.clientWidth*.7),behavior:REDUCED?'auto':'smooth'});
-    aL.addEventListener('click',()=>by(-1)); aR.addEventListener('click',()=>by(1));
-    nav.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); setTimeout(upd,0); setTimeout(upd,400);
-    nav.addEventListener('wheel',e=>{ if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){ const max=nav.scrollWidth-nav.clientWidth, nx=nav.scrollLeft+e.deltaY; if(max>0&&nx>=0&&nx<=max){ nav.scrollLeft=nx; e.preventDefault(); } } },{passive:false});
-    nav.addEventListener('pointerdown',e=>{ if(e.pointerType==='mouse'&&e.button===0){ drag={x:e.clientX,l:nav.scrollLeft}; moved=false; } });
-    window.addEventListener('pointermove',e=>{ if(!drag)return; const dx=e.clientX-drag.x; if(Math.abs(dx)>5)moved=true; if(moved)nav.scrollLeft=drag.l-dx; });
-    window.addEventListener('pointerup',()=>{ drag=null; });
-    nav.addEventListener('click',e=>{ if(moved){ e.stopPropagation(); e.preventDefault(); moved=false; } },true); }
   _saveMsg=$('#saved');
   const file=$('#fileIn'); file.addEventListener('change',()=>{ if(file.files[0])importFile(file.files[0]); file.value=''; });
   $('#impBtn').addEventListener('click',()=>pickImport());
@@ -2732,7 +3138,7 @@ function initShell(){
   window.addEventListener('dragover',e=>{ if(e.dataTransfer&&[...e.dataTransfer.types].includes('Files'))e.preventDefault(); });
   window.addEventListener('drop',e=>{ if(e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0]){e.preventDefault(); importFile(e.dataTransfer.files[0]);} });
   window.addEventListener('hashchange',()=>{const p=location.hash.slice(1); if(PAGES.includes(p)&&p!==page)go(p,true)});
-  const bl=$('#brandLink'); if(bl)bl.addEventListener('click',e=>{ if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button)return; e.preventDefault(); if(page==='dashboard'){ window.scrollTo({top:0,behavior:REDUCED?'auto':'smooth'}); } else go('dashboard'); });
+  $$('a.brand').forEach(bl=>bl.addEventListener('click',e=>{ if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button)return; e.preventDefault(); if(page==='dashboard'){ window.scrollTo({top:0,behavior:REDUCED?'auto':'smooth'}); } else go('dashboard'); }));
 }
 
 /* ============ Dashboard ============ */
@@ -2785,11 +3191,11 @@ function thisMonthCard(){
   card.append(el('div',{class:'mt'},facts.map(([k,v])=>el('div',{class:'kv'},el('span',null,k),el('b',null,v)))));
   return card;
 }
-const CU_BANNER_SVG="<svg class=\"cu-art\" viewBox=\"0 0 640 136\" preserveAspectRatio=\"xMaxYMid slice\" aria-hidden=\"true\" focusable=\"false\"><path class=\"s\" transform=\"translate(250 96) rotate(-28) scale(1.1)\" d=\"M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z\"/><path class=\"d\" transform=\"translate(320 70) rotate(24) scale(1)\" d=\"M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z\"/><path class=\"m\" transform=\"translate(380 118) rotate(-12) scale(1.2)\" d=\"M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z\"/><path class=\"b\" transform=\"translate(430 52) rotate(-40) scale(0.9)\" d=\"M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z\"/><path class=\"n\" transform=\"translate(470 104) rotate(-150) scale(1)\" d=\"M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z\"/><path class=\"d\" transform=\"translate(560 112) rotate(-120) scale(0.9)\" d=\"M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z\"/><path class=\"r\" transform=\"translate(540 50) rotate(30) scale(0.8)\" d=\"M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z\"/><circle class=\"b\" cx=\"610\" cy=\"30\" r=\"16\"/><circle class=\"r\" cx=\"300\" cy=\"22\" r=\"9\"/></svg>";
+const CU_BANNER_SVG="<svg class=\"cu-art\" viewBox=\"0 0 640 136\" preserveAspectRatio=\"xMaxYMid slice\" aria-hidden=\"true\" focusable=\"false\"><path class=\"s\" d=\"M340 140 C430 94 610 94 700 140Z\"/><circle class=\"b\" cx=\"604\" cy=\"30\" r=\"18\"/><rect class=\"d\" x=\"423\" y=\"125\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"m\" x=\"423\" y=\"114\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"d\" x=\"423\" y=\"103\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"m\" x=\"493\" y=\"125\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"d\" x=\"493\" y=\"114\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"m\" x=\"493\" y=\"103\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"d\" x=\"493\" y=\"92\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"m\" x=\"493\" y=\"81\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"d\" x=\"493\" y=\"70\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"d\" x=\"559\" y=\"125\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"m\" x=\"559\" y=\"114\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"d\" x=\"559\" y=\"103\" width=\"58\" height=\"14\" rx=\"7\"/><rect class=\"m\" x=\"559\" y=\"92\" width=\"58\" height=\"14\" rx=\"7\"/><path class=\"sd\" d=\"M522 70 C517.8 50.7 525.1 33.8 522 21.7\"/><path class=\"d\" transform=\"translate(522 21.7) rotate(-38) scale(0.4)\" d=\"M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z\"/><path class=\"m\" transform=\"translate(522 32.3) rotate(-150) scale(0.4)\" d=\"M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z\"/><circle class=\"b\" cx=\"392\" cy=\"96\" r=\"13\"/><circle class=\"s\" cx=\"392\" cy=\"96\" r=\"8.6\"/><circle class=\"s\" cx=\"352\" cy=\"112\" r=\"9\"/><circle class=\"b\" cx=\"352\" cy=\"112\" r=\"5.9\"/><circle class=\"r\" cx=\"418\" cy=\"40\" r=\"7\"/><path class=\"m\" transform=\"translate(410 128)\" d=\"M-15 1.1 C-15 -7.4 8.2 -7.7 15 -0.7 C15.3 6.6 -8.2 7.7 -15 1.1Z\"/></svg>";
 RENDER.dashboard=function(){
   const root=$('#p-dashboard'); root.replaceChildren(); const d=dashboard(); calc();
   const _cuTx=S.tx.filter(t=>mkOf(t.date)===CUR).length;
-  const _cuB=el('section',{class:'cu-banner'},el('div',{class:'cu-txt'},el('h2',{class:'cu-t'},S.settings.name?'Welcome, '+S.settings.name+'!':'Welcome!'),el('p',{class:'cu-s'},dLabel(TODAY)+(hasAnyData()?' · '+_cuTx+' transaction'+(_cuTx===1?'':'s')+' this month':''))));
+  const _cuB=el('section',{class:'cu-banner'},el('div',{class:'cu-txt'},el('h2',{class:'cu-t'},S.settings.name?'Welcome, '+S.settings.name+'!':hasAnyData()?'Welcome!':'Free net worth and budget tracker'),el('p',{class:'cu-s'},dLabel(TODAY)+(hasAnyData()?' · '+_cuTx+' transaction'+(_cuTx===1?'':'s')+' this month':''))));
   _cuB.insertAdjacentHTML('afterbegin',CU_BANNER_SVG);
   root.append(_cuB);
   root.append(el('div',{class:'page-h cu-acts'},el('div',null,statusPill()),
@@ -2802,7 +3208,7 @@ RENDER.dashboard=function(){
   // hero
   const nwSeries=dataNetWorth().slice(-12).map(r=>r.nw); const spW=matchMedia('(max-width:700px)').matches?Math.max(180,Math.min(560,innerWidth-74)):180; const sp=sparkline(nwSeries,spW,56); // full card width on phones
   root.append(el('div',{class:'card hero'},
-    el('div',null,el('div',{class:'lbl'},'Current net worth · '+mLabelLong(CUR)),el('div',{class:'big'+(d.nw<0?' neg':'')},money(d.nw))),
+    el('div',null,el('div',{class:'lbl'},'Current net worth · '+mLabelLong(CUR)),el('div',{class:'big'+(d.nw<0?' neg':'')},money(d.nw)),d.b.entered?shareBtn('Share progress',()=>shareNetWorth(d)):null),
     el('div',{class:'side'},el('div',{class:'tile'},el('div',{class:'lbl'},'Assets'),el('div',{class:'val'},money(d.assets))),el('div',{class:'tile'},el('div',{class:'lbl'},'Liabilities'),el('div',{class:'val'},money(d.liab))),
       el('div',{class:'tile'},el('div',{class:'lbl'},'Change this year'),el('div',{class:'val'},deltaText(d.nwChange)))),
     sp?el('div',{'aria-hidden':'true'},sp):null));
@@ -2820,7 +3226,7 @@ RENDER.dashboard=function(){
   { const nu=nextUpCard(evalAchSafe()); if(nu)root.append(nu); }
   }
   // this month + milestones
-  const ms=el('div',{class:'card'},el('h3',null,'Milestones'),el('div',{class:'sub'},'Based on net worth and the goals in Get Started'),el('div',{class:'mt'},d.milestones.map(m=>meter(m.name,m.p,m.done))));
+  const ms=el('div',{class:'card'},el('h3',null,'Milestones'),el('div',{class:'sub'},'Based on net worth and the goals in Settings'),el('div',{class:'mt'},d.milestones.map(m=>meter(m.name,m.p,m.done))));
   root.append(el('div',{class:'grid g2 mt'},thisMonthCard(),ms));
   if(SIMPLE){ root.append(el('div',{class:'row',style:'justify-content:center;margin-top:16px'},el('button',{class:'btn',type:'button',onclick:()=>{ setSimpleView(false); RENDER.dashboard(); }},'Show charts, ratios and forecasts'))); return; }
   // forecast
@@ -3018,7 +3424,7 @@ RENDER.extra=function(){
       {cats,h:150,caption:'Card payments and balances',series:[{name:'Card payments',color:'var(--s3)',type:'bar',data:pick(r,'payment')},{name:'Card balance',color:'var(--s2)',type:'line',data:pick(r,'balance')}]}]); }));
   grid.append(chartCard('Milestones progress','Cash + investments as a share of your next retirement goal',()=>{ const r=dataMilestones(); const T=S.settings; const cats=catsOf(r);
     const top=Math.max(0,...r.map(x=>x.value||0)); const mults=[[10,'Standard retirement'],[15,'Barista FI/RE'],[20,'Lean FI/RE'],[25,'Standard FI/RE'],[30,'Fat FI/RE']];
-    if(!(T.retire>0)) return el('div',{class:'empty'},'Set your retirement income in Get Started to see milestone progress.');
+    if(!(T.retire>0)) return el('div',{class:'empty'},'Set your retirement income in Settings to see milestone progress.');
     const next=mults.find(m=>T.retire*m[0]>top)||mults[mults.length-1]; const tgt=T.retire*next[0];
     return el('div',{},[xyChart({cats,yMin:0,yMax:Math.max(1,...r.map(x=>(x.value||0)/tgt)),yFmt:v=>pct(v,0),valFmt:v=>pct(v,1),endLabels:true,endW:112,noLegend:true,endText:(s)=>s.short,
       series:[{name:next[1]+' ('+money(tgt)+')',short:'Goal',color:'var(--muted)',type:'line',area:false,w:1.25,endR:2.5,data:r.map(()=>1),fmt:v=>pct(v,0)},{name:'Cash + investments',short:'You',color:'var(--s1)',type:'line',w:2.5,data:r.map(x=>x.value==null?null:x.value/tgt)}]}),
@@ -3069,10 +3475,10 @@ const CSV_DOC_LINES=[
 RENDER.start=function(){
   const root=$('#p-start'); root.replaceChildren(); const T=S.settings;
   root.append(el('div',{class:'page-h'},el('div',null,el('h2',null,'Settings'),el('p',null,hasAnyData()?'Your details, setup steps, banking checklist and backups. Everything stays in this browser.':'Log spending, check in monthly, and get your net worth, savings rate and retirement date. Free, no account, and your data stays in your browser.')),
-    el('span',{class:'pill'},'Official Web App · v1.1')));
+    el('span',{class:'pill'},'Official Web App · v1.2')));
   if(!hasAnyData())root.append(emptyBanner());
   root.append(stepsEl());
-  root.append(el('div',{id:'installSlot'})); paintInstall();
+  root.append(el('div',{id:'installSlot',class:'mt'},el('div',{'data-mb-install':'','data-app-name':'Money','data-note':'Opens in its own window with its own icon. Works offline after the first visit.',hidden:true}),el('p',{class:'sub',id:'installIosNote',hidden:true},'The Home Screen app may start empty, because iPhone keeps its data separate from Safari. Save a backup in Safari first, then import it in the app.'))); paintInstall();
   const g=el('div',{class:'grid g2 mt'}); root.append(g);
   // settings
   const set=(k,v)=>{T[k]=v; edited('start','settings');};
@@ -3116,6 +3522,28 @@ RENDER.start=function(){
   root.append(el('details',{class:'card mt',id:'sec-privacy'},el('summary',null,'Privacy policy'),staticStamp(),el('div',{class:'relnote'},PRIVACY_TEXT)));
   root.append(el('details',{class:'card mt',id:'sec-license'},el('summary',null,'Terms of use & license'),staticStamp(),el('div',{class:'relnote'},LICENSE_TEXT)));
 };
+/* ============ share cards (MB Suite v3 MBShare: drawn on this device, nothing uploaded) ============ */
+const SHARE_ICON='M18 8a3 3 0 1 0-2.8-4M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4';
+function shareBtn(label,fn){ return el('button',{class:'btn sm mb-share-btn',type:'button',onclick:fn},sv('svg',{class:'uic',viewBox:'0 0 24 24',width:16,height:16,'aria-hidden':'true',focusable:'false',fill:'none',style:'stroke:currentColor','stroke-width':2,'stroke-linecap':'round','stroke-linejoin':'round'},sv('path',{d:SHARE_ICON})),label); }
+function shareArt(){ const t=document.getElementById('shareArt'); return t&&t.content?t.content.firstElementChild:null; }
+function shareDate(){ return MON[+CUR.slice(5,7)-1]+' '+CUR.slice(0,4); }
+function monthsCheckedIn(){ return Object.keys(S.bal).filter(mk=>Object.values(S.bal[mk]||{}).some(isNum)).length; }
+function shareNetWorth(d){
+  const yr=CUR.slice(0,4), jan=yr+'-01', from=M.startMK&&mDiff(M.startMK,jan)>0?M.startMK:jan, base=bal(from), n=monthsCheckedIn();
+  const up=base.entered&&base.nw>0&&d.nwChange>0?d.nwChange/base.nw:null;
+  const headline=up?'Net worth up '+pct(up,0)+' this year':n>1?n+' months of check-ins':'Tracking my net worth';
+  const sub=up?'Since '+mLabelLong(from)+', checked in month by month':'Checked in month by month with a free tracker';
+  const plain=[{label:'Months checked in',value:String(n)}]; if(isNum(d.rate)&&d.rate>0)plain.push({label:'Savings rate',value:pct(d.rate,0)}); // only a positive rate is worth sharing
+  MBShare.open({title:'Share your progress',kicker:'Progress',headline,sub,art:shareArt(),fileName:'mbmoney-progress.png',date:shareDate(),
+    options:[{id:'amounts',label:'Show dollar amounts',value:false}],
+    build:o=>({stats:o.amounts?[{label:'Net worth',value:money(d.nw)},{label:'Change this year',value:(d.nwChange>0?'+':'')+money(d.nwChange)}].concat(plain.slice(0,1)):plain})});
+}
+function shareLevel(ev,li){
+  MBShare.open({title:'Share your level',kicker:'Milestone',headline:'Reached level '+li.level,sub:ev.unlocked+' of '+ev.total+' achievements unlocked by keeping my money tracked',
+    art:shareArt(),fileName:'mbmoney-level.png',date:shareDate(),
+    stats:[{label:'Level',value:String(li.level)},{label:'Achievements',value:ev.unlocked+' / '+ev.total},{label:'XP',value:ev.xp.toLocaleString()}]});
+}
+
 /* ============ Achievements ============ */
 const AF={status:'all',rar:'all',q:''};
 RENDER.achievements=function(){
@@ -3126,6 +3554,7 @@ RENDER.achievements=function(){
     el('div',{style:'text-align:right'},el('div',{class:'sub'},'Next level'),el('b',{class:'big'},li.level>=100?'MAX':'Level '+(li.level+1))),
     el('div',{class:'bar',role:'progressbar','aria-valuenow':Math.round(li.frac*100),'aria-valuemin':0,'aria-valuemax':100,'aria-label':'Level progress'},el('i',{style:'width:'+li.frac*100+'%'})),
     el('div',{class:'sub'},ev.xp.toLocaleString()+' XP total'),el('div'),el('div',{class:'sub',style:'text-align:right'},li.level>=100?'':li.toNext.toLocaleString()+' XP to go')));
+  if(ev.unlocked>0)root.append(el('div',{class:'row mt',style:'justify-content:flex-end'},shareBtn('Share your level',()=>shareLevel(ev,li))));
   if(S.demo)root.append(el('div',{class:'banner mt'},'These achievements come from the demo data. Clear it to start earning your own.'));
   const chip=(grp,val,label)=>el('button',{class:'chip',type:'button','aria-pressed':AF[grp]===val,onclick:()=>{AF[grp]=val;RENDER.achievements()}},label);
   root.append(el('div',{class:'row mt',style:'justify-content:space-between'},
@@ -3768,7 +4197,7 @@ RENDER.whatif=function(){
     chartHost.replaceChildren(chart); if(chart.draw)requestAnimationFrame(()=>chart.draw());
     const yb=wiYearsTo(P0,c0,rate,fi), ys=wiYearsTo(P0,c0+extra,rate,fi), fmtY=v=>v==null?'60+ yrs':v===0?'Reached':v.toFixed(1)+' yrs';
     tiles.replaceChildren(
-      tile('Years to '+(fi>0?compact(fi):'your FI number'),fi>0?fmtY(ys):'–',fi>0?('Current path: '+fmtY(yb)+(yb!=null&&ys!=null&&yb-ys>0.05?' · '+(yb-ys).toFixed(1)+' yrs sooner':'')):'Set your retirement income in Get Started (25× rule)'),
+      tile('Years to '+(fi>0?compact(fi):'your FI number'),fi>0?fmtY(ys):'–',fi>0?('Current path: '+fmtY(yb)+(yb!=null&&ys!=null&&yb-ys>0.05?' · '+(yb-ys).toFixed(1)+' yrs sooner':'')):'Set your retirement income in Settings (25× rule)'),
       tile('Growth vs. your deposits',money(Math.max(0,growth)),'Of '+money(fs)+', about '+pct(fs>0?Math.max(0,growth)/fs:0,0)+' is growth you did not have to deposit'),
       tile('Doubling time',rate>0?(72/WI.ret).toFixed(1)+' yrs':'–','Rule of 72: at '+WI.ret.toFixed(1)+'% your money doubles about every '+(rate>0?(72/WI.ret).toFixed(1):'–')+' years'));
     tiles.querySelectorAll('.val').forEach(countUp);
@@ -4390,12 +4819,13 @@ const FAQ=[
  {id:'storage',q:'Where is my data stored?',a:'Only in this browser (local storage). It saves as you type. Nothing goes to a server, and there are no accounts.\nClearing site data, using a private window, or switching browsers or devices removes your access to it. Export a CSV now and then as your backup.'},
  {id:'backup',q:'How do I back up my data or move to another device?',a:'Open Data in the top bar and click Save backup now (or press Ctrl+S). The first time, you pick the folder and file name, for example a synced OneDrive or Google Drive folder. After that it saves to the same file in one click (Chrome and Edge on a computer; other browsers save to Downloads). JSON is the most complete backup; Export All (CSV) gives you a spreadsheet copy. The chip next to Data shows when you last backed up.\nOn the other device, click Import Backup and choose that file, or drag it onto the page. If data already exists there, you choose Merge or Replace.'},
  {id:'install',q:'Can I install it like an app?',a:'Yes. In Chrome or Edge, use the Install button on the Settings page (or the install icon in the address bar). On iPhone or iPad, tap Share, then Add to Home Screen.\nIt then opens full screen with its own icon, and loads with no signal once it has been opened online at least once. Your data still lives only on your device.\nOn iPhone the installed app may start empty, because it does not share storage with Safari. Save a backup in Safari first, then import it in the app.',kw:'pwa install home screen offline app icon'},
+ {id:'share',q:'Can I share my progress?',a:'Yes. Use Share progress on the Dashboard\'s net worth card, or Share your level on Achievements. The app draws a square image on your device and shows you a preview first.\nDollar amounts stay off the image unless you tick Show dollar amounts. Account names, notes and transactions are never on it. Save image downloads it, and Share opens your device\'s share sheet where the browser supports it. Nothing is uploaded.',kw:'share image picture milestone progress level social post'},
  {id:'plan',q:'What does the Plan tab do?',a:'Plan answers "where am I headed?" with three tools.\nThe cash-flow calendar projects your checking balance day by day from your pay schedule, the bills on your Subscriptions tab, debt payments that have a due day, and your average everyday spending. It shows the lowest point and how much is safe to spend until payday.\nSavings goals follow an account balance from your monthly check-in, or an amount you type, and show what you need each month to hit the date.\nThe debt payoff planner reads your credit card and loan balances from the check-in, so you add each debt\'s APR and minimum payment once. It compares avalanche (highest APR first) with snowball (smallest balance first) and shows what an extra payment saves.\nIt all comes from your own numbers, so it is only as good as what you enter. These are estimates, not advice.',kw:'plan cash flow calendar forecast goals savings emergency fund debt payoff avalanche snowball apr payday safe to spend'},
  {id:'review',q:'What are the resilience numbers and the monthly review on the Dashboard?',a:'Runway is your cash and emergency fund divided by your monthly essentials (needs plus debt payments, averaged over your last three finished months). It is how many months you could cover the basics if income stopped.\nThe monthly review explains why your net worth moved since the previous check-in. Income minus everyday spending is the part from cash flow. Whatever is left is market moves, value changes in your home or vehicle, loan interest, and anything you have not logged. Savings transfers and debt payments are not counted as spending, because they move money between your own accounts.\nThe checklist beside it points at what needs attention, and you can mark a month as reviewed.',kw:'resilience runway emergency review monthly net worth change why explain checklist'},
  {id:'snapshot',q:'What is the 2-minute snapshot, and the Simple view?',a:'The snapshot is a short form for first-time setup: your take-home pay and a few balances (checking, savings, retirement, investments, cards, loans). It is saved as this month\'s check-in, so the Dashboard shows your net worth and runway right away. You can fine-tune each account later on Monthly Budget.\nThe Simple view on the Dashboard keeps the essentials (net worth, resilience, safe to spend, monthly review) and hides the charts, ratios and forecasts. The choice is remembered on this device.',kw:'quick start setup first time simple view dashboard declutter'},
  {id:'yearend',q:'How do the check-in reminder and the year-end summary work?',a:'The reminder downloads a small calendar file (.ics). Open it in Apple Calendar, Google Calendar, Outlook or any calendar app to get a repeating monthly reminder for your check-in. It is made in your browser and nothing is sent anywhere.\nThe year-end summary downloads a CSV with the year\'s income, spending, savings and debt payments, month by month, your top spending categories and the change in net worth. Both are under Settings, in Your data.',kw:'calendar ics reminder year end summary annual export csv tax'},
  {id:'cookies',q:'Does this site use cookies or tracking?',a:'No cookies, ads, analytics or accounts. Local storage holds your data plus two small settings: light or dark mode, and whether you dismissed the storage notice. None of it is sent anywhere.\nThe app loads nothing from other websites. The privacy policy below has the full list.',kw:'privacy cookie consent tracking analytics'},
- {id:'start',q:'What should I enter first?',a:'On Get Started, enter your birth date, tracking start month, take-home income and expected retirement income. Then set a plan on Monthly Budget, add month-end balances in the Net worth & check-in view, and log spending on Transactions. Want a look first? Click Load demo data.'},
+ {id:'start',q:'What should I enter first?',a:'On Settings, enter your birth date, tracking start month, take-home income and expected retirement income. Then set a plan on Monthly Budget, add month-end balances in the Net worth & check-in view, and log spending on Transactions. Want a look first? Click Load demo data.'},
  {id:'signs',q:'Do I enter expenses as negative numbers?',a:'No. Type positive numbers everywhere. On Transactions you pick Expense or Income, budget amounts are positive, and debts (credit cards, loans) are positive balances.\nOnly the exported CSV stores expenses as negatives. The importer handles that for you.'},
  {id:'csv',q:'What does the CSV look like? Can I import my bank export?',a:'One flat file with the columns Type, Date, Item, Category, Value, Description and Balance. Open "CSV format" under Your data for each row type, or download the template.\nA plain bank export with Date, Description and Amount columns also works. Its rows are added to your transactions.',kw:'import export format columns template'},
  {id:'networth',q:'How is net worth calculated?',a:'Assets (cash, investments, a car or home) minus liabilities (credit cards and loans), taken from the month-end balances you enter. The charts show it month by month, so regular check-ins give the best picture.'},
@@ -4403,7 +4833,7 @@ const FAQ=[
  {id:'xp',q:'How do achievements, XP and levels work?',a:'There are 121 achievements: the 82 from the original spreadsheet plus 39 new ones. Each is worth XP by rarity and unlocks automatically when your data meets its rule.\nYour level is 1 + total XP ÷ 925, rounded down, up to level 100. Tap any badge to see its rule and your progress.'},
  {id:'differ',q:'Why do some numbers differ from the old spreadsheet?',a:'The web version fixes a bug where the retirement and FI/RE dates counted the Cash row twice and left out investments. A few achievements are stricter now (current-month ones need a balance entered), and a few charts were redrawn to use a single axis.'},
  {id:'advice',q:'Is this financial advice?',a:'No. It is an educational tool, not tax, legal or investment advice, and its forecasts are estimates. It is still a beta. Talk to a qualified professional before big money decisions.'},
- {id:'delete',q:'How do I delete my data?',a:'On Get Started, under Your data, click Clear all data and confirm. You can also clear this site\'s data in your browser settings. Export a CSV first if you might want it back, because deleting cannot be undone.'},
+ {id:'delete',q:'How do I delete my data?',a:'On Settings, under Your data, click Clear all data and confirm. You can also clear this site\'s data in your browser settings. Export a CSV first if you might want it back, because deleting cannot be undone.'},
  {id:'reuse',q:'Can I copy the code or host my own version?',a:'Not without permission. The app is free for your own finances, and its code, design and artwork are protected. Details are in the Terms of use & license below.'}
 ];
 function setFaq(item,open){ item.classList.toggle('open',open); item.querySelector('.faq-q').setAttribute('aria-expanded',open?'true':'false'); const b=item.parentNode&&item.parentNode.parentNode&&item.parentNode.parentNode.querySelector('.faq-all'); if(b){ const all=[...item.parentNode.children].every(x=>x.classList.contains('open')); b.textContent=all?'Collapse all':'Expand all'; } }
@@ -4488,7 +4918,7 @@ function buildIndex(){
   FAQ.forEach((f,i)=>add('faq',f.q,f.a.split('\n')[0],f.a+' '+(f.kw||''),()=>openFaq(i),2));
   add('doc','Get set up: five steps','Progress and your next step',ABOUT_STEPS.map(s=>s.t+' '+s.d).join(' '),()=>openSection('sec-steps'),1); add('doc','About this tool','',ABOUT_TEXT,()=>openSection('sec-about'),1);
   add('doc','Configuration','Name, birth date, tracking start, income, retirement income','name date of birth start month annual net income retirement income settings',()=>openSection('sec-config'),3);
-  add('doc','Essential Banking Checklist','Checklist on Get Started',CHECKLIST.map(c=>c[2]).join(' '),()=>openSection('sec-checklist'),1);
+  add('doc','Essential Banking Checklist','Checklist on Settings',CHECKLIST.map(c=>c[2]).join(' '),()=>openSection('sec-checklist'),1);
   add('doc','Your data: export, import, demo, clear','Backups and moving devices','export import paste template demo clear delete backup',()=>openSection('sec-data'),3);
   add('doc','CSV format','Columns and row types','One flat file holds everything. Columns: '+CSV_HEADER.join(', ')+'. '+CSV_DOC_LINES.join(' '),()=>openSection('sec-csv'),1);
   RELEASES.forEach(r=>add('doc','Release notes: '+r.title.replace(/^(mbmoney\.online|Personal Wealth Management( Tool)?) /,''),'',r.lines.join(' '),()=>openSection('sec-release'),0));
@@ -4597,7 +5027,7 @@ function initSite(){
   booted=true; go(start,true); if(typeof checkUnlocks==='function')checkUnlocks(true); if(typeof initSite==='function')initSite();
   if(!storageOK)setSaveMsg('Autosave unavailable');
   window.addEventListener('beforeunload',()=>{try{localStorage.setItem(STORE_KEY,JSON.stringify(S))}catch(e){}});
-  if('serviceWorker' in navigator&&/^https?:/.test(location.protocol)){ const reg=()=>navigator.serviceWorker.register('sw.js').catch(()=>{}); if(document.readyState==='complete')reg(); else window.addEventListener('load',reg); }
+  if('serviceWorker' in navigator&&/^https?:/.test(location.protocol)){ const reg=()=>MBInstall.registerSW('sw.js'); if(document.readyState==='complete')reg(); else window.addEventListener('load',reg); }
 })();
 
 </script>

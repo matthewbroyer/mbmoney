@@ -1,7 +1,7 @@
 /* mbmoney.online service worker.
    Network-first for the app's own files, so updates arrive on the next visit; the cache is only the offline fallback.
    It never touches your data (that lives in localStorage) and ignores every request that is not a same-origin GET. */
-const VERSION = 'mbmoney-v6-suite';
+const VERSION = 'mbmoney-v7-suite-v3b';   // bump on every release so installed users get the new files
 const SHELL = ['./', 'index.html', 'manifest.json', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png', 'favicon.svg', 'favicon.ico'];
 const INDEX = new URL('index.html', self.registration.scope).href;
 
@@ -12,7 +12,7 @@ self.addEventListener('install', e => {
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k !== VERSION).map(k => caches.delete(k))))
+      .then(keys => Promise.all(keys.filter(k => k.startsWith('mbmoney-') && k !== VERSION).map(k => caches.delete(k))))   // only this app's own old caches
       .then(() => self.clients.claim())
   );
 });

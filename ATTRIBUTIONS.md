@@ -4,7 +4,7 @@ mbmoney.online is one HTML file (plus a manifest, a service worker and a few PNG
 
 - Code: written for this project. It uses only standard browser features.
 - Fonts: none loaded. The page uses the visitor's system fonts.
-- Logo, favicon, icons and all achievement badges: original inline SVG made for this project. The app-icon PNGs (`icon-192.png`, `icon-512.png`, `icon-maskable-512.png`, `apple-touch-icon.png`) and the social preview image (`og-image.png`) are rendered from that same logo, and the preview image uses only system fonts.
+- Logo, favicon, icons and all achievement badges: original inline SVG made for this project. The coin-and-sprout art (Dashboard banner, loading screen, share images) comes from Matthew Broyer's own MB Suite design kit (nature templates NA-01 and NA-11). Share images are drawn in the browser with system fonts. The app-icon PNGs (`icon-192.png`, `icon-512.png`, `icon-maskable-512.png`, `apple-touch-icon.png`) and the social preview image (`og-image.png`) are rendered from that same logo, and the preview image uses only system fonts.
 - Nothing is loaded from any other website.
 
 Names mentioned in the app's text belong to their owners. No affiliation or endorsement is implied:

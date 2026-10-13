@@ -1,4 +1,5 @@
 {
+  "id": "./",
   "name": "Money",
   "short_name": "Money",
   "description": "Free net worth and budget tracker. No account, and your data stays in your browser.",
@@ -8,6 +9,7 @@
   "orientation": "any",
   "background_color": "#f3f4f6",
   "theme_color": "#087F5B",
+  "lang": "en",
   "categories": [
     "finance",
     "productivity"
